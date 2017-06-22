@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>药都网绑定账号</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/regAndLogin.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+    <style>
+        .bind_btn1 ,.bind_btn2{width: 80%;}
+        .nav_wp {font-size:2.4rem;text-align: center;}
+        .nav_wp div{width:50%;float: left;height:6rem;line-height: 6rem;}
+        .nav_wp .active {color:#e6282b;border-bottom:0.2rem solid #e6282b;}
+        .bind_wp2 {display: none;margin-top:2.4rem; }
+    </style>
+</head>
+<body>
+<!--头部-->
+<header>
+    <a href="javascript:;" class="back_btn" id="back_btn">
+        <i class="icon_zjt iconfont"></i>返回
+    </a>
+    <span>绑定账号</span>
+</header>
+<!--注册框-->
+<div class="ydw_wp">
+    <div class="nav_wp clearfix">
+        <div class="active">未有账号,完善资料</div>
+        <div>已有账号,直接绑定</div>
+    </div>
+    <div class="reg_wp bind_wp1 bind_wp">
+        <ul class="reg_list">
+            <li class="reg_item">
+                <label for="mobile" class="dib">手机号码</label>
+                <input type="text" class="mobile input1" id="mobile" name="mobile" maxlength="11"  placeholder="请输入手机号码" autocomplete="off" />
+            </li>
+            <li class="reg_item">
+                <label for="code" class="three_word">验证码</label>
+                <input type="text" class="code input1" id="code" name="captcha"  placeholder="请输入验证码" autocomplete="off" />
+                <button class="get_code" disabled="disabled" onclick="getMobileCode(3)">获取验证码</button>
+            </li>
+            <li class="reg_item">
+                <label for="psw">登录密码</label>
+                <input type="password" class="psw input1" id="psw" name="password" placeholder="6-20字符，区分大小写" autocomplete="off" />
+            </li>
+            <li class="reg_item">
+                <label for="repsw">确认密码</label>
+                <input type="password" class="repsw input1" id="repsw" name="repassword" placeholder="请确认密码" autocomplete="off" />
+            </li>
+            <li class="reg_item">
+                <label for="nickname" class="two_word">昵称</label>
+                <input type="text" class="nickname input1" id="nickname" name="realname"  placeholder="请输入昵称(2-10位)" autocomplete="off" />
+            </li>
+            <li class="reg_item">
+                <label for="spread" class="three_word">推广码</label>
+                <input type="text" class="spread input1" id="spread"  placeholder="请输入推广码(选填)" autocomplete="off" />
+            </li>
+        </ul>
+        <div style="font-size:2rem;text-align: center;margin-top: 2rem;">
+            绑定即代表您同意<a href="./protocol2.html" style="color:#e6282b;">药都网注册协议</a>
+        </div>
+        <span class="bind_btn1 sub_btn" onclick="bind1()">立即绑定</span>
+        </div>
+    </div>
+    <div class="bind_wp2 bind_wp">
+        <ul class="reg_list">
+            <li class="reg_item">
+                <label for="mobile" class="dib">手机号码</label>
+                <input type="text" class="mobile input1" id="mobile2" name="mobile" maxlength="11"  placeholder="请输入手机号码" autocomplete="off" />
+            </li>
+            <li class="reg_item">
+                <label for="repsw">登录密码</label>
+                <input type="password" class="repsw input1" id="psw2"  placeholder="6-20字符，区分大小写" autocomplete="off" />
+            </li>
+        </ul>
+        <div style="font-size:2rem;text-align:right;margin-top:2rem;padding-right:2rem;">
+            <a href="./findpsw.html" style="color:#e6282b;">忘记密码?</a>
+        </div>
+        <span class="bind_btn2 sub_btn" onclick="bind2()">立即绑定</span>
+    </div>
+</div>
+</body>
+<script src="../js/reg-login.js"></script>
+<script>
+    var nav = $(".nav_wp div");
+    var content = $(".bind_wp");
+    var psw2 = $("#psw2");
+    var mobile2 = $("#mobile2");
+    var pswReg = /^([0-9]|[a-z]|[A-Z]){6,20}$/i;
+    var bindBol = true;
+    nav.click(function () {
+        var _this = $(this);
+        if (_this.hasClass("active")) return;
+        _this.addClass("active").siblings("div").removeClass("active");
+        var index = _this.index();
+        content.hide().eq(index).show();
+    })
+    function bind1() {
+        if (!bindBol) return;
+        var phone = $("#mobile").val();
+        var code = $("#code").val();
+        var psw = $("#psw").val();
+        var repsw = $("#repsw").val();
+        var nickname = $("#nickname").val();
+        var spread = $("#spread").val();
+        if (!phone){
+            rule.showMsg(1 , "请输入手机号"  , 1000);
+        }else if (!rule.phone(phone) && phone){
+            rule.showMsg(1 , "手机不正确"  , 1000);
+            return;
+        }else if (!code){
+            rule.showMsg(1 , "请输入验证码"  , 1000);
+            return;
+        }else if (!pswReg.test(psw)){
+            rule.showMsg(1 , "密码格式不正确"  , 1000);
+            return;
+        }else if (repsw != psw){
+            rule.showMsg(1 , "两次密码不一致"  , 1000);
+            return;
+        }else  if (!nickname){
+            rule.showMsg(1 , "请输入昵称"  , 1000);
+            return;
+        }
+        var params = {
+            captcha:code,
+            mobile:phone,
+            password:psw,
+            repsw:repsw,
+            realname:nickname,
+            spreading_code:spread
+        }
+        bindBol = false;
+        $.postT(rule.root + 'WeixinBinding/weixinRegisterBinding' , params ,function (data) {
+            var code  = data.code;
+            if (code == 1){
+                var datas = data.data;
+                var user_info = {};
+                user_info.uid = datas.id;
+                user_info.mobile = datas.mobile;
+                user_info.realname = datas.realname;
+                user_info.token = datas.token;
+                LocalData("user_info",user_info);
+                rule.showMsg(1 , "绑定成功,正在跳转",1500,"./index.html");
+            }else if (code == 10){
+                rule.showMsg(1 , "请输入2-10个字符的用户名",1500);
+            }else if (code == 20){
+                rule.showMsg(1 , "请输入正确的手机号",1500);
+            }else if (code == 21){
+                rule.showMsg(1 , "手机号被占用",1500);
+            }else if (code == 36){
+                rule.showMsg(1 , "验证码不存在",1500);
+            }else if (code == 37){
+                rule.showMsg(1 , "验证码过时",1500);
+            }else if (code == 38){
+                rule.showMsg(1 , "验证码错误",1500);
+            }else if (code == 40){
+                rule.showMsg(1 , "密码必须为6-20个字符",1500);
+            }else if (code == 41){
+                rule.showMsg(1 , "两次密码不一致",1500);
+            }else if (code == 99){
+                rule.showMsg(1 , "手机号与获取验证码的手机号不一致",1500);
+            }else if (code == 103){
+                rule.reLogin();
+            }
+            bindBol = true;
+        })
+    }
+    function bind2() {
+        if (!bindBol) return;
+        var psw = $.trim(psw2.val());
+        var mobile = $.trim(mobile2.val());
+        if (!mobile) {
+            rule.showMsg(1 , "请输入手机号",1000);
+            return;
+        }
+        if (!rule.phone(mobile) &&　mobile){
+            rule.showMsg(1 , "请输入正确手机号",1000);
+            return;
+        }
+        var params = {
+            password:psw,
+            mobile:mobile
+        }
+        bindBol = false;
+        $.postT(rule.root + 'WeixinBinding/weixinBinding' , params ,function (data) {
+            var code  = data.code;
+            if (code == 1){
+                var datas = data.data;
+                var user_info = {};
+                user_info.uid = datas.id;
+                user_info.mobile = datas.mobile;
+                user_info.realname = datas.realname;
+                user_info.token = datas.token;
+                LocalData("user_info",user_info);
+                rule.showMsg(1 , "绑定成功,正在跳转",1500,"./index.html");
+            }else if (code == 2){
+                rule.showMsg(1 , "该微信用户已绑定过手机",1500);
+            }else if (code == 3){
+                rule.showMsg(1 , "账号密码不正确",1500);
+            }else if (code == 4){
+                rule.showMsg(1 , "该账号已经被其他微信绑定过了",1500);
+            }else if (code == 103){
+                rule.reLogin();
+            }
+            bindBol = true;
+        })
+    }
+</script>
+</html>

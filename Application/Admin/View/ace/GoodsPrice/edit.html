@@ -1,0 +1,213 @@
+<extend name="Public/base"/>
+<block name='navi'><li>商品管理</li><li>药品列表</li></block>
+<block name="body">	
+<div class="page-header"><h1>{$meta_title}</h1></div>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#tab1"><i class="green ace-icon fa fa-home bigger-120"></i>基本信息</a></li>
+            <notempty name="info">
+            	<li><a data-toggle="tab" href="#tab2">价格列表</a></li>
+            </notempty>            
+        </ul>
+        <div class="tab-content">
+            <div id="tab1" class="tab-pane fade active in">
+                <form method="post" id="submit-form" class="form-horizontal" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;分类：<span class="check-tips"></span></label>
+                        <div class="controls">
+                            <select id="cate_id" name="cate_id" style="width:100px">
+                                <option value="0">请选择</option>
+                                <foreach name="cates" item="vo">
+                                    <option value="{$vo.id}">{$vo.title}</option>
+                                </foreach>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;药材：<span class="check-tips"></span></label>
+                        <div class="controls">
+                            <select id="goods_id" style="width:136px"><option value="0">请选择</option></select>
+                        </div>
+                    </div>                    
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;规格：<span class="check-tips"></span></label>
+                        <div class="controls">
+                            <select id="goods_attr_id" style="width:100px"><option value="0">请选择</option></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;产地：<span class="check-tips"></span></label>
+                        <div class="controls">
+                            <select id="prov_select"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;价格：<span class="check-tips"></span></label>
+                        <div class="controls">
+                            <input type="text" id="price" class="col-xs-5 col-sm-2" value="{$info.price}" autocomplete="off" style="margin-right:5px">
+                            <input type="text" id="select_date" placeholder="请选择价格日期" class="col-xs-5 col-sm-2">
+                        </div>
+                    </div>
+                    <div class="clearfix form-actions">
+		                <div class="col-md-offset-3 col-md-9">		                   
+		                    <button type="button" id="submitBtn" class="btn btn-info"><i class="ace-icon fa fa-check bigger-110"></i>确 定</button>
+		                    <button type="reset" class="btn btn-return"><i class="ace-icon fa fa-undo bigger-110"></i>重 置</a>
+		                </div>
+	            	</div>	         
+	            </form>              
+            </div>
+            <div id="tab2" class="tab-pane fade">                
+                <div class="dataTables_wrapper form-inline no-footer">
+				    <table class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="sample-table-2_info">
+				        <thead>
+				            <tr>
+				                <th>序号</th>
+				                <th>价格</th>
+				                <th>日期</th>  
+				            </tr>
+				        </thead>
+				        <tbody id="ajaxBody">				            
+				        </tbody>
+				    </table>    
+				</div>
+            </div>  
+        </div>
+    </div>
+</div>
+</block>
+<block name="script">
+<script src="__ADMIN__/assets/js/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="__STATIC__/laydate/laydate.js"></script>
+<script type="text/javascript">		
+	//导航高亮
+	highlight_subnav("{:U('GoodsPrice/index')}");
+	$(function(){
+		var id = {$Think.get.id|default=0};
+		if(parseInt(id) > 0){
+			$.getJSON("{:U('ajaxAllGoodsPriceH')}", {id: id}, function(req){
+				if(req.code == 1){
+					var sb = '', data = req.data;
+					for(var i in data){
+						sb += '<tr><td>'+ (+i+1) +'</td><td>'+ data[i].price +'</td><td>'+ data[i].create_time +'</td></tr>';
+					}
+					$('#ajaxBody').html(sb);
+				}else{
+					fail(req.msg);
+				}
+			})	
+		}
+		var origin_area = $.trim("{$info.origin_area|default=''}");
+		var prov_select = $('#prov_select'); 
+		/* 默认加载省份 */
+		$.get("{:U('Region/ajaxGetProHtml')}", function(data) {
+			if(data) {
+				prov_select.html(data);			
+				if(origin_area){			
+					prov_select.find("option:contains('"+ origin_area +"')").attr("selected", true);	
+				}								
+			}
+		})
+		/* 提交表单 */
+		$('#submitBtn').on('click', function(){
+			var data = _checkForm();
+			if(data){
+				var _this = $(this);
+				_this.addClass('disabled');
+				$.post("{:U('add')}", data, function(req){
+					if(req.code == 1){
+						success(req.msg, true);
+					}else{
+						fail(req.msg, _this);
+					}
+				});
+			}
+		});
+		var goods_id = {$info.goods_id|default=0};
+		/* 分类change事件 */
+		$('#cate_id').on('change', function(){
+			$.getJSON("{:U('ajaxGetGoods')}", {cate_id: this.value}, function(req){
+				if(req.code){
+					var sb = '<option value="0">请选择</option>', data = req.data;
+					for(var i in data){
+						sb += '<option '+ ((data[i].id==goods_id)&&'selected') +' value="'+ data[i].id +'">'+ data[i].goods_name +'</option>';
+					}
+					$('#goods_id').html(sb);
+					
+					/* 操作下拉框 */
+					var chosen = $("#goods_id").chosen({
+						no_results_text:" ",
+						search_contains: true
+                	});
+					chosen.trigger("chosen:updated");
+					
+					if(parseInt(goods_id) > 0){
+						$('#goods_id').trigger('change');
+						goods_id = 0;//避免再次执行
+					}
+				}else{
+					fail(req.msg);
+				}
+			});
+		});
+		var goods_attr_id = {$info.goods_attr_id|default=0};
+		/* 药材change事件 */
+		$('#goods_id').on('change', function(){
+			$.getJSON("{:U('Goods/ajaxGetSpecs')}", {id: this.value}, function(req){
+				if(req){
+					var sb = '<option value="0">请选择</option>', data = req;
+					for(var i in data){
+						sb += '<option '+ ((data[i].id==goods_attr_id)&&'selected') +' value="'+ data[i].id +'">'+ data[i].attr_name +'</option>';
+					}
+					$('#goods_attr_id').html(sb);				
+				}
+			});
+		});
+		/* 出示化价格日期 */
+		laydate({
+            elem: '#select_date',
+            format: 'YYYY-MM-DD',           
+            max: laydate.now(),
+            istime: false
+        });
+		<present name="info">
+			Think.setValue("cate_id", {$info.cate_id});
+			$('#cate_id').trigger('change');		
+		</present>		
+	})
+	/* 验证表单 */
+	function _checkForm(){
+		var cateObj = $('#cate_id');
+		if(parseInt(cateObj.val()) <= 0){
+			fail('请选择药材分类');return;
+		}
+		var goodsObj = $('#goods_id');
+		if(parseInt(goodsObj.val()) <= 0){
+			fail('请选择药材');return;
+		}
+		var goodsAttrObj = $('#goods_attr_id');
+		if(parseInt(goodsAttrObj.val()) <= 0){
+			fail('请选择规格');return;
+		}
+		var provSelect = $('#prov_select');
+		if(parseInt(provSelect.val()) <= 0){
+			fail('请选择产地');return;
+		}
+		var price = $.trim($('#price').val());
+		if(!price){
+			fail('请输入价格');return;
+		}
+		var data = {};
+		data.cate_id = cateObj.val();
+		data.cate_name = cateObj.find('option:selected').text();
+		data.goods_id = goodsObj.val();
+		data.goods_name = goodsObj.find('option:selected').text();
+		data.goods_attr_id = goodsAttrObj.val();		
+		data.goods_attr_name = goodsAttrObj.find('option:selected').text();	
+		data.origin_area = provSelect.find('option:selected').text();
+		data.price = price;
+		data.select_date = $.trim($('#select_date').val());		
+		return data;
+	}
+</script>
+</block>

@@ -1,0 +1,36 @@
+<extend name="./base" />
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/titleDSG.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/dl.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/companyShow/css/companyShow.css" />
+</block>
+<block name="body">
+<div class="demand-detail">
+	<include file="Public/common_nav" />		
+	<div class="detail-middle">			
+		<div class="detail-bread">
+			<i></i>
+			<b>当前位置：</b>&nbsp;
+			<a href="/">首页</a>&nbsp;&gt;&nbsp;<a href="{:U('CompanyShow/storeList')}">仓库信息</a>&nbsp;&gt;&nbsp;<a href="javascript:;"><b>详情</b></a>
+		</div>		
+		<div class="detail-main clearfix">
+			<div class="main-detail">
+				<ul class="main-details storeInfo clearfix">
+					<li class="w-f">仓库类型：<span>{$info.type}</span></li>
+					<li>仓库面积：{$info.size}m&sup2;</li>
+					<li>仓库层高：{$info.height}m</li>
+					<li>联&nbsp;&nbsp;系&nbsp;&nbsp;人：<span>{$info.contacts}</span></li>
+					<li>联系电话：<span>{$info.mobile}</span></li>
+					<li class="w-f">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：{$info.address}</li>
+					<li class="w-f">简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介：<em>{$info.desc}</em></li>
+				</ul>	
+				<div class="mainD-imgs">
+					<foreach name="info.img" item="vo">
+						<a href="javascript:;"><img src="{$vo}"/></a>
+					</foreach>
+				</div>
+			</div>
+		</div>			
+	</div>		
+</div>	
+</block>

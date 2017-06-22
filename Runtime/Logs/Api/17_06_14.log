@@ -1,0 +1,1461 @@
+[ 2017-06-14T16:36:03+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHall/demand_hall
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0070s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`uid`,`cate_id`,`cate_name`,`goods_id`,`goods_name`,`goods_attr_id`,`goods_attr_name`,`num`,`contacts`,`mobile`,`mobile_show` FROM `ydw_demand` WHERE `status` NOT IN ('-1') ORDER BY id desc LIMIT 20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0070s ]
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_company_confirm` [ RunTime:0.0080s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3550 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3550 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 289 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 289 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 2807 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 2807 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 1044 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 1044 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3446 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3446 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3446 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3446 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3256 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3256 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3248 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3248 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 109 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 109 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-14T16:36:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHall/demand_hall
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`uid`,`cate_id`,`cate_name`,`goods_id`,`goods_name`,`goods_attr_id`,`goods_attr_name`,`num`,`contacts`,`mobile`,`mobile_show` FROM `ydw_demand` WHERE `status` NOT IN ('-1') ORDER BY id desc LIMIT 20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_company_confirm` [ RunTime:0.0020s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3550 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3550 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 289 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 289 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3501 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 2807 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 2807 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 1044 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 1044 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3446 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3446 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3446 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3446 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3256 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3256 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 3248 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 3248 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 99 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 101 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 103 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 109 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 109 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-14T16:36:17+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 512 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 512 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-14T16:36:40+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 512 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 512 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-14T16:36:44+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 512 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 512 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-14T16:38:20+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:38:21+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:38:38+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:38:39+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:38:40+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:38:40+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:38:40+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:38:40+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:38:40+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:38:41+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:38:41+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:38:41+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:38:41+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:12+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:12+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:12+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:12+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:14+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:14+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:14+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:14+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:14+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:15+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:33+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:33+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:33+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:33+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:34+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:34+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:34+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:39:34+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:40:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:40:52+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:40:52+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:40:53+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:40:53+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:40:53+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:40:54+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:40:54+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:40:54+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:40:54+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:40:55+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:40:55+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:40:55+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:40:55+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-06-14T16:41:01+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0000s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Model\CYsdtModel::getList(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 514 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 220 行.
+NOTIC: [2] Missing argument 4 for Api\Model\CYsdtModel::getList(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 514 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 220 行.
+NOTIC: [8] Undefined variable: keyword D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 223 行.
+NOTIC: [8] Undefined variable: goods_name D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 224 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`title`,goods_name as gn,create_time as time FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 10   [ RunTime:0.0000s ]
+
+[ 2017-06-14T16:41:17+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 3 for Api\Model\CYsdtModel::getList(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 514 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 220 行.
+NOTIC: [2] Missing argument 4 for Api\Model\CYsdtModel::getList(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 514 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 220 行.
+NOTIC: [8] Undefined variable: keyword D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 223 行.
+NOTIC: [8] Undefined variable: goods_name D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 224 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,goods_name as gn,create_time as time FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 10   [ RunTime:0.0000s ]
+
+[ 2017-06-14T16:41:18+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0000s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Model\CYsdtModel::getList(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 514 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 220 行.
+NOTIC: [2] Missing argument 4 for Api\Model\CYsdtModel::getList(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 514 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 220 行.
+NOTIC: [8] Undefined variable: keyword D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 223 行.
+NOTIC: [8] Undefined variable: goods_name D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 224 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,goods_name as gn,create_time as time FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 10   [ RunTime:0.0000s ]
+
+[ 2017-06-14T16:41:50+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+NOTIC: [2] Missing argument 3 for Api\Model\CYsdtModel::getList(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 514 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 220 行.
+NOTIC: [2] Missing argument 4 for Api\Model\CYsdtModel::getList(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 514 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 220 行.
+NOTIC: [8] Undefined variable: keyword D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 223 行.
+NOTIC: [8] Undefined variable: goods_name D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 224 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,goods_name as gn,create_time as time FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 10   [ RunTime:0.0000s ]
+
+[ 2017-06-14T16:41:51+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0070s ]
+NOTIC: [2] Missing argument 3 for Api\Model\CYsdtModel::getList(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 514 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 220 行.
+NOTIC: [2] Missing argument 4 for Api\Model\CYsdtModel::getList(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 514 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 220 行.
+NOTIC: [8] Undefined variable: keyword D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 223 行.
+NOTIC: [8] Undefined variable: goods_name D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 224 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,goods_name as gn,create_time as time FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 10   [ RunTime:0.0000s ]
+
+[ 2017-06-14T16:43:33+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0120s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T16:51:52+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T16:52:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0070s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T16:53:07+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T16:53:15+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 15 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T16:53:20+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 120 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 120 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:01:28+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:02:27+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:02:27+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+
+[ 2017-06-14T17:02:32+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 120 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 120 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:02:33+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 120 [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 120 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:02:41+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 120 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 120 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:03:02+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 120 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 120 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:03:28+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 120 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 120 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:03:35+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 120 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 120 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:04:37+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 120 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 120 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-06-14T17:06:18+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 15 [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:06:18+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:06:19+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:06:22+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:07:14+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:08:19+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:08:20+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:08:20+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-06-14T17:09:28+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:09:30+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:09:30+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-06-14T17:09:30+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:09:30+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-06-14T17:09:31+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:09:31+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-06-14T17:13:10+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`title`,`view`,create_time as time,description as des,`thumb`,goods_name as gn,`author`,`content` FROM `ydw_c_tthq_1` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_c_tthq_1` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > 621 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < 621 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-06-14T17:13:18+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0070s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 621 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 621 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-06-14T17:13:26+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/getMarketDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+SQL: UPDATE `ydw_c_ysdt` SET `view`=view+1 WHERE `id` = 21 [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,description as des,`thumb`,`author`,`content`,create_time as time FROM `ydw_c_ysdt` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/mydemand.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+    <title>我的行情</title>
+    <script type="text/javascript">
+        if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+        if (!isMobile()) location.href = "./bind.html";
+    </script>
+</head>
+<body>
+<header>
+    <a href="./persional.html" class="back_btn" >
+        <i class="icon_zjt iconfont"></i>返回
+    </a>
+    <span>我的投标</span>
+</header>
+<div class="nav_wp">
+    <ul class="clearfix tb_wp">
+        <li class="nav_item active-nav">全部</li>
+        <li class="nav_item">进行中</li>
+        <li class="nav_item">已选标</li>
+        <li class="nav_item">未中标</li>
+    </ul>
+</div>
+<div class="ydw_wp">
+
+    <div class="main_wp">
+        <div class="c_item">
+            <ul class="list_wp" id="data_wp1">
+                <!--<li>-->
+                    <!--<a href="" class="clearfix">-->
+                        <!--<div class="list_info">-->
+                        <!--<div class="left">-->
+                            <!--<p>-->
+                                <!--<label>品名 : </label><span class="goods_name light">柑橘</span>-->
+                            <!--</p>-->
+                            <!--<p>-->
+                                <!--<label>规格 : </label><span class="txt_span1 txt_span">打算的</span>-->
+                                <!--<label> 数量 : </label><span class="txt_span2 txt_span">995</span>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="right">-->
+                            <!--<i class="iconfont icon_shijian"></i><br>-->
+                            <!--&lt;!&ndash;<i class="iconfont icon_wancheng"></i><br>&ndash;&gt;-->
+                            <!--<span class="status">进行中</span>-->
+                            <!--&lt;!&ndash;<span class="status status_ok">交易完成</span>&ndash;&gt;-->
+                        <!--</div>-->
+                    <!--</div>-->
+                        <!--<div class="btm_info clearfix">-->
+                        <!--<label>发布时间 : </label><span>2017-02-52</span>-->
+                        <!--<span class="r_btn r">去托管</span>-->
+                    <!--</div>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="" class="clearfix">-->
+                        <!--<div class="list_info">-->
+                            <!--<div class="left">-->
+                                <!--<p>-->
+                                    <!--<label>品名 : </label><span class="goods_name light">柑橘</span>-->
+                                <!--</p>-->
+                                <!--<p>-->
+                                    <!--<label>规格 : </label><span class="txt_span1 txt_span">打算的</span>-->
+                                    <!--<label> 数量 : </label><span class="txt_span2 txt_span">995</span>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="right">-->
+                                <!--<i class="iconfont icon_tanhao"></i><br>-->
+                                <!--<span class="status status_no">未中标</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="btm_info clearfix">-->
+                            <!--<label>发布时间 : </label><span>2017-02-52</span>-->
+                            <!--<span class="r_btn r">去托管</span>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="" class="clearfix">-->
+                        <!--<div class="list_info">-->
+                            <!--<div class="left">-->
+                                <!--<p>-->
+                                    <!--<label>品名 : </label><span class="goods_name light">柑橘</span>-->
+                                <!--</p>-->
+                                <!--<p>-->
+                                    <!--<label>规格 : </label><span class="txt_span1 txt_span">打算的</span>-->
+                                    <!--<label> 数量 : </label><span class="txt_span2 txt_span">995</span>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="right">-->
+                                <!--<i class="iconfont icon_biaozhu"></i><br>-->
+                                <!--<span class="status status_no">交易完成</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="btm_info clearfix">-->
+                            <!--<label>发布时间 : </label><span>2017-02-52</span>-->
+                            <!--<span class="r_btn r">去托管</span>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="c_item">
+            <ul class="list_wp" id="data_wp2">
+            </ul>
+        </div>
+        <div class="c_item">
+            <ul class="list_wp" id="data_wp3">
+            </ul>
+        </div>
+        <div class="c_item">
+            <ul class="list_wp" id="data_wp4">
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/load.js"></script>
+<script type="text/javascript">
+    var data = {
+        status:'',
+        num:10
+    };
+    $(".list_wp").each(function () {
+        $(this)[0].scrolling = false;
+        appendLoad($(this));
+    })
+    var nav = $(".nav_item");
+    rule.scrollEvents = function (wp) {
+        var j = $(".active-nav").index() + 1;
+        var dataWp = wp || $("#data_wp" +j);
+        if (dataWp[0].scrolling){
+            return;
+        }
+        dataWp[0].scrolling = true;
+        var lastId = dataWp.children(":last").attr("data-id");
+        data.minId = lastId || "";
+        $.postT(rule.root + 'AppUser/user_tender' ,data ,function (req) {
+            var code = req.code;
+            var str1  = '';
+            if (code == 1){
+                var datas = req.data;
+                var datasL = datas.length;
+                for (var i = 0; i < datasL; i++){
+                    var createTime = datas[i].create_time,
+                        attrName = datas[i].goods_attr_name,
+                        goodsName = datas[i].goods_name,
+                        id = datas[i].id,
+                        demandId = datas[i].demand_id,
+                        num = datas[i].num,
+                        status = datas[i].status,//'投标状态 0：招标中，1：中标，2：未中标,
+                        demandStatus = datas[i].demand_status;
+                    createTime = new Date(createTime*1000).format("yyyy-MM-dd");
+                        str1 += '<li data-id="'+ id +'"><a href="./tenderDetail.html?id='+demandId+'"><div class="list_info clearfix"><div class="left"><p><label>品名 : </label><span class="goods_name light">'+ goodsName +'</span></p><p><label>规格 : </label><span class="txt_span1 txt_span">'+ attrName +'</span><label> 数量 : </label><span class="txt_span2 txt_span">'+ num +'</span></p></div><div class="right">';
+                    //先判断status  投标状态 0：招标中，1：中标，2：未中标',
+                    if (status == 0){
+                        str1 += ' <i class="iconfont icon_shijian"></i><br><span class="status">进行中</span></div></div><div class="btm_info clearfix"><label>发布时间 : </label><span>' + createTime + '</span></div></a></li>';
+                    }else if (status == 1){
+                        var statusTxt = '';
+                        //中标后判断这条采购信息的状态
+                        switch (demandStatus){
+                            case '1':
+                                //雇主已选标(中标，等待支付）
+                                statusTxt = '中标等待支付';
+                                break;
+                            case '2':
+                                //已支付托管资金（已付托管资金）
+                                statusTxt = '已付托管资金';
+                                break;
+                            case '3':
+                                //已发货
+                                statusTxt = '待签收';
+                                break;
+                            case '4':
+                                statusTxt = '交易完成';
+                                //已签收
+                                break;
+                            default:
+                                break;
+                        }
+                        str1 += ' <i class="iconfont icon_biaozhu"></i><br><span class="status status_ok">'+ statusTxt +'</span></div></div><div class="btm_info clearfix"><label>发布时间 : </label><span>' + createTime + '</span></div></a></li>';
+                    }else if (status == 2){
+                        str1 += '<i class="iconfont icon_tanhao"></i><br><span class="status status_no">未中标</span></div></div><div class="btm_info clearfix"><label>发布时间 : </label><span>' + createTime + '</span></div></a></li>';
+                    }
+                }
+                setTimeout(function () {
+                    dataWp.append(str1);
+                    dataWp[0].hasload = true;
+                    if (datasL < data.num){
+                        dataWp[0].scrolling = true;
+                        dataWp.next("div").text("没有更多数据");
+                    }
+                    dataWp[0].scrolling = false;
+                } ,300)
+            }else if (code == 103){
+                var hrefUrl = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+                rule.showMsg(1 , "该账号已在其他地方登陆,请重新登录" , 2000 , hrefUrl);
+            }else if (code == 0){
+                dataWp[0].scrolling = true;
+                dataWp.next("div").text("没有更多数据");
+            }
+        })
+    }
+    nav.click(function (e){
+        var _this = $(this);
+        var index = _this.index();
+        _this.addClass('active-nav').siblings("li").removeClass("active-nav");
+        $(window).scrollTop(0);
+        $(".c_item").hide().eq(index).show();
+        data.status = index;
+        if (index == 0) {
+            data.status = '';
+        }
+        var i = index + 1;
+        var wpObj = $("#data_wp" + i);
+        if (wpObj[0].hasload) return;
+        rule.scrollEvents(wpObj);
+    });
+    //初始化页面数据;
+    rule.scrollEvents();
+</script>
+</body>
+</html>

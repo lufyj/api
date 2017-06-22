@@ -1,0 +1,30 @@
+<extend name="./base" />
+<block name="style">
+<link rel="stylesheet" type="text/css" href="__HOME__/goods/css/drugdetails.css" />
+<link rel="stylesheet" href="__HOME__/dlDS/css/titleDSG.css" />
+</block>
+<block name="body">
+<div class="demand-detail">		
+	<include file="Public/common_nav" />
+	<div class="detail-middle">
+		<div class="detail-bread m-border">
+			<b>当前位置：</b>&nbsp;
+			<a href="/">首页</a>&nbsp;&gt;&nbsp;
+			<a href="{:U('goods/market')}">药材行情</a>&nbsp;&gt;&nbsp;
+			<a href="javascript:;"><b>正文</b></a>
+			<a href="{:U('goods/detail',array('id'=>$info['goods_id']))}" class="r look_detail">查看更多内容</a>
+		</div>			
+		<div class="marketInfo market-detail">
+			<h2>{$info.title}</h2>
+			<div class="m-first">
+				来源：{$info.author|default="药都网"}&nbsp;&nbsp;浏览次数：{$info.view}&nbsp;&nbsp;时间：{$info.update_time|time_format}
+			</div>
+			<p class="m-contain">{$info.content}</p>
+		</div>	
+		<div class="m-page clearfix">
+			<p><span>上一篇：</span><notempty name="lastInfo"><a href="/goods/market_h/id/{$lastInfo.id}">{$lastInfo.title}</a><else/>暂无内容</notempty></p>
+			<p><span>下一篇：</span><notempty name="nextInfo"><a href="/goods/market_h/id/{$nextInfo.id}">{$nextInfo.title}</a><else/>暂无内容</notempty></p>
+		</div>
+	</div>
+</div>
+</block>

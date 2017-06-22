@@ -1,0 +1,316 @@
+/***代码：Supply->publish PC页面：供应管理 里的‘发布供应’******/
+/***代码：Demand->publish PC页面：求购管理 里的‘发布求购’******/
+.warn{
+	display: none;
+	font-weight: normal;
+	color: #e6292c;
+	font-size: 14px;
+}
+.warn i{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url(../../images/tanhao.png) no-repeat 0 0;
+	position: relative;
+	top:3px;
+	margin-right: 3px;
+}
+/*发布求购*/
+.publish .publish-ul {
+	font-size: 14px;
+}
+
+.publish .publish-ul>li {
+	margin-bottom: 20px;
+}
+
+.publish .publish-ul>li.detail-li{
+	margin-top: 85px;
+}
+.publish-ul>li>span {
+	display: inline-block;
+	width: 100px;
+	padding-left: 10px;
+	text-align: right;
+	margin-right: 5px;
+}
+
+.publish-ul>li>span span {
+	color: #e6292c;
+	position: relative;
+	top: 3px;
+}
+
+.publish-ul .drug-name,
+.publish textarea,
+.publish input,
+.publish select {
+	border: 1px solid #ccc;
+}
+
+.publish-ul .drug-name {
+	display: inline-block;
+	width: 140px;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 10px;
+	vertical-align: middle;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.publish-ul .drug-name:before {
+	content: "";
+	border: 3px solid transparent;
+	border-top-color: #444;
+	border-top-width: 6px;
+	position: absolute;
+	right: 5px;
+	top: 15px;
+}
+
+.publish-ul .drug-name>span {
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+}
+
+.publish select {
+	width: 162px;
+	padding: 7px 0;
+	text-indent:6px;
+	color:#444;
+}
+.publish select option{
+	text-indent: 6px;
+}
+.publish-ul .place-div {
+	margin: 10px 0 0 120px;
+	display: none;
+}
+
+.publish-ul .ad-div {
+	margin: 10px 0 0 89px;
+}
+
+.publish textarea,
+.publish input {
+	vertical-align: middle;
+}
+
+.publish textarea {
+	width: 510px;
+	padding: 8px;
+	height: 110px;
+}
+.price_li{
+	height: 37px;
+	line-height: 37px;
+}
+.num_input,.price_input{
+	width: 124px !important;
+}
+span#num_wp{
+	width:auto;
+}
+#num_wp,#price_wp{
+	display: none;
+}
+.publish input {
+	width: 140px;
+	height: 28px;
+	line-height: 28px;
+	padding: 0 10px;
+}
+
+.publish input[type="radio"] {
+	width: 16px;
+	margin-right: 5px;
+	border: none;
+}
+
+.publish-ul label {
+	padding-right: 10px;
+}
+
+.publish-ul .alert {
+	width: 600px;
+	height: 429px;
+	border: 1px solid #ccc;
+	position: absolute;
+	background-color: #F8F8F8;
+	top: 100%;
+	left: -1px;
+	display: none;
+	z-index: 1000;
+}
+
+.publish-ul .alert>ul {
+	width: 160px;
+	height: 429px;
+	background-color: #fff;
+	border-right: 1px solid #ccc;
+}
+
+.publish-ul .classify-list>li {
+	height: 32px;
+	line-height: 32px;
+	border-top: 1px dashed #ccc;
+	cursor: pointer;
+	text-align: left;
+	padding-left: 40px;
+}
+
+.publish-ul .classify-list>li:first-child {
+	border-top: none;
+}
+
+.publish-ul .classify-list>li.click {
+	width: 121px;
+	background-color: #F8F8F8 !important;
+}
+
+.publish-ul .classify-list>li:hover {
+	background-color: #F8F8F8;
+}
+
+.publish-ul .drug-list {
+	position: absolute;
+	left: 160px;
+	width: 400px;
+	height: 429px;
+	top: 0;
+	padding: 0 20px;
+	display: none;
+	overflow-y: auto;
+}
+
+.publish-ul div.drug-list {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.publish-ul div.drug-list span {
+	margin-right: 5px;
+}
+
+.publish-ul div.drug-list input[type="submit"],
+.publish-ul div.drug-list input[type="button"] {
+	width: 78px;
+	height: 38px;
+	background-color: #E62B2E;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+.publish-ul .drug-list>li {
+	float: left;
+	padding: 0 5px;
+}
+
+.publish-ul .drug-list>li:hover {
+	color: #E62B2E;
+}
+/*关于发布供应的上传图片的问题*/
+.publish-supply {
+	position: relative;
+}
+.upload-btn{
+	position: absolute;
+	top: 662px;
+	left: 179px;
+}
+#up-spy{
+	height: 90px;
+	width: 90px;
+	overflow: hidden;
+	position: absolute;
+	font-size: 50px;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	padding: 0;
+}
+.upload-btn img{
+	border: 1px solid #ccc;
+	
+}
+#spy{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	position: absolute;
+	top: 662px;
+	left: 179px;
+}
+.spy{
+	left: 280px !important;
+}
+#spy>li{
+	float: left;
+	margin-right: 11px;
+	width: 90px;
+	position: relative;
+	font-size: 0;
+}
+#spy>li>img{
+	width:90px;
+	height: 90px;
+	border: 1px solid #ccc;
+}
+#spy .del{
+	width: 90px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 16px;
+	position: absolute;
+	text-align: center;
+	bottom: 0px;
+	background: rgb(0,0,0);
+    background: rgba(0, 0, 0, .5);
+    filter: "alpha(opacity=50)";
+    filter: alpha(opacity=50);
+    cursor: pointer;
+    left: 1px;
+}
+#spy .del>span{
+	color: #fff;
+}
+/*关于发布供应的上传图片的问题结束*/
+.publish .publish-ul>li input[type="text"] {
+	width: 260px;
+	height: 35px;
+	line-height: 35px\9;
+}
+
+.publish-submit {
+	padding-left: 120px;
+}
+
+.publish-submit input {
+	width: 70px;
+	height: 40px;
+	line-height: 40px;
+	background: #E62B2E;
+	color: #fff;
+	font-size: 14px;
+	border: none;
+	outline: none;
+	/*border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;*/
+	cursor: pointer;
+}
+
+.publish-submit input:hover {
+	background:rgb(255,10,0);
+	background: rgba(255, 10, 0, 0.8);
+	filter: "alpha(opacity=80)";
+	filter: alpha(opacity=80);
+	*zoom: 1;
+	
+}
+/*上传图片结束*/

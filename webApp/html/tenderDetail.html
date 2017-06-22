@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>药都网--发布供应</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" href="../css/tender.css" />
+		<script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+            if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+		</script>
+	</head>
+	<body>
+		<header>
+			<a href="javascript:;" class="back_btn" id="back_btn">
+				<i class="icon_zjt iconfont"></i>返回
+			</a>
+			<span>投标信息</span>
+		</header>
+		<div class="ydw_wp">
+			<section>
+				<p class="ten-time">发布时间：<span id="ten-time"></span> </p>
+				<ul class="tender">
+					<li>
+						<span>价 格</span>：
+						<input type="tel" id="ten-price" readonly/>
+					</li>
+					<li>
+						<span>品 名</span>：
+						<input type="text" id="ten-name" readonly/>
+					</li>
+					<li>
+						<span>规 格</span>：
+						<input type="text" id="ten-norms" readonly/>
+					</li>
+					<li>
+						<span>数 量</span>：
+						<input type="tel" id="ten-num" readonly/>
+					</li>
+					<li class="ten-name">
+						<span class="sup-l2">联系人</span>：
+						<input type="text" name="contacts" id="ten-contact" readonly/>
+					</li>
+					<li class="ten-tel">
+						<span>手 机</span>：
+						<input type="tel" id="ten-mobile" readonly/>
+					</li>
+					<li class="clearfix ten-picture">
+						<span class="l">图 片&nbsp;&nbsp;<em>：</em></span>
+						<div class="ten-imgs">
+						</div>
+					</li>
+					<li class="ten-detail">
+						<span>详细说明</span>：
+						<textarea id="ten-detail" readonly></textarea>
+					</li>						
+				</ul>
+			</section>
+		</div>
+		<script src="../js/form.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var tenObj = {demand_id:rule.getRequest().id}
+			$(function(){
+				//提交表单
+				$.postT(rule.root+'AppUser/tender_details' , tenObj , function (req){
+					if(req.code == 103){
+						rule.reLogin();
+					}
+					if(req.code == 1){	
+						var data = req.data;
+						var demand = data.demand;
+						var imgs = data.imgs;
+						var time = new Date(data.create_time*1000).format("yyyy-MM-dd hh:mm");
+						$('#ten-time').text(time);
+						$('#ten-price').val(data.price);//价格
+						$('#ten-name').val(demand.goods_name);//品名
+						$('#ten-norms').val(demand.goods_attr_name);//规格
+						$('#ten-num').val(demand.num);//数量
+						$('#ten-contact').val(data.contacts);//联系人
+						$('#ten-mobile').val(data.mobile);//手机号
+						$('#ten-detail').val(data.remarks);//详细说明
+						//图片
+						if(imgs){
+							for(var i=0,l=imgs.length;i<l;i++){
+								$('.ten-imgs').append('<img src="'+imgs[i]+'">');
+							}
+						}else{
+							$('.ten-imgs').html('');
+						}
+					}
+				});
+			})
+		</script>
+	</body>
+</html>
+

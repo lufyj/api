@@ -1,0 +1,3 @@
+<foreach name="res" item="vo">
+<a href="<?php echo U($module.'/lst',array('cate_id'=>$cate_id,'id'=>$vo['id'])) ?>" <if condition="$vo.id eq $gid">class="active"</if>>{$vo.goods_name}</a>
+</foreach>

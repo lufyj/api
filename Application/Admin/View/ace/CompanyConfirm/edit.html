@@ -1,0 +1,416 @@
+<extend name="Public/base" />
+<block name='style'>
+	<link rel="stylesheet" type="text/css" href="__ADMIN__/css/confirm.css" />
+	<style type="text/css">
+		.tab_div {
+			display: none;
+		}
+		
+		.tab_div1 {
+			display: block;
+		}
+		.tab-content{
+			padding: 10px 0;
+		}
+	</style>
+</block>
+<block name='navi'>
+	<li>认证管理</li>
+	<li>认证审核</li>
+</block>
+<block name="body">
+	<!--弹框-->
+	<div class="img-alert clearfix">
+		<div class="img-wp">
+			<img src="" alt="" class="original" />
+		</div>
+		<span class="close-btn"></span>
+	</div>
+	<!--弹框-->
+	<div class="page-header">
+		<h1>审核认证申请信息</h1>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			
+		</div>
+		<div class="col-xs-12">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a data-toggle="tab" href="#tab1" class="nav_tab"><i class="green ace-icon fa fa-home bigger-120"></i>认证信息</a>
+				</li>
+				<li>
+					<a data-toggle="tab" href="#tab1" class="nav_tab"><i class="green ace-icon fa fa-home bigger-120"></i>二级域名审核</a>
+				</li>
+			</ul>
+			<div class="ui-jqgrid ">
+				<!--<div class="widget-box">-->
+					<div class="widget-body tab_div tab_div1 tab-content">
+						<div class="widget-header">
+							<h4 class="widget-title">
+								<i class="ace-icon fa  fa-pencil-square-o"></i>企业信息
+								</h4>
+						</div>
+						<div class="widget-main">
+							<!--内容-->
+							<div class="form-group hyxqcontent">
+								<input type="hidden" name="uid" value="{$company.uid}">
+								<ul class="list-unstyled lists clearfix">
+									<li class="clearfix col-sm-6">
+										<span class="col-sm-4 no-padding-right bf-s">企业名称：</span>
+										<span class="col-sm-8">{$info.name}</span>
+									</li>
+									<li class="clearfix col-sm-6">
+										<span class="col-sm-4 no-padding-right bf-s">营业执照所在地：</span>
+										<span class="col-sm-8">{$info.license_address}</span>
+									</li>
+									<li class="clearfix col-sm-6">
+										<span class="col-sm-4 no-padding-right bf-s">营业期限：</span>
+										<span class="col-sm-8">
+												<if condition="$info.license_continue neq '9999'">
+													{$info.begin} 至 {$info.end}
+												<else/>
+													长期
+												</if>
+											</span>
+									</li>
+									<li class="clearfix col-sm-6">
+										<span class="col-sm-4  no-padding-right bf-s">常用地址：</span>
+										<span class="col-sm-8">{$info.address}</span>
+									</li>
+									<li class="clearfix col-sm-6">
+										<span class="col-sm-4  no-padding-right bf-s">联系电话：</span>
+										<span class="col-sm-8">{$info.mobile}</span>
+									</li>
+									<li class="clearfix col-sm-6">
+										<span class="col-sm-4 no-padding-right bf-s">营业范围：</span>
+										<span class="col-sm-8">{$info.business_scope}</span>
+									</li>
+									<li class="clearfix col-sm-12">
+										<span class="col-sm-2 no-padding-right bf-s">注册资金：</span>
+										<span class="col-sm-10">{$info.registered_capital}</span>
+									</li>
+									<if condition="$info.certificate_type eq '2'">
+										<li class="clearfix col-sm-6">
+											<span class="col-sm-4 no-padding-right bf-s">执照：</span>
+											<span class="col-sm-8">
+													<img src="{$info.comprehensive_license}" class="img"/>
+													<input type="hidden" name="" value="{$info.comprehensive_license_base}">
+												</span>
+										</li>
+										<li class="clearfix col-sm-6">
+											<span class="col-sm-4 no-padding-right bf-s">统一社会信用代码：</span>
+											<span class="col-sm-8">{$info.social_credit_code}</span>
+										</li>
+									</if>
+									<if condition="$info.certificate_type eq '1'">
+										<li class="clearfix col-sm-6">
+											<span class="col-sm-4 no-padding-right bf-s">营业执照：</span>
+											<span class="col-sm-8">
+													<img src="{$info.license_img}" class="img"/>
+													<input type="hidden" name="" value="{$info.license_img_base}">
+												</span>
+										</li>
+										<li class="clearfix col-sm-6">
+											<span class="col-sm-4 no-padding-right bf-s">营业执照注册号：</span>
+											<span class="col-sm-8">{$info.license_number}</span>
+										</li>
+										<li class="clearfix col-sm-6" style="clear: both;">
+											<span class="col-sm-4 no-padding-right bf-s">组织机构代码证图片：</span>
+											<span class="col-sm-8">
+													<img src="{$info.organization_code_certificate}" class="img" />
+													<input type="hidden"  value="{$info.organization_code_certificate_base}">
+												</span>
+										</li>
+										<li class="clearfix col-sm-6">
+											<span class="col-sm-4 no-padding-right bf-s">组织机构代码：</span>
+											<span class="col-sm-8">{$info.organization_code}</span>
+										</li>
+									</if>
+								</ul>
+							</div>
+							<!--内容-->
+						</div>
+						<!--header-->
+						<div class="widget-header">
+							<h4 class="widget-title">
+									<i class="ace-icon fa  fa-pencil-square-o"></i>账户信息
+								</h4>
+						</div>
+
+						<!--header-->
+						<!--内容-->
+						<div class="widget-main">
+							<div class="form-group hyxqcontent">
+								<input type="hidden" name="uid" value="{$company.uid}">
+								<ul class="list-unstyled lists">
+									<li class="clearfix">
+										<span class="col-sm-2 no-padding-right bf-s">银行开户名：</span>
+										<span class="col-sm-8">{$info.count_name}</span>
+									</li>
+									<li class="clearfix">
+										<span class="col-sm-2 no-padding-right bf-s">开户银行：</span>
+										<span class="col-sm-8">{$info.bank_name}</span>
+									</li>
+									<li class="clearfix">
+										<span class="col-sm-2 no-padding-right bf-s">开户行所在城市：</span>
+										<span class="col-sm-8">{$info.bank_city}</span>
+									</li>
+									<li class="clearfix">
+										<span class="col-sm-2  no-padding-right bf-s">开户行支行名称：</span>
+										<span class="col-sm-8">{$info.bank_branch_name}</span>
+									</li>
+									<li class="clearfix">
+										<span class="col-sm-2  no-padding-right bf-s">企业对公账户：</span>
+										<span class="col-sm-8">{$info.count_number}</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--内容-->
+						<!--header-->
+						<if condition="$info.confirm_status eq '2'">
+							<div class="widget-header" style="border-top:1px solid rgb(204, 204, 204)">
+								<h4 class="widget-title">
+									<i class="ace-icon fa  fa-pencil-square-o"></i>审核
+								</h4>
+							</div>
+							<!--header-->
+							<!--内容-->
+							<div class="widget-main">
+								<div class="form-group hyxqcontent">
+									<ul class="list-unstyled">
+										<li class="clearfix" style="margin-bottom: 20px;">
+											<span class="col-sm-2 no-padding-right bf-s">审核：</span>
+											<span class="col-sm-10" for="form-field-1">
+												<label>
+                                            <input name="form-field-radio" type="radio" class="ace sh_radio" value="3"  checked="checked">
+                                            <span class="lbl">审核通过</span>
+											</label> &nbsp;&nbsp;&nbsp;&nbsp;
+											<label>
+                                            <input name="form-field-radio" type="radio" class="ace sh_radio" value="4" >
+                                            <span class="lbl">审核不通过</span>
+                                        		</label>
+											</span>
+										</li>
+										<li class="clearfix reason1" style="display: none;">
+											<span class="col-sm-2 hyxqcontent-left3 no-padding-right bf-s">审核理由：</span>
+											<span class="col-sm-5"><textarea class="form-control limited" name="audit_reason"  id="remark" maxlength="50"></textarea></span>
+											<span class="col-sm-5 remark" for="form-field-1">注:审核不通过时候，必须填写审核理由。</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!--内容-->
+							<div class="clearfix form-actions">
+								<div class="col-md-offset-3 col-md-9">
+									<a href="javascript:void(0);" id="mysub" data-id="{$info.id}" class="btn btn-primary" style="margin-right:30px;">
+										<i class="ace-icon fa fa-check"></i> 提交
+									</a>
+									<a href="javascript:history.back()" class="btn">
+										<i class="ace-icon fa fa-arrow-left"></i> 返回
+									</a>
+								</div>
+							</div>
+						</if>
+						<if condition="$info.confirm_status eq '4'">
+							<!--客户正在修改，暂无法操作-->
+							<div class="form-group hyxqcontent">
+								<p style="text-align: center;font-size: 16px;color: #f00;">客户正在修改申请资料，您暂时无法进行审核操作</p>
+							</div>
+						</if>
+					</div>
+					<div class="widget-body tab_div tab-content">
+						<if condition="$info.confirm_status eq 3">
+							<if condition="$domain.status neq '4'">
+								<div class="widget-main">
+									<div class="form-group hyxqcontent">
+										<div>
+											<span class="col-sm-2 no-padding-right bf-s">二级域名：</span>
+											<span class="col-sm-8" style="color: #f00; font-size: 16px;">{$domain.domain}</span>
+										</div>
+									</div>
+								</div>
+							</if>
+							<div class="widget-main">
+								<div class="form-group hyxqcontent">
+									<ul class="list-unstyled">
+										<li class="clearfix" style="margin-bottom: 20px;">
+											<span class="col-sm-2 no-padding-right bf-s">审核：</span>
+											<if condition="$domain.status eq '1'">
+												<span class="col-sm-10" for="form-field-1">
+													<label>
+														<input name="domainStatus" type="radio" class="ace" value="2"  checked="checked">
+														<span class="lbl">审核通过</span>
+												</label> &nbsp;&nbsp;&nbsp;&nbsp;
+												<label>
+														<input name="domainStatus" type="radio" class="ace" value="3" >
+														<span class="lbl">审核不通过</span>
+													</label>
+												</span>
+											</if>
+											<if condition="$domain.status eq '2'">
+												<span class="col-sm-8" style="color: #f00; font-size: 16px;">该域名已经通过审核</span>
+											</if>
+											<if condition="$domain.status eq '3'">
+												<span class="col-sm-8" style="color: #f00; font-size: 16px;">该域名未通过审核，等待用户编辑后再次提交申请</span>
+											</if>
+											<if condition="$domain.status eq '4'">
+												<span class="col-sm-8" style="color: #f00; font-size: 16px;">该用户尚未提交二级域名审核</span>
+											</if>
+										</li>
+										<if condition="$domain.status eq '1'">
+											<li class="clearfix reason2" style="display: none;">
+												<span class="col-sm-2 hyxqcontent-left3 no-padding-right bf-s">审核未通过原因：</span>
+												<span class="col-sm-5"><textarea class="form-control limited"  name="domainremark" id="domainremark" maxlength="50">{$domain.domain_remark}</textarea></span>
+												<span class="col-sm-5 remark" for="form-field-1">注:审核不通过时候，必须填写审核理由。</span>
+											</li>
+										</if>
+									</ul>
+								</div>
+							</div>
+							<if condition="$domain.status eq '1'">
+								<div class="clearfix form-actions">
+									<div class="col-md-offset-3 col-md-9">
+										<a href="javascript:void(0);" id="domain" data-id="{$info.id}" class="btn btn-primary" style="margin-right:30px;">
+											<i class="ace-icon fa fa-check"></i> 提交
+										</a>
+										<a href="javascript:history.back()" class="btn">
+											<i class="ace-icon fa fa-arrow-left"></i> 返回
+										</a>
+									</div>
+								</div>
+							</if>
+						</if>
+					</div>
+				<!--</div>-->
+			</div>
+			<!-- PAGE CONTENT ENDS -->
+		</div>
+	</div>
+</block>
+
+<block name="script">
+	<script type="text/javascript">
+		//导航高亮	
+		$(".nav_tab").click(function() {
+			var self = $(this);
+			var index = self.parent("li").index();
+			$(".tab_div").hide();
+			$(".tab_div").eq(index).show();
+		});
+		$(".sh_radio").change(function (){
+			if ($(".sh_radio:checked").val() == 4){
+				$(".reason1").show();
+			}else{
+				$(".reason1").hide();
+			}
+		});
+		$("input[name='domainStatus']").change(function (){
+			if ($("input[name='domainStatus']:checked").val() == 3){
+				$(".reason2").show();
+			}else{
+				$(".reason2").hide();
+			}
+		});
+		$("#mysub").click(function() {
+			var id = $(this).attr('data-id');
+			if(id > 0) {
+				var confirmStatus = $("input[name='form-field-radio']:checked").val();
+				if(confirmStatus != 3 && confirmStatus != 4) {
+					alert('审核操作失败');
+					return false;
+				}
+
+				var remark = $("#remark").val();
+				if(confirmStatus == 4 && remark == '') {
+					alert('请务必填写审核未通过原因');
+					return false;
+				}
+				var params = {
+					remark: remark,
+					confirmStatus: confirmStatus,
+					id: id
+				}
+				$.post("{:U('CompanyConfirm/subCheck')}", params, function(data) {
+					if(data.status == 1) {
+						alert('提交成功');
+						window.location.href = data.path;
+					} else {
+						alert('提交失败');
+						return false;
+					}
+				});
+			} else {
+				alert('审核操作失败');
+				return false;
+			}
+		});
+
+		//二级域名审核结果提交
+		$("#domain").click(function() {
+			var id = $(this).attr('data-id');
+			if(id > 0) {
+				var domainStatus = $("input[name='domainStatus']:checked").val();
+				if(domainStatus != 2 && domainStatus != 3) {
+					alert('审核操作失败');
+					return false;
+				}
+
+				var domainremark = $("#domainremark").val();
+				if(domainStatus == 3 && domainremark == '') {
+					alert('请务必填写审核未通过原因');
+					return false;
+				}
+				var params = {
+					domainremark: domainremark,
+					domainStatus: domainStatus,
+					id: id
+				}
+				$.post("{:U('CompanyConfirm/ajaxGetDomainStatus')}", params, function(data) {
+					if(data.status == 1) {
+						alert('提交成功');
+						window.location.href = data.path;
+					} else {
+						alert('提交失败');
+						return false;
+					}
+				});
+			} else {
+				alert('审核操作失败');
+				return false;
+			}
+		});
+
+		var imgAlert = $(".img-alert"),
+			original = $(".original");
+		$(".close-btn").click(function() {
+			imgAlert.hide();
+			original.attr("src", "");
+		});
+		$(".img").click(function() {
+			imgAlert.show();
+			var src = $(this).siblings('input').val();
+			original.attr("src", src);
+			//关闭按钮定位
+			positionClose();
+		});
+
+		$(window).resize(function() {
+			positionClose();
+		});
+
+		function positionClose() {
+			var div = document.getElementsByClassName("img-wp")[0];
+			var windowWidth = document.documentElement.clientWidth,
+				windowHeight = document.documentElement.clientHeight,
+				right = windowWidth - div.offsetLeft - div.offsetWidth,
+				top = windowHeight - div.offsetTop - div.offsetHeight;
+			$(".close-btn").css({
+				"right": right,
+				"top": top
+			})
+		}
+		highlight_subnav("{:U('CompanyConfirm/index')}");
+	</script>
+</block>

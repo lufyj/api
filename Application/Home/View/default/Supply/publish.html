@@ -1,0 +1,263 @@
+<extend name="./base" />
+<block name="style">
+	<!--样式自定义开始-->
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/publishDS.css" />
+	<script type="text/javascript">
+		var catObj = {$cateJson};
+	</script>
+	<style type="text/css">
+		.publish-submit input {
+			behavior: url(__CSS__/ie-css3.htc);
+		}
+	</style>
+	<!--样式自定义结束-->
+</block>
+<block name="body">
+	<!--主页内容开始-->
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+				<a href="javascript:;">供应管理</a>&nbsp;>&nbsp;
+				<a href="javascript:;">发布供应</a>
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />
+			<!--关于用户的中的发布供应和发布求购问题-->
+			<div class="publish-supply publish right l">
+				<form id="submit_form" target='frameFile' enctype="multipart/form-data">
+					<!--<div class="publishs">
+						<ul class="publish-nav clearfix">
+							<li class="active">发布供应</li>
+						</ul>
+					</div>-->
+					<div class="title">
+						<span class="active">发布供应</span>
+					</div>
+					<!--发布求购-->
+					<div class="right">
+						<ul class="publish-ul">
+							<li>
+								<span><span>* </span>药材名称：</span>
+								<div class="drug-name" id="select_cate">
+									<span>请选择</span>
+									<div class="alert">
+										<ul class="classify-list">
+											<li>
+												<span data-param="-1">自定义类</span>
+												<div class="drug-list clearfix">
+													<label for=""><span>药材名字:</span><input type="text" name="custom_name"></label>
+													<br>
+													<b class="warn_custom warn"><i></i></b><br />
+													<input type="button" id="custom_btn" value="确定" class="">
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<b class="warn_drug warn"><i></i></b>
+							</li>
+							<li>
+								<span>规格：</span>
+								<select id="select_spec">
+									<option value="-1" selected="selected">请选择</option>
+								</select>
+							</li>
+							<li class="price_li">
+								<span><span>* </span>数量：</span>
+								<label><input type="radio" name="num_sel" value="2" checked="checked" />大货</label>
+								<label><input type="radio" name="num_sel" value="1" />数量</label>
+								<span id="num_wp">
+									<input type="text" name="num" placeholder="请输入药材的数量..." class="num_input"/>&nbsp;&nbsp;公斤
+									<b class="warn_num warn"><i></i></b>
+								</span>
+								<!--<input type="text" name="num" placeholder="请输入药材的数量..." class="num_input" />&nbsp;&nbsp;公斤
+								<b class="warn_num warn"><i></i></b>-->
+							</li>
+							<!--图片路径-->
+							<input type="hidden" name='img' value="" class="img">
+							<li class="price_li">
+								<span><span>* </span>价格：</span>
+								<label><input type="radio" name="price_type" value="2" checked="checked" />面议</label>
+								<label><input type="radio" name="price_type" value="1" />单价</label>
+								<span id="price_wp">
+									<input type="text" name="price"  class="price_input"/>&nbsp;&nbsp;元/公斤
+								<b class="warn_price warn"><i></i></b>
+								</span>
+							</li>
+							<li>
+								<span><span>* </span>产地：</span>
+								<label>
+                                    <input type="radio" name="origin_type" value="1" checked="checked" />较广</label>
+								<label>
+                                    <input type="radio" name="origin_type" value="2"/>进口</label>
+								<label>
+                                    <input type="radio" name="origin_type"  value="3"/>省市县</label>
+								<div class="place-div">
+									<select id="prov_select" name="prov_select"></select>
+									<select id="city_select" name="city_select"></select>
+									<select id="area_select" name="area_select"></select>
+									<b class="warn_place warn"><i></i>请选择地区</b>
+								</div>
+							</li>
+							<li>
+								<span><span>* </span>联系人：</span>
+								<input type="text" name="contacts" value="{:session('user_sign.realname')}" placeholder="请输入您的姓名..." />
+								<b class="warn_contacts warn"><i></i></b>
+							</li>
+							<li>
+								<span><span>* </span>手机：</span>
+								<input type="text" name="mobile" value="{:session('user_sign.mobile')}" maxlength="11" placeholder="请输入您的手机号..." />
+								<b class="warn_mobile warn"><i></i></b>
+							</li>
+							<li>
+								<span><span></span>Q Q：</span>
+								<input type="text" name="qq" placeholder="请输入您的QQ号..." />
+								<b class="warn_qq warn"><i></i></b>
+							</li>
+							<li>
+								<span><span>* </span>货源所在地：</span>
+								<select id="supply_prvo" name="supply_prvo" class="supply_prvo"></select>
+								<select id="supply_city" name="supply_city" class="supply_city"></select>
+								<select id="supply_area_select" name="supply_area_select" class="supply_area_select"></select>
+								<b class="warn_spy warn"><i></i></b>
+							</li>
+							<li>
+								<span>详细地址：</span>
+								<input type="text" name="supply_details" placeholder="请输入您的详细地址">
+								<b class="warn_spy_details warn"><i></i></b>
+							</li>
+							<li>
+								<span>选择图片：</span>
+							</li>
+							<li class="detail-li">
+								<span><span>* </span>详情介绍：</span>
+								<textarea name="details"></textarea>
+								<b class="warn_details warn"><i></i></b>
+							</li>
+
+						</ul>
+						<div class="publish-submit">
+							<input type="button" value="提交" id="submit_btn" />
+						</div>
+					</div>
+					<!--发布求购结束-->
+					<notempty name="cates">
+						<input type="hidden" name="cate_id" value="{$cates[0].id}" />
+						<input type="hidden" name="cate_name" value="{$cates[0].title}" />
+						<else/>
+						<input type="hidden" name="cate_id" />
+						<input type="hidden" name="cate_name" />
+					</notempty>
+					<input type="hidden" name="goods_id" />
+					<input type="hidden" name="goods_name" />
+					<input type="hidden" name="goods_attr_id" />
+					<input type="hidden" name="goods_attr_name" />
+					<input type="hidden" name="origin_area" />
+					<input type="hidden" id="supply_area" name="supply_area" />
+					<ul id="spy" class="clearfix spy">
+
+					</ul>
+				</form>
+				<div class="upload-btn">
+					<img class="add-spy" src="__HOME__/images/up_pic.png" alt="" />
+					<form id="spy-form" enctype="multipart/form-data">
+						<input type="file" id="up-spy" name="file" />
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--主页内容结束-->
+</block>
+<block name="script">
+	<script src="__STATIC__/form.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var objLength = catObj.length;
+		//把1.2  3 4 5以上长度的字 分别放在4个数组
+		for(var i = 0; i < objLength; i++) {
+			var arr = [];
+			for(var j = 0; j < 4; j++) {
+				var newArr = [];
+				arr.push(newArr);
+			}
+			for(var j = 0; j < catObj[i].c.length; j++) {
+				var cgLength = catObj[i].c[j].cg.length
+				if(cgLength <= 2) {
+					arr[0].push(catObj[i].c[j]);
+				} else if(cgLength == 3) {
+					arr[1].push(catObj[i].c[j]);
+				} else if(cgLength == 4) {
+					arr[2].push(catObj[i].c[j]);
+
+				} else if(cgLength >= 5) {
+					arr[3].push(catObj[i].c[j]);
+				}
+			}
+			catObj[i].c = arr;
+		}
+		for(var i = 0; i < objLength; i++) {
+			var html = '';
+			var title = catObj[i].t,
+				id = catObj[i].i;
+			var li = '<li> <span data-param="' + id + '">' + title + '</span> <ul class="drug-list clearfix"></ul> </li>'
+			$(".classify-list>li:last").before(li);
+			for(var j = 0; j < catObj[i].c.length; j++) {
+				if(j == 0) {
+					for(var c = 0; c < catObj[i].c[j].length; c++) {
+						var ci = catObj[i].c[j][c].ci,
+							cg = catObj[i].c[j][c].cg;
+						if(c == 0) {
+							html += '<li style="clear:both" data-param="' + ci + '">' + cg + '</li>'
+						} else {
+							html += '<li data-param="' + ci + '">' + cg + '</li>';
+						}
+					}
+				} else if(j == 1) {
+					for(var c = 0; c < catObj[i].c[j].length; c++) {
+						var ci = catObj[i].c[j][c].ci,
+							cg = catObj[i].c[j][c].cg;
+						if(c == 0) {
+							html += '<li style="width:100%;margin-top:10px;border-top:0.5px dashed #ccc;"></li><li style="clear:both" data-param="' + ci + '">' + cg + '</li>';
+						} else {
+							html += '<li data-param="' + ci + '">' + cg + '</li>';
+						}
+					}
+				} else if(j == 2) {
+					for(var c = 0; c < catObj[i].c[j].length; c++) {
+						var ci = catObj[i].c[j][c].ci,
+							cg = catObj[i].c[j][c].cg;
+						if(c == 0) {
+							html += '<li style="width:100%;margin-top:10px;border-top:0.5px dashed #ccc;"><li style="clear:both" data-param="' + ci + '">' + cg + '</li>';
+
+						} else {
+							html += '<li data-param="' + ci + '">' + cg + '</li>';
+						}
+					}
+				} else if(j == 3) {
+					for(var c = 0; c < catObj[i].c[j].length; c++) {
+						var ci = catObj[i].c[j][c].ci,
+							cg = catObj[i].c[j][c].cg;
+						if(c == 0) {
+							html += '<li style="width:100%;margin-top:10px;border-top:0.5px dashed #ccc;"></li><li style="clear:both" data-param="' + ci + '">' + cg + '</li>';
+						} else {
+							html += '<li data-param="' + ci + '">' + cg + '</li>';
+						}
+					}
+				}
+			}
+			$(".classify-list>li").eq(i).find(".drug-list").html(html)
+		}
+	</script>
+	<!--<script src="__HOME__/user/js/user.js" type="text/javascript" charset="utf-8"></script>-->
+	<script type="text/javascript">
+		var urls = ["{:U('Goods/ajaxGetSpecs')}" , "{:U('Region/getProHtml')}" , "{:U('Region/getCityHtml')}" , "{:U('Region/getAreaHtml')}" , "{:U('publish')}" , "{:U('pic_updata')}"]
+	</script>
+	<script src="__HOME__/supply/js/publish.js" type="text/javascript" charset="utf-8"></script>
+	<!--脚本自定义开始-->
+	<!--脚本自定义结束-->
+</block>

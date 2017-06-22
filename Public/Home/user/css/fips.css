@@ -1,0 +1,206 @@
+/***代码User的follow的PC页面消息管理的 我的关注******/
+.my-follow .follow-list{
+	position: relative;
+	left: -8px;
+	width: 948px;
+}
+.my-follow  li{
+	float: left;
+	width: 148px;
+	margin-left: 6px;
+	margin-top: 20px;
+	border: 1px solid #ccc;
+	position: relative;
+	cursor: pointer;
+}
+.my-follow li:hover{
+	border-color:#E62B2E;
+}
+.my-follow li img{
+	width: 148px;
+	height: 148px;
+}
+.my-follow li p{
+	text-align: center;
+	font-size: 16px;
+	line-height: 48px;
+}
+.my-follow .unfollow{
+	display: inline-block;
+	width: 148px;
+	height: 31px;
+	line-height: 31px;
+	text-align: center;
+	color: #333;
+	background-color: #F8F8F8;
+}
+/***代码：User的index PC页面：账户管理的账户信息******/
+#head-img {
+	width: 10px;
+	position: relative;
+	left: -20px;
+	top: 16px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.user-msg .upload-li img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	vertical-align: bottom;
+}
+
+.user-msg>li {
+	margin-bottom: 20px;
+}
+
+.user-msg input {
+	width: 382px;
+	height: 34px;
+	line-height: 34px;
+	border: 1px solid #d3d3d3;
+	font-size: 12px;
+	padding-left: 5px;
+}
+/*关于修改账户管理中的上传头像部分*/
+.user-msg-file {
+	display: inline-block;
+	position: relative;
+	width: 130px;
+	height: 40px;
+	line-height: 40px;
+	top: 106px;
+    left: 40px;
+    text-align: center;
+    background: #2EB7F0;
+    color: #fff;
+    cursor: pointer;
+    text-indent: 8px;
+}
+.user-msg-file:hover{
+	background: #43C1F5;
+}
+/*修改file为隐藏形式*/
+.user-msg-file input[type="file"]{
+	width:0;
+	opacity: 0;
+	filter:'alpha(opacity=0)';
+	filter: alpha(opacity=0);
+}
+.user-msg-file label {
+	/*display: inline-block;
+	padding-left: 40px;
+	background: url(../images/upload_icon.png) no-repeat left center;*/
+	cursor:pointer;
+	font-size: 14px;
+}
+/*#upload_btn {
+	width: 60px;
+	position: absolute;
+	top: 3px;
+	left: 150px;
+	background: #E62B2E;
+	color: #fff;
+	border-radius: 17px;
+	border: none;
+	text-align: center;
+	text-indent: -3px;
+}
+
+#upload_btn:hover {
+	background: red;
+}*/
+
+.user-msg>li>span {
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+	font-size: 16px;
+	padding-right: 35px;
+}
+.user-msg>li>span.img-middle{
+	position:relative;
+	top:70px;
+}
+.user-msg .sub-li button {
+	width: 80px;
+	height: 35px;
+	line-height: 35px;
+	background-color: #E62B2E;
+	color: #fff;
+	text-align: center;
+	padding: 0;
+	margin-left: 139px;
+	cursor: pointer;
+}
+.user-msg .sub-li button:hover{
+	background:#f00;
+}
+.user-manage div[class^="msg"] {
+	height: 500px;
+	padding: 50px;
+	font-size: 24px;
+	font-weight: bold;
+}
+/***代码：User的profile PC页面：账户管理的账户信息代码：User的suggest PC页面：消息管理的意见反馈******/
+.my-suggest-details p{
+	font-size:18px;
+	line-height:40px;
+}
+.my-suggest-details form {
+	margin-top: 20px;
+}
+.my-suggest-details input,
+.my-suggest-details textarea {
+	display: block;
+	width: 430px;
+	height: 48px;
+	line-height: 48px;
+	color: #000;
+	font-size: 14px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 10px;
+	border: 1px solid #dddcdc;
+}
+.my-suggest-details input:focus,
+.my-suggest-details textarea:focus {
+	border: 1px solid #E62B2E;
+}
+.my-suggest-details textarea {
+	width: 900px;
+	height: 80px;
+	line-height: 26px;
+	margin: 13px 0;
+	padding: 10px 15px;
+}
+.my-suggest-details input.yanzma {
+	display: inline-block;
+	vertical-align: middle;
+	width: 155px;
+	margin: 0;
+}
+.yanzmaimg {
+	vertical-align: middle;
+	margin-left: 15px;
+}
+.yanzmaspan {
+	margin-left: 10px;
+	font-size: 18px;
+	color: #333;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.tijiao button {
+	width: 185px;
+	margin-top: 20px;
+	background: #E62B2E;
+	color: #fff;
+	height: 48px;
+	line-height: 48px;
+	font-size:15px;
+}
+.my-suggest-details a:hover {
+	text-decoration: none;
+}

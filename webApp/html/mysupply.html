@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的供应</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script type="text/javascript">
+        if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+        if (!isMobile()) location.href = "./bind.html";
+    </script>
+    <style>
+        /*我的供应订单*/
+        .myspy li{background-color: #fff;margin-top:1.6rem;}
+        .spy_t{padding: 0 1.6rem;font-size: 2.2rem;height:5.4rem;line-height:5.4rem;border-bottom: 0.1rem solid #ccc;}
+        .spy_img{width:11rem;height:11rem;}
+        .spy_txt , .spy_img{vertical-align: middle;}
+        .spy_txt{margin-left:1rem;display: inline-block;}
+        .spy_bd{padding:1.6rem;position: relative;}
+        .spy_bd p{font-size: 2.2rem;color: #666;}
+        .spy_bd h3{font-size:2.8rem;color: #000;font-weight: normal;}
+        .spy_pri{color: #e6282b;}
+        .myspy .icon_yjt{font-size: 3rem;margin-top: 3rem;}
+    </style>
+</head>
+<body>
+<header>
+    <a href="./persional.html" class="back_btn">
+        <i class="icon_zjt iconfont"></i>返回
+    </a>
+    <span>我的供应</span>
+</header>
+<div class="ydw_wp">
+    <div class="main myspy">
+        <ul class="myspy_lists">
+          <!---->
+            <!--<li>-->
+                <!--<div class="spy_t">-->
+                    <!--发布时间 : <span>2017-02-02</span>-->
+                <!--</div>-->
+                <!--<div class="spy_bd clearfix">-->
+                    <!--<img src="../images/ezp_01.png" alt="" class="spy_img"/>-->
+                    <!--<div class="spy_txt">-->
+                        <!--<h3>地黄</h3>-->
+                        <!--<p>单价: <span class="spy_pri">200.00元/公斤</span></p>-->
+                        <!--<p>数量: <span>大货</span></p>-->
+                    <!--</div>-->
+                    <!--<i class="iconfont icon_yjt r"></i>-->
+                <!--</div>-->
+            <!--</li>-->
+        </ul>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/load.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var listWp =  $(".myspy_lists");
+        appendLoad(listWp);
+        rule.scrollEvent = function (fn) {
+            var data = {
+                num:15,
+            }
+            var lastId = listWp.children(":last").attr("data-id");
+            data.minId = lastId || "";
+            $.postT(rule.root + "AppUser/user_supply" ,data , function (req){
+                var li = '';
+                var code = req.code;
+                if (code == 1){
+                    var datas = req.data;
+                    var datasL = datas.length;
+                    for (var i = 0; i < datasL;i++){
+                        var id = datas[i].id,
+                            picArr = datas[i].pic,
+                            goods_name = datas[i].goods_name,
+                            price = datas[i].price,
+                            price_type = datas[i].price_type,
+                            num = datas[i].num;
+                        create_time =  new  Date(datas[i].create_time * 1000).format('yyyy-MM-dd');
+                        var pic = "";
+                        if (price_type == 2){
+                            price = "面议";
+                        }else {
+                            price = price + "元/公斤";
+                        }
+                        if (num == -1){
+                            num = "大货";
+                        }else{
+                            num = num + "公斤";
+                        }
+                        if (picArr){
+                            pic = picArr[0];
+                        }
+                        li += '<li data-id="'+id+'"><a href="./supplydetail.html?id='+id+'"><div class="spy_t">发布时间 : <span>'+ create_time +'</span></div><div class="spy_bd clearfix"><img src="'+ pic +'" alt="" class="spy_img"/><div class="spy_txt"><h3>'+ goods_name +'</h3><p>单价: <span class="spy_pri">'+price+'</span></p><p>数量: <span>'+num+'</span></p></div><i class="iconfont icon_yjt r"></i></div></a></li>';
+                    }
+                    $(".myspy_lists").append(li);
+                    if (datasL < data.num){
+                        $("#load_wp").text("没有更多数据");
+                        return;
+                    }
+                    fn&&fn();
+                }else if (code == 0){
+                    $("#load_wp").text("没有更多数据");
+                }else if (code == 103){
+                    rule.reLogin()
+                }
+            });
+        }
+        scrolling = true;
+        rule.scrollEvent(onFinish);
+    });
+</script>
+</html>

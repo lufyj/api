@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/share.css"/>
+    <link rel="stylesheet" type="text/css" href="../swiper.min.css"/>
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="gray_boby sds_public">
+<header>
+    <a href="javascript:void(0);" class="back_btn" id="back_btn">
+        <i class="icon_zjt iconfont"></i>返回
+    </a>
+    <span>供应详情</span>
+</header>
+<div class="ydw_wp">
+    <div class="main">
+        <div class="time_div">
+            <span class="bf">发布时间 : </span><span class="time_span"></span>
+        </div>
+        <div class="top">
+            <ul class="top_list list">
+                <li class="img_li">
+                    <span class="bf_md">图　　片 : </span><div class="img_div"></div>
+                </li>
+                <li>
+                    <span class="bf">品　　名 : </span><span class="name_span"></span>
+                </li>
+                <li>
+                    <span class="bf">规　　格 : </span><span class="spec_span"></span>
+                </li>
+                <li>
+                    <span class="bf">数　　量 : </span><span class="num_span"></span>
+                </li>
+                <li>
+                    <span class="bf">单　　价 : </span><span class="price_span"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="middle">
+            <ul class="middle_list list">
+                <li>
+                    <span class="bf">产　　地 : </span><span class="origin_span r_span"></span>
+                </li>
+                <li>
+                    <span class="bf">货&nbsp;&nbsp;源&nbsp;&nbsp;地 : </span><span class="source_span r_span"></span>
+                </li>
+                <li>
+                    <span class="bf">描　　述 : </span><span class="des_span r_span"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <ul class="bottom_list list">
+                <li>
+                    <span class="bf">联&nbsp;&nbsp;系&nbsp;&nbsp;人 : </span><span class="contacts_span r_span"></span>
+                </li>
+                <li>
+                    <span class="bf">手　　机 : </span><span class="tel_span"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="img_box">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var id = parseInt(rule.getRequest().id);
+    var data = {
+        clientType:1,
+        id:id
+    };
+    $.ajax({
+        url:rule.root +'AppSupply/supply_details',
+        data:data,
+        type: "post",
+        success:function(req) {
+            console.log(req);
+            var code = req.code;
+            if (code == 1){
+                var datas = req.data;
+                var create_time = new Date(datas.create_time*1000).format('yyyy-MM-dd') ;		//发布时间
+                var	contacts = datas.contacts;				//联系人
+                var	mobile = datas.mobile;					//手机号
+                var goods_name = datas.goods_name;			//品名
+                var goods_attr_name = datas.goods_attr_name;//规格
+                var	num = datas.num;						//数量
+                var price_type = datas.price_type;			//价格类型
+                var price = datas.price;					//价格
+                var	origin_area = datas.origin_area;		//产地
+                var origin_type = datas.origin_type;        //产地类型
+                var supply_area = datas.supply_area;		//货源地
+                var supply_detail = datas.supply_detail;    //详细货源地
+                var	details = datas.details;				//详情
+                var imgs = datas.pic;						//图片
+                if (imgs){
+                    var imgsLength = imgs.length;
+                    var imgDom = '';
+                    var slider = '';
+                    for (var i = 0; i < imgsLength; i++){
+                        imgDom += '<img src="'+ imgs[i] +'" alt="" />';
+                        var index = imgs[i].indexOf("thumb");
+                        var h = imgs[i].substring(0 , index);
+                        var f = imgs[i].substring(index+14);
+                        var img_url = h + f;
+                        slider += '<div class="swiper-slide"><img src="'+ img_url +'" alt="" /></div>';
+                    }
+                    $(".img_div").html(imgDom);
+                    $(".swiper-wrapper").html(slider);
+                    var img = $(".img_div img");
+                    var width = img.width();
+                    img.css({
+                        'height':width + 'px'
+                    });
+                }
+
+                $(".time_span").text(create_time);
+                $(".name_span").text(goods_name);
+                $(".contacts_span").text(contacts);
+                $(".tel_span").text(mobile);
+                if (goods_attr_name){
+                    $(".spec_span").text(goods_attr_name);
+                }
+                if (num == -1){
+                    num = "大货";
+                    $(".num_span").text(num);
+                }else{
+                    $(".num_span").text(num + "公斤");
+                }
+                $(".num_span").text(num);
+                if (price_type == 2){
+                    price = "面议";
+                    $(".price_span").text(price);
+                }else {
+                    $(".price_span").text(price + "元/公斤");
+                }
+                $(".origin_span").text(origin_area);
+                $(".source_span").text(supply_area + supply_detail);
+                $(".des_span").text(details);
+            }
+        },
+        error:function (error) {
+            console.log(error)
+        }
+    })
+</script>
+</html>

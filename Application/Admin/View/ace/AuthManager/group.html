@@ -1,0 +1,45 @@
+<extend name="Public/base" />
+<block name='navi'><li>管理员</li><li>用户信息</li></block>
+<block name="body">	
+	<div class="page-header">
+		<h1>用户组授权</h1>
+	</div>
+    <div class="row col-xs-12" id="auth_groups">
+        <form class="form-horizontal" action="{:U('addToGroup')}" method="post" enctype="application/x-www-form-urlencoded" >
+			<label class="hd alert alert-info">{$nickname} 所属的用户组列表</label>
+            <volist name="auth_groups" id="vo">
+                <!-- <label class="checkbox">
+                    <input class="auth_groups " type="checkbox" name="group_id[]" value="{$vo.id}">{$vo.title}
+                </label> -->
+                <div class="checkbox">
+					<label>
+						<input class="auth_groups ace" type="checkbox" name="group_id[]" value="{$vo.id}">
+						<span class="lbl"> {$vo.title}</span>
+					</label>
+				</div>
+            </volist>
+            <input type="hidden" name="uid" value="{:I('uid')}">
+            <input type="hidden" name="batch" value="true">
+            <div class="clearfix form-actions">
+				<div class="col-md-offset-3 col-md-9">
+	                <button type="submit" class="btn btn-info submit-btn ajax-post" target-form="form-horizontal"><i class="ace-icon fa fa-check bigger-110"></i>确 定</button>
+	                <button class="btn btn-return" onclick="javascript:history.back(-1);return false;"><i class="ace-icon fa fa-undo bigger-110"></i>返 回</button>
+	            </div>
+            </div>
+        </form>
+    </div>
+</block>
+<block name="script">
+<script type="text/javascript">
+    $(function(){
+        var group = [{$user_groups}];
+        $('.auth_groups').each(function(){
+            if( $.inArray( parseInt(this.value,10),group )>-1 ){
+                $(this).prop('checked',true);
+            }
+        });
+    });
+    // 导航高亮
+    highlight_subnav("{:U('Member/index')}");
+</script>
+</block>

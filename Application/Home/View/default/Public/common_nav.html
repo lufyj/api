@@ -1,0 +1,27 @@
+<div class="demand-detail">
+	<div class="detail-top">
+		<ul class="detail-nav clearfix">
+			<li>
+				<a href="/">首页</a>
+			</li>
+			<li>
+				<a href="{:U('supply/lst')}" <if condition="$act eq sup">class="active"</if>>供应信息</a>
+			</li>
+			<li>
+				<a href="{:U('demand/lst')}" <if condition="$act eq dem">class="active"</if>>求购信息</a>
+			</li>
+			<li>
+				<a href="{:U('goods/market')}" <if condition="$act eq mar">class="active"</if>>药材行情</a>
+			</li>
+			<!--<li>-->
+				<!--<a href="{:U('companyShow/storeList')}" <if condition="$act eq 'store'">class="active"</if>>仓库信息</a>-->
+			<!--</li>-->
+			<!--<li>-->
+				<!--<a href="{:U('companyShow/deliveryList')}" <if condition="$act eq 'del'">class="active"</if>>物流信息</a>-->
+			<!--</li>-->
+			<li>
+				<a href="{:U('CompanyShow/mergeList')}" <if condition="$all eq 'all'">class="active"</if>>加工/检测</a>
+			</li>
+		</ul>
+	</div>
+</div>

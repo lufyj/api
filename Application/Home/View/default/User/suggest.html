@@ -1,0 +1,119 @@
+<extend name="./base" />
+<block name="style">
+	<!--样式自定义开始-->
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/fips.css" />
+	<!--样式自定义结束-->
+</block>
+<block name="body">
+	<!--主页内容开始-->
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+				<a href="javascript:;">消息管理</a>&nbsp;>&nbsp;
+				<a href="javascript:;">意见反馈</a>
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />
+			<!--意见反馈-->
+			<div class="right my-suggest l">
+				<div class="title">
+					<span class="active">意见反馈</span>
+				</div>
+				<div class="rights my-suggest-details">
+					<p>非常感谢您使用药都网！</p>
+					<p>如果您有任何建议，欢迎您来告诉我们，您的意见将帮助我们改进服务。</p>
+					<form id="myform">
+						<input type="text" id="mobile" value="{:session('user_sign.mobile')}" placeholder="请输入您的手机号" maxlength="11" />
+						<textarea id="question" rows="" cols="" placeholder="请您尽可能具体的描述您对我们的建议，这将能够更好的帮助我们改进产品和服务。"></textarea>
+						<input type="text" class="yanzma" id="code" />
+						<img class="code-img yanzmaimg" alt="点击切换" title="点击切换" src="{:U('index/verify','',false)}" style="cursor:pointer;" onclick="changeCode();">
+						<span class="yanzmaspan" onclick="changeCode();">看不清，换一张？</span>
+						<p class="tijiao">
+							<button type="button" id="submit_btn">提交意见</button>
+						</p>
+					</form>
+				</div>
+			</div>
+			<!--意见反馈结束-->
+		</div>
+	</div>
+	<!--主页内容结束-->
+</block>
+<block name="script">
+	<!--脚本自定义开始-->
+	<script src="__HOME__/js/placeholder.js"></script>
+	<script type="text/javascript">
+		/* 切换验证码 */
+		function changeCode() {
+			$('img.yanzmaimg').attr('src', "<?php echo U('index/verify','',false);?>/'" + Math.random());
+		}
+
+		$(function() {
+			/* 提交意见 */
+			var repeat_click = true; //重复标示
+
+			$('#submit_btn').on('click', function() {
+				if(!repeat_click) {
+					return;
+				}
+
+				var data = {
+					mobile: $.trim($('#mobile').val()),
+					question: $.trim($('#question').val()),
+					code: $.trim($('#code').val())
+				};
+				var reg = /^1[34578]\d{9}$/;
+				if(!data.mobile || !reg.test(data.mobile) || data.mobile == '请输入您的药都网账号') {
+					$.custom('请输入正确的手机号码~');
+					$('#mobile').val('');
+					return;
+				}
+				var codereg = /^[a-zA-Z0-9]{4}$/;
+				if(!data.code || !codereg.test(data.code)) {
+					$.custom('请输入正确的验证码~');
+					$('#code').val('');
+					return;
+				}
+				$.ajax({
+					url: "{:U()}", //请求的url地址
+					dataType: "json", //返回格式为json
+					async: true, //请求是否异步，默认为异步，这也是ajax重要特性
+					data: data, //参数值
+					type: "post", //请求方式
+					beforeSend: function() {
+						if(!data.question) {
+							$.custom('请填写意见~');
+							return false;
+						}
+						if(!data.code) {
+							$.custom('请填写验证码~');
+							return false;
+						}
+						repeat_click = false;
+						//请求前的处理
+					},
+					success: function(req) {
+						//请求成功时处理		        
+						$.custom(req.msg);
+						//$('#myform')[0].reset();
+						//document.querySelector('#myform').reset();
+						$('#code').val('');
+						changeCode();
+						repeat_click = true;
+					},
+					error: function() {
+						//请求出错处理
+						$.custom('网络请求错误，请稍后再试~');
+						repeat_click = true;
+					}
+				});
+			});
+		})
+	</script>
+	<!--脚本自定义结束-->
+</block>

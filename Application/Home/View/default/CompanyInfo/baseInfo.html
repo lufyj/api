@@ -1,0 +1,315 @@
+<extend name="./base" />
+<block name="style">
+	<!--样式自定义开始-->
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/company/css/company.css" />
+	<!--样式自定义结束-->
+</block>
+<block name="body">
+	<!--主页内容开始-->
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+				<a href="">企业管理</a> >
+				<a href="javascript:;">基础信息</a>
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />
+			<div class="right base-info l">
+					<div class="title">
+						<span class="active">二级域名</span>
+					</div>
+					<div class="domain-wp">
+						<span class="before">二级域名 : </span>
+						<if condition="($domain.status eq '1') or ($domain.status eq '2')" >
+							<if condition="$domain.status eq '2'">
+								<a href="{$domain.domain}" target="_blank">{$domain.domain}</a>
+								<span class="warn_span2">审核通过</span>
+							<else/>
+								<span>{$domain.domain}</span>
+								<span class="warn_span2">正在审核...</span>
+							</if>
+						<elseif condition="$domain.status eq '3'"/>
+							<input type="text" class="domain_name" value="{$domain.domain}"/>
+							<span class="domain_span">.yaoduwang.com</span>
+							<span class="domain_sub">提交审核</span>
+							<span class="warn_span1"></span>
+							<span class="warn_span2">审核未通过  : {$domain.remark}</span>
+							<div class="warn_div">(仅允许由数字，字母组成，长度为4到18位。唯一标识，也是二级域名前缀，创建后不可修改。)</div>
+						<else/>
+							<input type="text" class="domain_name"/>
+							<span class="domain_span">.yaoduwang.com</span>
+							<span class="domain_sub">提交审核</span>
+							<span class="warn_span1"></span>
+							<div class="warn_div"></div>
+						</if>
+					</div>
+				<div class="title">
+					<span class="active">基础信息</span>
+				</div>
+				<ul class="info-ul">
+					<li>
+						<span class="before">LOGO : </span>
+						<div id="preview1">
+							<if condition="$comInfo.logo neq ''">
+								<img id="logo" src="{$comInfo.logo}" class="company-logo" alt="" />
+							<else/>
+								<img id="logo" src="__HOME__/company/images/logo_12.png" class="company-logo" alt="" />
+							</if>
+						</div>
+						<span class="warn-logo"><b> * </b>图片文件最大1MB，支持jpg、bmp、png的图片格式</span>
+						<br>
+						<label class="logo-lb">
+							<form id="logo-form" enctype="multipart/form-data">
+								<input type="file" id="up-logo" name="logo"/>
+								<input type="hidden" value="" id="logo-ad" name="mylogo"/>
+							</form>
+							<span>更换LOGO</span>
+						</label>
+					</li>
+					<li>
+						<span class="before">企业名称 : </span>
+						<input type="text" id="comName" name="comName" placeholder="请输入企业名称(最多25个中文)" <if condition="$comInfo.name neq ''">value="{$comInfo.name}"</if>>
+					</li>
+					<li>
+						<span class="before">企业简介 : </span>
+						<textarea name="desc" id="desc"><if condition="$comInfo.desc neq ''">{$comInfo.desc}</if></textarea>
+					</li>
+					<li>
+						<span class="before">企业展示 : </span>
+						<div id="preview2">
+							<if condition="$comInfo.background neq ''">
+								<img id="company-img" src="{$comInfo.background}" class="company-show" alt="" />
+							<else/>
+								<img id="company-img" src="__HOME__/company/images/show_company.png" class="company-show" alt="" />
+							</if>
+						</div>
+						<span class="warn-show"><b> * </b>图片文件最大1MB，支持jpg、bmp、png的图片格式</span>
+						<br>
+						<label class="show-lb">
+								<form id="cp-form"  enctype="multipart/form-data">
+									<input type="file" id="up-company" name="bg"/>
+									<input type="hidden" value="" id="company-ad"/>
+								</form>
+							<span>更换图片</span>
+						</label>
+						<script src="__STATIC__/form.js" type="text/javascript" charset="utf-8"></script>
+						<script type="text/javascript">
+							//logo上传
+							$("#up-logo").change(function() {
+								$("#logo-form").ajaxSubmit({
+									type: 'post',
+									url: '/CompanyInfo/uplogo.html',
+									success: function(data) {
+										if(typeof(data) == "object") {
+											if(data.path) {
+												var src = data.path;
+												$("#logo").attr("src", src);
+												$("#logo-ad").val(src);
+											} else {
+												$.custom(data.msg);
+											}
+										} else {
+											var datas = JSON.parse(data);
+											if(datas.path) {
+												var src = datas.path;
+												$("#logo").attr("src", src);
+												$("#logo-ad").val(src);
+											} else {
+												$.custom(datas.msg);
+											}
+										}
+									},
+									error: function(error) {
+										$.custom('上传失败');
+									}
+								});
+							});
+							//公司展示图片上传
+							$("#up-company").change(function() {
+								$("#cp-form").ajaxSubmit({
+									type: 'post',
+									url: '/CompanyInfo/upBackground.html',
+									success: function(data) {
+										if(typeof(data) == "object") {
+											if(data.path) {
+												var src = data.path;
+												$("#company-img").attr("src", src);
+												$("#company-ad").val(src);
+											} else {
+												$.custom(data.msg);
+											}
+										} else {
+											var datas = JSON.parse(data);
+											if(datas.path) {
+												var src = datas.path;
+												$("#company-img").attr("src", src);
+												$("#company-ad").val(src);
+											} else {
+												$.custom(datas.msg);
+											}
+										}
+
+									},
+									error: function(error) {
+										$.custom('上传失败');
+									}
+								});
+							});
+						</script>
+					</li>
+					<li>
+						<span class="before">公告 : </span>
+						<textarea name="content" id="content" placeholder="请输入公告" class="notice"><if condition="$noticeInfo.content neq ''">{$noticeInfo.content}</if></textarea>
+					</li>
+				
+				</ul>
+				<!--选择风格开始-->
+				<div class="choose-style">
+					<span class="top">选择风格</span>
+					<div class="content">
+						<if condition="$themeList neq ''">
+							<ul class="clearfix">
+								<foreach name="themeList" item="theme">
+									<eq name="theme.name" value="$comInfo.style">
+										<li class="checked">
+									<else/>
+										<li>
+									</eq>
+										<img src="{$theme.path}" alt="" />
+										<input type="hidden" value="{$theme.name}" name="style" class="mystyle">
+										<div class="choose">
+											<span class="look"></span>
+											<span class="use"></span>
+										</div>
+										<div class="checked-div">
+											<span></span>
+										</div>
+									</li>
+								</foreach>
+							</ul>
+						</if>
+					</div>
+				</div>
+				<div class="sub-div">
+					<span class="save">保存</span>
+					<span class="del">清空</span>
+				</div>
+									
+				<!--</div>-->
+				<!--<div class="tab_div">-->
+				
+				<!--</div>-->
+				<!--选择风格结束-->
+			</div>
+		</div>
+	</div>
+	<!--预览弹框-->
+	<div class="look-wrap">
+		<div class="iframe">
+			<span class="c-ifm">
+			</span>
+		<iframe id="iframepage" name="iframepage"  frameborder="0"  marginheight="0" marginwidth="0" width="1600px"  ></iframe>
+	</div>
+	</div>
+	<script type="text/javascript">
+		var styleInit = '{$comInfo.style}';
+		if (!styleInit){
+			$(".choose-style li:first").addClass("checked");
+		}
+		$(function() {
+			var baseSub=true;//防止保存基本信息时重复提交
+			//保存基本信息(jingwei)
+			$(".save").on('click', function() {
+				if(!baseSub){
+					return false;
+				}
+				var name = $('#comName').val();
+				if(name.length>25){
+					$.custom('企业名称过长');
+					return false;
+				}
+				var desc = $.trim($('#desc').val());
+				var content = $.trim($("#content").val());
+				var comLogo = $.trim($("#logo-ad").val());
+				var combg = $.trim($("#company-ad").val());
+				var style = $.trim($(".choose-style").find('.checked').find('.mystyle').val());
+				if (name == '请输入企业名称(最多25个中文)'){
+					name = '';
+				}
+				if (content == '请输入公告'){
+					content = '';
+				}
+				if (!name && !desc && !content && !comLogo && !combg && !style){
+					$.custom('不能提交空数据');
+				}
+				baseSub=false;
+				$.post("{:U('CompanyInfo/saveInfo')}", {
+						name: name,
+						desc: desc,
+						content: content,
+						logo: comLogo,
+						background: combg,
+						style: style
+					},
+					function(data) {
+						if(data.status == 1) {
+							$.custom('保存成功');
+							setTimeout(function(){
+								location.reload();
+							},300);	
+						} else {
+							$.custom('保存失败');
+							return false;
+						}
+					}, "json");
+			});
+
+			//清空输入基本（jingwei）
+			$(".del").on('click', function() {
+				$('#comName').val('');
+				$('#desc').val('');
+				$("#content").val('');
+
+				//清除logo
+				var fileObj = $("#preview1");
+				fileObj.empty();
+				var emp = '<img id="emp" src="__HOME__/company/images/logo_12.png" class="company-logo" alt="公司logo"/>';
+				fileObj.append(emp);
+				$("#logo-ad").val("");
+
+				//清除背景图
+				var bgObj = $("#preview2");
+				bgObj.empty();
+				var bgimg = '<img id="bgimg" src="__HOME__/company/images/logo_12.png" class="company-show" alt="公司展示">';
+				bgObj.append(bgimg);
+				$("#company-ad").val("");
+			});
+			
+			$(".base-info .title>span").click(function (){
+				var self = $(this);
+				self.addClass("active").siblings("span").removeClass("active");
+				var index = $(this).index();
+				$(".tab_div").hide();
+				$(".tab_div").each(function (i){
+					if (i == index){
+						$(this).show();
+					}
+				});
+			});
+		});
+	</script>
+	<!--主页内容结束-->
+</block>
+<block name="script">
+	<!--脚本自定义开始-->
+	<script src="__HOME__/js/placeholder.js"></script>
+	<script src="__HOME__/company/js/company.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="__HOME__/company/js/companyInfo.js"></script>
+	<!--<script type="text/javascript" src="__HOME__/company/js/companyInfobg.js"></script>-->
+	<!--脚本自定义结束-->
+</block>

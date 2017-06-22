@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>药都网--商家详情</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/lists.css"/>
+		<script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+            if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+		</script>
+		<style type="text/css">
+			body{background: #Fff;}
+		</style>
+	</head>
+	<body>
+		<header>
+			<a href="./merchant.html" class="back_btn" onclick="window.history.back();">
+				<i class="icon_zjt iconfont"></i>返回
+			</a>
+			<span>详情</span>
+		</header>
+		<div class="ydw_wp">
+			<section>
+				<div class="mer-det">
+					<div class="det-img">
+						<div class="det-logo">
+							<img/>
+						</div>
+					</div>
+					<div class="det-content">
+						<h2 id="det-name"></h2>
+						<div class="clearfix">
+							<span class="l">【地址】</span>
+							<p id="det-address" class="l">
+							</p>
+						</div>
+						<div class="clearfix">
+							<span class="l">【电话】</span>
+							<p id="det-mobile" class="l">	
+							</p>
+						</div>
+						<div class="clearfix">
+							<span class="l">【简介】</span>
+							<p id="det-desc" class="l">
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<script type="text/javascript">
+			var merObj = {id:rule.getRequest().id}
+			$(function(){
+				//提交表单
+				$.postT(rule.root+'/AppCompany/comInfo' , merObj , function (req){
+					if(req.code == 103){
+						var hrefUrl = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+						rule.showMsg(1 , "该账号已在其他地方登陆,请重新登录" , 2000 , hrefUrl);
+					}
+					if(req.code == 1){	
+						var data = req.data;
+						$('.det-img').css('background','url('+data.background+') no-repeat');//商家的背景图
+						$('.det-logo>img').attr('src',data.logo);//公司的logo
+						$('#det-name').html(data.name);//公司的名字
+						$('#det-address').html(data.address);//地址
+						$('#det-mobile').html(data.mobile);//电话
+						$('#det-desc').html(data.desc);//简介
+					}
+				});
+			})
+		</script>
+	</body>
+</html>

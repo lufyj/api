@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>药都网大厅</title>
+		<!--<meta name="full-screen" content="yes">-->
+		<!--<meta name="x5-fullscreen" content="true">-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+		<script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js"></script>
+	</head>
+	<body>
+		<header class="clearfix">
+			<a href="search.html" class="right_a">
+				<i class="icon_search iconfont"></i><span class="">搜索</span>
+			</a>
+			<div class="nav_tab clearfix">
+				<div class="l"><span>采购</span></div>
+				<div class="l"><span>供应</span></div>
+			</div>
+		</header>
+		<div class="ydw_wp">
+			<div class="main">
+				<div class="back_top" onclick="backTop()">
+					<i class="icon_back_top iconfont"></i>
+					<p>顶部</p>
+				</div>
+				<div class="filter_wp">
+					<div class="goods_name l">
+						<a href="./cate.html?ReturnUrl=index.html" class="select_lk" id="lk_name"></a>
+					</div>
+					<div class="attr r">
+						<a href="javascript:;" class="select_lk" id="lk_attr"></a>
+					</div>
+				</div>
+				<div class="banner">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="../images/banner.png" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img src="../images/banner.png" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img src="../images/banner.png" alt="" />
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<div class="list_wp">
+					<div class="list_hd">
+						<ul class="hd_ul clearfix">
+							<li>品名</li>
+							<li class="second_li">数量</li>
+							<li>规格</li>
+							<li>联系人</li>
+							<li>电话</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="list_bd content" id="wrapper">
+					<ul class="data_wp">
+
+					</ul>
+			</div>
+		<!--底部-->
+		</div>
+		<footer>
+			<a href="./indexs.html" class="tab_lm">
+				<i class="iconfont icon_lm"></i>
+				<p>类目</p>
+			</a>
+			<a href="./follow.html" class="tab_follow">
+				<i class="iconfont icon_gz"></i>
+				<p>关注</p>
+			</a>
+			<a href="javascript:;" class="home tab_home"></a>
+			<a href="./discover.html" class="tab_follow">
+				<i class="iconfont icon_fx"></i>
+				<p>发现</p>
+			</a>
+			<a href="./persional.html" class="tab_perisonal">
+				<i class="iconfont icon_geren"></i>
+				<p>个人</p>
+			</a>
+		</footer>
+	</body>
+	<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/load.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+        //初始化轮播图
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+        });
+        var local = new LocalData();
+        var session = new Intent();
+        var tab = $(".nav_tab>div");
+        //拿到这页面初始是采购还是供应（index_type 0 为采购1为供应）
+        var type = session.getIntent("index_type") || 0;
+        var urls = ['AppHall/demand_hall' , 'AppHall/supply_hall'];
+        var jumpUrls = ['./demanddetail.html' , './supplydetail.html'];
+        var apiUrl = urls[type];
+        var jump = jumpUrls[type];
+        var tit = ["数量"  , "单价"];
+        var secondTit = $(".second_li");
+        var dataWp = $('.data_wp');
+        //初始化 dom结构
+        secondTit.text(tit[type]);
+        var repeat = true;
+		$(function () {
+            tab.eq(type).addClass("act");
+            //加载完成检测 药材品名和规格
+            var gn =  $("#lk_name"),
+                ga = $("#lk_attr");
+            var goods = {};
+            var status = rule.getRequest().status || "";
+            if (status){
+                goods.goodsName = local.getData("goods").goods_name;
+                goods.goodsId = local.getData("goods").goods_id;
+                goods.goodsAttr = local.getData("goods").goods_attr || "规格";
+            }else {
+                goods.goodsName = '品名';
+                goods.goodsId = '';
+                goods.goodsAttr = '规格';
+            }
+            gn.text(goods.goodsName).attr("data-id" , goods.goodsId);
+            ga.text(goods.goodsAttr);
+            ga.click(function () {
+                if (!goods.goodsId){
+                    rule.showMsg(1 , "请选择品名" , 1000)
+                }else {
+                    location.href = './attr.html?id='+ goods.goodsId + '&ReturnUrl=index.html';
+                }
+            })
+            var params = {
+                clientType:1,
+                num :20
+            }
+            params.goods_name = goods.goodsId?gn.text():"";
+            if (goods.goodsAttr == '规格'){
+                goods.goodsAttr = ''
+            }
+            params.goods_attr_name = goods.goodsAttr;
+            rule.scrollEvent = function (fn) {
+                params.minId = dataWp.children(":last").attr("data-id") || '';
+                $.post(rule.root + apiUrl, params, function(req) {
+                    var code = req.code;
+                    if(code == 1) {
+                        var datas = req.data;
+                        var dataLength = datas.length;
+                        var li = '';
+                        for(var i = 0; i < dataLength; i++) {
+                            var id = datas[i].id,
+                                goods_name = datas[i].goods_name,
+                                mobile = datas[i].mobile,
+                                num = datas[i].num || datas[i].price,
+                                contacts = datas[i].contacts,
+                                goods_attr_name = datas[i].goods_attr_name;
+
+                            li += '<li class="list_item post" data-id="' + id + '"><a href="'+jump+'?id='+id+'"><ul class="clearfix item_ul"><li>' + goods_name + '</li><li>' + num + '</li><li>' + goods_attr_name + '</li><li>' + contacts + '</li><li>' + mobile + '</li></ul></a></li>';
+                        }
+                        dataWp.append(li);
+                        if (dataLength < params.num){
+                            loadTxt.text("暂无更多数据");
+                            return;
+						}
+                        fn&&fn();
+                    }else if (code == 0){
+                        loadTxt.text("暂无更多数据");
+                    }
+                    repeat = true;
+                })
+            }
+            appendLoad(dataWp);
+            var loadTxt = $(".load_wp");
+            rule.scrollEvent();
+            tab.click(function () {
+                var _this = $(this);
+                if (_this.hasClass("act")) return;
+                if (!repeat) return;
+                _this.addClass("act").siblings("div").removeClass("act");
+                var i = _this.index();
+                //切换接口
+                apiUrl = urls[i];
+                jump = jumpUrls[i];
+                session.setIntent("index_type" , i);
+                //切换标题
+                secondTit.text(tit[i])
+				//初始化
+                loadTxt.text("正在加载更多...");
+                dataWp.html("")
+                scrolling = false;
+                repeat = false;
+               rule.scrollEvent();
+            })
+        })
+	function backTop() {
+		$("body , html").animate({
+		    "scrollTop":'0'
+		})
+	}
+	</script>
+</html>

@@ -1,0 +1,55 @@
+/*分享css*/
+body,html{width: 100%;}
+.ydw_logo{width: 7rem;height: 7rem;vertical-align: middle;}
+.ydw_t{display: inline-block;vertical-align: middle;margin-left:2rem;}
+.ydw_t p{font-size:2rem;}
+.ydw_t p:first-child{font-size:2.8rem;}
+.title {background-color: #e3e3e3;color: #000;padding:1.8rem 1.8rem;}
+/*供应、求购、仓库背景色*/
+.gray_boby {background-color: #f3f3f3;}
+/*供应、求购、仓库*/
+/*sds*/
+.sds_public .main>div.time_div {background-color: #f3f3f3;padding:1.44rem 2.4rem;font-size:2.4rem;}
+.sds_public .main>div {background-color: #fff;}
+.sds_public .top , .sds_public .middle , .sds_public .bottom{padding: 0 2.4rem;font-size: 0;}
+.sds_public .list>li {border-top:1px solid #e5e5e5;padding:2.4rem 0;font-size: 2.4rem;}
+.sds_public .list>li:first-child {border-top: none;}
+.sds_public .img_li {padding: 4rem 0 !important;}
+.sds_public .img_div {display: inline-block;width: 76%;font-size: 0;vertical-align: middle;}
+.sds_public .img_div img{width:19%;height: 8.12rem;margin-right: 1%;}
+.sds_public .middle {margin-top: 1.66rem;}
+.sds_public .bottom {margin-top: 1.66rem;margin-bottom: 8.8rem;}
+.sds_public .bf_md , .sds_public .bf {display: inline-block;width: 22%;}
+.sds_public .bf {vertical-align: top;}
+.sds_public .bf_md {vertical-align: middle;}
+.sds_public .r_span {display: inline-block;width: 78%;}
+/*下载按钮*/
+.download_btn {width: 12rem;padding:0.8rem 0;background-color: #2eb509;color: #fff;font-size: 2.4rem;border-radius: 3rem;text-align: center;margin-top: 1.2rem;}
+.download_btn:link {color: #fff;text-decoration:none;}
+.download_btn:visited {color: #fff;text-decoration:none;}
+.download_btn:hover {color: #fff;text-decoration:none;}         
+.download_btn:active {color: #fff;text-decoration:none;}
+/*物流、加工、检测*/
+/*dcp delivery checking process*/
+.dcp .top , .dcp .middle ,.dcp .bottom{font-size: 2.4rem;}
+.dcp .top {padding:2.4rem 3.7%;}
+.dcp .middle {padding: 1.2rem 3.7% 0rem 10%;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;}
+.dcp .bottom {padding: 1.2rem 3.7%;margin-bottom:8.8rem;}
+.dcp li{position: relative;padding: 1rem 0;}
+.dcp .ft_s {width: 25%;}
+.dcp .bhd_s {width: 73%;font-size: 2.4rem;color: #666;}
+.dcp .ft_s , .deli .bhd_s {vertical-align: top;}
+.dcp .deli_type {color: #e50010;}
+.dcp .dcp_sp {border-top:1px solid #e5e5e5;height: auto;}
+.dcp .c {width: 1.76rem;height: 1.76rem;background-color: #ffcc01;border-radius: 50%;position: absolute;left: -7%;top:2rem;}
+.dcp .line {width:2px;background-color: #ffcc01;  position: absolute;  top:100%;  left: 50%;  margin-left: -1px;}
+
+
+
+/*弹框*/
+.modal {width: 100%;  height: 100%;position:absolute; display: none;top:0;background: rgb(0 , 0 , 0);}
+.modal .img_box {width: 100%;position: absolute;left: 50%;text-align: center;top: 50%;-webkit-transform:translate(-50% , -50%);-moz-transform: translate(-50% , -50%);-ms-transform: translate(-50% , -50%);transform:translate(-50%; -50%);}
+.img_box img {width:100%;}
+.swiper-slide {width: 100%;height: 100%;}
+.swiper-container {width: 100%;  height: 100%;}
+.swiper-pagination {font-size: 2.8rem;color: #fff;}

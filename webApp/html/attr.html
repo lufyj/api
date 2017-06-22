@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>中药分类</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/cate.css" />
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script src="../js/common.js"></script>
+	</head>
+	<body>
+		<header>
+	        <a href="javascript:void(0);" class="back_btn" id="back_btn">
+	            <i class="icon_zjt iconfont"></i>返回
+	        </a>
+	        <span>规格选择</span>
+	    </header>
+		<div class="ydw_wp">
+			<div class="cate_wp">
+				<ul class="data_wp">
+					<!--<li><a href="javascript:;" class="attr_link">全部</a></li>-->
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var id = rule.getRequest().id;
+		var returnUrl = rule.getRequest().ReturnUrl;
+		var dataWp = $(".data_wp");
+		var local = new LocalData();
+        clientType = 1;
+        var param = {
+            clientType : 1,
+            id:id
+		}
+        $.post(rule.root + 'Spec/spec',param,function (req) {
+			if (req.code == 1){
+				var data  = req.data;
+				var dataL = data.length;
+				var str = '';
+				for (var i = 0; i < dataL; i++){
+					str += '<li><a href="javascript:;" class="attr_link">'+ data[i] +'</a></li>';
+				}
+                dataWp.append(str);
+			}
+        })
+        dataWp.on("click" , ".attr_link" ,function (req) {
+            var _this = $(this);
+            var attrTxt = _this.text();
+//            if (attrTxt == "全部"){
+//                attrTxt = '';
+//			}
+            var goodsMsg = local.getData("goods");
+            goodsMsg.goods_attr = attrTxt;
+            local.setData("goods" , goodsMsg);
+			location.href = returnUrl + '?status=1';
+        })
+	</script>
+</html>

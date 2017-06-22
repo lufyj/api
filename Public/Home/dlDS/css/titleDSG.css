@@ -1,0 +1,186 @@
+/******
+ * 为goods/market；demand/lst；demand/detail；supply/lst；supply/detail；goods/market_h
+ * 头部的公共样式
+ * ********/
+.detail-top{
+	width: 100%;
+	height: 45px;
+	background: #F5F5F5;
+	margin-top: 20px;
+}
+
+.detail-nav {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.detail-nav li {
+	float: left;
+}
+
+.detail-nav a {
+	display: inline-block;
+	padding: 10.5px 30px;
+	text-align: center;
+	font-size: 16px;
+}
+.detail-nav li a.active {
+	background: #E62B2E;
+	color: #fff !important;
+}
+
+.detail-nav li a:hover {
+	text-decoration: none;
+	color: #E62B2E;
+}
+
+.detail-nav li {
+	height: 45px;
+}
+.detail-middle {
+	width: 1200px;
+	margin: 20px auto;
+	overflow: hidden;
+}
+.detail-bread {
+	/*font-family: "宋体";*/
+	font-size:14px;
+	height: 28px;
+	line-height: 28px;
+	border-bottom:2px solid #cfcfcf;
+}
+
+.detail-bread a:hover {
+	color: #E62B2E;
+}
+.detail-bread i,.drugs-top h2 i{
+	display:inline-block;
+	width:20px;
+	height:20px;
+	background: url(../images/cur-pos.png) no-repeat;
+	margin-bottom:-2px;
+}
+/*.drugs-top {
+	border-top: 2px solid #CFCFCF;
+}*/
+.drugs-top h2{
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom:10px;
+	/*font-family: '宋体';*/
+}
+.drugs-top h2:first-child{
+	font-weight:normal;
+	font-size:14px;
+	display:inline-block;
+	width:400px;
+	margin-top:5px;
+	padding:5px 0;
+	border-bottom:1px dotted #ddd;
+}
+.drugs-top h2:first-child span{
+	padding:5px 8px;
+	border:1px solid #E62B2E;
+	margin-right:10px;
+}
+.drugs-top h2 i{
+	background: url(../images/checked_icon.png) no-repeat;
+	vertical-align: top;
+	margin-right:5px;
+}
+/******以下为药材分类展示全部样式*********/
+.loadingimg {
+	padding-top: 20px;
+	padding-left: 42%;
+}
+.drugs-title{
+	height: 44px;
+}
+.drugs-title li {
+	float: left;
+	margin-right: 5px;
+	background: #fff;
+	padding: 10px 15px;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	color: #000;
+	position: relative;
+	z-index:100;
+}
+.drugs-title li:hover,
+.drugs-title li.active {
+	box-sizing: border-box;
+	border-color: #E62b2e;
+	border-top: 3px solid #E62B2E;
+	cursor: pointer;
+	border-bottom: none !important;
+}
+.drugs-title li.first{
+	background:#E62B2E;
+	color:#fff;
+	border:1px solid #ddd;
+}
+.drugs-name {
+	border-top: 1px solid #E62B2E;
+	border-bottom:1px solid #e62b2e;
+	position: relative;
+	top: -1px;
+	z-index: 0;
+	padding-top: 10px;
+	background: #fff;
+	overflow-y: auto;
+	/*height: 100px;*/
+	display: none;
+	min-height:150px;
+	max-height:295px;
+	padding:10px 15px;
+	padding-right:0px;
+}
+.drugs-name a {
+    margin-bottom: 5px;
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    height: 22px;
+    line-height: 21px;
+}
+.drugs-name a:hover,.drugs-name a.active {
+	text-decoration:none;
+	background:#E62B2E;
+	border-radius:3px;
+	color:#fff;
+}
+/*关于热门样式*/
+.remen{
+	border-bottom: 1px dashed #ddd;
+    margin:0 30px 5px 9px;
+    padding-bottom: 3px;
+}
+.remen span{
+	color:#E62B2E;
+	font-size:16px;
+}
+.remen a{
+    background: #fa4c4c;
+    color: #fff;
+    border-radius: 20px;
+    margin-right:5px;
+}
+.remen a:hover{
+	border-radius: 20px;
+	text-decoration: none;
+}
+/*关于返回商品详情页面*/
+a.look_detail{
+	font-size:16px;
+	color:#8a8a8a;
+	padding-right:30px;
+	background: url(../images/look.png) no-repeat right center;
+}
+a.look_detail:hover{
+	color:#E62B2E;
+	text-decoration: none;
+	background: url(../images/look02.png) no-repeat right center;
+}

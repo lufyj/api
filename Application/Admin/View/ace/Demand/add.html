@@ -1,0 +1,128 @@
+<extend name="Public/base" />
+<block name="style">
+<link rel="stylesheet" type="text/css" href="__ADMIN__/css/fileinput.min.css" />
+<link rel="stylesheet" type="text/css" href="__ADMIN__/css/addoredit.css" />	
+<script>
+	var catObj = {$cateJson};
+</script>
+</block>
+<block name='navi'><li>求购管理</li><li>求购列表</li></block>
+<block name="body">
+<div class="page-header"><h1>{$meta_title}</h1></div>
+<div class="row">
+	<div class="col-xs-12">
+		<ul class="nav nav-tabs">
+			<li class="active">
+				<a data-toggle="tab" href="#tab1"><i class="green ace-icon fa fa-home bigger-120"></i>基 础</a>
+			</li>
+		</ul>
+		<div class="tab-content clearfix">
+			<div class="col-md-12">
+				<div class="tabbable">
+					<div class="row">
+						<div class="col-sm-12">
+							<form name="baseinfo" id="submit_form" method="post" action="{:U('save')}">									
+								<table class="table table-bordered dataTable chengebackgrounecolor ui-jqgrid-htable" id="grid-table">
+									<tbody>
+										<tr class="bg1">
+											<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;药材名称：</td>
+											<td class="col-md-5 col-sm-5" style="text-align:left;position: relative;">
+												<div class="choose-durg" id="select_cate" style="position: relative; width: 220px;">
+													<span class="show-cate">请选择</span>														
+													<div class="alert-wp">
+														<ul class="classify-list">
+															<li>
+																<span data-param="-1">自定义类</span>
+																<div class="drug-list clearfix">
+																	<label><span>药材名字:</span><input type="text" name="custom_name"></label>
+																	<br>
+																	<input type="button" id="custom_btn" value="确定" >
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;联系人：</td>
+											<td class="col-md-5 col-sm-5" style="text-align:left;">
+												<input class="form-control" type="text" name="contacts" style="display:inline-block; width:50%;" autocomplete="off"> &nbsp;&nbsp;
+												<span class="blue"></span>
+											</td>
+										</tr>
+										<tr class="bg1">
+											<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;规格：</td>
+											<td class="col-md-5 col-sm-5">													
+												<select class="form-control" id="select_spec" style="display:inline-block; width:50%;"></select>
+											</td>
+											<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;手机：</td>
+											<td class="col-md-5 col-sm-5" style="text-align:left;"><input type="text" name="mobile" class="form-control" maxlength=11 style="display:inline-block; width:50%;" autocomplete="off">
+											</td>
+										</tr>
+										<tr class="bg2">
+											<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;数量：</td>
+											<td class="col-md-5 col-sm-5"><input style="width: 50%;" name="num" type="text" autocomplete="off">&nbsp;&nbsp;公斤</td>
+											<td class="col-md-1 col-sm-1">QQ：</td>
+											<td class="col-md-5 col-sm-5"><input name="qq" class="form-control" type="text" autocomplete="off" style="display:inline-block; width:50%;"></td>
+										</tr>
+
+										<tr class="bg1">
+											<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;产地：</td>
+											<td class="col-md-5 col-sm-5">
+												<div class="control-group">
+													<label><input name="origin_type" type="radio" class="ace origin_place" checked="checked" value="1"><span class="lbl">&nbsp;&nbsp;较广</span></label>
+													<label><input name="origin_type" type="radio" class="ace origin_place"  value="2"><span class="lbl">&nbsp;&nbsp;进口</span></label>
+													<label><input name="origin_type" type="radio" class="ace origin_place"  value="3"><span class="lbl">&nbsp;&nbsp;省市县</span></label>
+												</div>
+											</td>
+											<td class="col-md-1 col-sm-1 place_select" style="display: none;"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;选择省地县：</td>
+											<td class="col-md-5 col-sm-5 place_select" style="display: none;">
+												<select class="col-md-3" name="prov_select" id="prov_select"></select>
+												<select class="col-md-3" name="city_select" id="city_select"></select>												
+												<select class="col-md-3" name="area_select" id="area_select"></select>
+											</td>
+										</tr>
+										<tr class="bg1">
+											<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;详情描述：</td>
+											<td colspan="3">
+												<textarea name="details" rows="10" style="width:100%;" placeholder="请描述您的详细信息"></textarea>
+											</td>
+										</tr>									
+									</tbody>
+								</table>
+								</br>								
+								<notempty name="cates">
+									<input type="hidden" name="cate_id" value="{$cates[0].id}" />
+									<input type="hidden" name="cate_name" value="{$cates[0].title}" />
+								<else/>
+									<input type="hidden" name="cate_id" />
+									<input type="hidden" name="cate_name" />
+								</notempty>
+								<input type="hidden" name="goods_id" />
+								<input type="hidden" name="goods_name" />
+								<input type="hidden" name="goods_attr_id" />
+								<input type="hidden" name="goods_attr_name" />
+								<input type="hidden" name="origin_area" />
+								<input type="hidden" name="pay_type" />						
+							</form>
+						</div>
+					</div>
+					<div class="clearfix form-actions">
+						<div class="col-md-offset-3 col-md-9">								
+							<a href="javascript:;" id="submitBtn" class="btn btn-info"><i class="ace-icon fa fa-check bigger-110"></i>确 定</a>
+							<a class="btn btn-return" href="javascript:history.back();"><i class="ace-icon fa fa-undo bigger-110"></i>返 回</a>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">
+<script src="__ADMIN__/js/business/demadd.js" type="text/javascript" charset="utf-8"></script>
+<script>
+var urls = ["{:U('Goods/ajaxGetSpecs')}","{:U('Region/ajaxGetProHtml')}","{:U('Region/ajaxGetCityHtml')}","{:U('Region/ajaxGetAreaHtml')}","{:U('')}"];
+//导航高亮
+highlight_subnav("{:U('Demand/index')}");
+</script>
+</block>

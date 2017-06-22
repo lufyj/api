@@ -1,0 +1,61 @@
+<extend name="Public/base" />
+<block name='navi'><li>商品管理</li><li>药品行情</li></block>
+<block name="body">
+    <div class="page-header"><h1>行情列表</h1></div>
+    <div class="space"></div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-6">
+                <form onsubmit="return false;" id="search-form">
+                    <div style="margin-bottom:10px;">
+                        <input type="text" name="goods_name" class="input-sm" placeholder="请输入药材名称">                        
+                        <a href="javascript:；" class="fm-button btn btn-sm btn-info search">查询</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-6 ">
+                <a class="fm-button btn btn-sm btn-success pull-right" href="{:U('add')}">新 增</a>
+            </div>
+            <div class="col-xs-12" id="ajax_table">      
+            	<include file='table'/>            
+            </div>
+        </div>
+    </div>
+</block>
+<block name="script">
+<script>
+var repeat_click = true;
+/* 删除一条药材行情信息 */
+function confirmDel(id, that){
+	$('#del-tip').text('确定删除当前行情？');
+	var dialog = $("div.base-modal"); 	
+	dialog.show();
+	/* 绑定删除按钮事件 */
+	$('button.ok').off('click').on('click', function(){
+		if(!repeat_click) return;
+		repeat_click = false;
+		dialog.hide();
+		$.ajax({
+            url: "{:U('GoodsMarket/del')}",
+            data: { id: id },
+            type: "get",
+            dataType: "json",
+            success: function(req) {
+                if(req.code == 1){
+                	success(req.msg);
+                	//清除当前行
+                	$(that).closest('tr').remove();                	
+                }else{
+                	alert(req.msg || req.info);	
+                }                
+                repeat_click = true;
+            },
+            error: function() {   		        
+   		        alert('网络连接超时，请稍后再试');   
+   		     	repeat_click = true;
+   		    }
+        });
+	})
+}
+</script>
+</block>

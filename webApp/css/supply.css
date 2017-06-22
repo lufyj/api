@@ -1,0 +1,36 @@
+.icon-zjt:before{content:"\e616";}
+.icon-tp:before{content:"\e697";}
+.title{height:8.8rem;line-height:8.8rem;border-bottom:1px solid #ddd;text-align: center;font-size:3rem;color:#fff;}
+.title a{color:#fff;}
+.title>a:first-child{position:absolute;left:2.5rem;font-size:2.8rem;vertical-align: middle;}
+.title>a:first-child i{font-size:2.8rem;}
+.title>a:last-child{position: absolute;right:2.5rem;}
+.supply{font-size:2.8rem;}
+.supply>li{border-bottom:0.2rem solid #efefef;height:8rem;line-height:8rem;text-indent: 2rem;padding-right:2rem;}
+.supply>li:first-child{height:15rem;line-height:15rem;}
+.supply>li:first-child i{font-size: 8.5rem;text-indent: 0;}
+.supply>li:first-child span{width:30%;letter-spacing: 1rem;text-indent: 4rem;}
+.supply>li:first-child em{letter-spacing: 0;margin-left:2rem;}
+.supply>li:first-child div.sup-imgs{height:8rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;width:70%;margin-top:4rem;}
+div.sup-imgs img{width:7.5rem;height:7.5rem;}
+div.sup-imgs-sc{display: inline-block;position:relative;text-indent: 0;margin-top:-3.3rem;}
+div.sup-imgs-sc input{position:absolute;top:6.4rem;height:8.5rem;width:8.5rem;opacity: 0;}
+.supply li span{width:14rem;display: inline-block;text-align: justify;letter-spacing: 1.8rem;color:#000; }
+.supply li p{display: inline-block;text-indent:0;width:55%;line-height:4rem;vertical-align: middle;}
+.supply li span.sup-l2{letter-spacing: 0.8rem}
+.supply li input[type="text"],.supply li input[type="tel"]{padding:1.5rem 0;background:#f7f7f7;width:67%;}
+.supply li input[type="button"]{padding: 1rem 2rem;background: #efefef;color: #999;border-radius: 0.5rem;}
+.supply li input[type="tel"]{color:#666;}
+.supply li input.xz-width{width:40%;}
+.supply li textarea{background: #f7f7f7;vertical-align: middle;width:67%;position: relative;top:1.5rem;}
+.supply>li:last-child{height:auto;padding:1rem 0;}
+.supply>li.sup-l3 input{width:67%;}
+.supply li input.sup-dm{background:#F5B203;color:#fff;border-radius: 0.5rem;}
+/*模态框*/
+.modals{position: fixed;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.6);display: -webkit-flex;-webkit-justify-content: center;-webkit-align-items: center;}
+.modal-dialogs{min-height:4rem;border-radius: 0.5rem;background-color: #fff;font-size:2.8rem;width:90%;}
+.modal-dialogs li{line-height:6rem;text-indent: 2em;}
+/*发布采购*/
+.demand>li:first-child i{font-size:2.8rem;}
+.demand>li:first-child{height: 8rem;line-height: 8rem;text-indent: 2rem;}
+.demand>li:first-child span{width:14rem;letter-spacing:1.8rem;text-indent:2rem;}

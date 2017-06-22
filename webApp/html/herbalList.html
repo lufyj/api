@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>药都网--发现</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/discover.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+<header>
+    <a href="./discover.html" class="back_btn">
+        <i class="icon_zjt iconfont"></i>返回
+    </a>
+    <span>养生</span>
+</header>
+<div class="ydw_wp">
+    <section class="des-list">
+    <ul class="fg" id="list_ul">
+        <!--<li class="type3">-->
+            <!--<a href="###" class="clearfix">-->
+                <!--<ul class="l">-->
+                    <!--<li><span class="fb">大雪-来碗滋补暖身汤&#45;&#45;当归红枣党参党参</span></li>-->
+                    <!--<li>不知不觉，已经进入到12月份了，天气渐冷，2011年12月7日，今日大雪了，渴望一份...</li>-->
+                <!--</ul>-->
+                <!--<img src="../images/supply02.jpg" class="r"/>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="type3">-->
+            <!--<a href="###" class="clearfix">-->
+                <!--<ul class="l">-->
+                    <!--<li><span class="fb">大雪-来碗滋补暖身汤&#45;&#45;当归红枣党参党参</span></li>-->
+                    <!--<li>不知不觉，已经进入到12月份了，天气渐冷，2011年12月7日，今日大雪了，渴望一份...</li>-->
+                <!--</ul>-->
+                <!--<img src="../images/supply02.jpg" class="r"/>-->
+            <!--</a>-->
+        <!--</li>-->
+    </ul>
+</section>
+</div>
+</body>
+<script type="text/javascript" src="../js/load.js"></script>
+<script>
+    $(function (){
+        var lsitWp  = $('#list_ul');
+        rule.scrollEvent = function (fn) {
+            var data = {
+                clientType:1,
+                num:5
+            }
+            var lastId = lsitWp.children(":last").attr("data-id");
+            data.minId = lastId || "";
+            $.post(rule.root + "AppHerbal/herbal" , data , function (req){
+                var li = "";
+                var code = req.code;
+                if (code == 1){
+                    var datas = req.data;
+                    var dataL = datas.length;
+                    for (var i = 0; i < dataL; i++){
+                        var descriptions = datas[i].descriptions,
+                            id = datas[i].id,
+                            thumb = datas[i].thumb,
+                            title = datas[i].title;
+                        li += '<li class="type3" data-id="'+ id +'"><a href="./herbal2.html?id='+id+'" class="clearfix"> <ul class="l"> <li><span class="fb">'+ title +'</span></li> <li>'+ descriptions +'</li> </ul> <img src="'+thumb+'" class="r"/></a></li>';
+                    }
+                    $("#list_ul").append(li);
+                    if (dataL < data.num){
+                        $(".load_wp").text("没有更多数据");
+                        return;
+                    }
+                    fn&&fn();
+                }else  if (code == 0){
+                    //查询失败
+                    console.log("查询失败");
+                }
+            });
+        }
+        appendLoad(lsitWp)
+        rule.scrollEvent();
+    });
+</script>
+</html>

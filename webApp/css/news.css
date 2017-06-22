@@ -1,0 +1,40 @@
+/*qiaoer---news*/
+
+/*药都网的消息中心----news*/
+.title{height:8.8rem;line-height:8.8rem;border-bottom:1px solid #ddd;text-align: center;}
+.title>span{font-size:3rem;}
+.title>a{position:absolute;left:0.5rem;color:#fff;font-size:2.8rem;vertical-align: middle;}
+.title>a i{font-size:2.8rem;}
+.n-c dt{width:8rem;height:8rem;border-radius: 0.3rem;line-height:8rem;text-align: center;margin-right:1.5rem;}
+.xt dt {background:#F44C4E;}
+.tb dt {background:#1F78F1;}
+.fh dt {background:#C929E6;}
+ .zb dt {background:#F1AE1F;}
+.qs dt {background:#F17D1F;}
+.n-c dt i{font-size:5rem;color:#fff;}
+.n-c>li{padding:1.5rem;border-bottom:0.1rem solid #D6D7DC;}
+.n-c dd:nth-child(2){font-size:2.5rem;margin-bottom:1.2rem;}
+.n-c dd:nth-child(2) span,.n-c dd:last-child{font-size:2rem;}
+.n-c dd:last-child{overflow: hidden;height: 3rem;text-overflow: ellipsis;white-space: nowrap;}
+.n-c li.active dl{color:#B3B3B3;}
+
+/*药都网的意见反馈---suggestion*/
+.sug{background:#F3F3F3;font-size:2.2rem;}
+.sug>textarea{width:100%;background:#fff;padding:3.5rem;color:#656565;box-sizing:border-box;height:26rem;margin-bottom:1.5rem;}
+.sug-con{background:#fff;padding-bottom:3rem;}
+.sug-con>h2{color:#231815;padding:3rem;}
+.sug-con>p{padding-left:3rem;}
+.sug-con>p em{padding:0 3rem;}
+.sug-con>p span{display: inline-block;width:5rem;text-align:justify;text-justify:distribute-all-lines; text-align-last:justify;}
+.sug-con>p:nth-child(2){padding-bottom:1.5rem;border-bottom:3px solid #f3f3f3;}
+.sug-con>p:nth-child(3){padding-top:1.5rem;}
+.sug-con>p input{width: 75%;padding: 0.5rem;vertical-align: middle;margin-bottom: 0.5rem;}
+.sug-con>p input:focus{color:#9FA0A0;}
+.sug-sub{height:43rem;line-height:43rem;text-align: center;}
+.sug-sub button{border:0.2rem solid #EB5560;border-radius:4rem;padding:0.9rem 0;width:50%;color:#eb5560;background:#F3F3F3;text-align: center;}
+.sug-modal{display: -webkit-box;display: -moz-box;-webkit-box-pack: center;-moz-box-pack: center;-webkit-box-align: center;-moz-box-align: center;position:fixed;left:0;top:0;width:100%;height:100%;background: rgba(0,0,0,0.6);display: none;}
+.sug-dialog{background:#fff;font-size:2.6rem;width:90%;border-radius: 1rem;text-align: center;padding:1.5rem 0;}
+.sug-dialog h2{color:#333;font-size:3rem;font-weight: 900;margin-bottom:1rem;}
+.sug-dialog p:nth-child(2){padding:1rem 0;border-bottom:0.1rem solid #ddd;}
+.sug-dialog p:nth-child(3){padding-top:1.5rem;color:#0D83C6;}
+.show{display: -webkit-box;}

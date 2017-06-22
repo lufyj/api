@@ -1,0 +1,42 @@
+<div class="page" style="margin-bottom:40px;margin-top:40px;">
+    <span class="count">共有<i>{$pager.count}</i>条记录</span>
+    <a href="javascript:turnpage(1,'prev')" class="prev">上一页</a> {$pager.showitem}
+    <a href="javascript:turnpage(1,'next')" class="next">下一页</a>
+</div>
+<script>
+	/* 声明变量 */
+    var	page	 = parseInt('{$pager.current}'),
+		pagenext = parseInt('{$pager.next}'),
+		pageprev = parseInt('{$pager.prev}'),
+		pagecnt  = parseInt('{$pager.pagecnt}');
+
+	$(function(){
+		
+		if(page == 1 && page != pagecnt){
+			$('a.prev').addClass('disable').attr('href', 'javascript:;');
+		}else if(page == pagecnt && page == 1){
+			$('a.prev,a.next').addClass('disable').attr('href', 'javascript:;');
+		}else if(page == pagecnt){
+			$('a.next').addClass('disable').attr('href', 'javascript:;');
+		}
+		
+	})
+	/* 跳转到某页 */
+	function topage(page){
+		var param = location.search.split('&');
+		if(page > pagecnt)page=pagecnt;
+		param[0] = '?p='+page;
+		var search = param.join('&');
+		location.href = location.pathname+search;
+	}
+	/* 切换页面 */
+	function turnpage(current,op){
+		if(op == 'next'){
+			topage(pagenext);
+		}else if(op == 'prev'){
+			topage(pageprev);
+		}else{
+			topage(current);
+		}
+	}
+</script>

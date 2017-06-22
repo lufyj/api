@@ -1,0 +1,249 @@
+<extend name="./base" />
+<block name="style">
+	<!--样式自定义开始-->
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/company/css/confirmCompany.css" />
+	<!--样式自定义结束-->
+</block>
+<block name="body">
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+				<a href="javascript:;">认证管理</a>
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />
+			<div class="right  l">
+				<div class="progress-bar1"></div>
+				<form id="myform" action="" method="post" enctype="multipart/form-data">
+					<input type="hidden" name="step" value="1">
+					<if condition="$info.certificate_type neq '2'">
+						<if condition="$info.certificate_type eq '1'">
+							<input type="hidden" name="mycomprehensive" value="__HOME__/company/images/example_3.png">
+							<input type="hidden" name="mylicense" value="{$info.license_img}">
+							<input type="hidden" name="myorganization" value="{$info.organization_code_certificate}">
+							<input type="hidden" name="mycomprehensiveCode" value="">
+							<input type="hidden" name="mylicenseCode" value="{$info.license_number}">
+							<input type="hidden" name="myorganizationCode" value="{$info.organization_code}">
+						<else/>
+							<input type="hidden" name="mycomprehensive" value="__HOME__/company/images/example_3.png">
+							<input type="hidden" name="mylicense" value="__HOME__/company/images/example_1.png">
+							<input type="hidden" name="myorganization" value="__HOME__/company/images/example_2.png">
+							<input type="hidden" name="mycomprehensiveCode" value="">
+							<input type="hidden" name="mylicenseCode" value="">
+							<input type="hidden" name="myorganizationCode" value="">
+						</if>
+					<else/>
+						<input type="hidden" name="mycomprehensive" value="{$info.comprehensive_license}">
+						<input type="hidden" name="mylicense" value="__HOME__/company/images/example_1.png">
+						<input type="hidden" name="myorganization" value="__HOME__/company/images/example_2.png">
+						<input type="hidden" name="mycomprehensiveCode" value="{$info.social_credit_code}">
+						<input type="hidden" name="mylicenseCode" value="">
+						<input type="hidden" name="myorganizationCode" value="">
+					</if>
+					<ul class="company-info info-ul">
+						<li>
+							<span class="bf-s"><span> * </span>企业名称 :</span>
+							<input type="text" class="company-name" name="name" autocomplete="off" <if condition="$info.name neq ''">value="{$info.name}"</if>/>
+							<span class="at-s"><span> * </span>标示内容为必填项</span>
+						</li>
+						<li>
+							<span class="bf-s"><span> * </span>营业执照所在地 :</span>
+							<input type="text" name="licAddress" class="license-place" autocomplete="off" <if condition="$info.license_address neq ''">value="{$info.license_address}"</if>/>
+							<span class="at-s"><span> * </span>营业执照注册地</span>
+						</li>
+						<li>
+							<span class="bf-s"><span> * </span>营业期限 :</span>
+							<input type="radio" name="licContinue" value="1" class="radio-date" <if condition="$info.license_continue neq '9999'">checked="checked"</if> />
+							<input class="date1 date laydate-icon" name="licContinue_begin" <if condition="$info.begin neq ''">value="{$info.begin}"</if> readonly="readonly" type="text" />
+							<span>&nbsp;—&nbsp;</span>
+							<input class="date2 date laydate-icon" name="licContinue_end" <if condition="$info.end neq ''">value="{$info.end}"</if> type="text" readonly="readonly" />
+							<div class="long-term">
+								<label><input type="radio" value="9999" name="licContinue" class="radio-date" <if condition="$info.license_continue eq '9999'">checked="checked"</if> />长期</label>
+							</div>
+						</li>
+						<li>
+							<span class="bf-s"><span> * </span>常用地址 :</span>
+							<input type="text" name="address" class="common-address"  autocomplete="off" placeholder="请输入常用地址" <if condition="$info.address neq ''">value="{$info.address}"</if>/>
+							<span class="at-s"><span> * </span>精确到街道</span>
+						</li>
+						<li>
+							<span class="bf-s"><span> * </span>联系电话 :</span>
+							<input type="text" name="mobile" class="mobile" placeholder="请输入联系电话" <if condition="$info.mobile neq ''">value="{$info.mobile}"</if>/>
+						</li>
+						<li>
+							<span class="bf-s">营业范围 :</span>
+							<input type="text" name="busScope" placeholder="请输入营业范围" autocomplete="off" <if condition="$info.business_scope neq ''">value="{$info.business_scope}"</if>/>
+						</li>
+						<li>
+							<span class="bf-s">注册资金 :</span>
+							<input type="text" name="regCapital" placeholder="请输入注册资金" class="money-input" autocomplete="off" <if condition="$info.registered_capital neq ''">value="{$info.registered_capital}"</if>/>
+							<span style="margin-left: 5px;">万元</span>
+						</li>
+						<li>
+							<span class="bf-s"><span> * </span>执照 :</span>
+							<label class="radio-label"><input type="radio" name="cerType" value="1" class="radio-license" <if condition="$info.certificate_type neq '2'">checked="checked"</if> />营业执照</label>
+							<label class="radio-label"><input type="radio" name="cerType" value="2" class="radio-license" <if condition="$info.certificate_type eq '2'">checked="checked"</if>/>三证合一营业执照</label>
+						</li>
+						<li class="license-li">
+							<if condition="$info.certificate_type neq '2'">
+								<ul class="license-a">
+									<li>
+										<span class="bf-s bf-s-a"><span> * </span>营业执照图片 :</span>
+										<div id="preview-div1">
+											<if condition="$info.license_img neq ''">
+												<img id="preview-img1" src="{$info.license_img}" style="width: 420px; height: 340px; border: solid 1px #d2e2e2;" alt="" />
+											<else/>
+												<img id="preview-img1" src="__HOME__/company/images/example_1.png" style="width: 420px; height: 340px; border: solid 1px #d2e2e2;" alt="" />
+											</if>
+										</div><br />
+										<span class="at-s"><span> * </span>图片文件最大3MB，支持jpg、bmp、png的图片格式</span><br /><br />
+										<label for="license-file1">
+											<input type="file" id="license-file1" name="lic" class="license-file"  size="20" />
+											<span class="up-span">上传图片</span>
+										</label>
+									</li>
+									<li>
+										<span class="bf-s"><span> * </span>营业执照注册号 :</span>
+										<input type="text" name="licNumber" placeholder="营业执照注册号" autocomplete="off" maxlength="15" class="blrn" value="{$info.license_number}"/>
+									</li>
+									<li>
+										<span class="bf-s bf-s-a"><span> * </span>组织机构代码证图片 :</span>
+										<div id="preview-div2">
+										<if condition="$info.organization_code_certificate neq ''">
+											<img id="preview-img2" src="{$info.organization_code_certificate}" style="width: 420px; height: 340px; border: solid 1px #d2e2e2;" alt="" />
+										<else/>
+											<img id="preview-img2" src="__HOME__/company/images/example_2.png" style="width: 420px; height: 340px; border: solid 1px #d2e2e2;" alt="" />
+										</if>
+										</div><br />
+										<span class="at-s"><span> * </span>图片文件最大3MB，支持jpg、bmp、png的图片格式</span><br /><br />
+										<label for="license-file2">
+											<input type="file" id="license-file2" name="org" class="license-file" size="20" />
+											<span class="up-span">上传图片</span>
+										</label>
+									</li>
+									<li>
+										<span class="bf-s"><span> * </span>组织机构代码 :</span>
+										<input type="text" name="orgCode" autocomplete="off" placeholder="组织机构代码" class="o-code" maxlength="10" value="{$info.organization_code}"/>
+									</li>
+								</ul>
+							<else/>
+								<ul class="license-b">
+									<li>
+										<span class="bf-s bf-s-a"><span> * </span>三证合一营业执照 :</span>
+										<div id="preview-div3">
+											<img id="preview-img3" src="{$info.comprehensive_license}" style="width: 420px; height: 340px; border: solid 1px #d2e2e2;" alt="" />
+										</div><br />
+										<span class="at-s"><span> * </span>图片文件最大3MB，支持jpg、bmp、png的图片格式</span><br /><br />
+										<label for="license-file3">
+											<input type="file" name="comLic" id="license-file3" class="license-file"  size="20" />
+											<span class="up-span">上传图片</span>
+										</label>
+									</li>
+									<li>
+										<span class="bf-s"><span> * </span>统一社会信用代码 :</span>
+										<input type="text" name="socialCreditCode" autocomplete="off" placeholder="统一社会信用代码" class="uscc" maxlength="18" value="{$info.social_credit_code}"/>
+									</li>
+								</ul>
+							</if>
+						</li>
+						<li class="btn-li">
+							<span>下一步</span>
+						</li>
+					</ul>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</block>
+<block name="script">
+	<!--脚本自定义开始-->
+	<script src="__HOME__/company/js/company.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__STATIC__/form.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="__HOME__/company/js/confirmCompanyInfo.js"></script>
+	<script src="__STATIC__/laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+	<!--脚本自定义结束-->
+	<script type="text/javascript">
+		laydate.skin('dahong');
+//		var minDate,maxDate;
+//		function maxDateFn(max){
+//			var year = max.substring(0 , 4),
+//				mouth = max.substring(5 , 7),
+//				day = max.substring(8 , 10);
+//			return year + '-' + mouth + '-' + (day-1);
+//		}
+		var current = laydate.now(0);
+		$(".date1").on("click", function() {
+			laydate({
+				format: 'YYYY-MM-DD',
+				min: '1949-10-01',
+				max:current,
+				istime:false,
+//				choose: function(dates) { //选择好日期的回调
+//					minDate = dates;
+//				}
+			})
+		});
+		$(".date2").on("click", function() {
+			laydate({
+				format: 'YYYY-MM-DD',
+				min: current,
+				istime:false,
+				//choose: function(dates) { //选择好日期的回调
+				//	maxDate = maxDateFn(dates);
+				//}
+			})
+		});
+	</script>
+	<script type="text/javascript">
+		//js本地图片预览，兼容ie[6-9]、火狐、Chrome17+、Opera11+、Maxthon3
+		function PreviewImage(fileObj, imgPreviewId, divPreviewId) {
+			var allowExtention = ".jpg,.bmp,.gif,.png"; //允许上传文件的后缀名document.getElementById("hfAllowPicSuffix").value;
+			var extention = fileObj.value.substring(fileObj.value.lastIndexOf(".") + 1).toLowerCase();
+			var browserVersion = window.navigator.userAgent.toUpperCase();
+			if(allowExtention.indexOf(extention) > -1) {
+				if(fileObj.files) { //HTML5实现预览，兼容chrome、火狐7+等
+					if(window.FileReader) {
+						var reader = new FileReader();
+						reader.onload = function(e) {
+							document.getElementById(imgPreviewId).setAttribute("src", e.target.result);
+						}
+						reader.readAsDataURL(fileObj.files[0]);
+					} else if(browserVersion.indexOf("SAFARI") > -1) {
+						$.custom('不支持Safari6.0以下浏览器的图片预览!');
+					}
+				} else if(browserVersion.indexOf("MSIE") > -1) {
+					fileObj.select();
+					if(browserVersion.indexOf("MSIE 9") > -1)
+						fileObj.blur(); //不加上document.selection.createRange().text在ie9会拒绝访问
+					var newPreview = document.getElementById(divPreviewId + "New");
+					if(newPreview == null) {
+						newPreview = document.createElement("div");
+						newPreview.setAttribute("id", divPreviewId + "New");
+						newPreview.style.width = document.getElementById(imgPreviewId).width + "px";
+						newPreview.style.height = document.getElementById(imgPreviewId).height + "px";
+						newPreview.style.border = "solid 1px #d2e2e2";
+					}
+					newPreview.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale',src='" + document.selection.createRange().text + "')";
+					var tempDivPreview = document.getElementById(divPreviewId);
+					tempDivPreview.parentNode.insertBefore(newPreview, tempDivPreview);
+					tempDivPreview.style.display = "none";
+				}
+			} else {
+				$.custom("仅支持" + allowExtention + "为后缀名的文件!");
+				fileObj.value = ""; //清空选中文件
+				if(browserVersion.indexOf("MSIE") > -1) {
+					fileObj.select();
+					document.selection.clear();
+				}
+				fileObj.outerHTML = fileObj.outerHTML;
+			}
+			return fileObj.value; //返回路径
+		}
+	</script>
+</block>

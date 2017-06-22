@@ -1,0 +1,59 @@
+<extend name="Company:base1" />
+<block name="style">
+	<!--样式自定义开始-->
+	<link rel="stylesheet" type="text/css" href="__CSS__/reset.css" />
+	<link rel="stylesheet" href="__TMPL__/deep/css/deepdetail.css" />
+	<!--样式自定义结束-->
+</block>
+<block name="body">
+	<div class="company01">
+		<!--logo头部-->
+		<div class="logo-title">
+			<div class="logo-bg clearfix">
+				<img src="{$comInfo.logo}" alt="公司的logo" class="l" />
+				<span class="r com-name">{$comInfo.name}</span>
+			</div>
+			<div class="title2-m">
+					<p>
+					<span>公告：</span>
+					<marquee scrolldelay="1000" direction="left" behavior="scroll" scrollamount="30" loop="-1" onMouseOut="this.start()" onMouseOver="this.stop()">
+						{$noticeInfo.content}
+					</marquee>
+				</p>
+			</div>
+		</div>
+		<!--logo头部-->
+		<!--所在位置-->
+		<div class="title-ad">
+			<div class="ad">
+				<span><a href="{$domain}">首页</a> ></span>
+				<span>公司业务 ></span>
+				<span class="cur">仓库</span>
+			</div>
+		</div>
+		<!--所在位置-->
+		<!--仓库-->
+		<div class="store-wrap  wrap-a">
+			<ul class="clearfix">
+				<li>仓库类型 : {$storeInfo.type}</li>
+				<li>仓库面积 : {$storeInfo.size}m<sup>2</sup></li>
+				<li>仓库层高 : {$storeInfo.height}</li>
+				<li>联系人 : {$storeInfo.contacts}</li>
+				<li>联系电话 : {$storeInfo.mobile}</li>
+				<li class="ads">地址 : {$storeInfo.address}</li>
+				<li class="store-des">仓库简介 : {$storeInfo.desc}</li>
+			</ul>
+			<ul class="img-ul clearfix">
+				<foreach name="storeInfo.img" item="img">
+					<li>
+						<img src="{$img}" alt="" />
+					</li>
+				</foreach>
+			</ul>
+		</div>
+		<!--仓库-->
+	</div>
+</block>
+<block name="script">
+
+</block>

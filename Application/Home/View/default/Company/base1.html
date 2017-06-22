@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			<?php if($meta_title){ echo $meta_title.'|'; } ?>药都网一站式服务平台</title>
+		<link rel="stylesheet" type="text/css" href="__CSS__/reset.css" />
+		<link rel="stylesheet" type="text/css" href="__CSS__/head.css" />
+		<block name="style">
+		</block>
+		<style>
+			.load_code img{
+				width:110px;
+			}
+			.footers{
+				padding: 10px 0;
+    			text-align: center;
+				border-top:1px solid #E7E7E7;
+			}
+			.footers p {
+				line-height: 20px;
+			}
+			.footer-wrap {
+				width:100%;
+				padding:10px 0;
+				background: #F8F8F8;
+			}
+			.footer-wrap>div{
+				width:1100px;margin:0 auto;
+			}
+			.go_back{
+				padding-top:30px;
+			}
+			.go_back p{
+				font-size: 20px;
+    			padding-top: 20px;
+    			margin-left: 15px;
+			}
+			.title-ad span:hover{
+				cursor: default;
+			}
+		</style>
+		<script src="__STATIC__/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<block name="body">
+			在这里书写各自的内容
+		</block>
+		<!--脚-->
+		<div class="footer-wrap">
+			<div class="clearfix">
+				<div class="l go_back">
+					<a href="/">
+						<img src="__IMG__/logo_03.png"/>
+						<p class="r">药都网，一个药商们的网站！</p>
+					</a>
+				</div>
+				<div class="load_code r">
+					<a href="#" style="margin-right:85px;"><img src="__IMG__/ydw_app2.png" /></a>
+					<a href="#"><img src="__IMG__/ydw_w2.png" /></a>
+				</div>
+				<!--<div class="go_back">
+					<a href="#" style="margin-right:85px;"><img src="__IMG__/ydw_app2.png" /></a>
+					<a href="#"><img src="__IMG__/ydw_w2.png" /></a>
+					<a href="/">
+						<img src="__TMPL__/images/fanhui.png"/>
+						<p class="r">药都网，一个药商们的网站！</p>
+					</a>
+				</div>-->
+			</div>
+		</div>
+		<!--关于我们等-->
+		<div class="footers">
+			<p>
+				<a href="/">药都网，一个药商们的网站！点击此处，进入首页！</a>
+			</p>
+			<!--增值电信业务经营许可-->
+			<p>
+				增值电信业务经营许可证：皖B2-00000000-0 互联网药品信息服务资格证书：（皖）-经营性-2017-0000
+			</p>
+			<p>
+				客服Q Q：785831157 在线时间：09:00-17:30
+			</p>
+			<p>
+				Copyright 2005-2015 <a href="/">www.yaoduwang.com</a> 版权所有 皖ICP备15022788号
+			</p>
+		</div>
+		<block name="script">
+		</block>
+	</body>
+
+</html>

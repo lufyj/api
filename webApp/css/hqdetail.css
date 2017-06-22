@@ -1,0 +1,30 @@
+.article_info{background-color: #fff;margin-top: 2rem;padding:1.2rem 2rem 0;}
+.head_img{width: 6.5rem;height: 6.5rem;}
+.head_img , .head_info p{vertical-align: middle;}
+.head_info p{display: inline-block;font-size: 2.6rem;color: #4d72ae;margin-left: 1.6rem;}
+.right_txt{font-size: 2.2rem;color: #999;margin-top: 1.8rem;}
+.atc_c {margin-top:1rem;max-height:100%;}
+.atc_c h3{font-size: 2.8rem;line-height: 4.2rem;}
+.atc_c p{font-size:2.2rem;color: #999;line-height: 3.2rem;text-align: justify;margin-top:1.4rem;}
+.img_wp img{width: 13.5rem;height: 13.5rem;margin-top: 2rem;}
+.img_wp {display: flex;flex-wrap: wrap;justify-content:space-between;}
+.atc_op{font-size: 2.2rem;}
+.atc_op{line-height: 6rem;}
+.atc_op , .atc_op a{color: #999;}
+.icon{font-size:2.8rem;margin-left: 3rem;vertical-align:-0.2rem;}
+.person_wp {border-top: 0.1rem solid #ccc;line-height: 5.6rem;height: 5.6rem;background-color: #fff;padding: 0 2rem;white-space: nowrap;overflow: hidden;font-size: 2.2rem;text-overflow: ellipsis;color: #4d72ae;}
+.person_wp span {color: #4d72ae;}
+.person_wp .icon_wallet {margin-right:0.2rem;display:inline-block;width: 3.2rem;height: 3.2rem;background:url("../images/qianbao.png") no-repeat center center;background-size: 100% 100%;vertical-align: -0.8rem;}
+.comment_wp {background-color: #f7f7f7;padding: 0 2rem;}
+.comment_hd {color: #333;}
+.comment_bd {padding: 0 2.8rem 1rem;}
+.comment_bd li>a{display: inline-block;width: 100%;height: 100%;}
+.comment_bd li>a:active{background-color: #ddd;}
+.comment_wp {line-height:4.2rem;font-size: 2.2rem;max-height: 100%;}
+.comment_wp .user{color: #4d72ae;}
+.comment_op {background-color: #fff;padding:1.4rem 0;font-size:2.2rem;position: fixed;display: flex;justify-content: space-around;bottom: 0;left: 0;width: 100%;}
+.comment_op input{background-color: #f7f7f7;padding-left:7%;width:68%;height: 4.8rem;line-height: 4.8rem;vertical-align: middle;border-radius:0.4rem;}
+.comment_op button{width:18%;height:5rem;background-color: #e6e6e6;color: #b2b2b2;border-radius:0.8rem;vertical-align: middle;}
+.comment_op .act{background-color: #e6282b;color: #fff;}
+.icon_shuxie {position: absolute;color: #999;left:3%;top:2.2rem;}
+.load_wp {margin-bottom:7.5rem;}

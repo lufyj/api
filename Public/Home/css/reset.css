@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+input:-webkit-autofill{
+   -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+body {
+    font: 12px/1.5 "微软雅黑", Arial, Tahoma, Helvetica, \5b8b\4f53, sans-serif;
+     color: #444;
+}
+
+html, body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, object, code, em, span, var, legend, button, input, textarea, th, td, a, img, header, footer, nav, aside, audio, datalist, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+/*清除内外边距*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+/*设置默认字体*/
+:focus {
+    outline: 0;
+}
+
+ul, ol, ul li, ol li {
+    list-style: none;
+}
+
+/*重置列表*/
+address, caption, cite, em, code, dfn, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+form label {
+    cursor: pointer;
+}
+
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    outline: none;
+}
+
+textarea {
+    resize: none
+}
+
+input {
+    vertical-align: middle;
+}
+
+img {
+    border: 0;
+}
+
+/*重置图片元素*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*重置表格*/
+.l {
+    float: left;
+}
+
+.r {
+    float: right;
+}
+
+button, input[type="reset"], input[type="button"], input[type="submit"] {
+    line-height: normal !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+a {
+    color: #666;
+}
+
+a:hover {
+    text-decoration: underline;
+    color:#E62B2E;
+}
+
+input {
+    _filter: chroma(color=#000000);
+}
+
+/*--清除浮动
+------------------------------------------------------------------------------------------*/
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix:after {
+    _zoom: 1;
+}
+
+.overflow {
+    overflow: hidden;
+    _zoom: 1;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+
+/*关于分页处理*/
+/*分页样式,此为公共的分页样式*/
+.page {
+	border-bottom: none;
+	margin-top: 40px;
+	text-align: center;
+	font-size: 14px;
+	vertical-align: middle;
+}
+
+.page span i {
+	font-style: normal;
+	margin: 0 5px;
+	color: #e62b2e;
+}
+
+.page a {
+	display: inline-block;
+	padding: 5px 13px;
+	border: 1px solid #e1e1e1;
+	margin-right: 9px;
+	background-color: #f6f6f6;
+	color: #333;
+	vertical-align: middle;
+}
+
+.page a.current{
+    background-color: #e62b2e;
+    color: #fff;
+    border-color: #e62b2e;
+}
+.page a.current:hover{
+    border-color: #e62b2e;
+	background-color:red;
+}
+.page .numinput {
+	width: 34px;
+	height: 31px;
+	border: 1px solid #e1e1e1;
+	margin: 0 5px;
+	text-align: center;
+	outline: none;
+}
+
+.page .disable {
+	color: #a1a1a1;
+	border-color: #e8e8e8;
+	background-color: #FFF;
+}
+
+.page .prev {
+	margin-right: 15px;
+}
+
+.page .prev i {
+	background: url(../images/prvpg.png) no-repeat;
+	display: inline-block;
+	width: 6px;
+	height: 9px;
+	*height: 13px;
+	margin-right: 12px;
+	*display: inline;
+	zoom: 1;
+}
+
+.page .prev.disable i {
+	background: url(../images/disprvpg.png) no-repeat;
+}
+
+.page .next {
+	margin-left: 9px;
+}
+
+.page .next i {
+	background: url(../images/nextpg.png) no-repeat;
+	width: 6px;
+	height: 9px;
+	*height: 13px;
+	display: inline-block;
+	margin-left: 12px;
+}
+
+.page .next.disable i {
+	background: url(../images/disnextpg.png) no-repeat;
+}
+
+.page .sure {
+	margin-left: 15px;
+}
+
+.page .count {
+	margin-right: 15px;
+	vertical-align: middle;
+}
+
+.page .num {
+	margin-left: 20px;
+	vertical-align: middle;
+}

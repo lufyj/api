@@ -1,0 +1,106 @@
+<extend name="./base" />
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/titleDSG.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/dl.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/viewer.min.css" />
+</block>
+<block name="body">
+	<div class="demand-detail">
+		<include file="Public/common_nav" />
+		<div class="detail-middle clearfix">
+			<div class="detail-bread">
+				<i></i>
+				<b>当前位置：</b>&nbsp;
+				<a href="/">首页</a>&nbsp;&gt;&nbsp;
+				<a href="{:U('supply/lst')}">供应信息</a>&nbsp;&gt;&nbsp;
+				<a href="javascript:;"><b>详情</b></a>
+				<a href="{:U('goods/detail',array('id'=>$info['goods_id']))}" class="r look_detail">查看更多内容</a>
+			</div>
+			<div class="detail-main clearfix">
+				<div class="main-title clearfix">
+					<h2 class="l">供应：{$info.goods_name}</h2>
+				</div>
+				<div class="main-detail clearfix">
+					<ul class="main-details clearfix l">
+						<li>分类：{$info.cate_name|default=''}</li>
+						<li>规格：{$info.goods_attr_name|default=''}</li>
+						<!--<li>数量：{$info.num}公斤</li>-->
+						<li>数量：
+							<?php if(is_numeric($info['num'])){echo $info['num'].'公斤';}else{echo $info['num'];} ?>
+						</li>
+						<li>价格：
+							<eq name="info.price_type" value="1">{$info.price}元/公斤
+								<else/>面议</eq>
+						</li>
+						<li>产地：
+							<eq name="info.origin_type" value="3">{$info.origin_area}
+								<else/>{$info.origin_type|get_origin_type}</eq>
+						</li>
+						<li>货源地：{$info.supply_area}</li>
+						<li>卖家：{$info.contacts}</li>
+						<li>手机：{$info.mobile}</li>
+						<li>Q&nbsp;Q：{$info.qq|default="无"}</li>
+						<li>发布时间：{$info.create_time|date='Y-m-d',###}</li>
+					</ul>
+					<div class="r main_right">
+						<div class="title clearfix">
+							<span class="l">
+							同名推荐
+							</span>
+							<a href="{:U('lst',array('cate_id'=>$info['cate_id'],'id'=>$info['goods_id']))}" class="r more">更多&gt;&gt;</a>
+						</div>
+						<ul class="list">
+							<foreach name="list" item="vo">
+								<li>
+									<a href="/supply/detail/id/{$vo.id}.html">
+										<span>价格&nbsp;:&nbsp;
+											<if condition="$vo.price_type eq 1 ">
+												{$vo.price}元/公斤
+												<else />
+												{$vo.price}
+											</if>
+										</span><span>规格&nbsp;:&nbsp;{$vo.goods_attr_name}</span><span>数量&nbsp;:&nbsp;<?php if(is_numeric($vo['num'])) echo $vo['num'].'公斤'; else echo $vo['num'];?></span>
+									</a>
+								</li>
+							</foreach>
+						</ul>
+					</div>
+				</div>
+				<div class="mainD-imgs" id="jq22">
+					<foreach name="info.imgs" item="vo">
+						<!--<a href="{$vo[0]}" target="_blank">-->
+						<img src="{$vo[1]}" data-param="{$vo[0]}" class="drug_img" />
+						<!--</a>-->
+					</foreach>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal_wp">
+		<img src="" alt="" class="show_img" />
+		<!--<span class="close-btn"></span>-->
+	</div>
+</block>
+<block name="script">
+	<script src="__HOME__/dlDS/js/viewer.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var drug_img = $(".drug_img"),
+			show_img = $(".show_img"),
+			modal_wp = $(".modal_wp");
+		$(function (){
+			drug_img.click(function() {
+				var u = $(this).attr('data-param');
+				show_img.attr("src", u);
+				//打开弹框
+				modal_wp.show();
+				show_img.css({
+					'max-height':'920px'
+				})
+			});
+			modal_wp.click(function() {
+				modal_wp.hide();
+                show_img.attr("src", '');
+			});
+		})
+	</script>
+</block>

@@ -1,0 +1,108 @@
+<extend name="Public/base"/>
+<block name='navi'><li>系统</li><li>菜单管理</li></block>
+<block name="body">    
+    <div class="page-header">
+		<h1>{:isset($info['id'])?'编辑':'新增'}后台菜单</h1>
+	</div>
+	<div class="row col-xs-12">
+	    <form action="{:U()}" method="post" class="form-horizontal">
+	        <div class="form-group">
+	            <label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;标题：</label>
+	            <div class="controls">
+	                <input type="text" class="col-xs-10 col-sm-5" name="title" value="{$info.title|default=''}">
+	                <lable class="blue smaller lighter">（用于后台显示的配置标题）</label>
+	            </div>
+	        </div>
+	        <div class="form-group">
+	            <label class="col-sm-3 control-label no-padding-right">排序：</label>
+	            <div class="controls">
+	                <input type="text" class="col-xs-10 col-sm-5" name="sort" value="{$info.sort|default=0}">
+	                <lable class="blue smaller lighter">（用于分组显示的顺序）</label>
+	            </div>
+	        </div>
+	        <div class="form-group">
+	            <label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;链接：</label>
+	            <div class="controls">
+	                <input type="text" class="col-xs-10 col-sm-5" name="url" value="{$info.url|default=''}">
+	                <lable class="blue smaller lighter">（U函数解析的URL或者外链）</label>
+	            </div>
+	        </div>
+	        <div class="form-group">
+	            <label class="col-sm-3 control-label no-padding-right">上级菜单：</label>
+	            <div class="controls">
+	                <select name="pid">
+	                    <volist name="Menus" id="menu">
+	                        <option value="{$menu.id}">{$menu.title_show}</option>
+	                    </volist>
+	                </select>
+	                <lable class="blue smaller lighter">（所属的上级菜单）</label>
+	            </div>
+	        </div>
+	        <div class="form-group">
+	            <label class="col-sm-3 control-label no-padding-right">分组：</label>
+	            <div class="controls">
+	                <input type="text" class="col-xs-10 col-sm-5" name="group" value="{$info.group|default=''}">
+	                <lable class="blue smaller lighter">（用于左侧分组二级菜单）</label>
+	            </div>
+	        </div>
+	        <div class="form-group">
+	            <label class="col-sm-3 control-label no-padding-right">是否隐藏：</label>
+	            <div class="controls">
+	            	<div class="radio">
+						<label>
+							<input name="hide" type="radio" class="ace" value="1">
+							<span class="lbl"> 是 </span>
+						</label>
+						<label>
+							<input name="hide" type="radio" class="ace" value="0">
+							<span class="lbl"> 否 </span>
+						</label>
+					</div>				
+	                <!-- <input type="radio" name="hide" value="1">是
+	                <label class="radio"><input type="radio" name="hide"  value="0">否</label> -->
+	            </div>
+	        </div>
+	        <div class="form-group">
+	            <label class="col-sm-3 control-label no-padding-right">仅开发者模式可见：<span class="check-tips"></span></label>
+	            <div class="controls">
+	            	<div class="radio">
+						<label>
+							<input name="is_dev" type="radio" class="ace" value="1">
+							<span class="lbl"> 是 </span>
+						</label>
+						<label>
+							<input name="is_dev" type="radio" class="ace" value="0">
+							<span class="lbl"> 否 </span>
+						</label>
+					</div>            	
+	                <!-- <label class="radio"><input type="radio" name="is_dev" value="1">是</label>
+	                <label class="radio"><input type="radio" name="is_dev" value="0">否</label> -->
+	            </div>
+	        </div>
+	        <div class="form-group">
+	            <label class="col-sm-3 control-label no-padding-right">说明：</label>
+	            <div class="controls">
+	                <input type="text" class="col-xs-10 col-sm-5" name="tip" value="{$info.tip|default=''}">
+	                <lable class="blue smaller lighter">（菜单详细说明）</label>
+	            </div>
+	        </div>
+	        <div class="clearfix form-actions">
+	        	<div class="col-md-offset-3 col-md-9">
+	        		<input type="hidden" name="id" value="{$info.id|default=''}">
+	            	<button class="btn btn-info submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal"><i class="ace-icon fa fa-check bigger-110"></i>确 定</button>
+	            	<button class="btn btn-return" onclick="javascript:history.back(-1);return false;"><i class="ace-icon fa fa-undo bigger-110"></i>返 回</button>	
+	        	</div>            
+	        </div>
+	    </form>
+    </div>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        Think.setValue("pid", {$info.pid|default = 0});
+        Think.setValue("hide", {$info.hide|default = 0});
+        Think.setValue("is_dev", {$info.is_dev|default = 0});
+        //导航高亮
+        highlight_subnav('{:U('index')}');
+    </script>
+</block>

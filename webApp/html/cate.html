@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>中药分类</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/cate.css" />
+	    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js"></script>
+	</head>
+	<body>
+		<header>
+	        <a href="javascript:void(0);" class="back_btn" id="back_btn">
+	            <i class="icon_zjt iconfont"></i>返回
+	        </a>
+	        <span>中药分类</span>
+	    </header>
+		<div class="ydw_wp">
+			<div class="cate_wp">
+				<ul id="cate_list">
+
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function () {
+            var returnUrl = decodeURIComponent(rule.getRequest().ReturnUrl);
+			$.post(rule.root + 'Class/goods_category' , {clientType:1} , function(data){
+				var li = '';
+				var code = data.code;
+			    if (code == 1){
+					var datas = data.data;
+					var datasL = datas.length;
+					for (var i = 0; i < datasL; i++){
+						var id = datas[i].id;
+						var title = datas[i].title;
+						var cateName = encodeURI(encodeURI(title));
+						li += '<li><a href="./goods_name.html?cate_id='+id+'&cate_name='+ cateName +'&ReturnUrl='+returnUrl+'">'+title+'</a></li>';
+					}
+					$("#cate_list").html(li);
+				}else if (code == 0){
+			        console.log("查询失败");
+				}
+			})
+        });
+	</script>
+</html>

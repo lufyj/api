@@ -1,0 +1,62 @@
+<div class="dataTables_wrapper form-inline no-footer">
+    <table class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="sample-table-2_info">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>联系人</th>
+                <th>联系电话</th>
+                <th>分类</th>
+                <th>品名</th>
+                <th>规格</th>
+                <th>数量</th>
+                <th>价格</th>
+                <th>产地</th>
+                <th>货源</th>
+                <th>创建时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <foreach name="list" item="vo" key="k">
+                <tr>
+                    <td>{$show_num*($page_num-1)+$k+1}</td>
+                    <td>{$vo.contacts}</td>
+                    <td>{$vo.mobile}</td>
+                    <egt name='vo.goods_id' value='1000000'>
+                    	<td></td>
+                    	<td><span class='label label-warning arrowed arrowed-right'>{$vo.goods_name}</span></td>
+                    	<td></td>
+                    <else/>
+                    	<td>{$vo.cate_name}</td>
+                    	<td>{$vo.goods_name}</td>
+                    	<td>{$vo.goods_attr_name}</td>
+                    </egt>                    
+                    <td>{$vo.num}</td>
+                    <eq name='vo.price_type' value='1'>
+                    	<td>{$vo.price_type|get_price_type}/{$vo.price|default=0}</td>
+                    <else/>
+                    	<td>{$vo.price_type|get_price_type}</td>
+                    </eq>
+                    <eq name='vo.origin_type' value='3'>
+                    	<td style="max-width:120px;">{$vo.origin_type|get_origin_type}/{$vo.origin_area|default=''}</td>
+                    <else/>
+                    	<td>{$vo.origin_type|get_origin_type}</td>
+                    </eq>   
+                    <td>{$vo.supply_area}</td>                    
+                    <td>{$vo.create_time|time_format}</td>
+                    <td width="100px">
+                        <div class="btn-toolbar opt-btn cf">
+                            <a class="btn btn-minier btn-primary" href="{:U('edit?id='.$vo['id'])}">编辑</a>
+                            <a class="btn btn-minier btn-danger ajax_get confirm no-refresh" href="{:U('del?id='.$vo['id'])}">删除</a>
+                        </div>
+                    </td>
+                </tr>
+            </foreach>
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-xs-12">            
+        	<include file='Public/page' url="{:U('Supply/Index')}"/>           
+        </div>
+    </div>
+</div>

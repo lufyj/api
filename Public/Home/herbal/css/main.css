@@ -1,0 +1,13 @@
+.wrap {padding:0 3.3%;}
+.title {width:100%;min-height:0.99rem;border-bottom: 1px solid #d3d3d3;padding-top: 0.25rem;}
+h3 {font-size:0.34rem;font-weight:700;line-height:0.61rem;}
+.base-msg span {font-size:0.16rem;color:#adadad;line-height: 0.25rem;}
+.base-msg .or {margin-right:1.9%;}
+.content-wrap .desc {font-size:0.25rem;margin-top:0.2rem;}
+.img-s {width:77.5%;text-align:center;margin:0.35rem auto;}
+.img-s img {width:100%;}
+.content{font-size:0.25rem;}
+.content p{
+	text-align: justify;
+}
+.img-div{text-align: center;}

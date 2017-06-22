@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>药都网--行情</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+    <style>
+        .market_wp {background:#fff;margin-top:2rem;height: 100%;padding: 0 2.6%;}
+        .market_wp h3 {font-size:2.8rem;text-align: center;padding:1.5rem 0 0.6rem;font-weight: normal;}
+        .article_msg , .content {font-size: 2.2rem;color:#999;}
+        .article_msg {text-align: center;line-height:4rem;}
+        .content {line-height:3.8rem;text-align: justify;margin-top:1rem;}
+        .time {margin-left:3rem;}
+        .views_num {margin-left:1rem;}
+        .link_wp {font-size:2.2rem;line-height:4.6rem;padding:1rem 0;}
+        .link_wp a{color:#5a86b3;}
+        .link_wp label {color: #666;}
+    </style>
+</head>
+<body>
+
+<header>
+    <!--<a href="javascript:void(0);" class="back_btn" onclick="window.history.back();">-->
+    <!--<i class="icon_zjt iconfont"></i>返回-->
+    <!--</a>-->
+    <span></span>
+</header>
+
+<div class="ydw_wp">
+    <article class="market_wp">
+        <h3 class="title"></h3>
+        <p class="article_msg">
+            <label>来源: </label><span class="author"></span>
+            <span class="views_num"></span>
+            <span class="time"></span>
+        </p>
+        <div class="content">
+        </div>
+        <div class="link_wp">
+            <div>
+                <label>上一篇: </label><a class="prev"></a>
+            </div>
+            <div>
+                <label>下一篇: </label><a class="next"></a>
+            </div>
+        </div>
+    </article>
+</div>
+</body>
+<script>
+    var source = rule.getRequest().source || '';
+    if (!source) {
+        $('header').hide();
+        $(".ydw_wp").removeClass("ydw_wp")
+    }
+    var typeArr = ['天天行情' , '产地行情' , '药市动态'];
+    var marketArr = ['亳州','安国' , '玉林' , '成都'];
+    var type = parseInt(rule.getRequest().type);//如果是1 天天行情，则需要传市场market
+    var market = rule.getRequest().market || '';
+    var id = rule.getRequest().id;
+    var title = typeArr[type-1];
+    var marketStr = type==1?'-'+marketArr[market-1]:'';
+    $('header').children("span").text(title+marketStr);
+    var params = {
+        type : type,
+        market : market,
+        id : id,
+        clientType : 1
+    }
+    $.post(rule.root+'AppHerbal/tthq_details' , params, function (res) {
+        if (res.code == 1){
+            var data = res.data,
+                author = data.author,
+                content = data.content,
+                createTime = data.create_time,
+                articleId = data.id,
+                nextId = data.next_id,
+                nextTitle = data.next_title,
+                prevId = data.prev_id,
+                prevTitle = data.prev_title,
+                title = data.title,
+                view = data.view;
+                $(".author").text(author);
+                $(".content").html(content);
+                $(".views_num").text("浏览"+view+"次");
+                $(".time").text(createTime);
+                $(".title").text(title);
+                var prevHref = prevId?'./tthq.html?id='+ prevId +'&type=' + type +'&market='+ market + '&source=' +source:'javascript:;';
+                var nextHref = nextId?'./tthq.html?id='+ nextId +'&type=' + type +'&market='+ market + '&source=' +source:'javascript:;';
+                var prevTxt = prevId?prevTitle:"没有了";
+                var nextTxt = nextId?nextTitle:"没有了";
+                $(".prev").attr("href" , prevHref).text(prevTxt);
+                $(".next").attr("href" , nextHref).text(nextTxt);
+        }
+    })
+</script>
+</html>

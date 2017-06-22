@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/share.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/detail.css"/>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/common.js"></script>
+</head>
+<body class="gray_boby ">
+	<div class=" title ">
+			<img src="../../images/ydw2.png" alt="" class="ydw_logo"/>
+			<div class="ydw_t">
+				<p>药都网</p>
+				<p>一个药商自助交易的平台</p>
+			</div>
+			<a class="download_btn dib r" href="###">点击打开</a>
+		</div>
+	<div class="main">
+		<div class="bn">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#" target="_blank"><img src="../../images/banner.png"/></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" target="_blank"><img src="../../images/banner.png"/></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" target="_blank"><img src="../../images/banner.png"/></a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<div class="top">
+			<h3>
+				<span class="goods_name">三七</span>
+				<span class="attr">各种规格</span>
+			</h3>
+			<div class="top_content">
+				<p>
+					<label>发布时间：</label><span class="day">2017-06-82</span>
+					<label>剩余天数：</label><span class="time">30天</span>
+				</p>
+				<p>
+					<label>价格：</label><span class="price">150.00元</span>
+					<label class="label4">数量：</label><span class="num">630吨</span>
+				</p>
+			</div>
+		</div>
+		<div class="bottom">
+			<ul>
+				<li>
+					<label>买家</label><span class="">理查德 <em class="blue"><i class="iconfont icon_v"></i>已认证</em></span>
+				</li>
+				<li>
+					<label>手机号</label><span class="tel blue"><a class="blue" href="tel:15638215985">15638215985</a></span>
+				</li>
+				<li>
+					<label>QQ</label><span>无</span>
+				</li>
+				<li>
+					<label>票据</label><span>发票或收购手续</span>
+				</li>
+				<li>
+					<label>质量</label><span>达到标注达到标注</span>
+				</li>
+				<li>
+					<label>样品</label><span>达到标注达到标注</span>
+				</li>
+				<li>
+					<label>产地</label><span>河南郑州开搞的萨达萨达打算</span>
+				</li>
+				<li>
+					<label>库存地</label><span>河南郑州开搞的萨达萨达打算</span>
+				</li>
+				<li>
+					<label>详情</label><span>我们家都是好东西我们家都是好东西我们家都是好东西我们家都是好东西我们家都是好东西 要不要</span>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</body>
+    <script src="../../js/share.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: 1000,//可选选项，自动滑动
+            pagination : '.swiper-pagination',
+            autoplayDisableOnInteraction : false,
+        });
+    	var result = GetRequest();
+    	var id = Number(result.id);
+    	var data = {
+			clientType:1,
+			id:id
+		};
+		$.ajax({
+			url:rule.root+"AppShare/supply_share",
+			data:data,
+			type: "post",
+			success:function(req) {
+				console.log(req);
+				var code = req.code;
+				if (code == 1){
+					var datas = req.data;
+					var create_time = datas.create_time;		//发布时间
+					var	contacts = datas.contacts;				//联系人
+					var	mobile = datas.mobile;					//手机号
+					var goods_name = datas.goods_name;			//品名
+					var goods_attr_name = datas.goods_attr_name;//规格
+					var	num = datas.num;						//数量
+					var price_type = datas.price_type;			//价格类型
+					var price = datas.price;					//价格
+					var	origin_area = datas.origin_area;		//产地
+					var origin_type = datas.origin_type;        //产地类型
+					var supply_area = datas.supply_area;		//货源地
+					var supply_detail = datas.supply_detail;    //详细货源地
+					var	details = datas.details;				//详情
+					var imgs = datas.pic;						//图片
+					if (imgs){
+					    var imgsLength = imgs.length;
+					    var imgDom = '';
+					    var slider = '';
+					    for (var i = 0; i < imgsLength; i++){
+							imgDom += '<img src="'+ imgs[i] +'" alt="" />';
+							var index = imgs[i].indexOf("thumb");
+							var h = imgs[i].substring(0 , index);
+							var f = imgs[i].substring(index+14);
+							var img_url = h + f;
+							slider += '<div class="swiper-slide"><img src="'+ img_url +'" alt="" /></div>';
+                   		}
+						$(".img_div").html(imgDom);
+						$(".swiper-wrapper").html(slider);
+                        var img = $(".img_div img");
+                        var width = img.width();
+                        img.css({
+                            'height':width + 'px'
+                        });
+					}
+
+					$(".time_span").text(create_time);
+					$(".name_span").text(goods_name);
+					$(".contacts_span").text(contacts);
+					$(".tel_span").text(mobile);
+					if (goods_attr_name){
+						$(".spec_span").text(goods_attr_name);
+					}
+					if (num == -1){
+						num = "大货";
+						$(".num_span").text(num);
+					}else{
+						$(".num_span").text(num + "公斤");
+					}
+                    $(".num_span").text(num);
+                    if (price_type == 2){
+						price = "面议";
+						$(".price_span").text(price);
+					}else {
+						$(".price_span").text(price + "元/公斤");
+					}
+					$(".origin_span").text(origin_area);
+					$(".source_span").text(supply_area + supply_detail);
+					$(".des_span").text(details);
+
+				}
+			},
+			error:function (error) {
+				console.log(error)
+			}
+		})
+    </script>
+</html>

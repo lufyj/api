@@ -1,0 +1,39 @@
+
+.icon-bx:before { content: "\e767";}
+.icon-wx:before { content: "\e655";}
+.icon-bzf:before { content: "\e60a";}
+.icon-zhuanzhang:before { content: "\e6e6";}
+.icon-zhifubao:before { content: "\e60b";}
+p.pay-ts,p.pay-ts2{color:#E62B2E;font-size:1.8rem;text-indent: 2em;padding:1.5rem 0;}
+p.pay-ts2{color:#666;border-bottom:0.1rem solid #D6D7DC;padding-top:0;}
+ul.pay-select{background: #fff;}
+.pay-select dl>dt>i{font-size:4.5rem;}
+.pay-select li:first-child dl>dt>i{color:#FF9C00;}
+.pay-select li:nth-child(2) dl>dt>i{color:#32B4FF;}
+.pay-select li:last-child dl>dt>i{color:#50D62B;}
+.pay-select dl>dt,.pay-select dl>dd:last-child{width:10%;text-align: center;vertical-align: middle;display: inline-block;}
+.pay-select dl>dt+dd{width:78%;vertical-align: middle;display: inline-block;}
+.pay-select dl>dd:last-child i{font-size:4.5rem;color:#e62b2e;}
+.pay-select dl>dt+dd>h2{color:#333;font-size:2.8rem;}
+.pay-select dl>dt+dd>p{color:#999;font-size:1.8rem;}
+.pay-select>li{padding:2rem 0;border-bottom:0.1rem solid #D6D7DC;}
+.pay-select>li:last-child{border-bottom:none;}
+div.pay-zfb-sel{color:#666;margin-top:2rem;border-top:0.1rem solid #d6d7dc;padding-top:2rem;}
+div.pay-zfb-sel>span{font-size:2.5rem;text-indent: 3rem;display: block;}
+div.pay-zfb-sel div{width:100%;margin-top:2rem;display: flex;display: -ms-flexbox;display: -webkit-flex;align-items: center;align-content: center;justify-content:space-around;}
+div.pay-zfb-sel a{padding:1rem 1.9rem;border:0.1rem solid #D6D7DC;border-radius: 1rem;font-size:2rem;}
+.pay-btn{text-align:center;margin-top:2rem;}
+.pay-btn>button{width:85%;padding:1.5rem 0;text-align: center;font-size:2.5rem;color:#999;border-radius: 1rem;}
+.pay-btn>button.active{background: #e62b2e;color:#fff;}
+.money-sel a.active{background: #E62b2e;color:#fff;border-color:#E62B2E;}
+
+/*支付托管资金单独*/
+.act .icon-wx:before { content: "\e767";}
+.icon-xxjy {color:#e62b2e !important;}
+.icon-xxjy:before{content: "\e62e";}
+.icon_anquan {color:#1afa29;font-size:4.5rem;vertical-align: middle;}
+.icon_anquan:before {content: "\e682";}
+.num_wp>div {display: inline-block;font-size: 2.5rem;vertical-align: middle;width:80%;margin-left:1rem;}
+.num_wp {padding:2rem 1.3rem;background-color: #fff;margin-bottom: 2rem;}
+.num_wp .gn{margin-left:0.2rem;}
+

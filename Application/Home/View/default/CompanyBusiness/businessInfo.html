@@ -1,0 +1,577 @@
+<extend name="./base" />
+<block name="style">
+	<!--样式自定义开始-->
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/company/css/company.css" />
+	<!--样式自定义结束-->
+</block>
+<block name="body">
+	<!--主页内容开始-->
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+				<a href="javascript:;">企业管理</a>&nbsp;>&nbsp;
+				<a href="javascript:;">业务管理</a>
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />
+			<div class="right base-info l">
+				<div class="title">
+					<span class="active">业务管理</span>
+				</div>
+				<!--公司业务开始-->
+				<ul class="bsns-ul">
+					<eq name="auth_store" value="1">
+					<li>
+						<div class="top clearfix">
+							<span>仓储</span>
+							<div class="add r">
+								<span class="add_span"><b></b>添加</span>
+								<span  class="warn_span">发布已到上限，发布更多，请联系客服</span>
+							</div>
+						</div>
+						<ul class="content cc">
+							<li class="clearfix f">
+								<span>类型</span>
+								<span style="position: relative;top: -5px;">面积(m<sup>2</sup>)</span>
+								<span>层高(m)</span>
+								<span>联系人</span>
+								<span>电话</span>
+							</li>
+							<if condition="$storeInfo neq ''">
+								<foreach name="storeInfo" item="store">
+									<li class="clearfix" data-business="store" data-id="{$store.id}">
+										<span>{$store.type}</span>
+										<span>{$store.size}</span>
+										<span>{$store.height}</span>
+										<span>{$store.contacts}</span>
+										<span>{$store.mobile}</span>
+									</li>
+								</foreach>
+								<else/>
+								<li class="clearfix">
+									<span>请添加仓库信息</span>
+								</li>
+							</if>
+						</ul>
+					</li>
+					</eq>
+					<eq name="auth_delivery" value="1">
+					<li>
+						<div class="top clearfix">
+							<span>物流</span>
+							<div class="add r">
+								<span class="add_span"><b></b>添加</span>
+								<span  class="warn_span">发布已到上限，发布更多，请联系客服</span>
+							</div>
+						</div>
+						<ul class="content wl">
+							<li class="clearfix f">
+								<span>出发地</span>
+								<span>目的地</span>
+								<span>车辆类型</span>
+							</li>
+							<if condition="$deliveryInfo neq ''">
+								<foreach name="deliveryInfo" item="delivery">
+									<li data-business="delivery" data-id="{$delivery.id}">
+										<span>{$delivery.begin}</span>
+										<span>{$delivery.end}</span>
+										<span>{$delivery.type}</span>
+									</li>
+								</foreach>
+								<else/>
+								<li>
+									<span>请添加物流服务信息</span>
+								</li>
+							</if>
+						</ul>
+					</li>
+					</eq>
+					<eq name="auth_packing" value="1">
+					<li>
+						<div class="top clearfix">
+							<span>包装</span>
+							<div class="add r">
+								<span class="add_span"><b></b>添加</span>
+								<span  class="warn_span">发布已到上限，发布更多，请联系客服</span>
+							</div>
+						</div>
+						<ul class="content bz">
+							<li class="clearfix f">
+								<span>包装方式</span>
+								<span>包装材料</span>
+							</li>
+							<if condition="$packingInfo neq ''">
+								<foreach name="packingInfo" item="packing">
+									<li data-business="packing" data-id="{$packing.id}">
+										<span>{$packing.packing_method}</span><span>{$packing.packing_material}</span>
+									</li>
+								</foreach>
+								<else/>
+								<li>
+									<span>请添加包装信息</span>
+								</li>
+							</if>
+						</ul>
+					</li>
+					</eq>
+					<eq name="auth_process" value="1">
+					<li>
+						<div class="top clearfix">
+							<span>加工</span>
+							<div class="add r">
+								<span class="add_span"><b></b>添加</span>
+								<span  class="warn_span">发布已到上限，发布更多，请联系客服</span>
+							</div>
+						</div>
+						<ul class="content jg">
+							<li class="clearfix f">
+								<span>加工方式</span>
+								<span>备注</span>
+							</li>
+							<if condition="$processInfo neq ''">
+								<foreach name="processInfo" item="process">
+									<li data-business="process" data-id="{$process.id}">
+										<span>{$process.content}</span>
+										<span class="remarks">{$process.remarks}</span>
+									</li>
+								</foreach>
+								<else/>
+								<li>
+									<span>请添加加工信息</span>
+								</li>
+							</if>
+						</ul>
+					</li>
+					</eq>
+					<eq name="auth_check" value="1">
+					<li>
+						<div class="top clearfix">
+							<span>检测</span>
+							<div class="add r">
+								<span class="add_span"><b></b>添加</span>
+								<span  class="warn_span">发布已到上限，发布更多，请联系客服</span>
+							</div>
+						</div>
+						<ul class="content jc">
+							<li class="clearfix f">
+								<span>检测方法</span>
+								<span>备注</span>
+							</li>
+							<if condition="$checkInfo neq ''">
+								<foreach name="checkInfo" item="check">
+									<li data-business="check" data-id="{$check.id}">
+										<span>{$check.content}</span>
+										<span class="remarks">{$check.remarks}</span>
+									</li>
+								</foreach>
+								<else/>
+								<li>
+									<span>请添加代检测信息</span>
+								</li>
+							</if>
+
+						</ul>
+					</li>
+					</eq>
+				</ul>
+				<!--公司业务开始-->
+			</div>
+		</div>
+	</div>
+	<!--弹框-->
+	<div class="empty">
+		<!--兼容ie透明增加一层div-->
+		<div class="alert-wrap">
+			<!--仓储-->
+			<eq name="auth_store" value="1">
+			<div class="first">
+				<div class="title clearfix">
+					<span>编辑仓储信息</span>
+					<b class="r close"></b>
+				</div>
+				<ul class="edit-ul">
+					<li class="type">
+						<span class="head">仓库类型 :</span>
+						<input type="hidden" name="st_id" id="st_id" value="0">
+						<label><input type="radio" name="st_type" class="st_type" value="0" checked="checked"/> 普通</label>
+						<label><input type="radio" name="st_type" class="st_type" value="1" /> 冷藏</label>
+						<label><input type="radio" name="st_type" class="st_type" value="2" /> 保温/恒温</label>
+						<label><input type="radio" name="st_type" class="st_type" value="3" /> 特种</label>
+						<label><input type="radio" name="st_type" class="st_type" value="4" /> 气调</label>
+					</li>
+					<li>
+						<span class="head">仓库面积 :</span>
+						<label><input placeholder="请输入数字" type="text" name="st_size" id="st_size" value="" autocomplete="off"/> m<sup>2</sup></label>
+						<span class="head v">层高:</span>
+						<label><input placeholder="请输入数字" type="text" name="st_height" id="st_height" value="" autocomplete="off"/> m</label>
+					</li>
+					<li>
+						<span class="head">地址 :</span>
+						<select name="st_provice" id="st_provice">
+							<option value="" selected="selected">请选择省</option>
+						</select>
+						<select name="st_city" id="st_city" class="city">
+							<option value="" selected="selected">请选择市</option>
+						</select>
+						<select name="st_dist" id="st_dist" class="dist">
+							<option value="" selected="selected">请选择区/县</option>
+						</select>
+					</li>
+					<li class="det-ad">
+						<span class="head">乡镇/街道 :</span>
+						<input type="text" name="st_address" id="st_address" placeholder="请输入详细地址(最多30个中文)" />
+					</li>
+					<li>
+						<span class="head">联系人 :</span>
+						<input type="text" name="st_contacts" id="st_contacts" placeholder="请输入联系人" autocomplete="off"/>
+						<span class="head tel">联系电话:</span>
+						<input type="text" name="st_mobile" id="st_mobile" placeholder="请输入联系电话" autocomplete="off"/>
+					</li>
+					<li>
+						<span class="head spe">图片 :</span>
+						<ul id="preview5" class="clearfix">
+							<li class="up-btn1">
+								<img class="add-store" src="__HOME__/company/images/up_pic.png" class="company-logo" alt="" />
+								<form id="store-form" enctype="multipart/form-data">
+									<input type="file" id="up-store" name="store" />
+								</form>
+							</li>
+						</ul>
+						<script src="__STATIC__/form.js" type="text/javascript" charset="utf-8"></script>
+
+					</li>
+					<li>
+						<span class="head spe">仓库简介 :</span>
+						<textarea name="st_desc" id="st_desc" rows="" cols="" class=""></textarea>
+					</li>
+				</ul>
+				<div class="sure-div">
+					<span class="save" id="st_save">保存</span>
+					<span class="del" id="st_cancel">取消</span>
+				</div>
+			</div>
+			</eq>
+			<!--物流-->
+			<eq name="auth_delivery" value="1">
+			<div class="second">
+				<div class="title clearfix">
+					<span>编辑物流信息</span>
+					<b class="r close"></b>
+				</div>
+				<ul class="edit-ul">
+					<li>
+						<input type="hidden" name="de_id" id="de_id" value="0">
+						<span class="head">出发地址:</span>
+						<select name="de_begin_provice" id="de_begin_provice">
+							<option value="" selected="selected">请选择省</option>
+						</select>
+						<select name="de_begin_city" id="de_begin_city" class="city">
+							<option value="" selected="selected">请选择市</option>
+						</select>
+						<select name="de_begin_dist" id="de_begin_dist" class="dist">
+							<option value="" selected="selected">请选择区/县</option>
+						</select>
+					</li>
+					<li class="det-ad">
+						<span class="head">目的地址:</span>
+						<select name="de_end_provice" id="de_end_provice">
+							<option value="" selected="selected">请选择省</option>
+						</select>
+						<select name="de_end_city" id="de_end_city" class="city">
+							<option value="" selected="selected">请选择市</option>
+						</select>
+						<select name="de_end_dist" id="de_end_dist" class="dist">
+							<option value="" selected="selected">请选择区/县</option>
+						</select>
+					</li>
+					<li class="det-ad">
+						<span class="head">车辆类型:</span>
+						<select name="de_type" id="de_type" class="de_type">
+							<option value="0" selected="selected">厢式/板车</option>
+							<option value="1">集装箱</option>
+							<option value="2">冷藏车</option>
+							<option value="3">危险品车辆</option>
+							<option value="4">特种车辆</option>
+						</select>
+					</li>
+					<li>
+						<span class="head spe">物流简介:</span>
+						<textarea name="de_desc" id="de_desc" rows="" cols="" class=""></textarea>
+					</li>
+				</ul>
+				<div class="sure-div">
+					<span class="save" id="de_save">保存</span>
+					<span class="del" id="de_cancel">取消</span>
+				</div>
+			</div>
+			</eq>
+			<!--包装信息-->
+			<eq name="auth_packing" value="1">
+			<div class="third">
+				<div class="title clearfix">
+					<span>编辑包装信息</span>
+					<b class="r close"></b>
+				</div>
+				<ul class="edit-ul">
+					<li class="det-ad">
+						<input type="hidden" name="pa_id" id="pa_id" value="0">
+						<span class="head">包装方式:</span>
+						<input type="text" id="pa_method" name="pa_method" placeholder="请输入包装方式" autocomplete="off"/>
+					</li>
+					<li class="det-ad">
+						<span class="head">包装材料:</span>
+						<input type="text" id="pa_material" name="pa_material" placeholder="请输入包装材料" autocomplete="off"/>
+
+					</li>
+					<li>
+						<span class="head spe">样品图片:</span>
+						<ul id="preview6" class="clearfix">
+							<li class="up-btn2">
+								<img class="add-packing" src="__HOME__/company/images/up_pic.png" alt="" />
+								<!--</label>-->
+								<form id="packing-form" enctype="multipart/form-data">
+									<input type="file" id="up-packing" name="packing" />
+								</form>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="sure-div">
+					<span class="save" id="pa_save">保存</span>
+					<span class="del" id="pa_cancel">取消</span>
+				</div>
+			</div>
+			</eq>
+			<!--代加工-->
+			<eq name="auth_process" value="1">
+			<div class="forth">
+				<div class="title clearfix">
+					<span>编辑加工方式</span>
+					<b class="r close"></b>
+				</div>
+				<ul class="edit-ul">
+					<li>
+						<span class="head">加工方式 :</span>
+						<input type="hidden" name="pr_id" id="pr_id" value="0"/>
+						<select name="pr_content" id="pr_content" class="default_select">
+							<option value="9999" selected="selected">请选择加工方式</option>
+							<option value="0">饮片加工/生产/包装</option>
+							<option value="1">花果茶生产</option>
+							<option value="2">中药打粉</option>
+							<option value="3">中药饮品加工/生产</option>
+							<option value="4">成品配方生产</option>
+							<option value="5">保健药品包装生产</option>
+							<option value="-1">自定义</option>
+						</select>
+						<span class="other-way pr_other">
+							<input type="text" name="pr_other" id="pr_other" placeholder="请输入加工方式" autocomplete="off"/><span>*</span>最多30个字
+						</span>
+					</li>
+					<li>
+						<span class="head spe">备注 :</span>
+						<textarea id="pr_remarks" name="pr_remarks" rows="" cols="" class=""></textarea>
+					</li>
+				</ul>
+				<div class="sure-div">
+					<span class="save" id="pr_save">保存</span>
+					<span class="del" id="pr_cancel">取消</span>
+				</div>
+			</div>
+			</eq>
+			<!--检测方法-->
+			<eq name="auth_check" value="1">
+			<div class="fifth">
+				<div class="title clearfix">
+					<span>编辑检测方式</span>
+					<b class="r close"></b>
+				</div>
+				<ul class="edit-ul">
+					<li>
+						<span class="head">检测方法 :</span>
+						<input type="hidden" name="ch_id" id="ch_id" value="0"/>
+						<select name="ch_content" id="ch_content" class="default_select">
+							<option value="9999" selected="selected">请选择检测方法</option>
+							<option value="0">中药材含量检验</option>
+							<option value="1">中药材常规三检</option>
+							<option value="2">中药材硫磺检验</option>
+							<option value="-1">自定义</option>
+						</select>
+						<span class="other-way ch_other">
+							<input type="text" name="ch_other" id="ch_other" placeholder="请输入检测方法" autocomplete="off"/><span>*</span>最多30个字
+						</span>
+					</li>
+					<li>
+						<span class="head spe">备注 :</span>
+						<textarea name="ch_remarks" id="ch_remarks" rows="" cols="" class=""></textarea>
+					</li>
+				</ul>
+				<div class="sure-div">
+					<span class="save" id="ch_save">保存</span>
+					<span class="del" id="ch_cancel">取消</span>
+				</div>
+			</div>
+			</eq>
+		</div>
+	</div>
+	<!--主页内容结束-->
+</block>
+<block name="script">
+	<!--脚本自定义开始-->
+	<script src="__HOME__/js/placeholder.js"></script>
+	<script src="__HOME__/company/js/company.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__HOME__/company/js/business.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	//选择其他加工方式和其他检测方式
+	var ch = $("#ch_content") , 
+		pr = $("#pr_content");
+	chooseOtherWay(ch);
+	chooseOtherWay(pr);
+	function chooseOtherWay(obj){
+		obj.change(function (){
+		var self = $(this);
+		if (self.val() == "-1"){
+			//展开其他输入框
+			self.siblings(".other-way").find('input[type="text"]').val("");
+			self.siblings(".other-way").show();
+		}else{
+			self.siblings(".other-way").hide();
+			self.siblings(".other-way").find('input[type="text"]').val("");
+		}
+	});
+	}
+	//————————————————————————————仓储————————————————————————
+		$("#preview5").on("click", "div.del", function() {
+			//出现添加图片按钮
+			$(".up-btn1").show();
+			//移除dom
+			var self = $(this);
+			self.parent("li").remove();
+			//动态修改id
+			$(".img-li1").each(function(index) {
+				var a = index + 1
+				var self = $(this);
+				self.children("img").attr("id", "store-img" + a);
+			});
+			//删除数据库图片
+		});
+		$("#preview5").on('change' ,  "#up-store", function() {
+			var i = $(".img-li1").length;
+			if(i >= 5) {
+				return false;
+			} else {
+				$("#store-form").ajaxSubmit({
+					type: 'post',
+					url: '/CompanyStore/upImg.html',
+					success: function(data) {
+						if(typeof(data) == "object") {
+							if(data.path) {
+								var index = i + 1;
+								var img = $('<li class="img-li1"><img id="store-img' + index + '" /><div class="del"><span>删除</span></div><input name="st_img[]" type="hidden" id="store-ad' + index + '"/></li>');
+								$("#preview5").append(img);
+								$("#store-img" + index).attr("src", data.path);
+								$("#store-ad" + index).val(data.path);
+								$('#store-form').resetForm();
+								if(i >= 4) {
+									$(".up-btn1").hide();
+								}
+							} else {
+								$.custom(data.msg);
+							}
+						} else {
+							var datas = JSON.parse(data);
+							if(datas.path) {
+								var index = i + 1;
+								var img = $('<li class="img-li1"><img id="store-img' + index + '" /><div class="del"><span>删除</span></div><input name="st_img[]" type="hidden" id="store-ad' + index + '"/></li>');
+								$("#preview5").append(img);
+								$("#store-img" + index).attr("src", datas.path);
+								$("#store-ad" + index).val(datas.path);
+								$('#store-form').resetForm();
+								if(i >= 4) {
+									$(".up-btn1").hide();
+								}
+							} else {
+								$.custom(datas.msg);
+							}
+						}
+
+					},
+					error: function(error) {
+						$.custom('上传失败');
+					}
+				})
+			}
+		});
+		
+		
+		//————------------------------------包装---------------------------------
+		//	记录上传张数
+		//删除图片
+		$("#preview6").on("click", "div.del", function() {
+			//出现添加图片按钮
+			$(".up-btn2").show();
+			//移除dom
+			var self = $(this);
+			self.parent("li").remove();
+			//动态修改id
+			$(".img-li2").each(function(index) {
+				var a = index + 1
+				var self = $(this);
+				self.children("img").attr("id", "packing-img" + a);
+			});
+			//删除数据库图片
+		});
+		$("#preview6").on("change" , "#up-packing" ,function() {
+			var i = $(".img-li2").length;
+			if(i >= 5) {
+				return false;
+			} else {
+				$("#packing-form").ajaxSubmit({
+					type: 'post',
+					url: '/CompanyPacking/upImg.html ',
+					success: function(data) {
+						if(typeof(data) == "object") {
+							if(data.path) {
+								var index = i + 1;
+								var img = $('<li class="img-li2"><img id="packing-img' + index + '" /><div class="del"><span>删除</span></div><input name="pa_img[]" type="hidden" id="packing-ad' + index + '"/></li>');
+								$("#preview6").append(img);
+								$("#packing-img" + index).attr("src", data.path);
+								$("#packing-ad" + index).val(data.path);
+								$('#packing-form').resetForm();
+								if(i >= 4) {
+									$(".up-btn2").hide();
+								}
+							} else {
+								$.custom(data.msg);
+							}
+						} else {
+							var datas = JSON.parse(data);
+							if(datas.path) {
+								var index = i + 1;
+								var img = $('<li class="img-li2"><img id="packing-img' + index + '" /><div class="del"><span>删除</span></div><input name="pa_img[]" type="hidden" id="packing-ad' + index + '"/></li>');
+								$("#preview6").append(img);
+								$("#packing-img" + index).attr("src", datas.path);
+								$("#packing-ad" + index).val(datas.path);
+								$('#packing-form').resetForm();
+								if(i >= 4) {
+									$(".up-btn2").hide();
+								}
+							} else {
+								$.custom(datas.msg);
+							}
+						}
+
+					},
+					error: function(error) {
+						$.custom('上传失败');
+					}
+				})
+			}
+		});
+	</script>
+	<!--脚本自定义结束-->
+</block>

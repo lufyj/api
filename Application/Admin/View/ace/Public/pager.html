@@ -1,0 +1,105 @@
+<?php $show_num=$data['show_num'];$page_num=$data['page_num'];$total_page=$data['total_page'];$all_count=$data['all_count']; ?>
+<div id="grid-pager" class="ui-state-default ui-jqgrid-pager ui-corner-bottom">
+	<table cellspacing="0" cellpadding="0" border="0" class="ui-pg-table" style="width:100%;table-layout:fixed;height:100%;">
+       <tbody>
+           <tr>
+               <td id="grid-pager_left"></td>
+               <td id="grid-pager_center" style=" width: 450px;">
+                   <table cellspacing="0" cellpadding="0" border="0" class="ui-pg-table" style="table-layout:auto;">
+                       <tbody>
+                           <tr>
+                               <td class="ui-pg-button ui-corner-all first_grid-pager" style="cursor: default;"><span class="ui-icon ace-icon fa fa-angle-double-left bigger-140"></span></td><!-- ui-state-disabled -->
+                               <td class="ui-pg-button ui-corner-all prev_grid-pager" style="cursor: default;"><span class="ui-icon ace-icon fa fa-angle-left bigger-140"></span></td><!-- ui-state-disabled -->
+                               <td style="width:4px;" class="ui-pg-button ui-state-disabled"><span class="ui-separator"></span></td>
+                               <td dir="ltr">当前第
+                                   <input type="text" role="textbox" value="{$page_num}" maxlength="7" size="2" class="ui-pg-input"> 页，共
+                                   <span class="sp_1_grid-pager">{$total_page}</span> 页</td>
+                               <td style="width:4px;" class="ui-pg-button ui-state-disabled"><span class="ui-separator"></span></td>
+                               <td class="ui-pg-button ui-corner-all next_grid-pager">
+                                   <span class="ui-icon ace-icon fa fa-angle-right bigger-140"></span></td>
+                               <td class="ui-pg-button ui-corner-all last_grid-pager">
+                                   <span class="ui-icon ace-icon fa fa-angle-double-right bigger-140"></span></td>
+                               <td dir="ltr">
+                                   <select role="listbox" class="ui-pg-selbox" id="show_num">
+                                   	<option <if condition="$show_num eq C('LIST_ROWS') ">selected="selected"</if> value="{:C('LIST_ROWS')}" role="option" >{:C('LIST_ROWS')}</option>
+                                       <option <if condition="$show_num eq 40 ">selected="selected"</if> value="40" role="option" >40</option>
+                                       <option <if condition="$show_num eq 60 ">selected="selected"</if> value="60" role="option" >60</option>
+                                       <option <if condition="$show_num eq 80 ">selected="selected"</if> value="80" role="option" >80</option>
+                                   </select>
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+               </td>
+               <td id="grid-pager_right">
+                   <div class="ui-paging-info" style="text-align:right" dir="ltr">第
+                       <?php echo ($page_num - 1) * $show_num + 1; ?> -
+                       <?php echo ($total_page == $page_num) ? $all_count : $show_num * $page_num; ?> 条 共 {$all_count} 条                               
+                   </div>
+               </td>
+           </tr>
+       </tbody>
+   </table>
+</div>
+<script>
+$(function(){
+	var click_atrr = "",
+		page_num = Number("{$data.page_num}"),	
+		total_page = Number("{$data.total_page}"),	
+		show_num = Number("{$data.show_num}"),
+		all_count = Number("{$data.all_count}");	
+	if (page_num == 1 && page_num != total_page) {
+	    click_attr = ".next_grid-pager,.last_grid-pager";
+	    $(".first_grid-pager,.prev_grid-pager").addClass("ui-state-disabled");
+	} else if (page_num == total_page && page_num == 1) {
+	    click_attr = "";
+	    $(".next_grid-pager,.last_grid-pager,.first_grid-pager,.prev_grid-pager").addClass("ui-state-disabled");
+	} else if (page_num == total_page) {
+	    click_attr = ".first_grid-pager,.prev_grid-pager";
+	    $(".next_grid-pager,.last_grid-pager").addClass("ui-state-disabled");
+	} else {
+	    click_attr = ".first_grid-pager,.prev_grid-pager,.next_grid-pager,.last_grid-pager";
+	}	
+	$(click_attr).off('click').on('click', function() {		
+		if ($(this).hasClass('first_grid-pager')) {
+	        page_num = 1;
+	    } else if ($(this).hasClass('last_grid-pager')) {
+	        page_num = Number(total_page);
+	    } else if ($(this).hasClass('prev_grid-pager')) {
+	        page_num = Number(page_num) - 1;
+	    } else if ($(this).hasClass('next_grid-pager')) {
+	        page_num = Number(page_num) + 1;
+	    }
+		ajaxPager();	    
+	});	
+	/* 绑定表单查询按钮 */
+	$('#search-form a.search').off('click').on('click',function(){        
+		ajaxPager();
+	});	
+	/* 下拉框选择时改变 */
+	$("#show_num").off('change').on("change", function() {
+		show_num = this.value;
+		//将选择的数量与all_count进行比较
+		/* if(this.value>all_count){			
+			return;
+		} */
+		ajaxPager();        
+    })
+    /* ajax异步访问公共方法 */
+    function ajaxPager(){
+		var condition = $('#search-form').serializeArray();
+		$.ajax({
+	        url: "[url]",  
+	        dataType: 'html',
+	        type: 'get',
+	        data: { show_num: show_num, page_num: page_num, condition: condition },
+	        success: function(data, textStatus) {	        	
+	        	$('#ajax_table').html(data);	        	          
+	        },
+	        error: function(jqXHR, textStatus, errorThrown) {
+	            alert(jqXHR);
+	        }
+	    });
+	}
+})
+</script>

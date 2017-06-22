@@ -1,0 +1,46 @@
+<extend name="./base" />
+<block name="style">
+<link rel="stylesheet" type="text/css" href="__HOME__/about/css/aboutUs.css" />
+</block>
+<block name="body">
+<div class="aboutUs clearfix">
+	<include file="about_menu" />	
+	<div class="aboutUs-main l">
+		<div class="aboutUs-top">
+			<h3>您所在的位置：<a href="{:U('Index/index')}">首页</a>&nbsp;&gt;&nbsp;<a href="{:U('index')}">关于我们</a>&nbsp;&gt;&nbsp;<a href="javasrcipt:;">最新公告</a></h3>
+		</div>
+		<div class="aboutUs-title">
+			<h2>最新公告</h2>
+		</div>
+		<div class="aboutUs-container wenhua">
+			<div class="usjs clearfix detail">
+				<h3 class="detailhd clearfix">
+		    		{$info.title}
+	    		</h3>
+				<div class="fuhd f-fl">
+					<span class="theauthor">责任编辑：<a rel="nofollow" href="javascript:;" title="来源{$info.author|default=药都网}">{$info.author|default=药都网}</a></span> | <span class="thetime">{$info.create_time|date='Y-m-d',###}</span> | <span class="thecategory"><a href="/about/platform" rel="category">最新公告</a></span>
+				</div>
+				<p>{$info.content}</p>
+			</div>				
+			<div class="about-page clearfix">
+				<p><span>上一篇：</span><notempty name="lastInfo"><a href="/about/detail/id/{$lastInfo.id}">{$lastInfo.title}</a><else/>暂无内容</notempty></p>
+				<p><span>下一篇：</span><notempty name="nextInfo"><a href="/about/detail/id/{$nextInfo.id}">{$nextInfo.title}</a><else/>暂无内容</notempty></p>
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">
+<script src="__HOME__/about/js/aboutUs.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		//给展示的最新公告的内容添加统一样式
+		$('.usjs').children(':gt(1)').css({
+			'line-height': '36px',
+			'font-size': '16px',
+			'color': '#666',
+			'text-indent': '2em'
+		});
+	})
+</script>	
+</block>

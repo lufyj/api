@@ -1,0 +1,30 @@
+/*我的投标和我的采购同用*/
+/*nav*/
+.nav_wp {position: fixed;top:7.6rem;width: 100%;background:#f8f8f8;z-index:50;}
+.ydw_wp {padding-top: 13.6rem;}
+.nav_item {float: left;font-size: 2.4rem;text-align: center;width:33.3%;height: 6rem;line-height: 6rem;}
+.nav_item a {display: inline-block;width: 100%;height: 100%;}
+.active-nav {color: #E62B2E;border-bottom: 0.3rem solid #E62B2E;}
+.tb_wp .nav_item {width:25%;}
+
+/*nav结束*/
+/*内容切换div*/
+/*符号*/
+.icon_shijian,.icon_wancheng,.icon_tanhao,.icon_biaozhu {font-size:4rem;color: #666;}
+.list_wp {height: 100%;}
+.c_item {display: none;}
+.c_item:first-child {display: block;}
+.list_info {font-size: 2.4rem;padding: 1.2rem 0;position: relative;}
+.list_info p {line-height:6rem;}
+.list_wp>li {background-color: #fff;padding:0 2rem;margin-bottom: 2rem;}
+.btm_info {padding:1.3rem 0;font-size: 2.2rem;color: #666;border-top: 1px solid #ccc;}
+.list_info .light {color:#E62B2E;}
+.txt_span1 {width:17rem;}
+.txt_span2 {width:15rem;}
+.txt_span {margin-right:1rem;vertical-align:top;display: inline-block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.status {color:#faab2c;font-size: 2.2rem;}
+.status_ok {color:#2c92fa;}
+.status_no {color:#26d19b;}
+.right {width: 14rem;text-align: center;position: absolute;right: 0;top:1.5rem;}
+.r_btn {padding:0.6rem 1.2rem;border: 2px solid #e62b2e;color: #e62b2e;border-radius:0.8rem;line-height:normal;margin-right:2rem;}
+/*内容切换div*/

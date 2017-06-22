@@ -1,0 +1,81 @@
+<extend name="Public/base" />
+<block name='navi'><li>其他</li><li>版本管理</li></block>
+<block name="body">
+	<div class="page-header">
+		<h1>{:isset($info['id'])?'编辑':'新增'}版本管理</h1>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a data-toggle="tab" href="#tab1"><i class="green ace-icon fa fa-home bigger-120"></i>基 础</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<form action="{:U('')}" method="post" class="form-horizontal" id="submit-form">
+					<input type="hidden" name="id" value="{$info.id}">
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;版本号：</label>
+						<div class="controls">
+							<input type="text" name="version_num" class="col-xs-10 col-sm-5" value="{$info.version_num|default=''}">
+						</div>
+					</div>
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;下载地址：</label>
+							<div class="controls">
+								<input type="text" name="download_address" class="col-xs-10 col-sm-5" value="{$info.download_address|default=''}">
+							</div>
+					</div>
+					<div class="clearfix form-actions">
+						<div class="col-md-offset-3 col-md-9">
+							<button type="button" id="submitBtn" class="btn btn-info"><i class="ace-icon fa fa-check bigger-110"></i>确 定</button>
+							<a class="btn btn-return" href="{:U('index')}"><i class="ace-icon fa fa-undo bigger-110"></i>返 回</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</block>
+<block name="script">
+<script type="text/javascript">
+$(function(){	
+	/* 提交表单 */
+	$('#submitBtn').on('click', function(){
+		var datas = _checkForm();
+		if(!datas) return;					
+		var _this = $(this);
+		_this.addClass('disabled');			
+		$.ajax({
+			url: "{:U('')}",
+			dataType: "json",		
+			data: datas,
+			type: "post",
+			success: function(req) {
+				if(req.code == 1) success(req.msg, req.url || true);
+				else fail(req.msg, _this);					
+			},
+			error: function() {			
+				alert('网络连接超时，请稍后再试');
+				_this.removeClass('disabled');
+			}
+		});		
+	});
+	//导航高亮
+	highlight_subnav("{:U('Version/index')}");
+})
+/* 验证表单数据 */
+function _checkForm(){
+	var submitForm = $('#submit-form');
+	var version_num = $.trim(submitForm.find('input[name=\'version_num\']').val());
+	if(!version_num){
+		fail('请输入版本号');return;
+	}
+	var download_address = $.trim(submitForm.find('input[name=\'download_address\']').val());
+	if(!download_address){
+		fail('请输入下载地址');return;
+	}
+	return submitForm.serialize();
+}
+</script>
+</block>

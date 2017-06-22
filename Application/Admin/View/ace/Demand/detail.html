@@ -1,0 +1,512 @@
+<extend name="Public/base" />
+<block name='navi'><li>求购管理</li><li>求购列表</li></block>
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__ADMIN__/assets/css/viewer.min.css"/>
+	<style>
+		/*#cboxContent{
+			position:relative;
+			z-index:50;
+		}
+		#cboxLoadedContent{
+			position:absolute;
+			left:0;
+			top:0;
+		}
+		#cboxPrevious{
+			position:absolute;
+			left:0;
+			bottom:-50px;
+		}*/
+	</style>
+</block>
+<block name="body">
+<div class="page-header">
+    <h1>求购详情</h1>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="ui-jqgrid">
+            <div class="widget-main">
+                <div class="row" style="padding:15px 30px">
+                	<neq name="info.status" value="-1">
+                    <eq name="info.trading_type" value="2">
+                        <span class="label label-lg label-purple arrowed-right">线下交易</span>
+                    <else/>
+                        <gt name="info.status" value="0">
+                        <if condition="($info.trading_type eq 0) AND ($info.status eq 1)">
+                            <div class="btn-group popover-success" data-placement="right" data-rel="popover" data-content="选择线下交易将直接完成交易" data-original-title="温馨提示">
+                                <button data-toggle="dropdown" class="btn btn-info dropdown-toggle">
+                                    交易方式
+                                    <i class="ace-icon fa fa-angle-down icon-on-right"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-info">
+                                    <li>
+                                        <a href="javascript:;" onclick="chooseTradingType(1);">线上交易</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" onclick="chooseTradingType(2);">线下交易</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        <else/>&nbsp;
+                            <span class="label label-lg label-purple arrowed-right"><eq name="info.trading_type" value="1">线上交易<else/>线下交易</eq></span>
+                            <if condition="($info.trading_type eq 1) AND ($info.status eq 1)">
+                            	<button class="btn btn-sm btn-info" onclick="choosePayType(2);">支付托管资金</button>                            
+                            <else/>&nbsp;
+                                <span class="label label-lg label-primary arrowed-right">
+                                <eq name="payInfo.pay_type" value="2">管理员支付<else/>在线支付</eq>
+                                </span>
+                            </if>
+                        </if>
+                        <gt name="info.status" value="1">
+                        	<eq name="info.status" value="2">
+	                        <button class="btn btn-sm btn-info" onclick="confirmDeliverAndSign(2);">确认发货</button>
+	                        <else/>&nbsp;
+	                        <span class="label label-lg label-pink arrowed-right">已发货</span>
+	                        </eq>
+                        </gt>
+                        <gt name="info.status" value="2">
+                        	<eq name="info.status" value="3">
+	                        <button class="btn btn-sm btn-info" onclick="confirmDeliverAndSign(3);">确认签收</button>
+	                        <else/>&nbsp;
+	                        <span class="label label-lg label-yellow arrowed-right">已签收</span>
+	                        </eq>
+                        </gt>
+                        <else/>
+                        <span class="label label-xlg label-warning">
+							<i class="ace-icon fa fa-exclamation-triangle bigger-120"></i>
+							请先进行选标
+						</span>
+                        </gt>
+                    </eq>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-white btn-default btn-bold" onclick="confirmDeliverAndSign(-1);">作废</button>
+                    <else/>
+                   	<span class="label label-xlg">
+						<i class="ace-icon fa fa-exclamation-triangle bigger-120"></i>
+						该条求购信息已作废
+					</span>
+                    </neq>
+                    <button class="btn btn-white btn-info btn-bold pull-right" onclick="lookLog();">查看日志</button>
+                    <hr/>
+                    <div id="fuelux-wizard" data-target="#step-container">
+                        <!-- #section:plugins/fuelux.wizard.steps -->
+                        <ul class="wizard-steps">
+                            <li data-target="#step1" <gt name="info.status" value="-1">class="complete"</gt>>
+                                <span class="step">1</span>
+                                <span class="title">雇主正在选标</span>
+                            </li>
+                            <li data-target="#step2" <gt name="info.status" value="0">class="complete"</gt>>
+                                <span class="step">2</span>
+                                <span class="title">雇主已选标</span>
+                            </li>
+                            <eq name="info.trading_type" value="2">
+                            	<li data-target="#step3" <gt name="info.status" value="3">class="complete"</gt>>
+	                                <span class="step">3</span>
+	                                <span class="title">交易完成</span>
+	                            </li>
+                            <else/>
+                            	<li data-target="#step3" <gt name="info.status" value="1">class="complete"</gt>>
+	                                <span class="step">3</span>
+	                                <span class="title">已支付托管资金</span>
+	                                <span class="title"><eq name="info.order_amount" value="-1"><span class="label label-primary">雇主选择转账支付托管资金，请管理员联系</span></eq></span>
+	                            </li>
+	                            <li data-target="#step4" <gt name="info.status" value="2">class="complete"</gt>>
+	                                <span class="step">4</span>
+	                                <span class="title">已发货</span>
+	                            </li>
+	                            <li data-target="#step5" <gt name="info.status" value="3">class="complete"</gt>>
+	                                <span class="step">5</span>
+	                                <span class="title">交易完成</span>
+	                            </li>                            	
+                            </eq>                            
+                        </ul>
+                    </div>
+                    <div class="hr hr-18 dotted hr-double"></div>
+                    <div class="clearfix detail-list">
+                        <h4 class="header smaller lighter blue">
+                        <i class="ace-icon fa fa-hand-o-right "></i>求购信息                        
+                        <gt name="info.deposit" value="0">                  
+                        <span class="label label-success label-xlg arrowed-in pull-right">已支付保证金{$info.deposit}</span>
+                        <else/>                        
+                        <span class="label label-danger label-xlg arrowed-in pull-right" style="margin-left:10px;">未支付保证金，<button type="button" class="btn btn-minier btn-danger" onclick="showModal();">点击支付</button></span>
+                        <eq name="info.deposit" value="-1">
+                        <span class="label label-primary pull-right">雇主选择转账支付保证金，请管理员联系</span>
+                        <else/>
+                        <span class="label label-primary pull-right">雇主选择不支付保证金</span>
+                        </eq>                        
+                        </gt>                                               
+                    </h4>
+					<ul class="list-unstyled col-md-12 col-xm-12">
+					    <li class="clearfix col-md-3 col-xs-12"><span class="hyxqcontent-left">联系人：</span><span class="hyxqcontent-right">{$info.contacts}</span></li>
+					    <li class="clearfix col-md-3 col-xs-12"><span class="hyxqcontent-left">联系电话：</span><span class="hyxqcontent-right">{$info.mobile}</span></li>
+					    <li class="clearfix col-md-3 col-xs-12"><span class="hyxqcontent-left">分类名称：</span><span class="hyxqcontent-right">{$info.cate_name}</span></li>
+					    <li class="clearfix col-md-3 col-xs-12"><span class="hyxqcontent-left">药品名称：</span><span class="hyxqcontent-right">{$info.goods_name}</span></li>
+					    <li class="clearfix col-md-3 col-xs-12"><span class="hyxqcontent-left">规格名称：</span><span class="hyxqcontent-right">{$info.goods_attr_name}</span></li>
+					    <li class="clearfix col-md-3 col-xs-12"><span class="hyxqcontent-left">求购数量：</span><span class="hyxqcontent-right">{$info.num}</span></li>
+					    <li class="clearfix col-md-3 col-xs-12"><span class="hyxqcontent-left">产地类型：</span><span class="hyxqcontent-right"><?php $area=get_origin_type($info['origin_type']); if($info['origin_type'] == 3){ $area.='/'.$info['origin_area']; } echo $area; ?></span></li>
+					    <li class="clearfix col-md-3 col-xs-12"><span class="hyxqcontent-left">发布时间：</span><span class="hyxqcontent-right">{$info.create_time|date='Y-m-d H:i:s',###}</span></li>					    
+					    <li class="clearfix col-md-3 col-xs-12"><span class="hyxqcontent-left">订单编号：</span><span class="hyxqcontent-right">{$info.order_number}</span></li>
+					    <li class="clearfix col-md-3 col-xs-12"><span class="hyxqcontent-left">订单来源：</span><span class="hyxqcontent-right">{$info.order_type|get_source_type}</span></li>
+					    <li class="clearfix col-md-12 col-xs-12" style="height:auto"><span class="hyxqcontent-left" style="width:7.5%">备注：</span><span>{$info.details}</span></li>
+					</ul>
+                    </div>
+                    <div class="clearfix">
+                        <h4 class="header smaller lighter blue">
+                        <i class="ace-icon fa fa-hand-o-right "></i>求购人信息                               
+                    </h4>
+                        <ul class="list-unstyled col-md-12 col-xm-12">
+                            <li class="clearfix col-md-3 col-xs-12"><span class="hyxqcontent-left">用户头像：</span><span class="hyxqcontent-right"><img style="width:100px;height:100px" src="{$info.head_pic}" /></span></li>
+                            <li class="clearfix col-md-3 col-xs-12"><span class="hyxqcontent-left">用户姓名：</span><span class="hyxqcontent-right">{$info.realname}</span></li>
+                            <li class="clearfix col-md-3 col-xs-12"><span class="hyxqcontent-left">联系方式：</span><span class="hyxqcontent-right">{$info.u_mobile}</span></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix">
+                        <!-- 投标列表开始-->
+                        <h4 class="header smaller lighter blue">
+                        <i class="ace-icon fa fa-hand-o-right "></i>投标列表                                
+                    </h4>
+                        <div class="dataTables_wrapper form-inline no-footer">
+                            <table class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="sample-table-2_info">
+                                <thead>
+                                    <tr>
+                                        <th>序号</th>
+                                        <th>联系人</th>
+                                        <th>联系电话</th>
+                                        <th>价格</th>
+                                        <th>投标时间</th>
+                                        <th>图片</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <foreach name="tenders" item="vo" key="k">
+                                        <tr>
+                                            <td>{$show_num*($page_num-1)+$k+1}</td>
+                                            <td>{$vo.contacts}</td>
+                                            <td>{$vo.mobile}</td>
+                                            <td>{$vo.price}</td>
+                                            <td>{$vo.create_time|time_format}</td>
+                                            <td>
+                                                <notempty name="vo.imgs">
+                                                    <ul class="ace-thumbnails clearfix" id="img_2">
+                                                        <foreach name="vo.imgs" item="vo2">
+                                                            <li>
+                                                                <!--<a href="{$vo2[0]}" data-rel="colorbox{$k}" class="cboxElement" onclick="showImg({$k});">-->
+                                                                    <img width="100" data-original="{$vo2[0]}" height="100" alt="100x100" src="{$vo2[1]}">
+                                                                <!--</a>-->
+                                                            </li>
+                                                        </foreach>
+                                                    </ul>
+                                                </notempty>
+                                            </td>
+                                            <td style="width:120px">
+                                            	<neq name="info.status" value="-1">
+                                                <switch name="vo.status">
+                                                    <case value="0">
+                                                        <div class="btn-toolbar opt-btn cf"><a class="btn btn-white btn-success btn-sm btn-bold" href="javascript:;" onclick="chooseWin({$vo.id});">选中</a><a class="btn btn-white btn-sm btn-default btn-bold" onclick="confirmDel({$vo.id},this);">删除</a></div>
+                                                    </case>
+                                                    <case value="1">
+                                                        <h4 class="green smaller lighter">{$vo.choose_time|time_format}</h4><span class="label label-xlg label-success arrowed-in-right">已中标</span></case>
+                                                    <case value="2"><span class="label label-xlg label-light arrowed-in-right">未中标</span></case>
+                                                </switch>
+                                                <else/>
+                                                <span class="label">该条求购信息已作废</span><hr/>
+                                                <a class="btn btn-white btn-default btn-sm btn-bold" onclick="confirmDel({$vo.id},this);">删除</a>
+                                                </neq>
+                                            </td>
+                                        </tr>
+                                    </foreach>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui-widget-overlay dialogbg deposit-dialog" style="display:none;"></div>
+<div class="widget-box ui-sortable-handle col-sm-3 ui-jqdialog dialogcon deposit-dialog" style="display:none;width:300px;position:fixed;top:center;">
+    <div class="ui-dialog ui-widget ui-widget-content">
+        <div class="widget-header">
+            <h4 class="smaller" style="display:inline-block">请输入保证金金额</h4>
+            <a class="ui-dialog-titlebar-close close" style=" float:right; padding-right:15px; padding-top:6px;"></a>
+        </div>
+        <div class="widget-main center">
+            金额：
+            <input type="text" id="deposit" />
+            <br/> 备注：
+            <textarea id="pay_deposit_memo"></textarea>
+        </div>
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix" style="padding:10px;">
+            <div class="center">
+                <button type="button" class="btn btn-success btn-sm ui-button deposit-ok" role="button">确定</button>
+                &nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-sm cancel" role="button">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui-widget-overlay dialogbg pay-dialog" style="display:none;"></div>
+<div class="widget-box ui-sortable-handle col-sm-3 ui-jqdialog dialogcon pay-dialog" style="display:none;width:300px;position:fixed;top:center;">
+    <div class="ui-dialog ui-widget ui-widget-content">
+        <div class="widget-header">
+            <h4 class="smaller" style="display:inline-block">请输入托管金金额</h4>
+            <a class="ui-dialog-titlebar-close close" style=" float:right; padding-right:15px; padding-top:6px;"></a>
+        </div>
+        <div class="widget-main center">
+            金额：
+            <input type="text" id="pay_money" />
+            <br/> 备注：
+            <textarea id="pay_memo"></textarea>
+        </div>
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix" style="padding:10px;">
+            <div class="center">
+                <button type="button" class="btn btn-success btn-sm ui-button pay-ok" role="button">确定</button>
+                &nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-sm cancel" role="button">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui-widget-overlay dialogbg log-dialog" style="display:none;"></div>
+<div class="widget-box ui-sortable-handle col-sm-3 ui-jqdialog dialogcon log-dialog" style="display:none;width:750px;position:fixed;top:20%;left:40%">
+    <div class="ui-dialog ui-widget ui-widget-content">
+        <div class="widget-header">
+            <h4 class="smaller" style="display:inline-block">日志</h4>
+            <a class="ui-dialog-titlebar-close close" style=" float:right; padding-right:15px; padding-top:6px;"></a>
+        </div>
+        <div class="widget-main">
+            <table class="table table-striped table-bordered table-hover">
+			    <thead>
+			        <tr>
+			            <th width="50px">序号</th>
+			            <th width="100px">操作人</th>
+			            <th>操作记录</th>
+			          	<th width="150px">操作时间</th>       
+			        </tr>
+			    </thead>
+			    <tbody id="tbody">			    	
+			    </tbody>
+			</table>            
+        </div>
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix" style="padding:10px;">
+            <div class="center">                
+                <button type="button" class="btn btn-sm cancel" role="button">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+</block>
+<block name="script">
+<!--<script src="__ADMIN__/assets/js/jquery.colorbox-min.js"></script>-->
+<script src="__ADMIN__/assets/js/viewer.min.js"></script>
+<script type="text/javascript">	
+//	/* 显示每一个中标信息的轮播图 */
+//	function showImg(inx){
+//		var $overflow = '';
+//		var colorbox_params = {
+//			rel: 'colorbox'+inx,
+//			reposition:true,
+//			scalePhotos:true,
+//			scrolling:false,
+//			previous:'<i class="ace-icon fa fa-arrow-left"></i>',
+//			next:'<i class="ace-icon fa fa-arrow-right"></i>',
+//			close:'&times;',
+//			current:'{current} of {total}',
+//			maxWidth:'100%',
+//			maxHeight:'100%',
+//			onOpen:function(){
+//				$overflow = document.body.style.overflow;
+//				document.body.style.overflow = 'hidden';
+//			},
+//			onClosed:function(){
+//				document.body.style.overflow = $overflow;
+//			},
+//			onComplete:function(){
+//				$.colorbox.resize();
+//			}
+//		};
+//
+//		$('.ace-thumbnails [data-rel="colorbox'+ inx +'"]').colorbox(colorbox_params);		
+//		$("#cboxLoadingGraphic").html("<i class='ace-icon fa fa-spinner orange'></i>");//let's add a custom loading icon
+//	}
+	var viewer = new Viewer(document.getElementById('img_2'), {
+		 url: 'data-original',
+	});
+	var repeat_click = true;
+	var demand_id	 = {$Think.get.id};
+	/* 选择中标 */
+	function chooseWin(tid){
+		$('#del-tip').text('确定选择当前投标信息？');
+		var dialog = $("div.base-modal"); 	
+		dialog.show();
+		/* 绑定确定按钮事件 */
+		$('button.ok').off('click').on('click', function(){	
+			var _this = $(this);
+			_this.addClass('disabled');
+			dialog.hide();
+			$.ajax({
+	   		    url: "{:U('Demand/doTender')}",
+	   		    dataType: "json",       		   
+	   		    data: {id: tid,did: demand_id},
+	   		    type: "post",       		   
+	   		    success: function(req) {
+	   		    	if(req.code == 1) success(req.msg, true);
+	                else fail(req.msg || req.info, _this);	        
+	   		    },		    
+	   		    error: function() {
+	   		    	alert('网络连接超时，请稍后再试');	   		     	
+	   		    	_this.removeClass('disabled');
+	   		    }
+	   		});
+		});
+	}
+	/* 确定是否删除 */
+	function confirmDel(tid, that){
+		$('#del-tip').text('确定删除当前投标信息？');
+		var dialog = $("div.base-modal"); 	
+		dialog.show();		
+		/* 绑定删除按钮事件 */
+		$('button.ok').off('click').on('click', function(){
+			var _this = $(this);
+			_this.addClass('disabled');
+			dialog.hide();
+			$.ajax({
+	   		    url: "{:U('Demand/doTender1')}",
+	   		    dataType: "json",       		   
+	   		    data: {id: tid,did: demand_id,type: 1},
+	   		    type: "post",
+	   		    success: function(req) {		    
+	   		        if(req.code == 1){
+	   		        	success(req.msg);
+	   		        	$(that).closest('tr').remove();
+	   		        	_this.removeClass('disabled');
+	   		        }else{
+	   		        	fail(req.msg || req.info, _this);
+	   		        }	   		        
+	   		    },		    
+	   		    error: function() {
+	   		    	alert('网络连接超时，请稍后再试');
+	   		    	_this.removeClass('disabled');
+	   		    }
+	   		});
+		});
+	}
+	var repeat_click2 = true;
+	/* 显示模态框 */
+	function showModal(){
+		var dialog = $('div.deposit-dialog'); 
+		dialog.show();
+		/* 绑定支付保证金金额 */
+		$('button.deposit-ok').off('click').on('click', function(){
+			var deposit  = parseFloat($.trim($('#deposit').val()));
+			var pay_memo = $.trim($('#pay_deposit_memo').val());
+			if(isNaN(deposit) || deposit <= 0){
+				fail('保证金不能小于0');return;
+			}			
+			doAjax({id: demand_id,deposit: deposit,pay_memo: pay_memo,inx: 10}, dialog, "{:U('Demand/doDemand10')}");			
+		});
+	}
+	/* 选择交易方式 */
+	function chooseTradingType(type){
+		$('#del-tip').text('确定选择'+(type==1&&'线上交易'||'线下交易')+'？');
+		var dialog = $('div.base-modal'); 
+		dialog.show();
+		$('button.ok').off('click').on('click', function(){
+			doAjax({id: demand_id,ttype: type}, dialog, "{:U('Demand/doDemand0')}");
+		});		
+	}
+	/* 选择支付方式 */
+	function choosePayType(type){		
+		var dialog = $('div.pay-dialog'); 
+		dialog.show();		
+		/* 绑定支付保证资金金额 */
+		$('button.pay-ok').off('click').on('click', function(){
+			var pay_money = parseFloat($.trim($('#pay_money').val()));
+			var pay_memo  = $.trim($('#pay_memo').val());
+			if(isNaN(pay_money) || pay_money <= 0){
+				fail('托管资金不能小于0');return;
+			}
+			doAjax({id: demand_id,pay_money: pay_money,pay_memo: pay_memo,inx: 1}, dialog, "{:U('Demand/doDemand1')}");		
+		});
+	}
+	/* 确认发货,确认签收 （更改求购信息状态）*/
+	function confirmDeliverAndSign(inx){
+		var ajaxUrl = '';
+		if(inx == -1){
+			ajaxUrl = "{:U('Demand/doDemand9')}";
+			$('#del-tip').text('确定将该条求购信息作废？');
+		}else if(inx == 2){
+			ajaxUrl = "{:U('Demand/doDemand2')}";
+			$('#del-tip').text('确定发货？');	
+		}else if(inx == 3){
+			ajaxUrl = "{:U('Demand/doDemand3')}";
+			$('#del-tip').text('确定签收？');
+		}		
+		var dialog = $('div.base-modal'); 
+		dialog.show();
+		/* 绑定删除按钮事件 */
+		$('button.ok').off('click').on('click', function(){
+			doAjax({id: demand_id,inx: inx}, dialog, ajaxUrl);
+		});
+	}
+	/* 公共ajax操作方法 */
+	function doAjax(data, dialog, ajaxUrl){
+		if(!repeat_click2) return;
+		repeat_click2 = false;
+		dialog.hide();
+		$.ajax({
+   		    url: ajaxUrl,
+   		    dataType: "json",       		   
+   		    data: data,
+   		    type: "post",
+   		    success: function(req) {       		    
+   		        if(req.code == 1){
+   		        	success(req.msg, true);
+   		        }else{
+   		        	fail(req.msg || req.info);
+   		        }
+   		     	repeat_click2 = true;
+   		    },		    
+   		    error: function() {       
+   		    	alert('网络连接超时，请稍后再试');
+   		     	repeat_click2 = true;
+   		    }
+   		});
+	}
+	var already = false;
+	/* 查看日志 */
+	function lookLog(){
+		var dialog = $('div.log-dialog'); 
+		dialog.show();
+		if(!already){
+			$.ajax({
+	   		    url: "{:U('Demand/ajaxLookLog')}",
+	   		    dataType: "json", 
+	   		    data:{id: demand_id},
+	   		    type: "get",
+	   		    success: function(req) {       		    
+	   		        if($.isArray(req)){
+	   		        	var sb = '',
+	   		        		i  = 0;
+	   		        	for(i in req){
+	   		        		sb += '<tr><td>'+ (+i+1) +'</td><td>'+ (req[i].nickname || '雇主') +'</td><td>'+ req[i].memo +'</td><td>'+ req[i].create_time +'</td></tr>';
+	   		        	}
+	   		        	$('#tbody').html(sb);
+	   		        }
+	   		        already = true;
+	   		    },
+	   		    error: function() {       
+	   		        alert('网络连接超时，请稍后再试');   		     	
+	   		    }
+	   		});	
+		}		
+	}
+	$(function(){
+		$('[data-rel=popover]').popover({html:true,trigger:'hover'});
+		//导航高亮
+		highlight_subnav("{:U('Demand/index')}");	
+	})	
+</script>
+</block>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/share.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css"/>
+		<script src="../../js/zepto2.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body class="gray_boby sds_public">
+		<div class=" title ">
+			<img src="../../images/ydw2.png" alt="" class="ydw_logo"/>
+			<div class="ydw_t">
+				<p>药都网</p>
+				<p>一个药商自助交易的平台</p>
+			</div>
+			<a class="download_btn dib r" href="###">点击打开</a>
+		</div>
+		<div class="main ">
+			<div class="top ">
+				<ul class="top_list list ">
+					<li class="img_li ">
+						<span class="bf_md">图　　片 : </span><div class="img_div "></div>
+					</li>
+					<li>
+						<span class="bf ">类　　型 : </span><span class="type_span "></span>
+					</li>
+					<li>
+						<span class="bf ">面　　积 : </span><span class="size_span "></span>
+					</li>
+					<li>
+						<span class="bf ">层　　高 : </span><span class="height_span "></span>
+					</li>
+				</ul>
+			</div>
+			<div class="middle ">
+				<ul class="middle_list list ">
+					<li>
+						<span class="bf ">地　　址 : </span><span class="zone_span r_span"></span>
+					</li>
+					<li>
+						<span class="bf ">详细地址 : </span><span class="ad_span r_span "></span>
+					</li>
+					<li>
+						<span class="bf ">简　　介 : </span><span class="des_span r_span "></span>
+					</li>
+				</ul>
+			</div>
+			<div class="bottom ">
+				<ul class="bottom_list list ">
+					<li>
+						<span class="bf ">联&nbsp;&nbsp;系&nbsp;&nbsp;人 : </span><span class="contacts_span r_span "></span>
+					</li>
+					<li>
+						<span class="bf ">联系电话 : </span><span class="tel_span"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="modal">
+		<div class="img_box">
+			<div class="swiper-container">
+		        <div class="swiper-wrapper">
+		        </div>
+	        	<div class="swiper-pagination"></div>
+	   		 </div>
+		</div>
+	</div>
+	</body>
+	<script src="../../js/swiper.min.js " type="text/javascript " charset="utf-8 "></script>
+	<script src="../../js/share.js " type="text/javascript " charset="utf-8 "></script>
+	<script type="text/javascript ">
+		var types = ["普通" , "冷藏" , "保温/恒温" , "特种" , '气调']
+		var result = GetRequest();
+		var id = Number(result.id);
+		var data = {
+			clientType: 1,
+			id: id
+		};
+		$.ajax({
+			url: "http://m.yaoduwang.com/index.php?s=Api/AppCompany/storeInfo",
+			data: data,
+			type: "post",
+			success: function(req) {
+				var code = req.code;
+				if(code == 1) {
+					var datas = req.data;
+					var address = datas.address;
+					var contacts = datas.contacts;
+					var height = datas.height;
+					var desc = datas.desc;
+					var size = datas.size;
+					var mobile = datas.mobile;
+					var zone = datas.zone;
+					var type = parseInt(datas.type);
+					var imgs = datas.imgs;
+					var imgsLength = imgs.length;
+					var imgDom = '';
+					 var slider = '';
+					for(var i = 0; i < imgsLength; i++) {
+						imgDom += '<img src="' + imgs[i] + '" alt="" />';
+						var index = imgs[i].indexOf("thumb");
+						var h = imgs[i].substring(0 , index);
+						var f = imgs[i].substring(index+14);
+						var img_url = h + f;
+						slider += '<div class="swiper-slide"><img src="'+ img_url +'" alt="" /></div>';
+					}
+					$(".img_div").html(imgDom);
+					$(".swiper-wrapper").html(slider);
+					console.log($(".img_box").height());
+					var img = $(".img_div img");
+					var width = img.width();
+					img.css({
+						'height': width + 'px'
+					})
+					$(".ad_span").text(address);
+					$(".contacts_span").text(contacts);
+					$(".height_span").text(height + "m");
+					$(".des_span").text(desc);
+					$(".size_span").html(size + "m" + '<sup>2</sup>');
+					$(".tel_span").text(mobile);
+					$(".zone_span").text(zone);
+					$(".type_span").text(types[type]);
+				}
+			},
+			error: function(error) {
+				console.log(error)
+			}
+		})
+	</script>
+
+</html>

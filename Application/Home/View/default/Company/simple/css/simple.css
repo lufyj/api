@@ -1,0 +1,98 @@
+/*头部及导航*/
+.logo-bg{
+	width: 1230px;
+	margin: 0 auto;
+	height: 120px;
+	line-height: 120px;
+	position: relative;
+	top: 20px;
+	background:url(./../images/logo_bg.png) no-repeat;
+	background-position: left -10px; 
+}
+.logo-bg img{
+	max-height: 80px;
+	margin-top: 20px;
+	margin-left: 60px;
+	vertical-align: middle;
+	display: inline-block;
+}
+.com-name{
+	font-size: 36px;
+	color: #010101;
+	margin-right: 100px;
+}
+.title2-m{
+	padding-top: 20px !important;
+}
+.title2-m p{
+	width:1145px;
+	padding:10px 0px 10px 15px;
+	margin: 20px auto 0;
+	font-size:16px;
+	color:#383838;
+	background:url(./../images/gonggao.png) no-repeat;
+}
+.logo-title{
+	background:url(./../images/nav_bg.png) no-repeat;
+	background-position:0px -2px;
+	width:100%;
+}
+.com01-bg{
+	width:100%;
+	padding: 10px 0;
+}
+/*头部及导航结束*/
+.company02-title{
+	height:405px;
+	width:100%;
+	background:url(./../images/nav_b.png) no-repeat center center;
+}
+.title2-t{
+	width:1160px;
+	margin:0 auto;
+	padding-top:50px;
+}
+.title2-m span{
+	color:#B38976;
+}
+.title2-m{
+	width:100%;
+	color:#fff;
+	padding-top:10px;
+}
+.title2-m p{
+	width:1145px;
+	padding:10px 0px 10px 15px;
+	margin: 20px auto 0;
+	font-size:16px;
+	color:#383838;
+	background:url(./../images/gonggao.png) no-repeat;
+}
+.title2-b{
+	width:1300px;
+	margin:0 auto;
+}
+.title2-b dl{
+	float:left;
+	width:20%;
+	text-align: center;
+}
+.title2-b dl img{
+	width:100px;
+	height:100px;
+}
+.title2-b dl dd{
+	font-size: 22px;
+    color: #4B4543;
+    margin-top: 10px;
+}
+.title2-b a:hover{
+	color:#A88779;
+	text-decoration: none;
+}
+.title2-m p marquee{
+	display:inline-block;
+	width: 1080px;
+    height: 18px;
+    line-height: 18px;
+}

@@ -1,0 +1,188 @@
+<extend name="./base" />
+<block name="style">
+	<!--样式自定义开始-->
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/company/css/company.css" />
+	<!--样式自定义结束-->
+</block>
+<block name="body">
+	<!--主页内容开始-->
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+				<a href="javascript:;">企业管理</a> >
+				<a href="javascript:;">企业动态</a>
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />
+			<div class="right base-info l">
+				<div class="title">
+					<span class="active">企业动态</span>
+				</div>
+				<!--公司动态开始-->
+				<ul class="news-ul">
+					<if condition="$newsInfo neq ''">
+						<foreach name="newsInfo" item="news">
+							<li class="clearfix t" data-id="{$news.id}">
+								<span>{$news.title}</span>
+								<span class="time-s r">{$news.add_time}</span>
+							</li>
+						</foreach>
+						<else/>
+						<li class="clearfix">
+							<span>请添加企业动态内容</span>
+						</li>
+					</if>
+				</ul>
+				<lt name="num" value="$count">
+					<ul class="news-edit">
+						<li>
+							<span>标题 :</span>
+							<input type="text" id="title" name="title" placeholder="请输入标题(最多输入30个中文)" />
+						</li>
+						<li>
+							<span>内容 :</span>
+							<textarea name="content" id="content" rows="" cols="" placeholder="请输入内容"></textarea>
+						</li>
+						<li>
+							<span>动态图片 :</span>
+							<div id="preview3">
+								<img id="news-img" src="__HOME__/company/images/add_news.png" alt="" />
+							</div>
+							<br />
+							<label class="news-label">
+								<form id="news-form"  enctype="multipart/form-data">
+									<input type="file" id="up-news" name="news"/>
+									<input type="hidden" value="" id="news-ad"/>
+									<span>上传图片</span>
+								</form>
+							</label>
+							<script src="__STATIC__/form.js" type="text/javascript" charset="utf-8"></script>
+						</li>
+						<li class="sub-li">
+							<button class="save add-save">保存</button>
+							<button class="del add-del">取消</button>
+						</li>
+					</ul>
+				</lt>
+			</div>
+		</div>
+	</div>
+	<!--弹框-->
+	<div class="news-empty">
+		<!--兼容ie透明增加一层div-->
+		<div class="news-alert">
+			<!--编辑新闻信息-->
+			<div class="alert-c">
+				<div class="title clearfix">
+					<span>企业动态</span>
+					<b class="r close"></b>
+				</div>
+				<ul class="news-edit">
+					<li>
+						<span>标题 :</span>
+						<input type="text" id="ed_title" name="ed_title" placeholder="请输入标题(最多输入20个中文)" />
+					</li>
+					<li>
+						<span>内容 :</span>
+						<textarea name="ed_content" id="ed_content" rows="" cols="" placeholder="请输入内容"></textarea>
+					</li>
+					<li>
+						<span>动态图片 :</span>
+						<div id="preview4">
+							<img id="edit-news-img" src="__HOME__/company/images/add.png" alt="" />
+						</div>
+						<br />
+						<label class="news-label">
+						<form id="edit-form"  enctype="multipart/form-data">
+							<input type="file" id="up-edit-news" name="news"/>
+							<input type="hidden" value="" id="edit-news-ad"/>
+							<span>上传图片</span>
+						</form>
+					</label>
+					</li>
+					<li class="sub-li">
+						<button class="save edit-save">保存</button>
+						<button class="del edit-del">取消</button>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+
+	<!--主页内容结束-->
+</block>
+<block name="script">
+	<!--脚本自定义开始-->
+	<script src="__HOME__/js/placeholder.js"></script>
+	<script src="__HOME__/company/js/news.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//增加新闻动态上传
+		$("#up-news").change(function() {
+			$("#news-form").ajaxSubmit({
+				type: 'post',
+				url: '/CompanyNews/upImg.html',
+				success: function(data) {
+					if(typeof(data) == "object") {
+						if(data.path) {
+							var src = data.path;
+							$("#news-img").attr("src", src);
+							$("#news-ad").val(src);
+						} else {
+							$.custom(data.msg);
+						}
+					} else {
+						var datas = JSON.parse(data);
+						if(datas.path) {
+							var src = datas.path;
+							$("#news-img").attr("src", src);
+							$("#news-ad").val(src);
+						} else {
+							$.custom(datas.msg);
+						}
+					}
+				},
+				error: function(error) {
+					$.custom('上传失败');
+				}
+			});
+		});
+		//编辑新闻动态
+		$("#up-edit-news").change(function() {
+			$("#edit-form").ajaxSubmit({
+				type: 'post',
+				url: '/CompanyNews/upImg.html',
+				success: function(data) {
+					if(typeof(data) == "object") {
+						if(data.path) {
+							var src = data.path;
+							$("#edit-news-img").attr("src", src);
+							$("#edit-news-ad").val(src);
+						} else {
+							$.custom(data.msg);
+						}
+					} else {
+						var datas = JSON.parse(data);
+						if(datas.path) {
+							var src = datas.path;
+							$("#edit-news-img").attr("src", src);
+							$("#edit-news-ad").val(src);
+						} else {
+							$.custom(datas.msg);
+						}
+					}
+				},
+				error: function(error) {
+					$.custom('上传失败');
+				}
+			});
+		});
+	</script>
+
+	<!--脚本自定义结束-->
+</block>

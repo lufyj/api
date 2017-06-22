@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>药都网--修改密码</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" href="../css/amend.css" />
+		<script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+            if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+		</script>
+	</head>
+	<body>
+		<header>
+			<a href="./perInfo.html" class="back_btn">
+				<i class="icon_zjt iconfont"></i>返回
+			</a>
+			<span>修改密码</span>
+			<a href="javascript:void(0);" class="r_btn" id="pwdSubmit">保存</a>
+		</header>
+		<div class="ydw_wp">
+			<section class="amend-pwd">
+			 	<ul class="pwd-set">
+			 		<li>
+			 			<input type="password" name="old_password" placeholder="请输入原始密码" maxlength="20" autofocus="autofocus"/>
+			 		</li>
+			 		<li>
+			 			<input type="password" name="new_password" placeholder="请输入新密码" maxlength="20"/>
+			 		</li>
+			 		<li>
+			 			<input type="password" name="confirm_password" placeholder="请确认新密码" maxlength="20"/>
+			 		</li>
+			 	</ul>
+			 	<p>请设置6-20个字符的新密码，区分大小写</p>
+			</section>
+		</div>
+		<script type="text/javascript">
+			var old_pwd = $('input[name="old_password"]');//原始密码
+			var new_pwd = $('input[name="new_password"]');//新密码
+			var confirm_pwd = $('input[name="confirm_password"]');//确认新密码
+			var repeat_click = true;//防止重复点击
+			$('#pwdSubmit').on('click',function(){
+				if(!repeat_click){
+					return false;
+				}
+				var old_pwdV = $.trim(old_pwd.val());
+				if(!old_pwdV){
+					rule.showMsg(1,'请输入您的原始密码！',1000);
+					return;
+				}
+				if(old_pwdV.length<6 || old_pwdV.length>20){
+					rule.showMsg(1,'请输入6-20个字符的原始密码!',1000);
+					return;
+				}
+				var new_pwdV = $.trim(new_pwd.val());
+				if(!new_pwdV){
+					rule.showMsg(1,'请输入您的新密码！',1000);
+					return;
+				}
+				if(new_pwdV.length<6 || new_pwdV.length>20){
+					rule.showMsg(1,'请输入6-20个字符的新密码!',1000);
+					return;
+				}
+				var confirm_pwdV = $.trim(confirm_pwd.val());
+				if(confirm_pwdV!=new_pwdV){
+					rule.showMsg(1,'两次输入的密码不一致！',1000);
+					return;
+				}
+				repeat_click = false;
+				//提交表单
+				$.postT(rule.root+'AppUser/user_password' , {old_password:old_pwdV,new_password:new_pwdV} , function (req){
+					switch(req.code){
+						case 0:
+							rule.showMsg(1,'修改失败，请重试！',2000);
+							break;
+						case 1:
+							rule.showMsg(1,'修改密码成功',4000);
+							window.history.go(-1);
+							break;
+						case 4:
+							rule.showMsg(1,'新密码与旧密码一致',2000);
+							break;
+						case 42:
+							rule.showMsg(1,'旧密码与数据库密码不匹配',2000);
+							break;
+						case 103:
+							var hrefUrl = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+							rule.showMsg(1 , "该账号已在其他地方登陆,请重新登录" , 2000 , hrefUrl);
+					}
+					repeat_click = true;
+				});
+			});
+		</script>
+	</body>
+</html>

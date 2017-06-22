@@ -1,0 +1,99 @@
+<extend name="Public/base"/>
+<block name='navi'><li>系统</li><li>网站设置</li></block>
+<block name="body">	
+	<div class="page-header">
+		<h1>网站设置</h1>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<ul class="nav nav-tabs" id="myTab">
+				<volist name="Think.config.CONFIG_GROUP_LIST" id="group">
+					<li <eq name="id" value="$key">class="active"</eq>><a href="{:U('?id='.$key)}"><i class="green ace-icon fa fa-home bigger-120"></i>{$group}配置</a></li>
+				</volist>
+			</ul>
+			<div class="tab-content">
+				<form class="form-horizontal" role="form" action="{:U('save')}"  method="post" >
+					<volist name="list" id="config">
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> {$config.title}： </label>
+							<div class="col-sm-9">
+								<switch name="config.type">
+									<case value="0">
+										<input type="text"  class="col-xs-10 col-sm-5" name="config[{$config.name}]" value="{$config.value}">
+										<!-- <input type="text" class="text input-small" name="config[{$config.name}]" value="{$config.value}"> -->
+									</case>
+									<case value="1">
+										<input type="text"  class="col-xs-10 col-sm-5" name="config[{$config.name}]" value="{$config.value}">
+										<!-- <input type="text" class="text input-large" name="config[{$config.name}]" value="{$config.value}"> -->
+									</case>
+									<case value="2">
+										<!-- <label class="textarea input-large">
+											<textarea name="config[{$config.name}]">{$config.value}</textarea>									
+										</label> -->
+										<textarea class="col-xs-10 col-sm-5" style='height:100px' name="config[{$config.name}]">{$config.value}</textarea>
+									</case>
+									<case value="3">
+										<!-- <label class="textarea input-large">
+											<textarea name="config[{$config.name}]">{$config.value}</textarea>
+										</label> -->
+										<textarea class="col-xs-10 col-sm-5" style='height:100px' name="config[{$config.name}]">{$config.value}</textarea>
+									</case>
+									<case value="4">
+										<select name="config[{$config.name}]">
+											<volist name=":parse_config_attr($config['extra'])" id="vo">
+												<option value="{$key}" <eq name="config.value" value="$key">selected</eq>>{$vo}</option>
+											</volist>
+										</select>
+									</case>
+								</switch>
+								<lable class="blue smaller lighter">（{$config.remark}）</label>							
+							</div>
+						</div>					
+					</volist>
+					<div class="clearfix form-actions">		
+						<div class="col-md-offset-3 col-md-9">
+							<button class="btn btn-info  ajax-post" type="submit" target-form="form-horizontal">
+								<i class="ace-icon fa fa-check bigger-110"></i>
+								确定
+							</button>
+							&nbsp; &nbsp; &nbsp;
+							<button class="btn" type="reset">
+								<i class="ace-icon fa fa-undo bigger-110"></i>
+								重置
+							</button>
+						</div>		
+					</div>
+					<!-- <div class="form-item">
+						<label class="item-label"></label>
+						<div class="controls">
+							<empty name="list"><button type="submit" disabled class="btn submit-btn disabled" target-form="form-horizontal">确 定</button><else/><button type="submit" class="btn submit-btn ajax-post" target-form="form-horizontal">确 定</button></empty>
+							
+							<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+						</div>
+					</div> -->
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- <ul class="nav nav-tabs" id="myTab">
+		<volist name="Think.config.CONFIG_GROUP_LIST" id="group">
+			<li <eq name="id" value="$key">class="current"</eq>><a href="{:U('?id='.$key)}">{$group}配置</a></li>
+		</volist>
+		<volist name="Think.config.CONFIG_GROUP_LIST" id="group">
+			<li <eq name="id" value="$key">class="active"</eq>>
+				<a data-toggle="tab" href="{:U('?id='.$key)}">
+					<i class="green ace-icon fa fa-home bigger-120"></i>{$group}配置					
+				</a>
+			</li>
+		</volist>
+	</ul>
+	<div class="tab-content">	
+		<form action="{:U('save')}" method="post">
+			<volist name="list" id="config">
+				<div id="home" class="tab-pane fade">
+					<p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+				</div>
+			</volist>			
+		</form>		
+	</div> -->
+</block>

@@ -1,0 +1,592 @@
+[ 2017-01-20T11:38:24+08:00 ] 123.149.77.12 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+SQL: SHOW COLUMNS FROM `ydw_hooks` [ RunTime:0.0006s ]
+SQL: SELECT `name`,`addons` FROM `ydw_hooks`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_addons` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`name` FROM `ydw_addons` WHERE `status` = 1 AND `name` IN ('ReturnTop')  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `ydw_addons` WHERE `status` = 1 AND `name` IN ('Attachment')  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name` FROM `ydw_addons` WHERE `status` = 1 AND `name` IN ('Attachment','SocialComment')  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name` FROM `ydw_addons` WHERE `status` = 1 AND `name` IN ('Attachment')  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name` FROM `ydw_addons` WHERE `status` = 1 AND `name` IN ('Editor')  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name` FROM `ydw_addons` WHERE `status` = 1 AND `name` IN ('EditorForAdmin')  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name` FROM `ydw_addons` WHERE `status` = 1 AND `name` IN ('SiteStat','SystemInfo','DevTeam')  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name` FROM `ydw_addons` WHERE `status` = 1 AND `name` IN ('Editor')  [ RunTime:0.0001s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.019646s ]
+INFO: [ app_init ] --END-- [ RunTime:0.020275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001218s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0006s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: login_6e590def35f879cbff3d0e6010a4a401 /home/webroot/yaoduwang_api_second/Application/Home/Model/UserModel.class.php 第 192 行.
+NOTIC: [8] Undefined index: login_cac9bf67375fc4371768f56397fe3ba2 /home/webroot/yaoduwang_api_second/Application/Home/Model/UserModel.class.php 第 193 行.
+SQL: SHOW COLUMNS FROM `ydw_goods` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name` FROM `ydw_goods` WHERE `status` = 1 AND `is_recom` = 1 ORDER BY sort desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_category` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title` FROM `ydw_goods_category` WHERE `status` = 1 ORDER BY length(title),sort  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`goods_name`,`goods_attr_ids` FROM `ydw_goods` WHERE `status` = 1 AND `cate_id` = 14 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`goods_name`,`goods_attr_ids` FROM `ydw_goods` WHERE `status` = 1 AND `cate_id` = 15 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`goods_name`,`goods_attr_ids` FROM `ydw_goods` WHERE `status` = 1 AND `cate_id` = 8 ORDER BY sort  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_name`,`goods_attr_ids` FROM `ydw_goods` WHERE `status` = 1 AND `cate_id` = 9 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`goods_name`,`goods_attr_ids` FROM `ydw_goods` WHERE `status` = 1 AND `cate_id` = 10 ORDER BY sort  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`goods_name`,`goods_attr_ids` FROM `ydw_goods` WHERE `status` = 1 AND `cate_id` = 13 ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`goods_name`,`goods_attr_ids` FROM `ydw_goods` WHERE `status` = 1 AND `cate_id` = 16 ORDER BY sort  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`goods_name`,`goods_attr_ids` FROM `ydw_goods` WHERE `status` = 1 AND `cate_id` = 17 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`goods_name`,`goods_attr_ids` FROM `ydw_goods` WHERE `status` = 1 AND `cate_id` = 7 ORDER BY sort  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`goods_name`,`goods_attr_ids` FROM `ydw_goods` WHERE `status` = 1 AND `cate_id` = 5 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`goods_name`,`goods_attr_ids` FROM `ydw_goods` WHERE `status` = 1 AND `cate_id` = 11 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`goods_name`,`goods_attr_ids` FROM `ydw_goods` WHERE `status` = 1 AND `cate_id` = 12 ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ydw_banner` [ RunTime:0.0006s ]
+SQL: SELECT `title`,`img_url`,`link_url`,`key_words` FROM `ydw_banner` WHERE `platform` = 1 AND `status` = 1 ORDER BY sort desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ydw_articles` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title` FROM `ydw_articles` WHERE `status` = 1 AND `cate_id` = 43 ORDER BY id desc LIMIT 10   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`num`,`goods_attr_name`,`contacts`,`mobile` FROM `ydw_demand` WHERE `status` <> -1 ORDER BY update_time desc LIMIT 10   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ydw_supply` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: condition /home/webroot/yaoduwang_api_second/Application/Home/Model/SupplyModel.class.php 第 97 行.
+SQL: SELECT `id`,`cate_name`,`goods_name`,`goods_attr_name`,`num`,`price_type`,`price`,`origin_type`,`origin_area`,`supply_area`,`contacts`,`mobile`,`create_time`,`pic` FROM `ydw_supply` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0001s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_company_delivery` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`user_id`,`begin`,`end`,`type`,`desc` FROM `ydw_company_delivery` ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_region` [ RunTime:0.0005s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1101 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=110102 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=12 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1200 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=120000 ) LIMIT 1   [ RunTime:0.0014s ]
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Home/Controller/CompanyShowController.class.php 第 292 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=15 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=15 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1500 ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=150000 ) LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1101 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=110102 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Home/Controller/CompanyShowController.class.php 第 292 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+SQL: SHOW COLUMNS FROM `ydw_company_store` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`user_id`,`type`,`size`,`height`,`contacts`,`mobile` FROM `ydw_company_store` ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_hot` [ RunTime:0.0004s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 14 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_goods` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('2422','75','2516','2334','68','70','72','73','2352','2364')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 15 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('134','84','78','83','82','81','80','79','148')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 8 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('675','351','355','349','4','12','128','388','369','2523','45')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('217','221','25','24','218','214','17','21','2467','1352','20')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 10 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('2282','2278','2318','31','28','2258','27','2263','2279','2')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('1507','60','1602','1519','1525','64','1512','1546','1797')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('87','1911','1353','88','89','90','91','94','92')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 17 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('105','106','104','103','102','97','99','1947','1948','101')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 7 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('1941','111','110','109','108','107')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 5 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('121','124','126','127','120','119','118','117','122')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 11 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('38','1362','1347','41','45','1346')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 12 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('928','789','796','773','736','759','47')  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000287s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000410s ]
+NOTIC: [8] Undefined variable: meta_title /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 8 行.
+NOTIC: [8] Undefined index: title /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 291 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042034s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042153s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000572s ]
+
+[ 2017-01-20T11:38:24+08:00 ] 123.149.77.12 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000488s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000199s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0007s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: login_6e590def35f879cbff3d0e6010a4a401 /home/webroot/yaoduwang_api_second/Application/Home/Model/UserModel.class.php 第 192 行.
+NOTIC: [8] Undefined index: login_cac9bf67375fc4371768f56397fe3ba2 /home/webroot/yaoduwang_api_second/Application/Home/Model/UserModel.class.php 第 193 行.
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`num`,`goods_attr_name`,`contacts`,`mobile` FROM `ydw_demand` WHERE `status` <> -1 ORDER BY update_time desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_supply` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: condition /home/webroot/yaoduwang_api_second/Application/Home/Model/SupplyModel.class.php 第 97 行.
+SQL: SELECT `id`,`cate_name`,`goods_name`,`goods_attr_name`,`num`,`price_type`,`price`,`origin_type`,`origin_area`,`supply_area`,`contacts`,`mobile`,`create_time`,`pic` FROM `ydw_supply` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0001s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_company_delivery` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`user_id`,`begin`,`end`,`type`,`desc` FROM `ydw_company_delivery` ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_region` [ RunTime:0.0005s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1101 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=110102 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=12 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=12 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1200 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=120000 ) LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Home/Controller/CompanyShowController.class.php 第 292 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=15 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=15 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1500 ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=150000 ) LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1101 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=110102 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Home/Controller/CompanyShowController.class.php 第 292 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+SQL: SHOW COLUMNS FROM `ydw_company_store` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`user_id`,`type`,`size`,`height`,`contacts`,`mobile` FROM `ydw_company_store` ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_hot` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 14 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_goods` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('2422','75','2516','2334','68','70','72','73','2352','2364')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 15 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('134','84','78','83','82','81','80','79','148')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 8 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('675','351','355','349','4','12','128','388','369','2523','45')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('217','221','25','24','218','214','17','21','2467','1352','20')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 10 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('2282','2278','2318','31','28','2258','27','2263','2279','2')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('1507','60','1602','1519','1525','64','1512','1546','1797')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('87','1911','1353','88','89','90','91','94','92')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 17 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('105','106','104','103','102','97','99','1947','1948','101')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 7 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('1941','111','110','109','108','107')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('121','124','126','127','120','119','118','117','122')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 11 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('38','1362','1347','41','45','1346')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 12 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('928','789','796','773','736','759','47')  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000266s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000428s ]
+NOTIC: [8] Undefined variable: meta_title /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 8 行.
+NOTIC: [8] Undefined index: title /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 291 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034639s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034757s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001189s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001309s ]
+
+[ 2017-01-20T11:38:29+08:00 ] 123.149.77.12 /supply/detail/id/866.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000496s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000167s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0007s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ydw_supply` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ydw_supply` WHERE `id` = 866 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ydw_supply` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`price_type`,`price`,`goods_attr_name`,`num` FROM `ydw_supply` WHERE `goods_name` = '艾叶' AND `id` <> '866' ORDER BY id desc LIMIT 5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000292s ]
+NOTIC: [8] Use of undefined constant sup - assumed 'sup' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/7c66e028511010834bc82c19208dea59.php 第 143 行.
+NOTIC: [8] Use of undefined constant dem - assumed 'dem' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/7c66e028511010834bc82c19208dea59.php 第 146 行.
+NOTIC: [8] Use of undefined constant mar - assumed 'mar' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/7c66e028511010834bc82c19208dea59.php 第 149 行.
+NOTIC: [8] Undefined variable: all /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/7c66e028511010834bc82c19208dea59.php 第 158 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018938s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019042s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000082s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000171s ]
+
+[ 2017-01-20T11:38:32+08:00 ] 123.149.77.12 /supply/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000372s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0007s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ydw_supply` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ydw_search_hot` [ RunTime:0.0005s ]
+SQL: SELECT `alias_name` FROM `ydw_search_hot` WHERE `goods_name` = '' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_supply` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`cate_name`,`goods_name`,`goods_attr_name`,`num`,`price_type`,`price`,`origin_type`,`origin_area`,`supply_area`,`contacts`,`mobile`,`create_time`,`pic` FROM `ydw_supply` ORDER BY id desc LIMIT 0,16   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1142 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1166 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1142 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1142 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1166 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1166 行.
+NOTIC: [8] Undefined index: path_info /home/webroot/yaoduwang_api_second/Application/Home/Controller/SupplyController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000376s ]
+NOTIC: [8] Use of undefined constant sup - assumed 'sup' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/ae19140cf9728ceec5831d81a435210e.php 第 148 行.
+NOTIC: [8] Use of undefined constant dem - assumed 'dem' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/ae19140cf9728ceec5831d81a435210e.php 第 151 行.
+NOTIC: [8] Use of undefined constant mar - assumed 'mar' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/ae19140cf9728ceec5831d81a435210e.php 第 154 行.
+NOTIC: [8] Undefined variable: all /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/ae19140cf9728ceec5831d81a435210e.php 第 163 行.
+NOTIC: [8] Undefined variable: alias_name /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/ae19140cf9728ceec5831d81a435210e.php 第 176 行.
+NOTIC: [8] Undefined index: cate_id /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/ae19140cf9728ceec5831d81a435210e.php 第 392 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024419s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024546s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000225s ]
+
+[ 2017-01-20T11:38:32+08:00 ] 123.149.77.12 /Uploads/Picture/Supply/20170112/thumb_200x200_587731d9de120.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000385s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000200s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0007s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0002s ]
+
+[ 2017-01-20T11:38:33+08:00 ] 123.149.77.12 /demand/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000395s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0006s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ydw_search_hot` [ RunTime:0.0005s ]
+SQL: SELECT `alias_name` FROM `ydw_search_hot` WHERE `goods_name` = '' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ydw_demand a WHERE a.status <> -1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.id,a.cate_name,a.goods_name,a.goods_attr_name,a.num,a.status,a.contacts,a.mobile,a.create_time,a.deposit,a.trading_type,a.order_amount,b.goods_img FROM ydw_demand a left join ydw_goods b on a.goods_id = b.id  WHERE a.status <> -1 ORDER BY a.id desc LIMIT 0,16   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: path_info /home/webroot/yaoduwang_api_second/Application/Home/Controller/DemandController.class.php 第 278 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000338s ]
+NOTIC: [8] Use of undefined constant sup - assumed 'sup' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/868be8030d5d7fef5efe88f93d193f2a.php 第 148 行.
+NOTIC: [8] Use of undefined constant dem - assumed 'dem' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/868be8030d5d7fef5efe88f93d193f2a.php 第 151 行.
+NOTIC: [8] Use of undefined constant mar - assumed 'mar' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/868be8030d5d7fef5efe88f93d193f2a.php 第 154 行.
+NOTIC: [8] Undefined variable: all /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/868be8030d5d7fef5efe88f93d193f2a.php 第 163 行.
+NOTIC: [8] Undefined variable: alias_name /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/868be8030d5d7fef5efe88f93d193f2a.php 第 176 行.
+NOTIC: [8] Undefined index: cate_id /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/868be8030d5d7fef5efe88f93d193f2a.php 第 375 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024458s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024563s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000095s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000189s ]
+
+[ 2017-01-20T11:38:35+08:00 ] 123.149.77.12 /supply/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000413s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000192s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0007s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ydw_supply` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ydw_search_hot` [ RunTime:0.0004s ]
+SQL: SELECT `alias_name` FROM `ydw_search_hot` WHERE `goods_name` = '' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_supply` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_name`,`goods_name`,`goods_attr_name`,`num`,`price_type`,`price`,`origin_type`,`origin_area`,`supply_area`,`contacts`,`mobile`,`create_time`,`pic` FROM `ydw_supply` ORDER BY id desc LIMIT 0,16   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1142 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1166 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1142 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1142 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1166 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api_second/Application/Common/Common/function.php 第 1166 行.
+NOTIC: [8] Undefined index: path_info /home/webroot/yaoduwang_api_second/Application/Home/Controller/SupplyController.class.php 第 250 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000210s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000371s ]
+NOTIC: [8] Use of undefined constant sup - assumed 'sup' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/ae19140cf9728ceec5831d81a435210e.php 第 148 行.
+NOTIC: [8] Use of undefined constant dem - assumed 'dem' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/ae19140cf9728ceec5831d81a435210e.php 第 151 行.
+NOTIC: [8] Use of undefined constant mar - assumed 'mar' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/ae19140cf9728ceec5831d81a435210e.php 第 154 行.
+NOTIC: [8] Undefined variable: all /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/ae19140cf9728ceec5831d81a435210e.php 第 163 行.
+NOTIC: [8] Undefined variable: alias_name /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/ae19140cf9728ceec5831d81a435210e.php 第 176 行.
+NOTIC: [8] Undefined index: cate_id /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/ae19140cf9728ceec5831d81a435210e.php 第 392 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023883s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000098s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000194s ]
+
+[ 2017-01-20T11:38:35+08:00 ] 123.149.77.12 /Uploads/Picture/Supply/20170112/thumb_200x200_587731d9de120.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000479s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000253s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0013s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0002s ]
+
+[ 2017-01-20T11:38:35+08:00 ] 123.149.77.12 /Uploads/Picture/Supply/20170112/thumb_200x200_587731d9de120.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000383s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000159s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0008s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0002s ]
+
+[ 2017-01-20T11:38:37+08:00 ] 123.149.77.12 /supply/detail/id/865.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000433s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000152s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0010s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ydw_supply` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ydw_supply` WHERE `id` = 865 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ydw_supply` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name`,`price_type`,`price`,`goods_attr_name`,`num` FROM `ydw_supply` WHERE `goods_name` = '艾叶' AND `id` <> '865' ORDER BY id desc LIMIT 5   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+NOTIC: [8] Use of undefined constant sup - assumed 'sup' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/7c66e028511010834bc82c19208dea59.php 第 143 行.
+NOTIC: [8] Use of undefined constant dem - assumed 'dem' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/7c66e028511010834bc82c19208dea59.php 第 146 行.
+NOTIC: [8] Use of undefined constant mar - assumed 'mar' /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/7c66e028511010834bc82c19208dea59.php 第 149 行.
+NOTIC: [8] Undefined variable: all /home/webroot/yaoduwang_api_second/Runtime/Cache/Home/7c66e028511010834bc82c19208dea59.php 第 158 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018901s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000089s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000265s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000367s ]
+
+[ 2017-01-20T11:47:50+08:00 ] 123.149.77.12 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002340s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000966s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0007s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`num`,`goods_attr_name`,`contacts`,`mobile` FROM `ydw_demand` WHERE `status` <> -1 ORDER BY update_time desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_supply` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: condition /home/webroot/yaoduwang_api/Application/Home/Model/SupplyModel.class.php 第 97 行.
+SQL: SELECT `id`,`cate_name`,`goods_name`,`goods_attr_name`,`num`,`price_type`,`price`,`origin_type`,`origin_area`,`supply_area`,`contacts`,`mobile`,`create_time`,`pic` FROM `ydw_supply` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0001s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_company_delivery` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`user_id`,`begin`,`end`,`type`,`desc` FROM `ydw_company_delivery` ORDER BY id desc LIMIT 5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ydw_region` [ RunTime:0.0005s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1101 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=110102 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=12 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=12 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1200 ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=120000 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api/Application/Home/Controller/CompanyShowController.class.php 第 292 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=15 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=15 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1500 ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=150000 ) LIMIT 1   [ RunTime:0.0013s ]
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1101 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=110102 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api/Application/Home/Controller/CompanyShowController.class.php 第 292 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+SQL: SHOW COLUMNS FROM `ydw_company_store` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`user_id`,`type`,`size`,`height`,`contacts`,`mobile` FROM `ydw_company_store` ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_hot` [ RunTime:0.0004s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 14 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_goods` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('2422','75','2516','2334','68','70','72','73','2352','2364')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 15 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('134','84','78','83','82','81','80','79','148')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 8 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('675','351','355','349','4','12','128','388','369','2523','45')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('217','221','25','24','218','214','17','21','2467','1352','20')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 10 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('2282','2278','2318','31','28','2258','27','2263','2279','2')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('1507','60','1602','1519','1525','64','1512','1546','1797')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('87','1911','1353','88','89','90','91','94','92')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 17 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('105','106','104','103','102','97','99','1947','1948','101')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 7 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('1941','111','110','109','108','107')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('121','124','126','127','120','119','118','117','122')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 11 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('38','1362','1347','41','45','1346')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 12 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('928','789','796','773','736','759','47')  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000266s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000414s ]
+NOTIC: [8] Undefined variable: meta_title /home/webroot/yaoduwang_api/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 8 行.
+NOTIC: [8] Undefined index: title /home/webroot/yaoduwang_api/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 291 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040157s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001219s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001361s ]
+
+[ 2017-01-20T12:07:53+08:00 ] 60.191.38.77 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000537s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0008s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: login_6e590def35f879cbff3d0e6010a4a401 /home/webroot/yaoduwang_api/Application/Home/Model/UserModel.class.php 第 192 行.
+NOTIC: [8] Undefined index: login_cac9bf67375fc4371768f56397fe3ba2 /home/webroot/yaoduwang_api/Application/Home/Model/UserModel.class.php 第 193 行.
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`num`,`goods_attr_name`,`contacts`,`mobile` FROM `ydw_demand` WHERE `status` <> -1 ORDER BY update_time desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_supply` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: condition /home/webroot/yaoduwang_api/Application/Home/Model/SupplyModel.class.php 第 97 行.
+SQL: SELECT `id`,`cate_name`,`goods_name`,`goods_attr_name`,`num`,`price_type`,`price`,`origin_type`,`origin_area`,`supply_area`,`contacts`,`mobile`,`create_time`,`pic` FROM `ydw_supply` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0001s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_company_delivery` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`user_id`,`begin`,`end`,`type`,`desc` FROM `ydw_company_delivery` ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_region` [ RunTime:0.0005s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1101 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=110102 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=12 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=12 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1200 ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=120000 ) LIMIT 1   [ RunTime:0.0013s ]
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api/Application/Home/Controller/CompanyShowController.class.php 第 292 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=15 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=15 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1500 ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=150000 ) LIMIT 1   [ RunTime:0.0013s ]
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=11 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=1101 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `REGION_ID`,`REGION_CODE`,`REGION_NAME` FROM `ydw_region` WHERE ( REGION_CODE=110102 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api/Application/Home/Controller/CompanyShowController.class.php 第 292 行.
+NOTIC: [8] Undefined offset: 0 /home/webroot/yaoduwang_api/Application/Home/Controller/CompanyShowController.class.php 第 295 行.
+SQL: SHOW COLUMNS FROM `ydw_company_store` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`user_id`,`type`,`size`,`height`,`contacts`,`mobile` FROM `ydw_company_store` ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_hot` [ RunTime:0.0004s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 14 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ydw_goods` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('2422','75','2516','2334','68','70','72','73','2352','2364')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 15 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('134','84','78','83','82','81','80','79','148')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 8 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('675','351','355','349','4','12','128','388','369','2523','45')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('217','221','25','24','218','214','17','21','2467','1352','20')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 10 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('2282','2278','2318','31','28','2258','27','2263','2279','2')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('1507','60','1602','1519','1525','64','1512','1546','1797')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('87','1911','1353','88','89','90','91','94','92')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 17 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('105','106','104','103','102','97','99','1947','1948','101')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 7 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('1941','111','110','109','108','107')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('121','124','126','127','120','119','118','117','122')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 11 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('38','1362','1347','41','45','1346')  [ RunTime:0.0001s ]
+SQL: SELECT `goods_id` FROM `ydw_goods_hot` WHERE `cate_id` = 12 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`cate_id`,`goods_name` FROM `ydw_goods` WHERE `id` IN ('928','789','796','773','736','759','47')  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000270s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000397s ]
+NOTIC: [8] Undefined variable: meta_title /home/webroot/yaoduwang_api/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 8 行.
+NOTIC: [8] Undefined index: title /home/webroot/yaoduwang_api/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 291 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034484s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034597s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000096s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000198s ]
+

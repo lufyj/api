@@ -1,0 +1,56 @@
+<extend name="Public/base"/>
+<block name='navi'><li>药品管理</li><li>药品热门搜索</li></block>
+<block name="body">	
+<div class="page-header"><h1>修改权重</h1></div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="tab-content">
+            <div id="tab1" class="tab-pane fade active in">
+                <form action="" method="post" id="submit-form" class="form-horizontal" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;药材名称：<span class="check-tips"></span></label>
+                        <div class="controls">
+                            <input type="text" id="goods_name" name="goods_name" class="col-xs-10 col-sm-5" value="{$data.goods_name|default=''}" readonly="readonly"/>
+                        </div>
+                    </div>
+                      <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;权重：<span class="check-tips"></span></label>
+                        <div class="controls">
+                            <input type="text" id="weight" name="weight" class="col-xs-10 col-sm-5" value="{$data.goods_hot|default=''}" autocomplete="off" />
+                        </div>
+                    </div>
+            </div>
+            <div class="clearfix form-actions">
+                <div class="col-md-offset-3 col-md-9">
+                	<button type="button" class="btn btn-info" id="submit_btn"><i class="ace-icon fa fa-check bigger-110"></i>确 定</button>
+                    <a class="btn btn-return" href="{:U('index')}"><i class="ace-icon fa fa-undo bigger-110"></i>返 回</a>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<block name="script">
+	<script type="text/javascript">
+		$(function(){
+			$('#submit_btn').click(function(){
+				var goods_name = $('#goods_name').val();
+				var weight     = parseInt($('#weight').val());
+				console.log(goods_name,weight);
+				$.ajax({
+					url:"{:U('weight')}",
+					type:'POST',
+					data:{goods_name:goods_name,weight:weight},
+					success:function(req){
+						if(req.info=='修改成功') success(req.info, req.url || true);
+	                	else fail(req.info);
+					},
+					error:function(){
+						alert('网络连接超时，请稍后再试');
+					}
+				});
+			});
+		});
+	</script>
+</block>
+</block>

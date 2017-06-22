@@ -1,0 +1,38 @@
+/*药都网的个人中心---persional*/
+/*底部tab高亮*/
+.tab_perisonal ,footer .icon_geren{color: #E62B2E;}
+/*jyp个人中心头像部分*/
+.acc-info{display: inline-block;vertical-align: middle;width:calc(100% - 15rem);}
+.acc-info>p{font-size: 2.8rem;color: #fff;line-height: 5rem;margin-left: 2rem;}
+.head-img{width: 13rem;height: 13rem;border-radius: 50%;vertical-align: middle;}
+/*头像部分*/
+.per_wp {background:url("../images/headbg.png") no-repeat;background-size: 100% 100%;height:29rem;}
+.per_info {height:100%;line-height:29rem;padding: 0 2rem; }
+.per_info a {display: inline-block;width: 100%;height: 100%;}
+/*头像部分*/
+.per_m1,.per_m2,.per_m3,.per_m4 {display:flex;display:-webkit-flex;flex-wrap: nowrap;text-align: center;}
+.per_m1 {line-height:5rem;font-size: 2.4rem;}
+.per_m2,.per_m3{font-size: 2.2rem;padding-bottom: 1rem;}
+h3 {font-size: 2.8rem;font-weight: normal;padding:2rem 1rem;}
+.per_m_wp {background:#fff;margin-bottom:1.8rem;}
+.per_m1>div {position: relative;width:25%;}
+.per_m1>div:before ,.per_m4>div:before {content: "";display:block;height:5rem;width: 0;border: 0.1rem solid #ccc;position:absolute;right:0;top: 50%;margin-top: -2.5rem;}
+.per_m1>div:last-child:before,.per_m4>div:last-child:before {border:none;}
+.per_m2>div{width: 33.3%;}
+.per_m3>div{width: 20%;}
+/*m4*/
+.per_m4 {padding:2rem 0;margin-bottom:8.4rem;}
+.per_m4>div{width:50%;position: relative;}
+.per_m4>div div , .per_m4 span {display: inline-block;vertical-align: middle;}
+.per_m4>div div{font-size: 2.0rem;text-align:left;margin-left: 1rem;}
+.per_m4>div div p:first-child {font-size: 2.4rem;}
+.per_m4 span {width:5rem;height:5rem;line-height:5rem;text-align:center;border-radius: 50%;background:#fd9e00;color:#fff;font-size:3rem;}
+.icon {background:url("../images/per.png") no-repeat;background-size:8rem 41.6rem;display:inline-block;}
+.icon1 {width:4.3rem;height:5rem;background-position:-2rem 0;}
+.icon2 {width:5.4rem;height:5rem;background-position:-1.2rem -4.9rem;}
+.icon3 {width:5.2rem;height:5rem;background-position:-1.2rem -12rem;}
+.icon4 {width:5.2rem;height:5rem;background-position:-1.3rem -17rem;}
+.icon5 {width:5.2rem;height:5rem;background-position:-1.3rem -22rem;}
+.icon6 {width:5.2rem;height:5rem;background-position:-1.2rem -26.8rem;}
+.icon7 {width:5.2rem;height:5rem;background-position:-1.2rem -31.8rem;}
+.icon8 {width:5.2rem;height:5rem;background-position:-1.2rem -36.5rem;}

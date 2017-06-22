@@ -1,0 +1,56 @@
+.hyxqcontent-left {
+    text-align: right;
+    width: 30%;
+    padding-right: 5px;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+	vertical-align: middle;
+}
+.hyxqcontent-right {
+    text-align: left;
+    width: 68%;
+    padding-left: 5px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+	vertical-align: middle;
+}
+.detail-list ul li {
+    line-height: 38px;
+    float: left;
+    display: inline-block;
+    height: 42px;
+    padding: 2px 0;
+}
+.fixed { position: fixed!important;	}
+.dialogcon { left: 50%;top: 50%;margin-left: -150px;margin-top: -100px; }
+.dialogbg {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1049;
+    opacity: 0.3;
+}
+#top-alert {
+    display: block;
+    top: 70px;
+    left: 210px;
+    right: 20px;
+    z-index: 3000;
+    margin-top: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    overflow: hidden;
+    font-size: 16px;
+}
+.table,.table th{
+	text-align: center;
+}

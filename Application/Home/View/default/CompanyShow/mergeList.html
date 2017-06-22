@@ -1,0 +1,55 @@
+<extend name="./base" />
+<block name="style">
+    <link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/titleDSG.css" />
+    <link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/dl.css" />
+    <link rel="stylesheet" type="text/css" href="__HOME__/companyShow/css/companyShow.css" />
+</block>
+<block name="body">
+    <include file="Public/common_nav" />
+    <div class="detail-middle">
+        <div class="detail-bread">
+            <i></i>
+            <b>当前位置：</b>&nbsp;
+            <a href="/">首页</a>&nbsp;&gt;&nbsp;
+            <a href="{:U('CompanyShow/mergeList')}">加工/检测</a>
+        </div>
+        <div class="drugs-top store-nav" id="cate_nav">
+            <h2 class="h2-com">请选择业务类型：</h2>
+            <ul class="delivery-nav clearfix">
+                <li <if condition="$act eq 'merge'">class="active"</if>>
+                <a href="{:U('CompanyShow/mergeList')}">全部</a>
+                </li>
+                <li <if condition="$act eq 'process'">class="active"</if>>
+                <a href="{:U('CompanyShow/mergeList',array('t'=>1))}">加工</a>
+                </li>
+                <li <if condition="$act eq 'check'">class="active"</if>>
+                <a href="{:U('CompanyShow/mergeList',array('t'=>2))}">检测</a>
+                </li>
+            </ul>
+        </div>
+        <div class="list-content clearfix">
+            <foreach name="info" item="vo">
+                <div class="storeList clearfix">
+                    <ul class="store-lists l clearfix">
+                        <if condition="$vo.type eq '1'">
+                            <li><b>业务类型：</b><span class="highlight_span">加工</span></li>
+                            <li><b>加工方式：</b><span>{$vo.content}</span></li>
+                        <else/>
+                            <li><b>业务类型：</b><span class="highlight_span">检测</span></li>
+                            <li><b>检测方法：</b><span>{$vo.content}</span></li>
+                        </if>
+                        <li class="last-store"><b>备注：</b><span class="span-store">{$vo.remarks}</span></li>
+                    </ul>
+                    <div class="l store-lists-r" style="margin-top: 0px">
+                        <p>&nbsp;发&nbsp;布&nbsp;人：{$vo.contact}</p>
+                        <p>联系方式：{$vo.mobile}</p>
+                    </div>
+                </div>
+            </foreach>
+        </div>
+        {$pageHtml}
+    </div>
+</block>
+<block name="script">
+    <script src="__HOME__/companyShow/js/companyShow.js" type="text/javascript" charset="utf-8"></script>
+</block>

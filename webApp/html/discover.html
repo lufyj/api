@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>药都网--发现</title>
+	    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/discover.css" />
+		<link rel="stylesheet" href="../css/pull.css">
+		<script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js"></script>
+	</head>
+	<body>
+		<header><span>发现</span></header>
+		<div class="ydw_wp">
+			<section class="des-t fg">
+				<a href="./storeList.html">
+					<dl>
+						<dt><i class="iconfont icon-ck"></i></dt>
+						<dd>仓库</dd>
+					</dl>
+				</a>
+				<a href="./herbalList.html">
+					<dl>
+						<dt><i class="iconfont icon-ys"></i></dt>
+						<dd>养生</dd>
+					</dl>
+				</a>
+				<a href="./merchant.html">
+					<dl>
+						<dt><i class="iconfont icon-sj"></i></dt>
+						<dd>商家</dd>
+					</dl>
+				</a>
+				<a href="./delList.html">
+					<dl>
+						<dt><i class="iconfont icon-wl2"></i></dt>
+						<dd>物流</dd>
+					</dl>
+				</a>
+				<a href="./hqlist.html">
+					<dl>
+						<dt><i class="iconfont icon-hq"></i></dt>
+						<dd>行情</dd>
+					</dl>
+				</a>
+			</section>
+			<article class="des-recommend">
+				<h2 class="fb">推荐</h2>
+				<div class="rec-m theme_wp">
+					<!--<a href="###">-->
+						<!--<dl>-->
+							<!--<dt><img src="../images/ydw2.png"/></dt>-->
+							<!--<dd>中药材常规三检</dd>-->
+						<!--</dl>-->
+					<!--</a>-->
+					<!--<a href="###">-->
+						<!--<dl>-->
+							<!--<dt><img src="../images/ydw2.png"/></dt>-->
+							<!--<dd>北京市大望路万达一号</dd>-->
+						<!--</dl>-->
+					<!--</a>-->
+					<!--<a href="###">-->
+						<!--<dl>-->
+							<!--<dt><img src="../images/ydw2.png"/></dt>-->
+							<!--<dd>冬季养生必备</dd>-->
+						<!--</dl>-->
+					<!--</a>-->
+					<!--<a href="###">-->
+						<!--<dl>-->
+							<!--<dt><img src="../images/ydw2.png"/></dt>-->
+							<!--<dd>冬季养生必备</dd>-->
+						<!--</dl>-->
+					<!--</a>-->
+				</div>
+			</article>
+			<section class="des-list list_wp">
+				<ul class="fg" id="des-list">
+				</ul>
+			</section>
+		</div>
+		<footer>
+			<a href="./indexs.html" class="tab_lm">
+				<i class="iconfont icon_lm"></i>
+				<p>类目</p>
+			</a>
+			<a href="./follow.html" class="tab_follow">
+				<i class="iconfont icon_gz"></i>
+				<p>关注</p>
+			</a>
+			<a href="./index.html" class="home tab_home"></a>
+			<a href="javascript:;" class="tab_fx">
+				<i class="iconfont icon_fx"></i>
+				<p>发现</p>
+			</a>
+			<a href="./persional.html" class="tab_perisonal">
+				<i class="iconfont icon_geren"></i>
+				<p>个人</p>
+			</a>
+		</footer>
+	</body>
+	<script type="text/javascript" src="../js/load.js"></script>
+	<script type="text/javascript">
+		var listWp =  $("#des-list");
+        appendLoad(listWp , true);
+		$(function (){
+		    $.post(rule.root + "AppHerbal/discover_theme" , {clientType:1} , function (req) {
+				console.log(req);
+				if (req.code == 1){
+				    var datas = req.data , datasL = datas.length;
+				    var str = '';
+				    for (var i = 0; i < datasL; i++){
+				        var id = datas.id;
+                        var titleType = parseInt(datas[i].title_type) - 1;
+                        var titleId = parseInt(datas[i].title_id);
+                        var urls = ['./storedetail.html','./deldetail.html','./checkdetail.html','./prodetail.html','./herbal2.html',];
+                        str += '<a href="'+urls[titleType]+'?id='+ titleId +'"><dl><dt><img src="'+ datas[i].img +'"/></dt><dd>'+datas[i].content+'</dd></dl></a>'
+					}
+					$(".theme_wp").html(str)
+				}
+            })
+            rule.scrollEvent = function (fn){
+                var data = {
+                    clientType:1,
+                    num:5
+				}
+				var lastId = listWp.children(":last").attr("data-id");
+                data.minId = lastId || "";
+                $.ajax({
+                    url:rule.root + "AppHerbal/discover_list",
+					type:'post',
+					data:data,
+					success:function (req){
+                        var code = req.code;
+                        if (code == 1){
+                            var datas = req.data;
+                            var dataLength  = datas.length;
+                            var li = '';
+                            for (var i = 0; i < dataLength; i++){
+                                var title_type = datas[i].title_type;
+                                var id = datas[i].id;
+                                var contents = datas[i].contents;
+                                switch (title_type){
+                                    case "1":
+                                        //仓储
+                                        var size = contents.size,
+                                            img  = contents.img,
+                                            type = contents.type,
+                                            address = contents.address,
+                                            height = contents.height;
+                                        li += '<li class="type1" data-id="'+ id +'"><a href="javascript:;" class="clearfix"><ul class="l"><li><span class="fb">仓库类型：</span><em class="fr">'+type +'</em></li> <li>面积：'+ size +'m&sup2;</li><li>层高：'+height+'m</li><li>地址：'+ address +'</li></ul><img src="'+img+'" class="r"/></a></li>';
+                                        break;
+                                    case "2":
+                                        //物流
+                                        var begin = contents.begin,
+                                            end = contents.end,
+                                            img = contents.img,
+                                            type = contents.type;
+                                        li += '<li class="type2" data-id="'+ id +'"><a href="javascript:;" class="clearfix"><ul class="l"> <li><span class="fb">车辆类型：</span><em class="fr">'+ type +'</em></li><li>出发地：'+ begin +'</li><li>目的地：'+ end +'</li></ul><img src="'+img+'" class="r"/></a></li>';
+                                        break;
+                                    case "3":
+                                        //检测
+                                        var content = contents.content,
+                                            remarks = contents.remarks,
+                                            img = contents.img;
+                                        li += '<li class="type3" data-id="'+ id +'"><a href="javascript:;" class="clearfix"><ul class="l"><li><span class="fb">检测方式：</span><em class="fr">'+content+'</em></li><li>备注：'+remarks+'</li></ul><img src="'+ img +'" class="r"/></a></li>';
+                                        break;
+                                    case "4":
+                                        //加工
+                                        var content = contents.content,
+                                            remarks = contents.remarks,
+                                            img = contents.img;
+                                        li += '<li class="type3" data-id="'+ id +'"><a href="javascript:;" class="clearfix"><ul class="l"><li><span class="fb">代加工方式：</span><em class="fr">'+content+'</em></li><li>备注：'+remarks+'</li></ul><img src="'+img+'" class="r"/></a></li>';
+                                        break;
+                                    case "5":
+                                        //药膳
+                                        var create_time = contents.create_time,
+                                            descriptions = contents.descriptions,
+                                            title = contents.title,
+                                            thumb = contents.thumb;
+                                        var id2 = contents.id;
+                                        li += '<li class="type3" data-id="'+ id +'"><a href="./herbal2.html?id='+id2+'" class="clearfix"><ul class="l"><li><span class="fb">'+title+'</span></li><li>'+descriptions+'</li></ul><img src="../images/supply02.jpg" class="r"/></a></li>'
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+							listWp.append(li);
+							if (dataLength < data.num){
+								$(".load_wp").text("没有更多数据");
+								return;
+							}
+							fn&&fn();
+                        }else  if (code == 0){
+                            $(".load_wp").text("没有更多数据")
+                        }
+                    },
+					error:function (error){
+					    console.log(error);
+					    fn&fn();
+					},
+				})
+			}
+            scrolling = true;
+            rule.scrollEvent(onFinish);
+        });
+	</script>
+</html>

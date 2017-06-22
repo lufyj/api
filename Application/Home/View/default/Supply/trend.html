@@ -1,0 +1,122 @@
+<extend name="./base" />
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/titleDSG.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/trend.css" />
+</block>
+<block name="body">
+	<div class="demand-detail">
+		<div class="detail-top">
+			<ul class="detail-nav clearfix">
+				<li>
+					<a href="/">首页</a>
+				</li>
+				<li>
+					<a href="{:U('supply/trend')}" <if condition="$act eq tre">class="active"</if>>市场价格</a>
+				</li>
+				<li>
+					<a href="{:U('supply/history')}" <if condition="$act eq his">class="active"</if>>历史价格</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="detail-middle">
+		<div class="detail-bread">
+			<i></i>
+			<b>当前位置：</b>&nbsp;
+			<a href="/">首页</a>&nbsp;&gt;&nbsp;
+			<a href="javascript:;">市场价格</a>
+		</div>
+		<!--关于市场价格页面开始-->
+		<div class="trend-t">
+			<dl class="clearfix trend-b">
+				<dt class="l"><b>药材分类</b></dt>
+				<dd class="l">
+					<a href="#">全部</a>
+					<a href="#" class="active">今日变动</a>
+					<a href="#">花类</a>
+					<a href="#">叶类</a>
+					<a href="#">根茎类</a>
+					<a href="#">动物类</a>
+					<a href="#">矿石类</a>
+					<a href="#">全草类</a>
+					<a href="#">树皮类</a>
+					<a href="#">藤木类</a>
+					<a href="#">树脂类</a>
+					<a href="#">菌藻类</a>
+					<a href="#">其它加工类</a>
+					<a href="#">果实种子类</a>
+				</dd>
+			</dl>
+		</div>
+		<div class="trend-m">
+			<table>
+				<thead>
+					<tr>
+						<td>品名</td>
+						<td>规格</td>
+						<td>产地</td>
+						<td>价格(元/公斤)</td>
+						<td>走势</td>
+						<td>昨日对比</td>
+						<td>周对比</td>
+						<td>月对比</td>
+						<td>季度对比</td>
+						<td>年对比</td>
+						<td>历史价格</td>
+						<td>供货信息</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="{:U('goods/detail')}">槐花</a></td>
+						<td>统</td>
+						<td>河南</td>
+						<td>20.00</td>
+						<td>稳</td>
+						<td class="col-r">↑3.4%</td>
+						<td class="col-r">↑3.4%</td>
+						<td>0.0%</td>
+						<td class="col-g">↓-5%</td>
+						<td class="col-r">↑3.4%</td>
+						<td class="trend-a"><a href="{:U('supply/history')}">历史价格</a></td>
+						<td class="trend-a"><a href="{:U('supply/lst')}">供货信息</a></td>
+					</tr>
+					<tr>
+						<td><a href="{:U('goods/detail')}">槐花</a></td>
+						<td>统</td>
+						<td>河南</td>
+						<td>20.00</td>
+						<td>稳</td>
+						<td class="col-r">↑3.4%</td>
+						<td class="col-r">↑3.4%</td>
+						<td>0.0%</td>
+						<td class="col-g">↓-5%</td>
+						<td class="col-r">↑3.4%</td>
+						<td class="trend-a"><a href="{:U('supply/history')}">历史价格</a></td>
+						<td class="trend-a"><a href="{:U('supply/lst')}">供货信息</a></td>
+					</tr>
+					<tr>
+						<td><a href="{:U('goods/detail')}">槐花槐花槐花</a></td>
+						<td>统</td>
+						<td>河南河南河南</td>
+						<td>20.00</td>
+						<td>稳</td>
+						<td class="col-r">↑3.4%</td>
+						<td class="col-r">↑3.4%</td>
+						<td>0.0%</td>
+						<td class="col-g">↓-5%</td>
+						<td class="col-r">↑3.4%</td>
+						<td class="trend-a"><a href="{:U('supply/history')}">历史价格</a></td>
+						<td class="trend-a"><a href="{:U('supply/lst')}">供货信息</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--分页器-->
+		{$pageHtml}
+		<!--关于市场价格页面结束-->
+	</div>
+</block>
+<block name="script">
+
+</block>

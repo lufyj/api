@@ -1,0 +1,117 @@
+<extend name="Public/base" />
+<block name='navi'><li>系统消息</li><li>系统消息管理</li></block>
+<block name="body">
+<div class="page-header">
+	<h1>新增系统消息</h1>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<ul class="nav nav-tabs">
+			<li class="active">
+				<a data-toggle="tab" href="#tab1"><i class="green ace-icon fa fa-home bigger-120"></i>推送信息</a>
+			</li>
+		</ul>
+		<div class="tab-content clearfix">
+			<!-- 基础 -->
+			<div id="tab1" class="tab-pane fade active in ">
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;客户端类型：<span class="check-tips"></span></label>
+					<div class="controls">
+						<select style="hight:auto;" id="platform">
+							<option value="1">Android,IOS</option>
+							<option value="2">Android</option>
+							<option value="3">IOS</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group clearfix">
+					<label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;消息标题：<span class="check-tips"></span></label>
+					<div class="controls">
+						<input type="text" id="message" class="col-xs-10 col-sm-5" />
+					</div>
+				</div>
+				<div class="form-group clearfix">
+					<label class="col-sm-3 control-label no-padding-right">详细内容：</label>
+					<div class="controls">
+						<textarea name="" rows="5" cols="" id="details" class="col-xs-10 col-sm-5"></textarea>
+					</div>
+				</div>
+				<div class="form-group clearfix push_pro" style="display: none;">
+					<label class="col-sm-3 control-label no-padding-right"></label>
+					<div class="alert alert-success alert-dismissable col-xs-10 col-sm-5" style="margin: 0;">
+						<span>正在推送</span>
+					</div>
+				</div>
+				<div class="clearfix form-actions">
+					<div class="col-md-offset-3 col-md-9">
+						<input type="hidden" name="id" value="{$info.id|default=''}">
+						<button type="submit" id="mysubmit" class="btn btn-info submit-btn ajax-post" target-form="form-horizontal"><i class="ace-icon fa fa-check bigger-110"></i>推 送</button>
+						<a class="btn btn-return" href="{:U('index')}"><i class="ace-icon fa fa-undo bigger-110"></i>返 回</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">	
+<script>
+	$(function() {
+		$("#mysubmit").on('click', function() {			
+			var _this = $(this);
+			_this.addClass('disabled');
+			var platform = $("#platform").val();
+			if(platform != '2' && platform != '3') {
+				platform = 1;
+			}
+			var message = $("#message").val();
+			if(message == '') {
+				fail('请输入系统消息标题', _this);return;
+			}
+			var details = $("#details").val();	
+			if (details == ''){
+				fail('请输入内容', _this);return;
+			}
+			var timer;
+			$.ajax({
+				url: "{:U('')}",
+				type: 'post',
+				dataType: 'json',
+				data: {
+					platform: platform,
+					message: message,
+					details: details
+				},
+				beforeSend: function() {
+					$(".push_pro").fadeIn();
+					var txt = ['正在推送' , '正在推送.' , '正在推送..' , '正在推送...'];
+					var i = 1;
+					timer = setInterval(function (){
+						$(".push_pro span").text(txt[i]);
+						i++;
+						if (i > 3){
+							i = 0;
+						}
+					} , 500)
+				},
+				success: function(data) {					
+					if(data.status == 1) {			
+						$(".push_pro span").text("推送成功");
+						window.location.href = "{:U('Push/index')}";
+					}else{
+						fail(data.info, _this);
+					}
+					clearInterval(timer);
+				},
+				error:function (error){					
+					alert('网络连接错误，请稍后再试');
+					clearInterval(timer);
+					_this.removeClass('disabled');
+				}
+			})
+		});
+		//导航高亮
+		highlight_subnav("{:U('Push/index')}");
+	});
+</script>
+</block>

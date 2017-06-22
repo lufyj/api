@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/share.css"/>
+    <link rel="stylesheet" type="text/css" href="../swiper.min.css"/>
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+    </script>
+    <style>
+        .sds_public .bottom {margin-bottom:4rem;}
+        .op_wp {display:none;width:70%;height:6rem;line-height:6rem;border-radius:0.8rem;text-align:center;margin:0 auto;background-color:#e6282b !important;font-size:2.4rem;margin-bottom:2rem;}
+        .op_btn {color: #fff;display: inline-block;width: 100%;height: 100%;}
+    </style>
+</head>
+<body class="gray_boby sds_public">
+<header>
+    <a href="javascript:;" class="back_btn" id="back_btn">
+        <i class="icon_zjt iconfont"></i>返回
+    </a>
+    <span>求购详情</span>
+</header>
+<div class="ydw_wp">
+    <div class="main">
+        <div class="time_div">
+            <span class="bf">发布时间 : </span><span class="time_span"></span>
+        </div>
+        <div class="top">
+            <ul class="top_list list">
+                <li>
+                    <span class="bf">品　　名 : </span><span class="name_span"></span>
+                </li>
+                <li>
+                    <span class="bf">规　　格 : </span><span class="spec_span"></span>
+                </li>
+                <li>
+                    <span class="bf">数　　量 : </span><span class="num_span"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="middle">
+            <ul class="middle_list list">
+                <li>
+                    <span class="bf">产　　地 : </span><span class="origin_span r_span"></span>
+                </li>
+                <li>
+                    <span class="bf">描　　述 : </span><span class="des_span r_span"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <ul class="bottom_list list">
+                <li>
+                    <span class="bf">联&nbsp;&nbsp;系&nbsp;&nbsp;人 : </span><span class="contacts_span r_span"></span>
+                </li>
+                <li>
+                    <span class="bf">手　　机 : </span><span class="tel_span"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="op_wp" >
+            <a href="javascript:;" class="op_btn">投标</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/share.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var gn = $(".name_span"),
+        spec = $(".spec_span"),
+        goodsNum = $(".num_span");
+    var param = {};
+    var id = parseInt(rule.getRequest().id);
+    var data = {
+        id:id
+    };
+    $.postT(rule.root +'AppDemand/demand_details' ,data , function (req) {
+            var code = req.code;
+            if (code == 1){
+                var datas = req.data;
+                var id = datas.id;
+                var create_time = new Date(datas.create_time*1000).format('yyyy-MM-dd');		//发布时间
+                var	contacts = datas.contacts;				//联系人
+                var	mobile = datas.mobile;					//手机号
+                var goods_name = datas.goods_name;			//品名
+                var goods_attr_name = datas.goods_attr_name;//规格
+                var	num = datas.num;						//数量
+                var price_type = datas.price_type;			//价格类型
+                var	origin_area = datas.origin_area;		//产地
+                var origin_type = datas.origin_type;        //产地类型
+                var	details = datas.details;
+                var status = parseInt(datas.status);
+                //tender_status 0 自己的求购  1已投  2 未投
+                var  tenderStatus = datas.tender_status;
+                $(".time_span").text(create_time);
+                gn.text(goods_name);
+                $(".contacts_span").text(contacts);
+                $(".tel_span").text(mobile);
+                if (goods_attr_name){
+                    spec.text(goods_attr_name);
+                }
+                if (num == "大货"){
+                    goodsNum.text(num);
+                }else {
+                    goodsNum.text(num + "公斤");
+                }
+                param.goods_name = goods_name;
+                param.goods_attr = goods_attr_name;
+                param.goods_num = num;
+                param.id = id;
+                $(".origin_span").text(origin_area);
+                $(".des_span").text(details);
+                if (tenderStatus == 0){
+                    //自己的采购 暂不处理
+                    $(".op_wp").hide();
+                }else if (tenderStatus == 1){
+                    //查看我的投标
+                    $(".op_wp").show().children("a").text("查看我的投标");
+                }else if (tenderStatus == 2){
+                    //判断这条采购状态
+                    if (status > 0){
+                        //为选过标的 不再选择投标按钮
+                        $(".op_wp").hide();
+                    }else if (status == 0){
+                        //正在投标 现在投标按钮
+                        $(".op_wp").show().children("a").text("投标");
+                    }
+                }
+            }else if (code == 103){
+                rule.reLogin();
+            }
+    } )
+$(".op_btn").click(function () {
+    var _this = $(this);
+    if (_this.text() == '投标'){
+        //去投标
+        new LocalData().setData("mytender" , param);
+        location.href = './tender.html';
+    }else if (_this.text() == '查看我的投标'){
+        //去看我的投标
+        location.href = './tenderDetail.html?id='+param.id;
+    }
+})
+</script>
+</html>

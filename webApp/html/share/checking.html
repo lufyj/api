@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/share.css" />
+		<script src="../../js/zepto2.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body class="dcp">
+		<div class=" title ">
+			<img src="../../images/ydw2.png" alt="" class="ydw_logo"/>
+			<div class="ydw_t">
+				<p>药都网</p>
+				<p>一个药商自助交易的平台</p>
+			</div>
+			<a class="download_btn dib r" href="###">点击打开</a>
+		</div>
+		<div class="main">
+			<div class="middle">
+				<ul>
+					<li>
+						<div class="c">
+							<b class="line dib"></b>
+						</div>
+						<span class="ft_s dib">检测方式 : </span><span class="check_c bhd_s dib"></span>
+					</li>
+					<li>
+						<div class="c"><b class="line dib"></b></div>
+						<span class="ft_s dib">联系方式 : </span><div class="bhd_s dib">
+							<span class="name_span"></span><br>
+							<span class="tel_span"></span>
+						</div>
+					</li>
+					<li class="dcp_sp">
+						<i class="c dib"></i>
+						<span class="ft_s">备　　注 : </span>
+						<span class="remark bhd_s dib"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/share.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var result = GetRequest();
+		var id = Number(result.id);
+		var data = {
+			clientType: 1,
+			id: id
+		};
+		$.ajax({
+			url: "http://m.yaoduwang.com/index.php?s=Api/AppCompany/checkInfo",
+			data: data,
+			type: "post",
+			success: function(req) {
+				console.log(req);
+				var code = req.code;
+				if(code == 1) {
+					var datas = req.data;
+					var contacts = datas.contacts;
+					var content = datas.content;
+					var mobile = datas.mobile;
+					var remarks = datas.remarks;
+					$(".check_c").text(content);
+					$(".name_span").text(contacts);
+					$(".tel_span").text(mobile);
+					$(".remark").text(remarks);
+					var obj = $('.middle li');
+					line(obj);
+				}
+			},
+			error: function(error) {
+				console.log(error);
+			}
+		})
+	</script>
+
+</html>

@@ -1,0 +1,80 @@
+<extend name="Public/base" />
+<block name='navi'><li>商品管理</li><li>药材管理</li></block>
+<block name="body">
+<div class="page-header"><h1>药材列表</h1></div><div class="space"></div>
+<div class="row">
+    <div class="col-xs-12">
+    	<div class="tabbable">
+    		<ul class="nav nav-tabs" id="myTab">
+				<li class="active">
+					<a data-toggle="tab" href="#home"><i class="green ace-icon fa fa-home bigger-120"></i>平台药品</a>
+				</li>
+				<li>
+					<a data-toggle="tab" href="#messages" id="custom_id">自定义药品</a>
+				</li>
+			</ul>
+<div class="tab-content">
+	<div id="home" class="tab-pane fade in active">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="col-xs-6">
+					<form onsubmit="return false;" id="search-form">
+	                    <div style="margin-bottom:10px;">					                    	
+	                        <select name="cate_id">
+	                        	<option value="0">请选择分类</option>
+	                        	<foreach name="cates" item="vo" >
+	                        	    <option value="{$vo.id}">{$vo.title}</option>
+	                        	</foreach>								
+							</select>                        
+	                        <input type="text" name="goods_name" class="input-sm" placeholder="请输入品名">					                        
+	                        <a href="javascript:;" class="fm-button btn btn-sm btn-info search">查询</a>
+	                    </div>
+	                </form>		
+				</div>
+				<div class="col-xs-6 ">
+	                <a class="fm-button btn btn-sm btn-success pull-right" href="{:U('add')}">新 增</a>
+	            </div>
+	            <div id="ajax_table">      
+	            	<include file='table'/>            
+	            </div>
+			</div>
+		</div>		
+	</div>
+	<div id="messages" class="tab-pane fade">
+		<div class="alert alert-danger">
+			<button type="button" class="close" data-dismiss="alert">
+				<i class="ace-icon fa fa-times"></i>
+			</button>							
+			此界面显示前台用户发布需求时，添加的自定义药品。（目前只提供参考，暂不考虑分页，查询）							
+			<br>
+		</div>
+		<div id="ajax_table2">
+           	<include file='custom_table'/>            
+           </div>
+	</div>
+</div>
+    	</div>
+    </div>
+</div>
+</block>
+<block name="script">
+	<script>
+		$(function(){
+			$('#custom_id').on('click', function(){
+				$.ajax({
+			        url: "{:U('Goods/ajaxCustomGoods')}",
+			        async: true,
+			        dataType: 'html',
+			        type: 'GET',			        
+			        success: function(data, textStatus) {			        	
+			        	$('#ajax_table2').html(data);			        	            
+			        },
+			        error: function(jqXHR, textStatus, errorThrown) {
+			        	  
+			            alert(jqXHR);
+			        }
+			    });
+			});
+		})
+	</script>
+</block>

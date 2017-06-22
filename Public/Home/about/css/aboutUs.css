@@ -1,0 +1,212 @@
+/********首页最底层的关于我们的css样式**************/
+.aboutUs {
+	width: 1200px;
+	margin: 20px auto;
+}
+
+.aboutUs-nav {
+	width: 230px;
+}
+
+.aboutUs-nav h2 {
+	height: 42px;
+	background: #E62B2E;
+	color: #fff;
+	font-size: 20px;
+	line-height: 42px;
+	text-align: center;
+}
+
+.aboutUs-list ul {
+	border: 1px solid #e2e2e2;
+	border-top: none;
+}
+
+.aboutUs-list li {
+	height: 49px;
+	line-height: 49px;
+	border-bottom: 1px solid #f8f8f8;
+}
+
+.aboutUs-list a {
+	display: block;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+}
+
+.aboutUs-list span {
+	padding-left: 20px;
+}
+
+.aboutUs-list li a:hover {
+	text-decoration: none;
+	background: #FFF7F7;
+	color: #E62B2E;
+}
+.aboutUs-list li a.active {
+	background: #FFF7F7;
+	color: #E62B2E;
+}
+
+.aboutUs-main {
+	width: 970px;
+}
+
+.aboutUs-top h3 {
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 2px solid #E62B2E;
+	padding-left: 35px;
+	font-family: "宋体";
+}
+
+.aboutUs-top a:hover {
+	text-decoration: none;
+	color: #e62b2e;
+}
+
+.aboutUs-title,
+.aboutUs-container {
+	padding-top: 20px;
+	padding-left: 30px;
+}
+
+.aboutUs-title h2 {
+	font-size: 36px;
+	padding-left: 30px;
+	background: url(../images/symbol_1_03.png) no-repeat left center;
+}
+.about-index p{
+	font-size:16px;
+	line-height:30px;
+	text-indent: 2em;
+}
+/****以上为关于我们的公共样式类*********/
+
+/*01关于我们页面*/
+
+.aboutUs-container img {
+	max-width: 300px;
+	float: right;
+	margin-left: 15px;
+}
+
+/*关于我们页面结束*/
+
+
+/*07最新公告*/
+.aboutUs-container.wenhua img {
+	max-width: 100%;
+}
+.detailhd {
+	font-size: 30px;
+	text-align: center;
+	font-weight: normal;
+}
+
+.post-info {
+	font-size: 14px;
+	color: #999;
+}
+.fuhd{
+	font-size: 14px;
+	color: #999;
+	text-align: center;
+}
+.fuhd a {
+	color: #006dbc;
+}
+
+.maincontainer {
+	margin-left: 70px;
+	margin-top: 20px;
+}
+
+.maincontainer h2 {
+	font-size: 24px;
+	color: #333;
+	font-weight: normal;
+	height: 50px;
+	line-height: 50px;
+	padding-bottom: 10px;
+}
+
+.report ul li {
+	border-bottom: 1px dotted #ccc;
+	height: 42px;
+	line-height: 42px;
+	padding-left: 15px;
+	padding-right: 20px;
+}
+
+.report ul li a.textcon,
+.report ul li a.textcon:link,
+.report ul li a.textcon:visited {
+	color: #333;
+	font-size: 14px;
+}
+
+.report ul li a.textcon:hover {
+	text-decoration: underline;
+}
+
+span.linkurl {
+	margin-right: 10px;
+	display: inline-block;
+	color: #0383cd;
+}
+
+.dongtaidian {
+	margin-right: 13px;
+	display: inline-block;
+	background: #0383cd;
+	width: 5px;
+	height: 5px;
+}
+
+span.riqi {
+	color: #333;
+	font-family: arial;
+	font-size: 13px;
+}
+.about-page{
+	border-top:1px solid #f0f0f0;
+	padding-top:15px;
+	margin-top:15px;
+}
+.about-page p{
+	float:left;
+	width: 50%;
+	font-size:15px;
+}
+.about-page span{
+	color:#E62B2E;
+}
+.about-page button{
+	padding:5px 9px;
+	color:#fff;
+	background: #E62B2E;
+	margin-right:10px;
+	cursor:pointer;
+}
+.about-page button:hover{
+	background: #f00;
+}
+.about-page a{
+	display: inline-block;
+	width:350px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	height:30px;
+	line-height:26px;
+	vertical-align: middle;
+}
+/*最新公告结束*/
+/*关于意见反馈*/
+#myform img{
+	float:none;
+	margin-bottom:0;
+}

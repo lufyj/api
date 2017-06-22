@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>中药分类</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/cate.css" />
+		<script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js"></script>
+	</head>
+	<body>
+		<header>
+	        <a href="javascript:void(0);" class="back_btn" id="back_btn">
+	            <i class="icon_zjt iconfont"></i>返回
+	        </a>
+	        <span>中药品名</span>
+	    </header>
+		<div class="ydw_wp">
+	    	<div class="gs_name_wp">
+	    	<div class="hot_box">
+	    		<div class="box_hd">
+	    			<span>热门</span><i class="iconfont icon_hot"></i>
+	    		</div>
+	    		<div class="box_bd hot_bd">
+	    			<!--<a href="###" class="hot_a">艾叶</a>-->
+	    			<!--<a href="###" class="hot_a">侧伯也</a>-->
+	    			<!--<a href="###" class="hot_a">茶叶</a>-->
+	    			<!--<a href="###" class="hot_a">大红袍</a>-->
+	    			<!--<a href="###" class="hot_a">大青叶</a>-->
+	    			<!--<a href="###" class="hot_a">灯台叶</a>-->
+	    			<!--<a href="###" class="hot_a">滴水珠</a>-->
+	    		</div>
+	    	</div>
+	    	<div class="goods_wp">
+	    		<div class="box_hd">
+	    			<span>全部</span><i class="iconfont icon_all"></i>
+	    		</div>
+	    		<div class="box_bd box_bd2">
+	    			<!--<a href="###" class="a2">茶叶</a>-->
+	    		</div>
+	    		<div class="box_bd box_bd3">
+	    			<!--<a href="###" class="a3">茶叶茶</a>-->
+	    		</div>
+	    		<div class="box_bd box_bd4">
+	    			<!--<a href="###" class="a3">茶茶叶茶</a>-->
+	    		</div>
+	    		<div class="box_bd box_bd5">
+	    			<!--<a href="###" class="a4">茶叶我我茶</a>-->
+	    		</div>
+	    	</div>
+	    </div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function (){
+		    var cate_id = rule.getRequest().cate_id;
+		    var cateName = decodeURI(rule.getRequest().cate_name);
+		    var returnUrl = decodeURIComponent(rule.getRequest().ReturnUrl);
+            var local = new LocalData();
+            var data = {
+                cate_id:cate_id,
+                clientType:1
+			}
+		    $.post(rule.root + "Class/goods_name" ,data , function (req){
+		        var code = req.code;
+		        var arr2 = [];
+		        var arr3 = [];
+		        var arr4 = [];
+		        var arr5 = [];
+		        if (code == 1){
+					var datas = req.data;
+					var datasL  = datas.length;
+					var dataHot = req.dataHot;
+					var hotA = '';
+					if (dataHot){
+                        var dataHotL = dataHot.length;
+                        for (var i  = 0; i < dataHotL; i++){
+                            var gn = dataHot[i].goods_name;
+                            var cateId = dataHot[i].cate_id;
+                            var id = dataHot[i].id;
+                            hotA += '<a href="javascript:;" class="hot_a a_lk" data-id="'+ id +'" cate-id="'+ cateId +'">'+ gn +'</a>';
+                        }
+					}
+
+					$(".hot_bd").html(hotA);
+					for (var i = 0; i < datasL; i++){
+						var goods_name = datas[i].goods_name;
+						var l = goods_name.length;
+						if (l <= 2){
+                            arr2.push(datas[i])
+						}else if (l == 3){
+                            arr3.push(datas[i])
+						}else if (l == 4){
+                            arr4.push(datas[i])
+						} else if (l >= 4){
+                            arr5.push(datas[i])
+                        }
+					}
+					var arr = [];
+					arr.push(arr2 , arr3 , arr4 , arr5);
+					var arrLength = arr.length;
+					var l2 = arr[0].length;
+                    var l3 = arr[1].length;
+                    var l4 = arr[2].length;
+                    var l5 = arr[3].length;
+                    var a2 = '' , a3 = '', a4 = '' ,a5 = '';
+					for (var i = 0; i < arrLength; i++){
+					    for (var j = 0; j < arr[i].length; j++){
+                            var gn = arr[i][j].goods_name;
+                            var cateId = arr[i][j].cate_id;
+                            var id = arr[i][j].id;
+                            if (i == 0){
+                                a2 += '<a href="javascript:;" class="a2 a_lk" data-id="'+ id +'" cate-id="'+ cateId +'">'+ gn +'</a>'
+							}else if (i == 1){
+                                a3 += '<a href="javascript:;" class="a3 a_lk" data-id="'+ id +'" cate-id="'+ cateId +'">'+ gn +'</a>'
+							}else if (i == 2){
+                                a4 += '<a href="javascript:;" class="a3 a_lk" data-id="'+ id +'" cate-id="'+ cateId +'">'+ gn +'</a>'
+							} else if (i == 3){
+                                a5 += '<a href="javascript:;" class="a4 a_lk" data-id="'+ id +'" cate-id="'+ cateId +'">'+ gn +'</a>'
+                            }
+						}
+					}
+					$(".box_bd2").html(a2);
+					$(".box_bd3").html(a3);
+					$(".box_bd4").html(a4);
+					$(".box_bd5").html(a5);
+				}else if (code == 0){
+
+				}
+			});
+            $(".ydw_wp").on("click" , ".a_lk" , function() {
+				var _this = $(this);
+				var id = _this.attr("data-id");
+				var cateId = _this.attr("cate-id");
+				var name = _this.text();
+                var goodsMsg = {};
+                goodsMsg.goods_name = name;
+                goodsMsg.goods_id = id;
+                goodsMsg.cate_id = cateId;
+                goodsMsg.cate_name  = cateName;
+                local.setData("goods" , goodsMsg);
+                location.href = returnUrl + '?status=1';
+			})
+		})
+	</script>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>药都网--支付保证金</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="../css/payment.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+    </script>
+</head>
+<body>
+<header>
+    <a href="javascript:void(0);" class="back_btn" id="back_btn">
+        <i class="icon_zjt iconfont"></i>返回
+    </a>
+    <span>支付托管资金</span>
+</header>
+<div class="ydw_wp">
+    <section>
+        <div class="num_wp">
+            <i class="iconfont icon_anquan"></i>
+            <div>
+                <h2 class="total_m"></h2>
+                <p class="gn">柑橘</p>
+            </div>
+        </div>
+        <ul class="pay-select">
+            <li data-pay="1" class="act">
+                <dl>
+                    <dt>
+                        <i class="iconfont icon-zhuanzhang"></i>
+                    </dt>
+                    <dd>
+                        <h2>转账</h2>
+                        <p>稍后客服将会电话与您联系，请保持电话畅通。</p>
+                    </dd>
+                    <dd>
+                        <i class="iconfont icon-wx"></i>
+                    </dd>
+                </dl>
+            </li>
+            <li data-pay="2">
+                <dl>
+                    <dt>
+                        <i class="iconfont icon-zhifubao"></i>
+                    </dt>
+                    <dd>
+                        <h2>支付宝</h2>
+                        <p>客服不会以任何方式索要您的验证码！</p>
+                    </dd>
+                    <dd>
+                        <i class="iconfont icon-wx"></i>
+                    </dd>
+                </dl>
+                <div class="pay-zfb-sel" style="display: none;">
+                    <span>选择金额</span>
+                    <div class="money-sel">
+                        <a href="javascript:;">200 元</a>
+                        <a href="javascript:;">300 元</a>
+                        <a href="javascript:;">400 元</a>
+                        <a href="javascript:;">500 元</a>
+                    </div>
+                </div>
+            </li>
+            <li data-pay="0">
+                <dl>
+                    <dt>
+                        <i class="iconfont icon-xxjy"></i>
+                    </dt>
+                    <dd>
+                        <h2>线下交易</h2>
+                        <p>线下交易风险大,产生的一切损失平台将不予负责</p>
+                    </dd>
+                    <dd>
+                        <i class="iconfont icon-wx"></i>
+                    </dd>
+                </dl>
+            </li>
+        </ul>
+        <div class="pay-btn">
+            <button type="button" id="paySubmit" class="active">确定</button>
+        </div>
+    </section>
+
+</div>
+<script>
+    var selectBtn = $(".pay-select>li");
+    selectBtn.click(function () {
+        var _this = $(this);
+        var index = _this.index();
+        if (index == 1) {
+            rule.showMsg(1 , "支付宝业务暂未开通" , 1000)
+            return;
+        }
+        if (_this.hasClass("act")) return;
+        _this.addClass("act").siblings("li").removeClass("act");
+    })
+    $(function () {
+        //拿着my_selection
+        var subBtn = document.getElementById("paySubmit");
+        var mySelection = new Intent().getIntent("my_selection");
+        var totalPrice = (mySelection.num * mySelection.price).toFixed(2);
+        $(".total_m").text("￥" + totalPrice);
+        //点击确定
+        var params = {
+            id:mySelection.id,
+            inx:1
+        };
+        subBtn.onclick = function () {
+            selectBtn.each(function () {
+                var _this = $(this);
+                if (_this.hasClass("act")){
+                    params.type = _this.attr("data-pay");
+                }
+            });
+            $.postT(rule.root+'AppDemand/doDemand' , params ,function (req) {
+                console.log(req)
+                if (req.code == 1){
+                    rule.showMsg(1 , "选标成功", 1000,"./persional.html");
+                }else {
+                    rule.showMsg(1 , "选标失败", 1000,"./persional.html");
+                }
+            })
+        }
+    })
+</script>
+</body>
+</html>

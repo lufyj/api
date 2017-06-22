@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        .wrap {padding:1.4rem 3.3% 0;height:100%;}
+        .top {width:100%;border-bottom: 1px solid #e5e5e5;}
+        .title {font-size:2.8rem;line-height:6rem; color: #000;font-weight: 700}
+        .base-msg span {font-size:2.2rem;color:#999;line-height:4rem;}
+        .base-msg .author {margin-right:1.9%;}
+        .content-wrap .desc {font-size:2.4rem;margin-top:2rem;}
+        .img-s {width:77.5%;text-align:center;margin:2rem auto;}
+        .img-s img {width:100%;}
+        .content{font-size:2.4rem;}
+        .content img{width: 90%;display: block;margin:2rem auto}
+        .content {text-align: justify;}
+    </style>
+</head>
+<body>
+<!--药都网药膳-->
+<div class="ydw_wp">
+    <header>
+        <a href="javascript:;" class="back_btn" id="back_btn">
+            <i class="icon_zjt iconfont"></i>返回
+        </a>
+        <span>药膳</span>
+    </header>
+    <div class="wrap">
+        <div class="top">
+            <div class="title"></div>
+            <div class="base-msg">
+                <span class="author"></span>
+                <span class="time"></span>
+            </div>
+        </div>
+        <div class="content-wrap">
+            <p class="desc"></p>
+            <div class="img-s"></div>
+            <div class="content"></div>
+        </div>
+    </div>
+</div>
+<!--药都网药膳-->
+</body>
+<script type="text/javascript">
+    $(function() {
+        var id = rule.getRequest().id;
+        var data = {
+            atticles_id: id ,
+            clientType :1
+        };
+        $.ajax({
+            type: "post",
+            url: rule.root+"AppHerbal/herbal_detail",
+            async: true,
+            data: data,
+            success: function(data) {
+                var title = data.data.title,
+                    author = data.data.author,
+                    content = data.data.content,
+                    desc = data.data.description,
+                    time = data.data.create_time,
+                    thumb = data.data.thumb;
+                if(thumb) {
+                    var img = $('<img src="' + thumb + '" alt="" />');
+                    $(".img-s").append(img);
+                }
+                $(".desc").text(desc);
+                $(".title").text(title);
+                $(".base-msg .author").text(author);
+                $(".content").html(content.trim());
+                $(".base-msg .time").text(time);
+            }
+        });
+    })
+</script>
+
+</html>

@@ -1,0 +1,36 @@
+ <div class="dataTables_wrapper form-inline no-footer">
+	<table class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="sample-table-2_info">
+	    <thead>
+	        <tr>
+	            <th>序号</th>
+	            <th>企业名称</th>
+	            <th>联系电话</th>
+	            <th>联系地址</th>
+	            <th>认证时间</th>
+	            <th>操作</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    <?php $show_num = $data['show_num']; $page_num = $data['page_num']; ?>
+	        <foreach name="data.list" item="vo" key="k">
+	            <tr>
+					<td>{$show_num*($page_num-1)+$k+1}</td>
+	                <td>{$vo.name}</td>
+	                <td>{$vo.mobile}</td>
+	                <td>{$vo.address}</td>
+	                <td>{$vo.confirm_time|time_format}</td>
+	                <td width="100px">
+	                    <div class="btn-toolbar opt-btn cf">
+	                        <a class="btn btn-minier btn-primary" href="{:U('edit?id='.$vo['id'])}" target="_blank">管理业务</a>
+	                    </div>
+	                </td>
+	            </tr>
+	        </foreach>
+	    </tbody>
+	</table>
+	<div class="row">
+	    <div class="col-xs-12">
+	        <include file='Public/pager' url="{:U('Business/Index')}" />
+	    </div>
+	</div>
+</div>

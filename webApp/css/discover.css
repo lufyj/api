@@ -1,0 +1,35 @@
+/*发现图表高亮*/
+.tab_fx ,footer .icon_fx{color: #E62B2E;}
+.fg{color:#666;}
+.fr{color:#e62b2e;}
+.fb{color:#333;}
+.title{height:8.8rem;line-height:8.8rem;border-bottom:1px solid #ddd;text-align: center;}
+.title>span{font-size:3rem;}
+.title>a{position:absolute;left:0.5rem;color:#fff;font-size:2.8rem;vertical-align: middle;}
+.title>a i{font-size:2.8rem;}
+.des-t{margin:3rem 0;text-align: center;}
+.des-t a{display: inline-block;width:19%;text-align: center;}
+.des-t a dd{color:#666;font-size:2.4rem;text-align: center;}
+.des-t a dt{width:7rem;height:7rem;line-height:7rem;margin:0 auto 2rem;background:#18D6FF;border-radius: 50%;color:#fff;font-size:4.8rem;}
+.des-t a:nth-child(2) dt{background:#12DC04;}
+.des-t a:nth-child(3) dt{background:#FF6E43;}
+.des-t a:nth-child(4) dt{background:#18ADFE;}
+.des-t a:nth-child(5) dt{background:#eaa718;}
+.des-recommend{border:1rem solid #EDEDEE;border-left:none;border-right:none;padding:2rem 0 4rem;}
+.des-recommend h2{font-size:3.8rem;margin-bottom:3rem;text-align: center;font-weight: normal;}
+.rec-m{text-align: center;display: flex;}
+.rec-m>a{display: inline-block;text-align: center;width: 25%;}
+.rec-m>a dt{width:12rem;height:12rem;margin:0 auto;}
+.rec-m>a img{width:12rem;height:12rem;}
+.rec-m>a dd{font-size:2rem;text-align:center;line-height:2.8rem;margin:1rem auto 0;height:5rem;overflow: hidden;width:12rem;}
+.des-list>ul>li{border-bottom:0.1rem solid #D6D7DC;padding:2rem 4% 2rem 6%;background-color: #fff;}
+.des-list li img{width:16rem;height:16rem;}
+.des-list li span,.des-list li em{font-size:3rem;}
+.des-list li{font-size:2.4rem;}
+.des-list li ul{width:70%;}
+.type1 li:nth-child(2){display: inline-block;width:60%;}
+.type1 li:nth-child(3){text-align: right;display: inline-block;width:40%;}
+.des-list li li:first-child,.des-list li.type2 li{width: 100%;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.des-list li.type1 li:first-child{height:5.5rem;}
+.des-list li.type2 li:first-child,.des-list li.type3 li:first-child{height:7rem;}
+.des-list li.type3 li:not(:first-child),.des-list li.type1 li:last-child{text-overflow: -o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;font-size:2.2rem;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}

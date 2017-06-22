@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>药都网--修改称呼</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" href="../css/amend.css" />
+		<script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+            if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+		</script>
+	</head>
+	<body>
+		<header>
+			<a href="./perInfo.html"  class="back_btn">
+				<i class="icon_zjt iconfont"></i>返回
+			</a>
+			<span>修改称呼</span>
+			<a href="javascript:void(0);" class="r_btn" id="nameSubmit">保存</a>
+		</header>
+		<div class="ydw_wp">
+			<section class="amend-name">
+			 	<input type="text" id="realname" name="realname" maxlength="10" autofocus="autofocus"/>
+			 	<p>请输入2-10个字符的称呼</p>
+			</section>
+		</div>
+		<script type="text/javascript">
+			var oldName =decodeURIComponent(window.location.href.split("=")[1]);
+			var realname = $('#realname');//称呼
+			var repeat_click = true;//防止重复点击
+			$(function(){
+				realname.val(oldName);
+				var value = $.trim(realname.val());//判断两次是否一样
+				$('#nameSubmit').on('click',function(){
+					if(!repeat_click){
+						return false;
+					}
+					var realnameV = $.trim(realname.val());
+					if(!realnameV){
+						rule.showMsg(1,'请输入您的称呼！',1000);
+						return;
+					}
+					if(realnameV.length<2 || realnameV.length>10){
+						rule.showMsg(1,'请输入2-10个字符的称呼!',1000);
+						return;
+					}
+					if(value==realnameV){
+						rule.showMsg(1,'您修改的称呼未改变！',1000);
+						return;
+					}
+					value = realnameV;
+					repeat_click = false;
+					//提交表单
+					$.postT(rule.root+'AppUser/user_nickname' , {realname:realnameV} , function (req){
+						if(req.code == 103){
+							var hrefUrl = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+							rule.showMsg(1 , "该账号已在其他地方登陆,请重新登录" , 2000 , hrefUrl);
+						}
+						if(req.code==0){
+							rule.showMsg(1,'修改失败，请重试！',2000);
+						}
+						if(req.code == 1){	
+							rule.showMsg(1,'修改成功',2000);
+							window.history.go(-1);
+						}
+						repeat_click = true;
+					});
+				});
+			})
+		</script>
+	</body>
+</html>

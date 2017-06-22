@@ -1,0 +1,26 @@
+.icon-tp:before{content:"\e697";}
+.title{height:8.8rem;line-height:8.8rem;border-bottom:1px solid #ddd;text-align: center;font-size:3rem;color:#fff;}
+.title a{color:#fff;}
+.title>a:first-child{position:absolute;left:2.5rem;font-size:2.8rem;vertical-align: middle;}
+.title>a:first-child i{font-size:2.8rem;}
+.title>a:last-child{position: absolute;right:2.5rem;}
+.tender {font-size: 2.8rem;background: #fff;}
+.tender>li {border-bottom: 0.2rem solid #efefef;height: 8rem;line-height: 8rem;text-indent: 2rem;padding-right: 2rem;}
+.tender li span {width: 14rem;display: inline-block;text-align: justify;letter-spacing: 1.8rem;color: #000;}
+.tender li.ten-name span{letter-spacing: 1rem;}
+.tender>li.ten-picture {height: 15rem;line-height: 15rem;border-bottom:1rem solid #f7f7f7;max-width: 100%;padding-right: 1rem;}
+.tender>li.ten-picture span {width: 30%;letter-spacing: 0;text-indent: 4rem;}
+.tender>li.ten-picture span:first-letter{margin-right:3.6rem;}
+.tender>li.ten-picture div.ten-imgs {line-height: 13rem;height: 8rem;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-pack: justify;-webkit-justify-content: space-between;-ms-flex-pack: justify;justify-content: space-between;width: 70%;}
+.tender>li.ten-picture div.ten-imgs img {margin-top: 4rem;width: 7.5rem;height: 7.5rem;}
+div.sup-imgs-sc {display: inline-block;position: relative;text-indent: 0;top: 1.4rem;}
+div.sup-imgs-sc i {font-size: 8.5rem;text-indent: 0;}
+div.sup-imgs-sc input {position: absolute;top: 2.5rem;height: 8.5rem;width: 8.5rem;opacity: 0;}
+.tender>li.ten-detail{border-bottom:none;height:auto;}
+.tender>li.ten-detail span{letter-spacing: 0;}
+.tender>li.ten-tel{border-bottom:1.5rem solid #F7F7F7;}
+div.ten-submit{text-align: center;margin-top:2rem;}
+div.ten-submit>button{background: #e62b2e;color:#fff;width:85%;padding:1rem 0;text-align: center;font-size:2.8rem;border-radius: 0.5rem;}
+.tender li textarea {vertical-align: middle;width: 67%;position: relative;top: 0.5rem;height: 5rem;}
+/*我的投标信息*/
+p.ten-time{padding: 2rem 0;font-size: 2rem;color: #666;text-indent: 4.5rem;}

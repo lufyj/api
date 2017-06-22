@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>药都网注册</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/regAndLogin.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <header>
+        <a href="./login.html" class="back_btn">
+            <i class="icon_zjt iconfont"></i>返回
+        </a>
+        <span>注册</span>
+    </header>
+    <!--注册框-->
+    <div class="ydw_wp">
+        <div class="reg_wp">
+        <ul class="reg_list">
+            <li class="reg_item">
+                <label for="mobile" class="dib">手机号码</label>
+                <input type="text" class="mobile input1" id="mobile" name="mobile" maxlength="11"  placeholder="请输入手机号码" autocomplete="off" />
+            </li>
+            <li class="reg_item">
+                <label for="code" class="three_word">验证码</label>
+                <input type="text" class="code input1" id="code" name="captcha"  placeholder="请输入验证码" autocomplete="off" />
+                <button class="get_code" disabled="disabled" onclick="getMobileCode(1)">获取验证码</button>
+            </li>
+            <li class="reg_item">
+                <label for="psw">登录密码</label>
+                <input type="password" class="psw input1" id="psw" name="password" placeholder="6-20字符，区分大小写" autocomplete="off" />
+            </li>
+            <li class="reg_item">
+                <label for="repsw">确认密码</label>
+                <input type="password" class="repsw input1" id="repsw" name="repassword" placeholder="请确认密码" autocomplete="off" />
+            </li>
+            <li class="reg_item">
+                <label for="nickname" class="two_word">昵称</label>
+                <input type="text" class="nickname input1" id="nickname" name="realname"  placeholder="请输入昵称(2-10位)" autocomplete="off" />
+            </li>
+            <li class="reg_item">
+                <label for="spread" class="three_word">推广码</label>
+                <input type="text" class="spread input1" id="spread"  placeholder="请输入推广码" autocomplete="off" />
+            </li>
+        </ul>
+            <div style="font-size: 2rem;text-align: center;margin-top: 2rem;">
+                注册即代表您同意<a href="./protocol2.html" style="color:#e6282b;">药都网注册协议</a>
+            </div>
+        <span class="reg_btn sub_btn">完成</span>
+    </div>
+    </div>
+</body>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/reg-login.js"></script>
+<!--<script type="text/javascript">-->
+    <!--var _mobile = $("#mobile");-->
+    <!--var getCode = $(".get_code");-->
+    <!--_mobile.keyup(function(){-->
+        <!--var phone = $(this).val();-->
+        <!--if (rule.phone(phone)) getCode.removeAttr("disabled");-->
+    <!--});-->
+    <!--var repeatBol = true;-->
+    <!--getCode.click(function () {-->
+        <!--if (!repeatBol) return;-->
+        <!--repeatBol = false;-->
+        <!--var phone = _mobile.val();-->
+        <!--if (rule.phone(phone)) {-->
+            <!--rule.showMsg(1 , "手机格式不正确"  , 1000);-->
+            <!--repeatBol = true;-->
+            <!--return;-->
+        <!--}-->
+        <!--$.ajax({-->
+            <!--url:rule.root + "/User/mobileCode",-->
+            <!--data:{-->
+                <!--mobile: phone,-->
+                <!--code_source:1-->
+            <!--},-->
+            <!--type:"post",-->
+            <!--dataType:"json",-->
+            <!--success:function (req) {-->
+                <!--repeatBol = true;-->
+               <!--var code = req.code;-->
+               <!--if (code == 20){-->
+                    <!--rule.showMsg(1 , "手机格式正确"  , 1000);-->
+               <!--}else  if (code == 21){-->
+                    <!--rule.showMsg(1 , "该手机已经被注册"  , 1000);-->
+               <!--}else if (code == 1){-->
+                   <!--getCode.attr("disabled" , "disabled");-->
+                    <!--//短信发送成功-->
+                   <!--var txt = 60;-->
+                   <!--getCode.text(txt + "秒后重试");-->
+                   <!--var timer = setInterval(function (){-->
+                       <!--txt&#45;&#45;;-->
+                       <!--getCode.text(txt + "秒后重试");-->
+                       <!--if (txt == 0){-->
+                           <!--getCode.removeAttr("disabled").text("获取验证码");-->
+                           <!--clearInterval(timer);-->
+                       <!--}-->
+                   <!--} , 1000)-->
+               <!--}else if(code == -1){-->
+                   <!--rule.showMsg(1 , "短信发送失败"  , 1000);-->
+               <!--}-->
+            <!--},-->
+            <!--error:function(err){-->
+                <!--console.log(err);-->
+                <!--repeatBol = true;-->
+            <!--}-->
+        <!--})-->
+    <!--});-->
+    <!--$(".reg_btn").click(function () {-->
+        <!--var phone = _mobile.val();-->
+        <!--var code = $("#code").val();-->
+        <!--var psw = $("#psw").val();-->
+        <!--var repsw = $("#repsw").val();-->
+        <!--var nickname = $("#nickname").val();-->
+        <!--var spread = $("#spread").val();-->
+        <!--var pswReg = /^([0-9]|[a-z]|[A-Z]){6,20}$/i;-->
+        <!--if (!rule.phone(phone)){-->
+            <!--rule.showMsg(1 , "手机不正确"  , 1000);-->
+            <!--return;-->
+        <!--}else if (!code){-->
+            <!--rule.showMsg(1 , "请输入验证码"  , 1000);-->
+            <!--return;-->
+        <!--}else if (!pswReg.test(psw)){-->
+            <!--rule.showMsg(1 , "密码格式不正确"  , 1000);-->
+            <!--return;-->
+        <!--}else if (repsw != psw){-->
+            <!--rule.showMsg(1 , "两次密码不一致"  , 1000);-->
+            <!--return;-->
+        <!--}else  if (!nickname){-->
+            <!--rule.showMsg(1 , "请输入昵称"  , 1000);-->
+            <!--return;-->
+        <!--}-->
+        <!--var data = {-->
+            <!--mobile:phone,-->
+            <!--captcha:code,-->
+            <!--password:psw,-->
+            <!--repassword:repsw,-->
+            <!--realname:nickname,-->
+            <!--spreading_code:spread-->
+        <!--}-->
+
+        <!--$.post(rule.root+"/User/register" , data , function (req) {-->
+            <!--var code = req.code;-->
+            <!--switch (code){-->
+                <!--case 1:-->
+                    <!--rule.showMsg(1 , "注册成功正在调转"  , 1000 , "./login.html");-->
+                    <!--break;-->
+                <!--case -1:-->
+                    <!--rule.showMsg(1 , "注册失败请稍后再试"  , 1000 , "./reg.html");-->
+                    <!--break;-->
+                <!--case 10:-->
+                    <!--rule.showMsg(1 , "请输入2-10个字符的昵称"  , 1000);-->
+                    <!--break;-->
+                <!--case 44:-->
+                    <!--rule.showMsg(1 , "两次输入密码不一致"  , 1000);-->
+                    <!--break;-->
+                <!--case 40:-->
+                    <!--rule.showMsg(1 , "两次输入密码不一致"  , 1000);-->
+                    <!--break;-->
+                <!--case 99:-->
+                    <!--rule.showMsg(1 , "手机号已经被更改"  , 1000);-->
+                    <!--break;-->
+                <!--case 38:-->
+                    <!--rule.showMsg(1 , "手机验证码错误"  , 1000);-->
+                <!--default:-->
+                    <!--break;-->
+
+            <!--}-->
+        <!--})-->
+    <!--});-->
+<!--</script>-->
+</html>

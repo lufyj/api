@@ -1,0 +1,53 @@
+<extend name="Public/base" />
+<block name='navi'><li>客户信息</li><li>意见反馈</li></block>
+<block name="body">
+    <div class="page-header">
+        <h1>反馈列表</h1>
+    </div>
+    <div class="space"></div>
+    <div class="row">
+        <div class="col-xs-12">
+        	<div class="modal fade" id="reply" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog">
+					<div class="modal-content" style="margin-top:300px">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h4 class="modal-title" id="myModalLabel">
+								用户反馈回复
+							</h4>
+						</div>
+						<div class="modal-body">
+							<form method="post" role="form" id="reply_form">
+								<input type="hidden" name="user_id" value="" class="user_id"/>
+							  	<div class="form-group">
+							    	<label for="" class="sr-only">反馈回复</label><!-- id="reply-content"-->
+							    	<textarea name="reply_content" class="form-control" rows="8" style="resize:none;">请写入您的意见</textarea>
+							  	</div>
+							</form>
+						</div>
+						<div class="modal-footer action">
+							 <button type="button" class="btn btn-default btn-clear">清除</button> 
+							 <input form="reply_form" type="submit" value="回复" class="btn btn-primary reply_submit" />
+							 <!--<a form="reply_form" href="{:U('update',array('sid'=>$reply_form['user_id'],'reply_content'=>$reply_form['reply_content']))}" role="button" class="btn btn-primary">回复</a>-->
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="col-xs-6">
+                <form onsubmit="return false;" id="search-form">
+                    <div style="margin-bottom:10px;">                        
+                        <select name="status">
+                        	<option value="">请选择回复状态</option>
+                        	<option value="0">未回复</option>
+                        	<option value="1">已回复</option>								
+						</select>                        
+                        <a href="javascript:;" class="fm-button btn btn-sm btn-info search">查询</a>
+                    </div>
+                </form>
+            </div>            
+            <div class="col-xs-12" id="ajax_table">      
+            	<include file='table'/>
+            </div>
+        </div>
+    </div>
+</block>

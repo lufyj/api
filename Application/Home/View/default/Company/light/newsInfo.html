@@ -1,0 +1,52 @@
+<extend name="Company:base1" />
+<block name="style">
+	<!--样式自定义开始-->
+	<link rel="stylesheet" type="text/css" href="__CSS__/reset.css" />
+	<link rel="stylesheet" href="__TMPL__/light/css/lightdetail.css" />
+	<!--样式自定义结束-->
+</block>
+<block name="body">
+	<div class="company01">
+		<!--logo头部-->
+		<div class="logo-title">
+			<div class="logo-bg clearfix">
+				<img src="{$comInfo.logo}" alt="公司的logo" class="l" />
+				<span class="r com-name">{$comInfo.name}</span>
+			</div>
+			<div class="mb"></div>
+			<div class="title2-m">
+				<p>
+					<span>公告：</span>
+					<marquee scrolldelay="1000" direction="left" behavior="scroll" scrollamount="30" loop="-1" onMouseOut="this.start()" onMouseOver="this.stop()">
+						{$noticeInfo.content}
+					</marquee>
+				</p>
+			</div>
+		</div>
+		<!--logo头部-->
+		<!--位置信息-->
+		<div class="title-ad">
+			<div class="ad">
+				<span><a href="{$domain}">首页</a> ></span>
+				<span>公司动态 ></span>
+				<span class="cur">{$newsInfo.title}</span>
+			</div>
+		</div>
+		<!--位置信息-->
+		<!--动态-->
+		<div class="news-wrap  wrap-b">
+			<h3>{$newsInfo.title}</h3>
+			<div class="time">发布时间 :&nbsp;<span class="pub-t">{$newsInfo.add_time}</span></div>
+			<div class="content clearfix">
+				<if condition="$newsInfo.img neq ''">
+					<img src="{$newsInfo.img}" alt="" />
+				</if>
+				<div>{$newsInfo.content}</div>
+			</div>
+		</div>
+		<!--动态-->
+	</div>
+</block>
+<block name="script">
+
+</block>

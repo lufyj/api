@@ -1,0 +1,82 @@
+<extend name="./base" />
+<block name="style">
+    <!--样式自定义开始-->
+    <link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+    <link rel="stylesheet" type="text/css" href="__HOME__/user/css/fips.css" />
+    <!--样式自定义结束-->
+</block>
+<block name="body">	
+	<!--主页内容开始-->
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+				<a href="javascript:;">消息管理</a>&nbsp;>&nbsp;
+				<a href="javascript:;">我的关注</a>
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />
+			<!--我的关注-->
+			<div class="right my-follow l">
+				<div class="title">
+					<span class="active">我的关注</span>
+				</div>
+				<ul class="follow-list clearfix">
+					<foreach name="list" item="vo" key="k" >
+					   <li data-param="{$vo.goods_id}">
+					   		<a href="{:U('goods/detail',array('id'=>$vo['goods_id']))}" target="_blank">
+							<img src="{$vo.goods_img|default='__IMG__/noimg.png'}" alt="{$vo.goods_name}" />							
+							<p>{$vo.goods_name}</p>	
+							</a>													
+							<span class="unfollow" onclick="cacelFollow({$vo.goods_id});">取消关注</span>
+						</li>
+					</foreach>										
+				</ul>	
+				{$pageHtml}				
+			</div>						
+			<!--我的关注结束-->
+		</div>		
+	</div>
+    <!--主页内容结束-->
+</block>
+<block name="script">
+    <!--脚本自定义开始-->
+    <script type="text/javascript">
+    	//防止重复点击
+    	var repeat_click = true;    	
+    	 /**
+         * [cacelFollow 取消关注]
+         * @param  {[type]} gid [药品id]
+         * @return {[type]}     [description]
+         */
+        function cacelFollow(gid) {
+            if (!repeat_click) {
+                return;
+            }
+            repeat_click = false;
+            $.ajax({
+                url: "{:U('User/ajaxCancelFollow')}",
+                dataType: "json",
+                data: { gid: gid },
+                type: "get",
+                success: function(req) {
+                    if (req.code == 1) {
+                        //删除对应的li
+                        $("li[data-param='" + gid + "']").remove();
+                    } else {
+                        $.custom(req.msg);
+                    }
+                    repeat_click = true;
+                },
+                error: function() {
+                    $.custom('网络请求错误，请稍后再试~');
+                    repeat_click = true;
+                }
+            });
+        }
+    </script>
+    <!--脚本自定义结束-->
+</block>

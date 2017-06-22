@@ -1,0 +1,54 @@
+@charset "utf-8";
+ 
+html, body {font-family: Microsoft Yahei;font-size: 12px;color: #666;
+}
+img {border:0;}
+*{padding:0;margin:0;}
+body, div, form, ul, ol, p, th, td, dt, dd, em {padding:0; margin:0; vertical-align:baseline;}
+ul {list-style:none;}
+ol {padding-left:20px;}
+ol li {line-height:150%}
+h1, h2, h3 {font-size:100%;font-weight:normal;}
+:focus {outline:0;}
+
+a:link,a:visited,a:active{font-family: Microsoft Yahei;color: #565656;text-decoration: none;cursor: pointer;	
+}
+a:hover {color: #2D9FEC;text-decoration: none;}
+.dis{display:block;}
+.left{ float:left;}
+.right{ float:right;}
+li{list-style:none;}
+.clear{ clear:both;}
+* html .clearfix {height:1%;}
+.clearfix {display:block;}
+
+.fl {float:left;}
+.fr {float:right;}
+.clear {clear:both;}
+.style1{color:#e6292c;}
+.style2{color:#000;}
+.style3{height:35px;line-height:35px;font-size:15px;color: #e6292c; text-align:center;font-weight:bold;background:url(../images/d1.jpg) repeat-x bottom left;}
+.style4{font-size: 13px;line-height: 35px;height: 35px;padding-top:15px;padding-bottom:15px;padding-left:35px;}
+.style4 .long:hover,.style4 .short:hover{ border:1px solid #e6292c;}
+.style5:link,.style5:visited,.style5:active{font-size: 12px;line-height: 35px; text-decoration:underline;color:#3078d2;}
+.style5:hover{color:#e6292c;}
+.style6{font-size:14px;color:#555;font-weight:bold;}
+.buttonstyle{ background-color:#e6292c;line-height: 35px;height: 35px;color:#fff;font-size:14px;text-align:center; cursor:pointer;border:0px;}
+.buttonstyle:hover{background-color:#cd0609;}
+.line{height:80px;width: 100%;border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #e6e9f0;}
+.line1{height:20px;width: 100%;border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #e6e9f0;margin-bottom:20px;}
+.Main #findpwphone {height: 50px;width: 100%;margin-top: 15px;margin-bottom: 15px;}
+#findpwphone li {float: left;width: 281px;font-size: 14px;line-height: 50px;font-weight: bold;color: #000;text-align:center;}
+#findpwphone .current{color:#e6292c;}
+.success {background-color: #f8fff2;height: 52px;width: 500px;line-height:52px;color:#000;font-size:17px;border: 1px solid #70c92e;background: url(../images/sucess_bg.jpg) no-repeat center left;margin-left:45px;margin-top:55px;padding-left:50px;}
+
+.home_sct_top{font-size:13px;}
+
+#fixedLayer{ width:70px; background: #f9f9f9; position:fixed; right:10px; top:30%;} 
+#fixedLayer ul li{width:60px;height:55px;font-size:13px;color:#ff010d;text-align:center;padding:5px;border-bottom:2px solid #fff; letter-spacing:2px;}
+#fixedLayer ul a:hover{ text-decoration:none;}
+#fixedLayer ul li:hover{background:#ccc;}
+#fixedLayer ul li img{margin:0px auto;}
+
+
+

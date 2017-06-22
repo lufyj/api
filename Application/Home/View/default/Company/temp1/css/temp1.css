@@ -1,0 +1,145 @@
+/*企业的导航样式*/
+.temp1_nav{
+	width:100%;
+	height:117px;
+	background: url(../images/title_01.png);
+}
+.logo{
+	position:relative;
+	width:1200px;
+	margin:0 auto;
+}
+.logo img{
+	position:absolute;
+	left:0;
+	top:45px;/*暂定，。后期需要修改的*/
+}
+.logo_nav{
+	margin-top:50px;
+}
+.logo_nav li{
+	float:left;
+}
+.logo_nav li a{
+	display: inline-block;
+	border-left:1px solid #fff;
+	color:#fff;
+	font-size: 18px;
+    padding: 0 30px;
+}
+.logo_nav li:first-child a{
+	border:none;
+}
+.logo_nav li a:hover{
+	text-decoration: none;
+}
+.notice{
+    position: absolute;
+    left: 120px;
+    top: 125px;
+    color: #2A57A5;
+    width: 900px;
+    font-size:14px;
+}
+.notice span{
+	color:#3C79CD;
+}
+.notice marquee{
+	display: inline-block;
+	width:780px;
+}
+/*企业简介与企业动态*/
+.company01-intro{
+	width:100%;
+	background:#F8F8F8;
+}
+.intros,.company01-business{
+	width:1160px;
+	margin:0 auto;
+}
+.intros{
+	padding:15px 0; 
+	height:456px;
+}
+.intro-l{
+	width:52%;
+	border-right:1px dashed #DADBDF;
+	padding-right:25px;
+}
+.intro-l .cpy-desc img{
+	width:237px;
+	height:154px;
+	margin-right:20px;
+	margin-top: 8px;
+}
+.intro-l .cpy-desc,.introR-t1,.introR-t2{
+	color:#6e6e6e;
+	font-size:16px;
+}
+.intro-l .cpy-desc{
+	line-height:30px;
+	height:370px;
+	overflow: hidden;
+}
+.intro-l .cpy-desc p{
+	text-indent: 2em;
+}
+.intro-l .cpy-desc:first-line{
+	line-height:20px;
+}
+.intro-l a,.introR-t2 a,.introR-t1 a,.introR-b a{
+	color:#C1A091;
+	font-size:16px;
+}
+.intro-r{
+	padding-left:25px;
+	width:43%;
+}
+.intro-r h2{
+	background: url('./images/intro_02.png') no-repeat left center;
+}
+.introR-b i{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border: 2px solid #000;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+.introR-b a{
+	color:#6D6D6D;
+}
+.introR-b a:hover{
+	color:#E62B2E;
+}
+.introR-b li{
+	line-height:26px;
+}
+.introR-b span{
+	font-size:16px;
+	color:#6e6e6e;
+}
+.introR-b{
+	height:311px;
+	overflow: hidden;
+}
+.titleBg {
+    font-size: 24px;
+    color: #727272;
+    padding-left: 39px;
+    margin-bottom: 12px;
+    background: url(./../images/intro_01.png) no-repeat left center;
+}
+.intro-r h2 {
+    background: url(./../images/intro_02.png) no-repeat left center;
+}
+.company01-intro .titleBg{
+	/*font-size:24px;
+	color:#727272;
+	padding-left:39px;
+	margin-bottom:20px;
+	background: url(./../images/intro_01.png) no-repeat left center;*/
+	border-bottom:1px solid #F6F6F6;
+	height:70px;
+	line-height:70px;
+}

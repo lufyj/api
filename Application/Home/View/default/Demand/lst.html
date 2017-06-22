@@ -1,0 +1,242 @@
+<extend name="./base" />
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/titleDSG.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/dl.css" />
+	<script type="text/javascript">
+		(function() {
+			window.cache = {
+				c: []
+			};
+		})();
+	</script>
+</block>
+<block name="body">
+	<include file="Public/common_nav" />
+	<div class="detail-middle">
+		<div class="detail-bread">
+			<i></i>
+			<b>当前位置：</b>&nbsp;
+			<a href="/">首页</a>&nbsp;&gt;&nbsp;
+			<a href="{:U('demand/lst')}">求购信息</a>
+			<if condition="$q">
+				&nbsp;&gt;&nbsp;
+				<a href="">{$q}</a>
+			</if>
+			<if condition="$alias_name">
+				<a href="">({$alias_name})</a>
+			</if>
+		</div>
+		<div class="drugs-top" id="cate_nav">
+			<notempty name="goods_name">
+				<h2><i></i>已选择：{$cate_name|default=''}&nbsp;--&gt;&nbsp;{$goods_name|default=''}</h2>
+			</notempty>
+			<h2>请选择类别：</h2>
+			<ul class="drugs-title clearfix">
+				<notempty name="Think.get.cate_id">
+					<li onclick="rload();">全部</li>
+					<else/>
+					<li onclick="rload();" class="active first">全部</li>
+				</notempty>
+				<foreach name="cates" item="vo" key="k">
+					<li <?php if(I( 'get.cate_id')==$vo[ 'id']){echo 'class="active"';} ?> onclick="connector({$vo.id})">{$vo.title}</li>
+				</foreach>
+			</ul>
+			<div class="drugs-name"></div>
+			<foreach name="cates" item="vo" key="k">
+				<div class="drugs-name" id="c-{$vo.id}" <?php if(I( 'get.cate_id')==$vo[ 'id']){echo 'style="display:block;"';}else{echo 'style="display:none;"';} ?> ></div>
+			</foreach>
+		</div>
+		<div class="drugs-main clearfix">
+			<foreach name="list" item="vo">
+				<div class="competes clearfix l">
+					<div class="competes-img l">
+						<a href="{:U('demand/detail',array('id'=>$vo['id']))}">
+							<img src="{$vo.goods_img|default='__IMG__/noimg.png'}" />
+						</a>
+					</div>
+					<div class="competes-detail l">
+						<ul class="clearfix">
+							<li>商品名称：{$vo.goods_name}</li>
+							<li>商品规格：{$vo.goods_attr_name}</li>
+							<li>求购数量：{$vo.num}公斤</li>
+							<li class="cd-color">联&nbsp;&nbsp;系&nbsp;&nbsp;人：{$vo.contacts}</li>
+							<li class="cd-color">联系电话：{$vo.mobile}</li>
+							<li class="cd-color">发布时间：{$vo.create_time|date='Y-m-d',###}</li>
+						</ul>
+					</div>
+				</div>
+			</foreach>
+		</div>
+		{$pageHtml}
+	</div>
+</block>
+<block name="script">
+	<script type="text/javascript">
+		$(function() {
+				//对drugs-name的左边距进行设置
+				$('.competes').each(function(i) {
+					if(i % 2 == 0) {
+						$(this).css('margin-right', '1.5%');
+					}
+				});
+				//获取分类导航对象
+				var cate_nav = $('#cate_nav');
+				cate_nav.find('ul>li').on('click', function() {
+					var inx = $(this).index();
+					$(this).addClass('active').siblings().removeClass();
+					if(this.innerHTML == '全部') {
+						$(this).addClass('first');
+					} else {
+						$(this).removeClass('first');
+					}
+					if(inx != 0) {
+						cate_nav.find('div.drugs-name').eq(inx).show().siblings('div').hide();
+					} else {
+						cate_nav.find('div.drugs-name').hide();
+					}
+				});
+				//绑定初始化药品分类
+				var cate_id = "{$Think.get.cate_id}" || '';
+				if(parseInt(cate_id) > 0) {
+					connector(cate_id);
+				}
+			})
+			/* 加载求购列表页 */
+		function rload() {
+			window.location.href = "{:U('demand/lst')}";
+		}
+		var gid = {$Think.get.id|default=0} ;
+		/*关于热门药材*/
+		/*function remen(cateid){
+			var great='',i=0;
+			var cateids = [14,15,8,9,10,13,16,17,7,5,11,12];
+			for(var j = 0;j<cateids.length;j++){
+				if(cateid==cateids[j]){
+					i = j;
+				}
+			}
+			great='<div class="remen"><span>热门：</span>';
+			for(var key in zqq_arr[i]){
+				great+='<a href="/demand/lst/cate_id/'+cateid+'/id/'+zqq_arr[i][key]+'.html">'+key+'</a>';
+			}
+			great+='</div>';
+			return great;	
+		}*/
+		function remen(cateid,array){
+			var great='';
+			great='<div class="remen"><span>热门：</span>';
+			for(var i =0,len=array.length;i<len;i++){
+				great+='<a href="/demand/lst/cate_id/'+cateid+'/id/'+array[i].id+'.html">'+array[i].goods_name+'</a>';
+			}
+			great+='</div>';
+			return great;	
+		}
+		/* 异步调取药品方法 */
+		function connector(cate_id) {
+			if(window.cache.c[cate_id]) {
+				return;
+			}
+			var wrap_id = '#c-' + cate_id;
+			$.ajax({
+				url: "{:U('Demand/ajaxGetGoodsByCateId')}",
+				dataType: "json",
+				type: "get",
+				data: { cate_id: cate_id, id:gid, type: 1 },
+				beforeSend: function() {
+					$(wrap_id).html('<img class="loadingimg" src="__IMG__/loading.gif" />');
+				},
+
+				success: function(req) {
+					var datas = req.data.goods,
+						hot = req.data.hot,
+						datasL = datas.length,
+						max = datas[0].goods_name.length,
+						arr = [];
+						
+					for(var i = 0; i < 4; i++) {
+						var newArr = [];
+						arr.push(newArr);
+					}
+
+					for(var i = 0; i < datasL; i++) {
+						if(datas[i].goods_name.length <= 2) {
+							arr[0].push(datas[i]);
+						} else if(datas[i].goods_name.length == 3) {
+							arr[1].push(datas[i]);
+						} else if(datas[i].goods_name.length == 4) {
+							arr[2].push(datas[i]);
+						} else if(datas[i].goods_name.length >= 5) {
+							arr[3].push(datas[i]);
+						}
+					}
+					var str = '';
+					if(hot!=null){
+						str = remen(cate_id,req.data.hot);
+					}
+					for(var i = 0; i < arr.length; i++) {
+						var classS = "";
+						if(i == 0) {
+							for(var j = 0; j < arr[i].length; j++) {
+								if(gid == arr[i][j].id){
+									classS = " class='active' ";
+								}else{
+									classS="";
+								}
+								if(j == arr[i].length - 1) {
+									str += "<a href='/demand/lst/cate_id/" + cate_id + "/id/" + arr[i][j].id + ".html'"+ classS +">" + arr[i][j].goods_name + "</a><br/>";
+								} else {
+									str += "<a href='/demand/lst/cate_id/" + cate_id + "/id/" + arr[i][j].id + ".html'"+ classS +">" + arr[i][j].goods_name + "</a>";
+								}
+
+							}
+						} else if(i == 1) {
+							for(var j = 0; j < arr[i].length; j++) {
+								if(gid == arr[i][j].id){
+									classS = " class='active' ";
+								}else{
+									classS="";
+								}
+								if(j == arr[i].length - 1) {
+									str += "<a href='/demand/lst/cate_id/" + cate_id + "/id/" + arr[i][j].id + ".html'"+ classS +">" + arr[i][j].goods_name + "</a><br/>";
+								} else {
+									str += "<a href='/demand/lst/cate_id/" + cate_id + "/id/" + arr[i][j].id + ".html'"+ classS +">" + arr[i][j].goods_name + "</a>";
+								}
+							}
+						} else if(i == 2) {
+							for(var j = 0; j < arr[i].length; j++) {
+								if(gid == arr[i][j].id){
+									classS = " class='active' ";
+								}else{
+									classS="";
+								}
+								if(j == arr[i].length - 1) {
+									str += "<a href='/demand/lst/cate_id/" + cate_id + "/id/" + arr[i][j].id + ".html'"+ classS +">" + arr[i][j].goods_name + "</a><br/>";
+								} else {
+									str += "<a href='/demand/lst/cate_id/" + cate_id + "/id/" + arr[i][j].id + ".html'"+ classS +">" + arr[i][j].goods_name + "</a>";
+								}
+							}
+						} else if(i == 3) {
+							for(var j = 0; j < arr[i].length; j++) {
+								if(gid == arr[i][j].id){
+									classS = " class='active' ";
+								}else{
+									classS="";
+								}
+								if(j == arr[i].length - 1) {
+									str += "<a href='/demand/lst/cate_id/" + cate_id + "/id/" + arr[i][j].id + ".html'"+ classS +">" + arr[i][j].goods_name + "</a><br/>";
+								} else {
+									str += "<a href='/demand/lst/cate_id/" + cate_id + "/id/" + arr[i][j].id + ".html'"+ classS +">" + arr[i][j].goods_name + "</a>";
+								}
+							}
+						}
+					}
+					$(wrap_id).html(str);
+					window.cache.c[cate_id] = true;
+				},
+				error: function() {
+					$.custom('网络连接超时，请您稍后重试');
+				}
+			});
+		}
+	</script>
+</block>

@@ -1,0 +1,93 @@
+<!--帮助中心开始-->
+<div class="help-wrap clearfix">
+	<div class="help-nav l">
+		<span>帮助中心分类</span>
+		<ul class="nav-list">
+			<li>
+				<div class="one-l">
+					<img src="__HOME__/help/images/newcomer.png" alt="" />新手入门<span></span>
+				</div>
+				
+				<ul class="two-l" <if condition="$code eq 1">id="show"</if>>
+					<li <if condition="$act eq demandHelp">class="active"</if>>
+						<a href="{:U('Help/demandHelp')}">求购指南</a>
+					</li>
+					<li <if condition="$act eq supplyHelp">class="active"</if>>
+						<a href="{:U('Help/supplyHelp')}">供应指南</a>
+					</li>
+					<li <if condition="$act eq register">class="active"</if>>
+						<a href="{:U('Help/register')}">会员注册</a>
+					</li>
+					<li <if condition="$act eq login">class="active"</if>>
+						<a href="{:U('Help/login')}">如何登录</a>
+					</li>
+					<li <if condition="$act eq findpwd">class="active"</if>>
+						<a href="{:U('Help/findpwd')}">找回密码</a>
+					</li>
+					<li <if condition="$act eq attention">class="active"</if>>
+						<a href="{:U('Help/attention')}">我的关注</a>
+					</li>
+					<li <if condition="$act eq personalData">class="active"</if>>
+						<a href="{:U('Help/personalData')}">个人资料</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="one-l">
+					<img src="__HOME__/help/images/users.png" alt="" />企业用户<span></span>
+				</div>
+				<ul class="two-l" <if condition="$code eq 2">id="show"</if>>
+					<li <if condition="$act eq approve">class="active"</if>>
+						<a href="{:U('Help/approve')}">企业认证</a>
+					</li>
+					<li <if condition="$act eq service">class="active"</if>>
+						<a href="{:U('Help/service')}">企业服务</a>
+					</li>
+					<li <if condition="$act eq card">class="active"</if>>
+						<a href="{:U('Help/card')}">企业名片</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="one-l">
+					<img src="__HOME__/help/images/payment.png" alt="" />支付方式<span></span>
+				</div>
+				<ul class="two-l" <if condition="$code eq 3">id="show"</if>>
+					<li <if condition="$act eq payment1">class="active"</if>>
+						<a href="{:U('Help/payment1')}">在线支付</a>
+					</li>
+					<li <if condition="$act eq payment2">class="active"</if>>
+						<a href="{:U('Help/payment2')}">线下支付</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="one-l">
+					<img src="__HOME__/help/images/us.png" alt="" />关于我们<span></span>
+				</div>
+				<ul class="two-l" <if condition="$code eq 4">id="show"</if>>
+					<li <if condition="$act eq brief">class="active"</if>>
+						<a href="{:U('Help/brief')}">公司简介</a>
+					</li>
+					<li <if condition="$act eq contact">class="active"</if>>
+						<a href="{:U('Help/contact')}">联系客服</a>
+					</li>
+					<li <if condition="$act eq feedback">class="active"</if>>
+						<a href="{:U('Help/feedback')}">意见反馈</a>
+					</li>
+				</ul>
+			</li>
+			<!--<li>
+    				<div class="one-l">
+    					<img src="__HOME__/help/images/center_03.png" alt="" />新手入门<span></span>
+    				</div>
+    				<ul class="two-l">
+    					<li>注册流程</li>
+    					<li>登录流程</li>
+    					<li>企业身份认证</li>
+    					<li>密码修改</li>
+    				</ul>
+    			</li>-->
+		</ul>
+	</div>
+<!--没有结束标签-->

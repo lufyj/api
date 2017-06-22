@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/follow.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+    <script type="text/javascript">
+        if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+    </script>
+    <title>药都网关注</title>
+</head>
+<body>
+    <header class="clearfix header" >
+        <a href="search.html" class="right_a">
+            <span class="">添加关注</span>
+        </a>
+        <div class="nav_tab clearfix">
+            <div class="act l"><span>供应</span></div>
+            <div class="l"><span>采购</span></div>
+        </div>
+    </header>
+    <div class="ydw_wp">
+        <div class="main">
+        <div class="no_follow" style="display: none;">
+            <div class="no_img">
+                <img src="../images/nofollow.png" class="nofollow" alt="">
+            </div>
+            <div class="follow_tj clearfix">
+                <span>关注推荐</span>
+                <span class="change r" onclick="loadRecommend()"><i class="iconfont icon_change"></i>换一批</span>
+            </div>
+            <div class="tj_wp">
+                <ul class="clearfix ti_ul">
+
+
+                  <!---->
+                    <!--<li class="tj_item selected">-->
+                        <!--<img src="../images/tjimg.png" alt="">-->
+                        <!--<p>鹿茸</p>-->
+                    <!--</li>-->
+
+                </ul>
+            </div>
+            <div class="follow_tj clearfix">
+                <span class="all_select" onclick="allSelect()">全选</span>
+                <span class="one_key r">一键关注</span>
+            </div>
+        </div>
+        <div class="follow_dtl">
+            <div class="swiper-container nav_container" id="swiper-container2" style="width:100%;">
+                <div class="swiper-wrapper nav_wp">
+                    <!--<div class="swiper-slide active-nav nav_item">-->
+                    <!--枸杞-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide nav_item">-->
+                    <!--枸杞子-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <!--<div class="data_wp">-->
+                <!--<canvas id="myChart" width="1000" height="500"></canvas>-->
+            <!--</div>-->
+            <div class="list_wp">
+            <div class="list_hd">
+                <ul class="hd_ul clearfix hd1">
+                    <li class="frist_i">单价</li>
+                    <li class="second_i">产地</li>
+                    <li class="frist_i">规格</li>
+                    <li class="frist_i">联系人</li>
+                    <li class="third_i">电话</li>
+                </ul>
+                <!--<ul class="hd_ul clearfix hd2">-->
+                    <!--<li class="frist_i">单价</li>-->
+                    <!--<li class="second_i">产地</li>-->
+                    <!--<li class="frist_i">规格</li>-->
+                    <!--<li class="frist_i">联系人</li>-->
+                    <!--<li class="third_i">电话</li>-->
+                <!--</ul>-->
+            </div>
+            <div class="list_bd">
+                <ul class="list_ul">
+                    <!--<li class="list-item">-->
+                        <!--<ul class="clearfix">-->
+                            <!--<li class="frist_i">17</li>-->
+                            <!--<li class="second_i">较广</li>-->
+                            <!--<li class="frist_i">通货</li>-->
+                            <!--<li class="frist_i">荆云鹏</li>-->
+                            <!--<li class="third_i">15638215985</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+        <!--底部-->
+    <footer>
+        <a href="./indexs.html" class="tab_lm">
+            <i class="iconfont icon_lm"></i>
+            <p>类目</p>
+        </a>
+        <a href="javascript:;" class="tab_follow">
+            <i class="iconfont icon_gz"></i>
+            <p>关注</p>
+        </a>
+        <a href="./index.html" class="home tab_home"></a>
+        <a href="./discover.html" class="tab_fx">
+            <i class="iconfont icon_fx"></i>
+            <p>发现</p>
+        </a>
+        <a href="./persional.html" class="tab_perisonal">
+            <i class="iconfont icon_geren"></i>
+            <p>个人</p>
+        </a>
+    </footer>
+</body>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/load.js"></script>
+<script src="../js/charts.js"></script>
+<script type="text/javascript">
+    var noFollow = $(".no_follow");
+    var followDtl = $(".follow_dtl");
+    var oneKey = $(".one_key");
+    var change = $(".change");
+    var recommendWp= $(".ti_ul");
+    var navWp = $(".nav_wp");
+    var listwp  = $('.list_ul');
+    var mySwiper2;
+    var tab = $(".nav_tab>div");
+    appendLoad(listwp);
+    var loadTxt = $(".load_wp");
+    //记录当前的goods;
+    var urls = ['AppSupply/supply_lists' , 'AppDemand/demand_lists'];
+    var tit = ["单价"  , "数量"];
+    var params = {
+        clientType:1,
+        num:15
+    };
+    var apiUrl = urls[0];
+    function updateNavPosition(i){
+        $('#swiper-container2 .active-nav').removeClass('active-nav')
+        var activeNav = $('#swiper-container2 .swiper-slide').eq(i).addClass('active-nav');
+        if (!activeNav.next().hasClass('swiper-slide-visible')){
+            mySwiper2.slideTo(activeNav.index()-2)
+        }
+        if (!activeNav.prev().hasClass('swiper-slide-visible')){
+            mySwiper2.slideTo(activeNav.index()-2);
+        }
+
+        if (!activeNav.hasClass('swiper-slide-visible')) {
+            if (activeNav.index()>mySwiper2.activeIndex) {
+                console.log(2);
+                var thumbsPerNav = Math.floor(mySwiper2.width/activeNav.width())-1
+                mySwiper2.slideTo(activeNav.index()-thumbsPerNav)
+            }
+            else {
+                mySwiper2.slideTo(activeNav.index())
+            }
+        }
+    }
+    //加载关注内容
+    $.postT(rule.root + 'Follow/follow_lists' ,{}, function (data) {
+        if (data.code == 1){
+            noFollow.hide();
+            followDtl.show();
+            var datas = data.data , dataL = datas.length;
+            var str = '';
+            for (var i = 0; i < dataL; i++){
+                if (i == 0){
+                    str += '<div class="swiper-slide active-nav nav_item" data-id="'+datas[i].goods_id+'">'+ datas[i].goods_name +'</div>';
+                }else {
+                    str += '<div class="swiper-slide  nav_item" data-id="'+datas[i].goods_id+'">'+ datas[i].goods_name +'</div>';
+                }
+            }
+            navWp.html(str);
+            //加载完 初始化导航
+            mySwiper2 = new Swiper('#swiper-container2',{
+                watchSlidesProgress : true,
+                watchSlidesVisibility : true,
+                slidesPerView : 5,
+                onTap: function(){
+                    var i = mySwiper2.clickedIndex;
+                    if (!i && i!= 0) return;
+                    updateNavPosition(i);
+                }
+            })
+            //加载默认的数据
+            params.goods_name = $(".active-nav").text();
+            loadDatas(params , apiUrl);
+        }else if (data.code == 0){
+            noFollow.show();
+            loadRecommend();
+            followDtl.hide();
+        }else if (data.code == 103) {
+            rule.reLogin();
+        }
+    })
+    navWp.on("click" , ".nav_item" , function () {
+        var _this = $(this);
+        params.goods_name = _this.text();
+        init();
+        loadDatas(params , apiUrl);
+    })
+    tab.click(function () {
+        var _this = $(this);
+        if (_this.hasClass("act")){
+            return;
+        }
+        _this.addClass("act").siblings("div").removeClass("act");
+        var i = _this.index();
+        //切换接口
+        apiUrl = urls[i];
+        //切换标题
+        $(".hd1>li:first-child").text(tit[i])
+        init();
+        //加载数据
+        loadDatas(params , apiUrl);
+    })
+    //加载对应的供应和求购
+    rule.scrollEvent = function (fn) {
+        loadDatas(params,apiUrl,fn);
+    }
+    function loadDatas(params,url,fn) {
+        if (fn){
+            var lastId = listwp.children(":last").attr("data-id");
+            params.minId = lastId
+        }else {
+            params.minId = '';
+        }
+        var request = params.goods_name;
+        var requestApi = apiUrl;
+        $.post(rule.root + url , params ,function (req) {
+            if (request != params.goods_name || requestApi != apiUrl){
+                return false;
+            }
+            if (req.code == 1){
+                var str = '';
+                var datas = req.data,dataL = datas.length;
+                for (var i = 0; i < dataL; i++){
+                    var id = datas[i].id;
+                    var frist  = datas[i].num || datas[i].price;
+                    var originArea = datas[i].origin_area;
+                    var attrName = datas[i].goods_attr_name;
+                    var contacts = datas[i].contacts;
+                    var mobile = datas[i].mobile;
+                    str += ' <li class="list-item" data-id="'+ id +'"><ul class="clearfix"><li class="frist_i">'+ frist +'</li><li class="second_i">'+ originArea +'</li><li class="frist_i">'+ attrName +'</li><li class="frist_i">'+ contacts +'</li><li class="third_i">'+ mobile +'</li></ul></li>'
+                }
+                if (fn){
+                    listwp.append(str);
+                    fn&&fn();
+                }else {
+                     listwp.html(str);
+                }
+                if (dataL < params.num){
+                    loadTxt.text("没有更多数据")
+                }
+            }else if (req.code == 0){
+                loadTxt.text("没有更多数据");
+            }
+        })
+    }
+    //init
+    function init() {
+        loadTxt.text("正在加载更多...");
+        listwp.html("")
+        scrolling = false;
+    }
+    //以下是没有关注时候
+    recommendWp.on("click" , "li" , function () {
+        $(this).toggleClass('selected');
+    })
+    oneKey.on("click" , function () {
+        var arr = [];
+        $(".tj_item").each(function () {
+            var _this = $(this);
+            if (_this.hasClass("selected")){
+                var id = _this.attr("data-id");
+                arr.push(id);
+            }
+        });
+        var goodsId = arr.join(",");
+        $.postT(rule.root + 'Follow/onekey_follow' ,{goods_ids:goodsId} ,function (req) {
+            if (req.code == 1){
+                location.reload();
+            }else if (req.code == 103){
+                rule.reLogin();
+            }
+        })
+    });
+    function allSelect() {
+        $(".tj_item").addClass("selected");
+    }
+    function loadRecommend() {
+        $.post(rule.root + "Follow/search_hot" , {clientType:1} , function (req) {
+            if (req.code == 1){
+                var datas = req.data;
+                var datasL = datas.length;
+                var str = '';
+                for (var i = 0; i < datasL; i++){
+                    var id = datas[i].id,
+                        goodsName = datas[i].goods_name.replace(/\s+/g,""),
+                        goodsImg = datas[i].goods_img;
+                    str += '<li class="tj_item selected" data-id="'+ id +'"><img src="'+ goodsImg +'" alt=""><p>'+ goodsName +'</p></li>'
+                }
+                recommendWp.html(str);
+            }
+        })
+    }
+</script>
+</html>

@@ -1,0 +1,90 @@
+<extend name="./base" />
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/titleDSG.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/dl.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/companyShow/css/companyShow.css" />
+</block>
+<block name="body">
+	<include file="Public/common_nav" />
+	<div class="detail-middle">
+		<div class="detail-bread">
+			<i></i>
+			<b>当前位置：</b>&nbsp;
+			<a href="/">首页</a>&nbsp;&gt;&nbsp;
+			<a href="{:U('CompanyShow/deliveryList')}">物流信息</a>
+		</div>
+		<div class="drugs-top store-nav" id="cate_nav">
+			<h2 class="h2-com">请选择类型：</h2>
+			<ul class="delivery-nav clearfix">
+				<li <if condition="$t eq 9999">class="active"</if>>
+					<a href="{:U('CompanyShow/deliveryList')}">全部</a>
+				</li>
+				<li <if condition="$t eq 0">class="active"</if>>
+					<a href="{:U('CompanyShow/deliveryList',array('t'=>0))}">厢式/板车</a>
+				</li>
+				<li <if condition="$t eq 1">class="active"</if>>
+					<a href="{:U('CompanyShow/deliveryList',array('t'=>1))}">集装箱</a>
+				</li>
+				<li <if condition="$t eq 2">class="active"</if>>
+					<a href="{:U('CompanyShow/deliveryList',array('t'=>2))}">冷藏车</a>
+				</li>
+				<li <if condition="$t eq 3">class="active"</if>>
+					<a href="{:U('CompanyShow/deliveryList',array('t'=>3))}">危险品车辆</a>
+				</li>
+				<li <if condition="$t eq 4">class="active"</if>>
+					<a href="{:U('CompanyShow/deliveryList',array('t'=>4))}">特种车冷藏</a>
+				</li>
+			</ul>
+		</div>
+		<foreach name="info" item="vo">
+			<div class="storeList clearfix">
+				<ul class="store-lists l clearfix">
+					<li><b>车辆类型：</b>{$vo.type}</li>
+					<li><b>联系电话：</b>{$vo.mobile}</li>
+					<li class="store-l"><b>&nbsp;出&nbsp;发&nbsp;地：</b>{$vo.begin}</li>
+					<li class="store-l"><b>&nbsp;目&nbsp;的&nbsp;地：</b>{$vo.end}</li>
+					<li class="last-store"><b>简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介：</b>
+					<span class="span-store">{$vo.desc}</span>
+					</li>
+				</ul>
+				<div class="l store-lists-r">
+					<p>&nbsp;发&nbsp;布&nbsp;人：{$vo.name}</p>
+					<p>发布时间：{$vo.add_time}</p>
+				</div>
+			</div>
+		</foreach>
+		{$pageHtml}
+	</div>
+</block>
+<block name="script">
+	<script type="text/javascript">
+		$(function() {
+				var upA = '<a href="###" class="up-a">收起更多</a>',
+					downA = '<a href="###" class="down-a">展开更多</a>';
+			$('.span-store').each(function(){
+				if($(this).text().length>49){
+					$(this).after(downA);
+				}
+			});
+			var lastStore = $(".last-store");
+			lastStore.on("click"  , ".down-a" , function (){
+				var span   = $(this).siblings("span");
+					span.css({
+						"white-space":"normal",
+						"width":"90%"
+					});
+					span.append(upA);
+					$(this).remove();
+			});
+			lastStore.on("click"  , ".up-a" , function (){
+				var span   = $(this).parent("span");
+					span.css({
+						"white-space":"nowrap",
+						"width":"81%"
+					});
+					$(this).remove();
+					span.after(downA);
+			});
+		});
+	</script>
+</block>

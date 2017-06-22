@@ -1,0 +1,195 @@
+/******支付页面demand中的index新增支付功能页面的样式*****/
+.demand-lists{
+	border-bottom:1px dashed #EAEAED;
+	padding-left:25px;
+	padding-bottom:20px;
+	margin-bottom:10px;
+}
+.lists-d{
+	line-height:30px;
+	font-size:14px;
+}
+.lists-d span{
+	color:#A9A9A9;
+	display: inline-block;
+	width:80px;
+	text-align: right;
+	margin-right:15px;
+}
+i.color-r{
+	font-style:normal;
+}
+.color-r{
+	color:#E62B2E;
+}
+p.color-r{
+	padding-left:25px;
+	margin-bottom:15px;
+}
+.alipay01-sel{
+	line-height:40px;
+}
+.alipay01-sel li{
+	position:relative;
+	padding-left:25px;
+	border:1px dashed transparent;
+}
+.alipay01-sel li:hover,.alipay01-sel li.active{
+	border-color:#FFCD80;
+	background:#FFFBED;
+}
+.alipay01-sel span{
+	color:#9C9C9C;
+	margin-left:10px;
+}
+/*.sel-i{
+	position: absolute;
+	left:-1px;
+	top:3px;
+	display: inline-block;
+	width:14px;
+	height:14px;
+	border:1px solid #D6D7DC;
+	margin-bottom:-1px;
+}*/
+/*.alipay01-sel [type="checkbox"],.tijiao input{
+	position:absolute;
+	top:12px;
+	left:27px;
+	opacity: 0;
+	filter: "alpha(opacity=0)";
+	filter: alpha(opacity=0); 
+	zoom:1;
+}*/
+.tijiao .sel-i{
+	display: inline-block;
+	width:14px;
+	height:14px;
+	border:1px solid #D6D7DC;
+	margin-bottom:-1px;
+}
+.tijiao>input[type="checkbox"]{
+    position: absolute;
+    top: -5px;
+    left: 22px;
+    opacity: 0; 
+    filter: "alpha(opacity=0)";
+    filter: alpha(opacity=0);
+    zoom: 1;
+    width: 20px;
+}
+.alipay01-sel label,.tijiao label{
+	margin-left:5px;
+}
+span.zf03 select{
+	width:80px;
+	color:#E62B2E;
+}
+/*span.zf04 img{
+	vertical-align: middle;
+	margin-left:5px;
+}*/
+.tishi{
+	margin:15px 0;
+}
+.tijiao{
+	padding-left:25px;
+	position:relative;
+}
+.tijiao .sel-i{
+	background: url(../images/icon02.png) no-repeat center center;
+}
+.tijiao a{
+	color:#2B89F4;
+}
+.tijiao a:hover,.fabu a:hover{
+	text-decoration: none;
+}
+.fabu{
+	padding-left:25px;
+	margin-top:15px;
+}
+.fabu>a,.fabu>button{
+	padding:9px 19px;
+	background: #E62B2E;
+    border:1px solid #E62B2E;
+    color:#fff;
+    margin-right:20px;
+    cursor: pointer;
+}
+.fabu>a:first-child{
+	border-color:#D9DADE;
+	color:#8A8A8A;
+	background: #EDEDED;
+}
+/******关于模态框的设计*******/
+.modal{
+	display:none;
+}
+.modal-shade{
+	background:none;
+	background:rgba(0,0,0,0.3);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c000000,endColorstr=#4c000000);
+	z-index:1500;	
+}
+.dialog{
+	width:415px;
+	height:528px;
+	background: #fff;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+}
+.content{
+	position:relative;
+	font-size:14px;
+	padding-bottom:25px;
+}
+.content i{
+    position: absolute;
+   	top:1px;
+    color: #fff;
+    font-style: normal;
+    font-family: '宋体';
+    font-weight: bold;
+    cursor: pointer;
+}
+.content i.i-close{
+	right:10px;
+	top:9px;
+}
+.index-modal{
+	width:930px;
+}
+/**关于demand/publish模态框的调整**/
+.demand-pubm{
+	text-align: center;
+}
+.demand-pubm a {
+	margin-right: 15px;
+	padding: 8px 19px;
+	color: #8A8A8A;
+	text-align: center;
+	background: #EDEDED;
+	text-decoration: none;
+	border: 1px solid #D9DADE;
+}
+.demand-pubm a:first-child {
+	border-color: #E62B2E;
+	background: #E62B2E;
+	color: #fff;
+}
+.modal-dialog {
+	width: 370px;
+	height:160px;
+	background: #fff;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+}

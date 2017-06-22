@@ -1,0 +1,23 @@
+.title{height:8.8rem;line-height:8.8rem;border-bottom:1px solid #ddd;text-align: center;}
+.title>span{font-size:3rem;}
+.title>a{position:absolute;left:0.5rem;color:#fff;font-size:2.8rem;vertical-align: middle;}
+.title>a i{font-size:2.8rem;}
+/*以上后期会去掉的*/
+/*发布行情*/
+body{background: #fff;}
+.icon-sczp:before{content: "\e645";}
+.market{font-size:2.8rem;color:#666;}
+.market-b{font-size:2.3rem;color:#666;text-align: center;padding:0 2rem;}
+ul.market>li{padding:1.5rem;}
+li.mar-t{padding:4rem 1.5rem 1.5rem;border-top:4rem solid #F5F5F5;border-bottom:2rem solid #F5F5F5;}
+li.mar-t textarea{width: calc(100% - 13rem);height:auto;vertical-align: text-top;}
+li.mar-t>span{color:#e62b2e;vertical-align:top;}
+li.mar-m>textarea{width:100%;min-height: 20rem;}
+li.mar-img-carrier{position: relative;border:1px solid #ccc;text-align: center;line-height:6rem;}
+li.mar-img-carrier i{font-size:6rem;color:#ccc;}
+li.mar-img-carrier input{position:absolute;left:0;top:0;width:6rem;height: 100%;opacity:0;}
+.market li.mar-tj{border-top:2rem solid #F5F5F5;text-align: center;padding-top:3rem;padding-bottom:5rem;}
+.market li.mar-tj input{width:85%;font-size:3rem;color:#fff;background: #e62b2e;padding:2rem 0;border-radius: 1rem;}
+.market li:nth-child(3) ul{padding-left:9%;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox; display: flex;text-align: justify;-webkit-box-pack: justify;-webkit-justify-content: space-between; -ms-flex-pack: justify;}
+.market li:nth-child(3) li{width:6rem;height:6rem;}
+.market li:nth-child(3) li img{width:6rem;height: 6rem;}

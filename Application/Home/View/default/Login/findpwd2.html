@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>药都网找回密码</title>
+    <link rel="shortcut icon" type="image/x-icon" href="__IMG__/logo-icon.ico">
+    <link href="__CSS__/reset.css" rel="stylesheet" type="text/css" />
+    <link href="__CSS__/login.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="header_bg">
+        <div id="header" class="clearfix header-login">
+            <a href="./index.html">
+                <img src="__IMG__/logo_03.png" alt="" />
+            </a>
+            <i></i>
+            <span>找回密码</span>
+        </div>
+    </div>
+    <!--关于找回密码页面主体部分02-->
+    <div class="middle-wrap register password clearfix">
+        <div class="password-nav password2"></div>
+        <div class="password-back">
+            验证码已经发送到您的验证手机 <span class="">{$mobile}</span>
+            <br> 验证码30分钟内有效
+            <!--	，若未收到点击
+            <a onclick="javascript:;">重新发送</a>按钮重新获得验证码。-->
+        </div>
+        <form action="{:U('/login/findpwd?i=3')}" id="form">
+            <div class="password-phone pwd2-code">
+                <input type="text" id="code" maxlength=5 placeholder="请输入短信验证码" autocomplete="off" />
+            </div>
+            <div class="password-phone pwd2-pw">
+                <input type="password" id="pwd" placeholder="设置新密码" autocomplete="off" />
+                <br />
+                <!-- <i></i> -->
+            </div>
+            <div class="password-phone pwd2-pw">
+                <input type="password" id="rpwd" placeholder="确认新密码" autocomplete="off" />
+                <br />
+                <span>密码为6-20个字符，可有英文、数字及字符组成</span>
+            </div>
+            <div class="password-next">
+                <a href="javascript:;" id="step2_btn">下一步</a>
+            </div>
+        </form>
+    </div>
+    <include file="Public/footer" />
+    <script src="__STATIC__/jquery-1.8.3.min.js" type="text/javascript"></script>    
+    <script src="__HOME__/user/js/findpwd.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    var pwdObj	 = $('#pwd'), rpwdObj = $('#rpwd'), codeObj = $('#code');
+	var urls = ["{:U('login/validCode')}","{:U('findpwd',array('i'=>3))}"];	
+    </script>
+</body>
+
+</html>

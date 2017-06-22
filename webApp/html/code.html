@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>下载药都网</title>
+	</head>
+	<body>
+		<div style="text-align: center;display: none;" class="img_wp">
+			<img src="../images/open.jpg" alt="" style="width: 100%;">
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+        function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for(var i = 0; i < strs.length; i ++) {
+                    theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+        var result = GetRequest();
+        var eCode = result.extension_code;
+        if (eCode){
+            $.post("http://m.yaoduwang.com/index.php?s=Api/Extension/extension" , {extension_code:eCode},function (req){
+                fn();
+            })
+		}else {
+            fn();
+		}
+
+		/* 智能机浏览器版本信息:*/
+		function fn(){
+			var ydw = {
+				Android:"http://a.app.qq.com/o/simple.jsp?pkgname=com.yaoduphone",
+				Ios:"https://itunes.apple.com/us/app/id1193133333?l=zh&ls=1&mt=8",
+				download:'http://m.yaoduwang.com/apk/yaoduwang1.4.apk',
+				browser:'',
+			}
+			ydw.CheckVersions  = function (){
+				if(navigator.userAgent.match("MicroMessenger") && navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+					ydw.browser = "ioswx";
+					return "ioswx";
+				}
+				if (navigator.userAgent.match(/android/i) && navigator.userAgent.match("MicroMessenger")){
+					ydw.browser = "androidwx";
+                    return "androidwx";
+				}
+                if (navigator.userAgent.match(/android/i)){
+                    ydw.browser = "android";
+                    return "android";
+                }
+				if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)){
+					ydw.browser = "ios";
+                    return "ios";
+				}
+			}
+			ydw.CheckVersions();
+			if (ydw.browser == 'ioswx'){
+                window.location.href = ydw.Android;
+			}else if (ydw.browser == 'androidwx'){
+			    $(".img_wp").show();
+			}else if (ydw.browser == 'ios'){
+                window.location.href = ydw.Ios;
+			}else if (ydw.browser == "android"){
+                window.location.href = ydw.download;
+			}
+        }
+	</script>
+
+</html>

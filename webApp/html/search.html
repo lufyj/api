@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>中药分类</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/search.css" />
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script src="../js/common.js"></script>
+	</head>
+	<body>
+		<div class="header clearfix">
+	        <a href="javascript:void(0);" class="back_btn" id="back_btn">
+	            <i class="icon_zjt iconfont"></i>
+	        </a>
+	        <i class="icon_search2 iconfont icon1"></i>
+	        <input type="text" class="search"/>
+	        <span class="sear_btn">搜索</span>
+	    </div>
+	    <div class="main">
+	    	<div class="hot_box box1">
+	    		<div class="box_hd">
+	    			<span>热门推荐</span>
+	    		</div>
+	    		<div class="box_bd hot_wp data_box">
+
+	    		</div>
+	    	</div>
+	    	<div class="history_box box1">
+	    		<div class="box_hd clearfix">
+	    			<span>历史搜索</span>
+	    			<a href="javascript:void(0);" class="r" onclick="deleteHistory()">
+			            <i class="icon_dustbin iconfont"></i>
+			        </a>
+	    		</div>
+	    		<div class="box_bd history_wp data_box">
+
+	    		</div>
+	    	</div>
+			<div class="search_result box2">
+				<ul id="search_wp">
+					<!--<li>-->
+						<!--<a href="###">-->
+							<!--<i class="iconfont icon_search2 icon2"></i>-->
+							<!--大枣(干枣，没早)-->
+						<!--</a>-->
+					<!--</li>-->
+				</ul>
+			</div>
+	    </div>
+	</body>
+	<script type="text/javascript">
+		var searchWp  = $("#search_wp");
+		var searchInput = $(".search");
+		var searchBtn = $(".sear_btn");
+		var dataBox = $(".data_box");
+		var hisBOX = $(".history_box");
+		var box1 = $('.box1');
+        var box2 = $('.box2');
+        searchInput.keydown(function () {
+            box2.children("ul").html('');
+        })
+        searchInput.keyup(function () {
+            var _this = $(this);
+            search(_this);
+        })
+        searchBtn.on("click" , function () {
+            search(searchInput);
+        })
+        searchWp.on("click" , "li" , function () {
+            var goodsName = $(this).find("span").text();
+            if (!goodsName) return;
+            var searchHistory = new LocalData().getData("search_history") || [];
+		   	if (searchHistory.indexOf(goodsName) == -1){
+			   	searchHistory.push(goodsName);
+			   	new LocalData().setData("search_history" ,searchHistory);
+		   	}
+        })
+        dataBox.on("click" , ".goods_a" , function () {
+            var txt = $(this).text();
+            searchInput.focus().val(txt);
+            search(searchInput);
+        })
+		$(function () {
+			//加载热门推荐
+			$.post(rule.root + 'AppSearch/hot_search' ,{clientType :1} ,function (req) {
+				var code = req.code;
+				if (code == 1){
+				    var datas = req.data;
+				    var datasL = datas.length;
+				    var str = '';
+				    for (var i = 0; i < datasL; i++){
+						str += '<a href="javascript:;" class="goods_a">'+datas[i]+'</a>'
+					}
+					$(".hot_wp").html(str)
+				}
+            })
+            //加载搜索历史
+            loadHistory();
+        })
+		//搜索方法
+        function search(_this) {
+            var goodsName = $.trim(_this.val());
+            if (!goodsName) {
+                box1.show();
+                box2.hide().children("ul").html('');
+                return;
+            }
+            box1.hide();
+            box2.show();
+
+            $.post(rule.root +　'AppSearch/search' , {goods_name:goodsName,clientType :1},function (req) {
+                var code = req.code;
+                var str = '';
+                //储存历史搜索
+                if (code == 1){
+                    var datas = req.data;
+                    var datasL = datas.length;
+                    for (var i = 0; i < datasL; i++){
+                        var aliasName  = datas[i].alias_name;
+                        var goodsName  = datas[i].goods_name;
+                        var id = datas[i].id;
+                        if (aliasName){
+                            aliasName = "(" + aliasName + ")";
+						}
+                        str += '<li><a href="javascript:;" class="search_a" data-id="'+ id +'"><i class="iconfont icon_search2 icon2"></i><span>'+ goodsName + '</span>' + aliasName+'</a></li>'
+                    }
+                }else {
+                    str = '<li class="no_data">暂无搜索药品</li>';
+                }
+                searchWp.html(str)
+            })
+        }
+        //加载搜索历史方法
+        function loadHistory() {
+            var historys = new LocalData().getData("search_history");
+            if (historys) {
+                hisBOX.show();
+                var l = historys.length;
+                var html = '';
+                for (var i = 0; i < l; i++){
+                    html += '<a href="javascript:;" class="goods_a">'+ historys[i] +'</a>';
+                }
+                $(".history_wp").html(html);
+            }else {
+                hisBOX.hide();
+			}
+        }
+        //删除历史
+        function deleteHistory() {
+            new LocalData().removeData("search_history");
+            loadHistory()
+        }
+         var local = new LocalData();
+        searchWp.on("click" ,".search_a" , function () {
+            var _this = $(this);
+            var gn = _this.find("span").text();
+            var id = _this.attr("data-id");
+            var data = {
+                goods_name:gn,
+                id:id
+            }
+            local.setData("goodsmsg" , data);
+            location.href = './goodsmsg.html';
+        })
+	</script>
+</html>
+

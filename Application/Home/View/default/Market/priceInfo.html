@@ -1,0 +1,81 @@
+<extend name="./base" />
+<block name="style">
+<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/titleDSG.css" />
+<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/trend.css" />
+</block>
+<block name="body">
+<div class="demand-detail">
+	<div class="detail-top">
+		<ul class="detail-nav clearfix">
+			<li>
+				<a href="/">首页</a>
+			</li>
+			<li>
+				<a href="{:U('supply/trend')}" <if condition="$act eq tre">class="active"</if>>市场价格</a>
+			</li>
+			<li>
+				<a href="{:U('supply/history')}" <if condition="$act eq his">class="active"</if>>历史价格</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="detail-middle">
+	<div class="detail-bread">
+		<i></i>
+		<b>当前位置：</b>&nbsp;
+		<a href="/">首页</a>&nbsp;&gt;&nbsp;
+		<a href="javascript:;">市场价格</a>
+	</div>
+	<div class="trend-t">
+		<dl class="clearfix trend-b">
+			<dt class="l"><b>药材分类</b></dt>
+			<dd class="l">
+				<a href="{:U('market/priceInfo')}" <empty name="Think.get.id">class="active"</empty>>全部</a>				
+				<foreach name="cates" item="vo" >
+				    <a href="{:U('market/priceInfo',array('id'=>$vo['id']))}" <?php if(I( 'get.id')==$vo[ 'id']){echo 'class="active"';} ?>>{$vo.title}</a>
+				</foreach>				
+			</dd>
+		</dl>
+	</div>
+	<div class="trend-m">
+		<table>
+			<thead>
+				<tr>
+					<td>品名</td>
+					<td>规格</td>
+					<td>产地</td>
+					<td>价格(元/公斤)</td>
+					<td>走势</td>
+					<td>昨日对比</td>
+					<td>周对比</td>
+					<td>月对比</td>
+					<td>季度对比</td>
+					<td>年对比</td>
+					<td>历史价格</td>					
+				</tr>
+			</thead>
+			<tbody>
+			<foreach name="list" item="vo" >
+			    <tr>
+					<td>{$vo.goods_name}</td>
+					<td>{$vo.goods_attr_name}</td>
+					<td>{$vo.origin_area}</td>
+					<td>{$vo.price}</td>
+					<td>稳</td>
+					<if condition="$vo.dayRate gt 0"><td class="col-r">↑{$vo.dayRate}%</td><elseif condition="$vo.dayRate lt 0"/><td class="col-g">↓{$vo.dayRate}%</td><else /><td>0.00%</td></if>		
+					<if condition="$vo.weekRate gt 0"><td class="col-r">↑{$vo.weekRate}%</td><elseif condition="$vo.weekRate lt 0"/><td class="col-g">↓{$vo.weekRate}%</td><else /><td>0.00%</td></if>
+					<if condition="$vo.monthRate gt 0"><td class="col-r">↑{$vo.monthRate}%</td><elseif condition="$vo.monthRate lt 0"/><td class="col-g">↓{$vo.monthRate}%</td><else /><td>0.00%</td></if>
+					<if condition="$vo.quarterRate gt 0"><td class="col-r">↑{$vo.quarterRate}%</td><elseif condition="$vo.quarterRate lt 0"/><td class="col-g">↓{$vo.quarterRate}%</td><else /><td>0.00%</td></if>
+					<if condition="$vo.yearRate gt 0"><td class="col-r">↑{$vo.yearRate}%</td><elseif condition="$vo.yearRate lt 0"/><td class="col-g">↓{$vo.yearRate}%</td><else /><td>0.00%</td></if>
+					<td class="trend-a"><a href="/market/priceHistory.html?q={$vo.goods_name}&attr={$vo.goods_attr_name}&area={$vo.origin_area}">历史价格</a></td>		
+				</tr>
+		    </foreach>
+			</tbody>
+		</table>
+	</div>	
+	{$pageHtml}
+</div>
+</block>
+<block name="script">
+
+</block>

@@ -1,0 +1,82 @@
+<extend name="./base" />
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/titleDSG.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/dl.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/companyShow/css/companyShow.css" />
+</block>
+<block name="body">
+	<include file="Public/common_nav" />
+	<div class="detail-middle">
+		<div class="detail-bread">
+			<i></i>
+			<b>当前位置：</b>&nbsp;
+			<a href="/">首页</a>&nbsp;&gt;&nbsp;
+			<a href="">仓库信息</a>
+		</div>
+		<div class="drugs-top" id="cate_nav">
+			<h2 class="h2-com">请选择类型：</h2>
+			<ul class="delivery-nav clearfix">
+				<li <if condition="$t eq 9999">class="active"</if>>
+					<a href="{:U('CompanyShow/storeList')}">全部</a>
+				</li>
+				<li <if condition="$t eq 0">class="active"</if>>
+					<a href="{:U('CompanyShow/storeList',array('t'=>0))}">普通</a>
+				</li>
+				<li <if condition="$t eq 1">class="active"</if>>
+					<a href="{:U('CompanyShow/storeList',array('t'=>1))}">冷藏</a>
+				</li>
+				<li <if condition="$t eq 2">class="active"</if>>
+					<a href="{:U('CompanyShow/storeList',array('t'=>2))}">保温/恒温</a>
+				</li>
+				<li <if condition="$t eq 3">class="active"</if>>
+					<a href="{:U('CompanyShow/storeList',array('t'=>3))}">特种</a>
+				</li>
+				<li <if condition="$t eq 4">class="active"</if>>
+					<a href="{:U('CompanyShow/storeList',array('t'=>4))}">气调</a>
+				</li>
+			</ul>
+		</div>
+		<div class="drugs-main clearfix">
+			<foreach name="info" item="vo">
+				<div class="delivery-lists clearfix">
+					<div class="competes-img l">
+						<a href="{:U('CompanyShow/storeInfoIndex',array('i'=>$vo['id']))}">
+							<img src="{$vo.img}" />
+						</a>
+					</div>
+					<div class="competes-detail l">
+						<ul class="clearfix">
+							<li class="del-last">仓库类型：<span class="color-r">{$vo.type}</span></li>
+							<li>仓库面积：{$vo.size}m&sup2;</li>
+							<li>仓库层高：{$vo.height}m</li>
+							<li>联&nbsp;&nbsp;系&nbsp;&nbsp;人：<span>{$vo.contacts}</span></li>
+							<li>联系电话：<span>{$vo.mobile}</span></li>
+							<li class="del-last">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：{$vo.address}</li>
+							<li class="del-last">简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介：<em>{$vo.desc}</em><a href="{:U('CompanyShow/storeInfoIndex',array('i'=>$vo['id']))}">详情&gt;&gt;</a></li>
+						</ul>
+					</div>
+				</div>
+			</foreach>
+		</div>
+		{$pageHtml}
+	</div>
+</block>
+<block name="script">
+	<script type="text/javascript">
+		$(function(){
+			//增加左边距问题
+			/*$('.delivery-lists').each(function(i){
+				if(i%2==1){
+					$(this).css('margin-left','1.2%');
+				}
+			});*/
+			//关于简介限制字数问题
+			$('.del-last em').each(function(){
+				var txt=$(this).text();
+				if(txt.length>39){
+					$(this).text($(this).text().slice(0,38)+'...');
+				}
+			});
+		});
+	</script>
+</block>

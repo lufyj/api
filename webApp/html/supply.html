@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>药都网--发布供应</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" href="../css/supply.css" />
+		<link rel="stylesheet" href="../css/LArea.css" />
+		<script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+            if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+            if (!isMobile()) location.href = "./bind.html";
+		</script>
+	</head>
+	<body>
+		<header>
+			<a href="javascript:void(0);" class="back_btn" id="back_btn">
+				<i class="icon_zjt iconfont"></i>返回
+			</a>
+			<span>发布供应</span>
+			<a href="javascript:void(0);" class="r_btn" id="supplySubmit">发布</a>
+		</header>
+		<div class="ydw_wp">
+			<section>
+				<ul class="supply">
+					<li class="clearfix">
+						<span class="l">图 片<em>：</em></span>
+						<form method="post" id="submitForm" enctype="multipart/form-data">
+							<div class="clearfix l sup-imgs">
+								<div class="sup-imgs-sc">
+									<i class="iconfont icon-tp"></i>
+									<input type="file" accept="image/*" name="pic[]" id="sup-img"/>
+									<input type="hidden" name="clientType" value="1" />
+									<!-- onchange="imgChange('sup-imgs','sup-imgs-sc');" -->
+								</div>
+							</div>
+						</form>
+					</li>
+					<li onclick="javascript:window.location.href='./cate.html?ReturnUrl=supply.html'">
+						<span>品 名</span>：
+						<p>请选择产品名称</p>
+						<input type="hidden" name="goods_name" value="" id="sup-name" placeholder="请选择产品名称" disabled/>
+						<i class="iconfont icon-yjt r"></i>
+					</li>
+					<li class="sup-norms">
+						<span>规 格</span>：
+						<p>请选择规格</p>
+						<input type="hidden" name="goods_attr_name" id="sup-norms" placeholder="请选择规格" />
+						<i class="iconfont icon-yjt r"></i>
+					</li>
+					<li>
+						<span>数 量</span>：
+						<input type="tel" maxlength="7" name="num" id="sup-num" placeholder="单位/公斤" class="xz-width"/>
+						<input type="button" name="num2" id="sup-num2" value="大货"/>
+					</li>
+					<li>
+						<span>单 价</span>：
+						<input type="tel" maxlength="10" data-prtype="1" name="price" id="sup-price" placeholder="单位(元/公斤)" class="xz-width"/>
+						<input type="button" name="price2" data-prtype="2" id="sup-price2" value="面议" />
+					</li>
+					<li class="sup-addS">
+						<span>产 地</span>：
+						<p id="area">请选择产地</p>
+						<input type="hidden" name="origin_area"/>
+						<input type="hidden" name="origin_code" id="sup-addS" placeholder="请选择产地"/>
+						<i class="iconfont icon-yjt r"></i>
+					</li>
+					<li class="sup-addE">
+						<span class="sup-l2">货源地</span>：
+						<p id="area2">请选择货源地</p>
+						<input type="hidden" name="supply_area" />
+						<input type="hidden" name="supply_code" id="sup-addE" placeholder="请选择货源地"/>
+						<i class="iconfont icon-yjt r"></i>
+					</li>
+					<li class="sup-l3">
+						<span class="sup-l2">联系人</span>：
+						<input type="text" name="contacts" id="sup-contact" placeholder="请填写联系人" />
+					</li>
+					<li class="sup-l3">
+						<span>手 机</span>：
+						<input type="tel" maxlength="11" name="mobile" id="sup-mobile"/>
+					</li>
+					<li>
+						<span>备 注</span>：
+						<textarea name="details" autoHeight="true" id="sup-detail" placeholder="请填写备注"></textarea>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<script src="../js/LAreaData2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/LArea.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/form.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/supply.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

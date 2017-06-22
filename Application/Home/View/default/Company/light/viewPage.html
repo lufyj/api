@@ -1,0 +1,344 @@
+<extend name="Company:base1" />
+<block name="style">
+	<link rel="stylesheet" href="__TMPL__/light/css/light.css" />
+	<link rel="stylesheet" href="__TMPL__/base1.css" />
+</block>
+<block name="body">
+	<div class="fix_nav">
+		<ul class="clearfix">
+			<li>
+				<a href="#com21">首页</a>
+			</li>
+			<li>
+				<a href="#com22">简介</a>
+			</li>
+			<li>
+				<a href="#com23">动态</a>
+			</li>
+			<li>
+				<a href="#com24">业务</a>
+			</li>
+			<li>
+				<a href="#com25">联系我们</a>
+			</li>
+		</ul>
+	</div>
+	<div class="company01" id="com21">
+		<!--logo头-->
+		<div class="logo-title">
+			<div class="logo-bg clearfix">
+				<img src="{$comInfo.logo}" alt="企业的logo" class="l" />
+				<span class="r com-name">{$comInfo.name}</span>
+			</div>
+			<div class="mb"></div>
+			<div class="title2-m">
+				<p>
+					<span>公告：</span>
+					<marquee scrolldelay="1000" direction="left" behavior="scroll" scrollamount="30" loop="-1" onMouseOut="this.start()" onMouseOver="this.stop()">
+						{$noticeInfo.content}
+					</marquee>
+				</p>
+			</div>
+		</div>
+		<!--logo头部-->
+		<div class="title2-b clearfix">
+			<dl>
+				<dt><a href="#com21"><img src="__TMPL__/simple/images/b-list01.png" alt="" /></a></dt>
+				<dd>
+					<a href="#com21">首页</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#com22"><img src="__TMPL__/simple/images/b-list02.png" alt="" /></a></dt>
+				<dd>
+					<a href="#com22">简介</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#com23"><img src="__TMPL__/simple/images/b-list03.png" alt="" /></a></dt>
+				<dd>
+					<a href="#com23">动态</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#com24"><img src="__TMPL__/simple/images/b-list04.png" alt="" /></a></dt>
+				<dd>
+					<a href="#com24">业务</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="#com25"><img src="__TMPL__/simple/images/b-list05.png" alt="" /></a></dt>
+				<dd>
+					<a href="#com25">联系我们</a>
+				</dd>
+			</dl>
+		</div>
+		<!--公司简介-->
+		<div class="company01-intro clearfix">
+			<div class="intros clearfix">
+				<div class="intro-l l">
+					<h2 class="titleBg" id="com22">企业简介</h2>
+					<!--<p class="clearfix">
+							<img class="l" src="{$comInfo.background}" alt="" />{$comInfo.desc}
+							<if condition="$from eq 'show'">
+								<a href="{:U('CompanyShow/descInfo',array('id'=>$comInfo['id']))}">更多&gt;&gt;</a>
+							</if>
+						</p>-->
+					<div class="cpy-desc clearfix">
+						<img class="l" src="{$comInfo.background}" alt="" /> {$comInfo.desc}
+						<if condition="$from eq 'show'">
+							<a href="{:U('CompanyShow/descInfo',array('id'=>$comInfo['id']))}" target="_blank">更多&gt;&gt;</a>
+						</if>
+					</div>
+				</div>
+				<div class="intro-r l">
+					<h2 class="titleBg" id="com23">企业动态</h2>
+					<ul class="introR-b">
+						<foreach name="newsInfo" item="news" key="news_k">
+							<if condition="($news_k eq 0) and ($news.img neq '')">
+								<li class="intoRB-first clearfix">
+									<img src="{$news.img}" alt="" class="l" />
+									<p class="l">
+										<a href="{:U('CompanyShow/newsInfo',array('id'=>$news['id']))}" target="_blank">{$news.title} <span class="r">{$news.add_time}</span></a>
+									</p>
+									<p class="l cut_content">
+										<span>{$news.content}</span>
+										<if condition="$from eq 'show'">
+											<a href="{:U('CompanyShow/newsInfo',array('id'=>$news['id']))}" target="_blank">更多&gt;&gt;</a>
+											<else/>
+											<a href="{:U('CompanyShow/newsInfo',array('id'=>$news['id']))}" target="_blank">更多&gt;&gt;</a>
+										</if>
+									</p>
+								</li>
+								<else/>
+								<li>
+									<i></i>
+									<if condition="$from eq 'show'">
+										<a href="{:U('CompanyShow/newsInfo',array('id'=>$news['id']))}" target="_blank">{$news.title}</a>
+										<else/>
+										<a href="{:U('CompanyShow/newsInfo',array('id'=>$news['id']))}" target="_blank">{$news.title}</a>
+									</if>
+									<span class="r">{$news.add_time}</span>
+								</li>
+							</if>
+						</foreach>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--公司简介结束-->
+		<!--公司业务开始-->
+		<div class="company01-business" id="com24">
+			<h2 class="titleBg">企业业务</h2>
+			<if condition="$storeInfo neq ''">
+				<div class="business01">
+					<div class="h-center">
+						<h2>仓储</h2></div>
+					<foreach name="storeInfo" item="store" key="store_k">
+						<div class="storage01">
+							<h3>仓储0{$store_k+1}</h3>
+							<ul class="stor clearfix">
+								<li>仓库类型：{$store.type}</li>
+								<li class="centerAll">仓库面积：{$store.size}m&sup2;</li>
+								<li class="rightAll">仓库层高：{$store.height}m</li>
+								<li>联系人：{$store.contacts}</li>
+								<li class="centerAll">联系电话：{$store.mobile}</li>
+								<li class="rightAll">&nbsp;</li>
+								<li>地址：{$store.address}</li>
+								<li class="centerAll">&nbsp;</li>
+								<if condition="$from eq 'show'">
+									<li class="rightAll">
+										<a href="{:U('CompanyShow/storeInfo',array('id'=>$store['id']))}" target="_blank">详情&gt;&gt;</a>
+									</li>
+								</if>
+							</ul>
+						</div>
+					</foreach>
+				</div>
+			</if>
+			<!--公司物流-->
+			<if condition="$deliveryInfo neq ''">
+				<div class="business01 business02">
+					<div class="h-center">
+						<h2>物流</h2></div>
+					<foreach name="deliveryInfo" item="delivery" key="delivery_k">
+						<div class="storage01">
+							<h3>物流0{$delivery_k+1}</h3>
+							<div class="bus02 clearfix">
+								<p class="l">出发地：{$delivery.begin}</p>
+								<p class="r">目的地：{$delivery.end}</p>
+								<p class="p03">车辆类型：{$delivery.type}</p>
+								<p class="p03">
+									物流简介：{$delivery.desc}
+								</p>
+							</div>
+						</div>
+					</foreach>
+				</div>
+			</if>
+			<!--包装-->
+			<if condition="$packingInfo neq ''">
+				<div class="business01 business03">
+					<div class="h-center">
+						<h2>包装</h2></div>
+					<div class="bus03">
+						<table>
+							<thead>
+								<tr>
+									<th>图片</th>
+									<th>包装方式</th>
+									<th>包装材料</th>
+									<th>&nbsp;</th>
+								</tr>
+							</thead>
+							<tbody>
+								<foreach name="packingInfo" item="packing" key="packing_k">
+									<tr>
+										<td>
+											<img src="{$packing.img}" alt="" />
+										</td>
+										<td>{$packing.packing_method}</td>
+										<td class="td3">{$packing.packing_material}</td>
+										<td class="td4">
+											<a href="{:U('CompanyShow/packingInfo',array('id'=>$packing['id']))}" target="_blank" class="tableA">更多</a>
+										</td>
+									</tr>
+								</foreach>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</if>
+			<!--包装结束-->
+			<!--待加工-->
+			<if condition="$processInfo neq ''">
+				<div class="business01 business04">
+					<div class="h-center">
+						<h2>加工</h2></div>
+					<foreach name="processInfo" item="process">
+						<div class="storage01">
+							<div class="bus02 clearfix">
+								<p class="p03">
+									<b>加工方式：</b>{$process.content}(备注：{$process.remarks})
+								</p>
+							</div>
+						</div>
+					</foreach>
+				</div>
+			</if>
+			<!--待加工结束-->
+			<!--待检测-->
+			<if condition="$checkInfo neq ''">
+				<div class="business01 business05">
+					<div class="h-center">
+						<h2>检测</h2></div>
+					<foreach name="checkInfo" item="check">
+						<div class="storage01">
+							<div class="bus02 clearfix">
+								<p class="p03">
+									<b>检测方法：</b>{$check.content}(备注：{$check.remarks})
+								</p>
+							</div>
+						</div>
+					</foreach>
+				</div>
+			</if>
+			<!--待检测结束-->
+		</div>
+		<!--公司业务结束-->
+		<!--联系我们-->
+		<div class="company01-footer" id="com25">
+			<div class="intros clearfix">
+				<h2 class="titleBg">联系我们</h2>
+				<p class="foot01">【地　址】{$comInfo.address}</p>
+				<p>【联系人】付老五 </p>
+				<p class="centerAll">【联系电话】{$comInfo.mobile}</p>
+			</div>
+		</div>
+		<!--联系我结束-->
+	</div>
+</block>
+<block name="script">
+	<script src="__JS__/head.js"></script>
+	<script>
+		$(function() {
+			//锚点跳转实现的动画
+			$('a[href*=#]:not([href=#])').click(function() {
+				if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if(target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top-40
+						}, 1000);
+						return false;
+					}
+				}
+			});
+			//第二版魔板样式跳转
+			$('.title2-b dl').mouseenter(function() {
+				var imgs = $(this);
+				switch(imgs.index()) {
+					case 0:
+						imgs.find('dt a').html('<img src="__TMPL__/light/images/nav11.png" alt="" />');
+						imgs.find('dd a').css('color', '#A88779');
+						break;
+					case 1:
+						imgs.find('dt a').html('<img src="__TMPL__/light/images/nav22.png" alt="" />');
+						imgs.find('dd a').css('color', '#A88779');
+						break;
+					case 2:
+						imgs.find('dt a').html('<img src="__TMPL__/light/images/nav33.png" alt="" />');
+						imgs.find('dd a').css('color', '#A88779');
+						break;
+					case 3:
+						imgs.find('dt a').html('<img src="__TMPL__/light/images/nav44.png" alt="" />');
+						imgs.find('dd a').css('color', '#A88779');
+						break;
+					case 4:
+						imgs.find('dt a').html('<img src="__TMPL__/light/images/nav55.png" alt="" />');
+						imgs.find('dd a').css('color', '#A88779');
+						break;
+				}
+			}).mouseleave(function() {
+				var imgs = $(this);
+				switch(imgs.index()) {
+					case 0:
+						imgs.find('dt a').html('<img src="__TMPL__/light/images/nav01.png" alt="" />');
+						imgs.find('dd a').css('color', '#666');
+						break;
+					case 1:
+						imgs.find('dt a').html('<img src="__TMPL__/light/images/nav02.png" alt="" />');
+						imgs.find('dd a').css('color', '#666');
+						break;
+					case 2:
+						imgs.find('dt a').html('<img src="__TMPL__/light/images/nav03.png" alt="" />');
+						imgs.find('dd a').css('color', '#666');
+						break;
+					case 3:
+						imgs.find('dt a').html('<img src="__TMPL__/light/images/nav04.png" alt="" />');
+						imgs.find('dd a').css('color', '#666');
+						break;
+					case 4:
+						imgs.find('dt a').html('<img src="__TMPL__/light/images/nav05.png" alt="" />');
+						imgs.find('dd a').css('color', '#666');
+						break;
+				}
+			});
+			//固定导航
+			var ta = $('.title2-b dd a').offset().top;
+			$(window).scroll(function() {
+				if($(window).scrollTop() >= ta) {
+					$('.fix_nav').show();
+				} else {
+					$('.fix_nav').hide();
+				}
+			});
+			//关于限制第二行隐藏的问题
+			var cut_content = $('.cut_content span');
+			if(cut_content.text().length>40){
+				cut_content.text(cut_content.text().slice(0,40)+'...');
+			}
+		});
+	</script>
+</block>

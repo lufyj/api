@@ -1,0 +1,87 @@
+<extend name="./base" />
+<block name="style">
+	<!--样式自定义开始-->
+	<!--样式自定义结束-->
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/fips.css" />
+</block>
+<block name="body">
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="{:U('user/profile')}">我的药都网</a>				
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />
+			<!--账户管理-->
+			<div class="right user-manage l">
+				<ul class="navs clearfix">
+					<li class="show">账户信息</li>
+					<li>我的积分</li>
+					<li>账号安全</li>
+				</ul>
+				<!--账户信息
+				-->
+				<ul class="user-msg msg02">
+					<li class="upload-li">
+						<span>上传头像 : </span>
+						<img src="__HOME__/user/images/center_my_03.jpg" alt="" />
+						<label for="head-img">修改头像</label>
+						<input type="file" id="head-img" />
+					</li>					
+					<li>
+						<span>姓名 : </span>
+						<input type="text" name="realname" value="{:session('user_sign.realname')}"/>
+					</li>
+					<li>
+						<span>手机号 : </span>
+						<input type="text" disabled="disabled" value="{:session('user_sign.mobile')}" />
+					</li>
+					<li>
+						<span>邮箱 : </span>
+						<input type="text" name="email" value="{$info.email}"/>
+					</li>					
+					<li>
+						<span>微信号 : </span>
+						<input type="text" name="weixin" value="{$info.weixin}"/>
+					</li>
+					<li>
+						<span>QQ : </span>
+						<input type="text" name="qq" value="{$info.qq}"/>
+					</li>					
+					<li>
+						<span>地址 : </span>
+						<input type="text" name="address" value="{$info.address}"/>
+					</li>			
+					<li class="sub-li">
+						<span>保存</span>
+					</li>
+				</ul>
+				<!--账户信息-->
+				<!--我的积分-->
+				<div class="msg02" style="display:none;">
+					这是我的积分页面，还没有完善，敬请期待！
+				</div>
+				<!--我的积分结束-->
+				<!--账号安全-->
+				<div class="msg02" style="display:none;">
+					这是我的账号安全页面，还没有完善，敬请期待！
+				</div>
+				<!--账号安全结束-->
+			</div>
+			<!--账户管理结束-->
+			
+			<!--<div class="publish-demand publish">
+				
+			</div>-->
+		</div>
+	</div>
+</block>
+<block name="script">
+	<!--脚本自定义开始-->
+	<script src="__HOME__/user/js/user.js" type="text/javascript" charset="utf-8"></script>
+	<!--脚本自定义结束-->
+</block>

@@ -1,0 +1,223 @@
+<extend name="Public/base" />
+<block name="style">
+	<link rel="stylesheet" href="" />
+	<style>
+		ul {
+			list-style: none;
+			margin: 0;
+		}
+		
+		.Adedit {
+			border: 1px solid #ddd;
+			font-size: 16px;
+			padding: 10px !important;
+			line-height: 38px;
+		}
+		
+		.edit-container {
+			font-size: 15px !important;
+			margin-bottom: 15px;
+		}
+		
+		label input[type=checkbox].ace,
+		label input[type=radio].ace {
+			z-index: -100!important;
+			width: 1!important;
+			height: 0!important;
+		}
+		
+		input[type=checkbox].ace,
+		input[type=radio].ace {
+			opacity: 0;
+			position: absolute;
+			z-index: 1;
+			width: 18px;
+			height: 18px;
+			cursor: pointer;
+		}
+		
+		.edit-con01 {
+			display: inline-block;
+			text-align: right;
+			width: 119px;
+		}
+		
+		.inline {
+			margin-right: 20px;
+		}
+		
+		.inline-w {
+			width: 7em;
+		}
+		
+		[class*='col-'] {
+			padding: 0px;
+		}
+		
+		.durg-name {
+			height: 600px;
+			overflow-y: auto;
+		}
+		
+		.drug-show {
+			border: 1px solid #ddd;
+			/*margin-top: 20px;*/
+		}
+		.drugs-lists a {
+			margin: 10px 10px 0 0;
+		}
+		
+		.form-actions {
+			background: none;
+			border-top: none;
+		}
+		
+		.drug-lists span {
+			display: inline-block;
+			width: 7em;
+		}
+		
+		.drug-lists{
+			padding-bottom: 20px;
+		}
+		.top {
+			margin:28px 0;
+			line-height: 34px;
+			border-top: 1px solid #e09b4d;
+			padding-top: 10px;
+		}
+		
+		.top>span {
+			color: #71502C;
+			font-size: 18px;
+			padding-left: 10px;
+			border-left: 4px solid #e09b4d;
+		}
+		.top b{
+			color: #999;
+			font-size: 18px;
+			cursor: pointer;
+			margin-top: 8px;
+		}
+		.all-select-div{
+			font-size: 24px;
+		}
+		.drug-lists>li{
+			padding: 0 20px;
+		}
+	</style>
+
+</block>
+<block name='navi'>
+	<li>客户管理</li>
+	<li>业务管理</li>
+</block>
+<block name="body">
+	<div class="page-header">
+		<h1>编辑业务</h1>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a data-toggle="tab" href="#tab1"><i class="green ace-icon fa fa-home bigger-120"></i>业务管理</a>
+				</li>
+			</ul>
+			<div class="tab-content clearfix form-horizontal">
+					<input type="hidden" name="id" value="{$info.id}">
+					<!-- 基础 -->
+					<div id="tab1" class="tab-pane fade active in">
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;企业名称：</label>
+							<div class="controls">
+								<input type="text" name="name" class="col-xs-10 col-sm-5" value="{$info.name|default=''}" disabled="disabled">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;联系电话：</label>
+							<div class="controls">
+								<input type="text" name="mobile" class="col-xs-10 col-sm-5" value="{$info.mobile|default=''}" disabled="disabled">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;企业地址：</label>
+							<div class="controls">
+								<input type="text" name="address" class="col-xs-10 col-sm-5" value="{$info.address|default=''}" disabled="disabled">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;认证时间：</label>
+							<div class="controls">
+								<input type="text" name="confirm_time" class="col-xs-10 col-sm-5" value="{$info.confirm_time|default=''}" disabled="disabled">
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 edit-container">
+						<div class="row">
+							<div class="col-xs-3 text-right">
+								<i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;业务管理：
+							</div>
+							<div class="col-xs-5 Adedit">
+								<foreach name="info.businessArr" item="v">
+									<label class='inline'>
+										<input type='checkbox' <if condition="$v.status eq '1'">checked=checked</if>  class='ace check_business' value='{$v.code}'/>
+										<span class='lbl'>&nbsp;&nbsp;{$v.content}</span>
+									</label>
+								</foreach>
+								</div>
+						</div>
+					</div>
+					<div class="clearfix form-actions">
+						<div class="col-md-offset-3 col-md-9">
+							<a href="javascript:;" id="submitBtn" class="btn btn-info submit-btn ajax-post"><i class="ace-icon fa fa-check bigger-110"></i>确 定</a>
+							<a class="btn btn-return" href="/admin.php?s=/Business/index.html"><i class="ace-icon fa fa-undo bigger-110"></i>返 回</a>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</block>
+
+<block name="script">
+	<script type="text/javascript">
+			//导航高亮
+			$(function (){
+				highlight_subnav("{:U('Business/index')}");
+				var check_business = $(".check_business");
+				$(".ajax-post").click(function (){
+					var _this = $(this);
+					var id = $('input[name="id"]').val();
+					var businessArr = [];
+					check_business.each(function (){
+						var self = $(this);
+						if (self.prop("checked")){
+							businessArr.push(self.val());
+						}
+					});
+					var business = businessArr.join(",");
+					var  data= {
+						id:id,
+						business:business
+					};
+					$.ajax({
+						type:"get",
+						url:"{:U('Business/edit')}",
+						data:data,
+						dataType:'json',
+						success:function (data){
+							if(data.code==1){
+								success('编辑成功', data.url , 1000);
+//								window.location.href=data.url;
+							}else{
+								fail('编辑失败', data.url , 1000);
+//								window.location.href=data.url;
+							}
+						},
+						error:function (error){
+							console.log(error)
+						}
+					});
+				});
+			});
+	</script>
+</block>

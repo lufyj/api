@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="full-screen" content="yes">-->
+	<!--<meta name="x5-fullscreen" content="true">-->
+    <title>药都网登录</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/regAndLogin.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+<div class="logo_wp">
+    <img src="../images/logo_big.png" alt="" class="logo_img">
+</div>
+<div class="login_wp">
+    <div>
+    	<i class="iconfont icon_tel"></i>
+    	<input type="text" class="tel input2" id="tel" placeholder="请输入手机号" maxlength="11">
+    </div>
+	<div>
+    	<i class="iconfont icon_psw"></i>
+    	<input type="password" class="password input2" id="psw" placeholder="6-20字符，区分大小写">
+    </div>
+    <button class="login_btn sub_btn">登录</button>
+    <div class="op_box">
+        <a href="./reg.html">新用户注册</a><span>|</span><a href="./findpsw.html">找回密码</a>
+    </div>
+    <div class="other_login">
+        <span class="other_hd">第三方登录</span>
+        <p class="wx_login">
+            <i></i><br>
+            微信
+        </p>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    rule.wxLogin = function () {
+        var code  = rule.getRequest().code,state = rule.getRequest().state;
+        var returnUrl = new LocalData().getData("returnUrl");
+        var redirectUrl = decodeURIComponent(returnUrl);
+        if (code && state){
+            $("body").hide();
+            //是微信登录回调来的  然后请求接口哪数据
+            $.get(rule.root + "Weixin/getUserOpenId" ,{code:code} , function (req) {
+                var code = req.code;
+                if (code == 1){
+                    var msg = req.msg;
+                    var userInfo = {};
+                        userInfo.uid = msg.id ,
+                        userInfo.mobile = msg.mobile,
+                        userInfo.realname = msg.realname,
+                        userInfo.token = msg.token;
+                        LocalData("user_info",userInfo);
+                        location.href = redirectUrl;
+                }
+            })
+        }
+    };
+    rule.wxLogin();
+    var cliclBol = true;
+    var returnUrl =decodeURIComponent(rule.getRequest().ReturnUrl || "./index.html");
+    $(".wx_login").click(function () {
+        new LocalData().setData("returnUrl" , encodeURIComponent(returnUrl));
+        rule.requestWx('http://m.yaoduwang.com/webApp/html/login.html');
+    })
+    $(".login_btn").click(function (){
+        if (!cliclBol) return false;
+        var mobile = $("#tel").val();
+        var psw = $("#psw").val();
+        if (!rule.phone(mobile)){
+            rule.showMsg(1 , "手机号格式不正确"  , 1000);
+            return false;
+        }
+        var data = {
+            mobile:mobile,
+            password:psw
+        }
+        cliclBol = false;
+        $.ajax({
+            url:rule.root + "User/login",
+            data:data,
+            type:'post',
+            success:function(req){
+                var code = req.code;
+                if (code == 1){
+                    var datas = req.data;
+                    var user_info = {};
+                    user_info.uid = datas.id;
+                    user_info.mobile = datas.mobile;
+                    user_info.realname = datas.realname;
+                    user_info.token = datas.token;
+                    LocalData("user_info",user_info);
+                    rule.showMsg(1 , "登录成功"  , 500 , returnUrl);
+                }else if (code == -1){
+                    cliclBol = true;
+                    rule.showMsg(1 , "手机号或者密码错误"  , 1000);
+                }
+            },
+            error:function(err){
+                cliclBol = true;
+                console.log(err);
+            }
+        })
+    });
+</script>
+</html>

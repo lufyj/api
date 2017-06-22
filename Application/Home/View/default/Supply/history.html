@@ -1,0 +1,224 @@
+<extend name="./base" />
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/titleDSG.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/trend.css" />
+	<link rel="stylesheet" type="text/css" href="__STATIC__/laydate/need/laydate.css" />
+	<!--[if lte IE 8]>
+        <script src="excanvas.js"></script>
+    <![endif]-->
+</block>
+<block name="body">
+	<div class="demand-detail">
+		<div class="detail-top">
+			<ul class="detail-nav clearfix">
+				<li>
+					<a href="/">首页</a>
+				</li>
+				<li>
+					<a href="{:U('supply/trend')}" <if condition="$act eq tre">class="active"</if>>市场价格</a>
+				</li>
+				<li>
+					<a href="{:U('supply/history')}" <if condition="$act eq his">class="active"</if>>历史价格</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="detail-middle">
+		<div class="detail-bread">
+			<i></i>
+			<b>当前位置：</b>&nbsp;
+			<a href="/">首页</a>&nbsp;&gt;&nbsp;
+			<a href="javascript:;">历史价格</a>
+		</div>
+		<!--关于市场价格开始-->
+		<div class="trend-t history-t">
+			<dl class="clearfix">
+				<dt class="l"><b>产地</b></dt>
+				<dd class="l">
+					<a href="###" class="active">河南</a>
+				</dd>
+			</dl>
+			<dl class="clearfix">
+				<dt class="l"><b>规格</b></dt>
+				<dd class="l">
+					<a href="" class="active">各种规格</a>
+					<a href="">统</a>
+					<a href="">大统</a>
+				</dd>
+			</dl>
+		</div>
+		<div class="history-m clearfix">
+			<div class="m-left l" id="line-chart">
+				<!--历史价格走势图-->
+			</div>
+			<!--查询历史价格-->
+			<div class="m-right r">
+				<ul>
+					<li>今日价格：
+						<font class="col-r">100.00</font>
+					</li>
+					<li class="col-r">选择对比时间：</li>
+					<li class="r-height">
+						<div class="h-date">
+							<input class="laydate-icon-dahong" id="date-start" type="text" value="" name="price1" />
+						</div>
+						<div class="h-date">
+							<input class="laydate-icon-dahong" id="date-end" type="text" value="" name="price1" />
+						</div>
+						<input type="button" value="开始比对" name="tijiao" />
+					</li>
+					<li>涨幅：
+						<font class="col-r">↑</font>
+						<font class="col-g">↓</font>347.4%</li>
+				</ul>
+			</div>
+		</div>
+		<!--关于市场价格结束-->
+		<!--当前品种的价格-->
+		<div class="history-b">
+			<p><span>当前品种历史价格：</span>
+				<a href="javascript:;">
+					<font>防己</font>&nbsp;&nbsp;
+					<font>大统</font>&nbsp;&nbsp;
+					<font>河南</font>
+				</a>
+			</p>
+			<table>
+				<thead>
+					<tr>
+						<td>年/月</td>
+						<td>1月份</td>
+						<td>2月份</td>
+						<td>3月份</td>
+						<td>4月份</td>
+						<td>5月份</td>
+						<td>6月份</td>
+						<td>7月份</td>
+						<td>8月份</td>
+						<td>9月份</td>
+						<td>10月份</td>
+						<td>11月份</td>
+						<td>12月份</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2015年</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+					</tr>
+					<tr>
+						<td>2016年</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+						<td>41.00</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--当前市场价格结束-->
+	</div>
+</block>
+<block name="script">
+	<script src="__STATIC__/laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__STATIC__/highcharts/js/highcharts.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function() {
+			//关于选择日期
+			laydate.skin('dahong');
+			var start = {
+				elem: '#date-start', //选择ID为START的input  
+				format: 'YYYY-MM-DD', //自动生成的时间格式  
+				min: laydate.now(), //设定最小日期为当前日期  
+				max: '2099-06-16', //最大日期  
+				istime: true, //必须填入时间  
+				istoday: false, //是否是当天  
+				start: laydate.now(0, "YYYY-MM-DD"), //设置开始时间为当前时间  
+				choose: function(datas) {
+					end.min = datas; //开始日选好后，重置结束日的最小日期  
+					end.start = datas //将结束日的初始值设定为开始日  
+				}
+			};
+			var end = {
+				elem: '#date-end',
+				format: 'YYYY-MM-DD',
+				min: laydate.now(),
+				max: '2099-06-16',
+				istime: true,
+				istoday: false,
+				start: laydate.now(0, "YYYY-MM-DD"),
+				choose: function(datas) {
+					start.max = datas; //结束日选好后，重置开始日的最大日期  
+				}
+			};
+			$('#date-start').val(start.start);
+			$('#date-end').val(end.start);
+			laydate(start);
+			laydate(end);
+		});
+		/* 显示折线图 */
+		var arrX = ['一月', '二月', '三月', '四月', '五月', '六月','七月', '八月', '九月', '十月', '十一月', '十二月'];
+		var data = [70,85,80,90,70,120,70,100,50,70,70,80];
+		$('#line-chart').highcharts({
+			title: {
+				text: '最近防己历史价格对比图',
+				x: -20,//center
+				style:{color: '#e62b2e',fontSize: '16px'}
+			},
+			subtitle: {
+				text: '来源: 药都网',
+				x: -20
+			},
+			xAxis: {
+				tickInterval:2,
+				categories:arrX  
+			},
+			yAxis: {
+				title: {
+					text: '价格 (元/公斤)'
+				},
+				plotLines: [{
+					value: 0,
+					width: 1,
+					color: '#808080'
+				}],
+			},
+			tooltip: {
+				valueSuffix: '元/公斤',
+				crosshairs: [{ // 设置准星线样式
+					width: 2
+				}]
+			},
+			legend: {
+				enabled: false
+			},
+			credits: {
+				enabled: false
+			},
+			series: [{
+				name: '防己',
+				type: 'spline',
+				data: data
+			}]
+		});
+	</script>
+</block>

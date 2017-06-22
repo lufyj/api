@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>帮助中心</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/help.css" />
+		<script src="../js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--<div class="header">
+			<a href="javascript:;"><span></span><b>帮助中心</b></a>
+		</div>-->
+		<div class="help-main">
+			<!--关于制作帮助中心页面-->
+			<!--新手入门-->
+			<div>
+				<div class="main-t">
+					<span><img src="../images/green.png"/></span>新手入门<i class="rotate"></i>
+				</div>
+				<div class="help-b show">
+					<ul>
+						<li>
+							<a href="help/demand.html">求购指南<i></i></a>
+						</li>
+						<li>
+							<a href="help/supply.html">供应指南<i></i></a>
+						</li>
+						<li>
+							<a href="help/register.html">会员注册<i></i></a>
+						</li>
+						<li>
+							<a href="help/login.html">如何登录<i></i></a>
+						</li>
+						<li>
+							<a href="help/findpwd.html">找回密码<i></i></a>
+						</li>
+						<li>
+							<a href="help/attention.html">我的关注<i></i></a>
+						</li>
+						<li>
+							<a href="help/personal.html">个人资料<i></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--企业用户-->
+			<div>
+				<div class="main-t">
+					<span><img src="../images/firm.png"/></span>企业用户<i></i>
+				</div>
+				<div class="help-b">
+					<ul>
+						<li>
+							<a href="help/approve.html">企业认证<i></i></a>
+						</li>
+						<li>
+							<a href="help/service.html">企业服务<i></i></a>
+						</li>
+						<li>
+							<a href="help/card.html">企业名片<i></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--支付方式-->
+			<div>
+				<div class="main-t">
+					<span><img src="../images/pay.png"/></span>支付方式<i></i>
+				</div>
+				<div class="help-b">
+					<ul>
+						<li>
+							<a href="help/payment1.html">在线支付<i></i></a>
+						</li>
+						<li>
+							<a href="help/payment2.html">线下支付<i></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--企业用户-->
+			<div>
+				<div class="main-t">
+					<span><img src="../images/about.png"/></span>关于我们<i></i>
+				</div>
+				<div class="help-b">
+					<ul>
+						<li>
+							<a href="help/brief.html">公司简介<i></i></a>
+						</li>
+						<li>
+							<a href="help/contact.html">联系客服<i></i></a>
+						</li>
+						<li>
+							<a href="help/feedback.html">意见反馈<i></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--关于制作帮助中心页面结束-->
+		</div>
+	</body>
+	<script>
+		$(function(){
+			$('.help-main').on('click','.main-t',function(){
+				var _this = $(this);
+				var next=$(this).next('.help-b');
+				if(next.hasClass('show')){
+					_this.find('i').removeClass('rotate');
+					next.removeClass('show');
+				}else{
+					var parents = _this.parent().siblings();
+					parents.find('.show').removeClass('show');
+					parents.find('i.rotate').removeClass('rotate');
+					_this.find('i').addClass('rotate');
+					next.addClass('show');
+				}
+			});
+			var href='';
+			$('.help-b').on('click','li',function(){
+				href = $(this).find('a').attr('href');
+				$(this).parents('.help-b').addClass('show');
+				sessionStorage.setItem('href',href);
+			});
+			var hrefs = sessionStorage.getItem('href');
+			if(hrefs){
+				$('.help-b li a').each(function(){
+					var _this= $(this);
+					if(_this.attr('href')==hrefs){
+						var i = _this.parents('.help-b');
+						i.parent().siblings().find('.show').removeClass('show').prev().find('i').removeClass('rotate');
+						i.addClass('show');
+						i.prev().find('i').addClass('rotate');
+					}
+				});
+			}
+		});
+	</script>
+</html>

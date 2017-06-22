@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script type="text/javascript">
+        if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+        if (!isMobile()) location.href = "./bind.html";
+    </script>
+    <style>
+        .myflw_tit{padding: 0 1.6rem;font-size: 2.6rem;line-height: 5rem;}
+        .myflw_bd{background-color: #fff;}
+        .myflw_bd li{padding: 1.6rem;border-bottom: 0.1rem solid #ccc;}
+        .flw_txt {display: inline-block;margin-left: 2rem;}
+        .flw_txt p{line-height: 5.5rem;}
+        .flw_txt p:last-child{margin-left: 0.5rem;}
+        .flw_img , .flw_txt{vertical-align: middle;}
+        .flw_n{font-size: 3rem;}
+        .flw_cate{font-size: 1.6rem;color: #666;}
+        .flw_img{width: 12rem;height: 12rem;}
+        .myflw_list a{display: inline-block;width: 100%;}
+    </style>
+</head>
+<body>
+<header>
+    <a href="./persional.html" class="back_btn">
+        <i class="icon_zjt iconfont"></i>返回
+    </a>
+    <span>我的关注</span>
+</header>
+<div class="ydw_wp">
+    <div class="main myflw">
+        <div class="myflw_tit">
+            我的关注<span class="myflw_n"></span>
+        </div>
+        <div class="myflw_bd">
+            <ul class="myflw_list">
+
+                <!--<li>-->
+                    <!--<a href="">-->
+                    <!--<img src="../images/tjimg.png" class="flw_img" alt="">-->
+                    <!--<div class="flw_txt">-->
+                        <!--<p class="flw_n">雷万</p>-->
+                        <!--<p class="flw_cate">全草类</p>-->
+                    <!--</div>-->
+                    <!--</a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/load.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var listWp =  $(".myflw_list");
+            $.postT(rule.root + "Follow/follow_lists" ,'', function (req){
+                var li = '';
+                var code = req.code;
+                if (code == 1){
+                    var datas = req.data;
+                    var datasL = datas.length;
+                    for (var i = 0; i < datasL;i++){
+                        var goods_id = datas[i].goods_id,
+                            goods_img = datas[i].goods_img,
+                            goods_name = datas[i].goods_name,
+                            title = datas[i].title;
+                        li += '<li data-id="'+goods_id+'"><img src="'+ goods_img +'" class="flw_img" alt=""><div class="flw_txt"><p class="flw_n">'+goods_name+'</p><p class="flw_cate">'+title+'</p></div></li>';
+                    }
+                    $(".myflw_n").text("(" + datasL + ")");
+                    listWp.append(li);
+                }else if (code == 0){
+                    rule.showMsg(2 , "没有更多数据..." ,".myspy_lists");
+                }else if (code == 103){
+                    var hrefUrl = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+                    rule.showMsg(1 , "该账号已在其他地方登陆,请重新登录" , 2000 , hrefUrl);
+                }
+            });
+        listWp.on("click" , "li" , function () {
+            var _this = $(this);
+            var param = {};
+            param.goods_name = _this.find(".flw_n").text();
+            param.id = _this.attr("data-id");
+            new LocalData().setData("goodsmsg" , param);
+            location.href = "./goodsmsg.html";
+        })
+    });
+</script>
+</html>

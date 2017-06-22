@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+    <title>供应列表</title>
+    <style>
+        .box_hd span{font-size: 3.2rem;}
+        .list_bd {font-size: 2.2rem;}
+        .box_hd a{color:#e6282b;margin-top:0.8rem;}
+        .frist_i{width: 17%;}
+        .second_i{width:25%;}
+        .third_i{width:24%;}
+        .list-item li , .hd_ul li{float: left;text-align: center;border-bottom:2px solid #ccc;overflow: hidden; white-space: nowrap; }
+        .list-item{line-height:5.4rem;}
+        .hd_ul{background-color: #fff;line-height:5.8rem;font-size: 2.4rem;border-left: 2px solid #ccc;border-top:2px solid #ccc;}
+        .hd_ul>li{border-right: 2px solid #ccc;box-sizing: border-box;}
+    </style>
+</head>
+<body>
+<header>
+    <a href="javascript:;" class="back_btn" id="back_btn">
+        <i class="icon_zjt iconfont"></i>返回
+    </a>
+    <span>供应列表</span>
+</header>
+<div class="ydw_wp">
+    <div class="list_hd">
+        <ul class="hd_ul clearfix hd1">
+            <li class="frist_i">单价</li>
+            <li class="second_i">产地</li>
+            <li class="frist_i">规格</li>
+            <li class="frist_i">联系人</li>
+            <li class="third_i">电话</li>
+        </ul>
+    </div>
+    <div class="list_bd">
+        <ul class="list_ul spy_ul">
+            <!--<li class="list-item">-->
+            <!--<ul class="clearfix">-->
+            <!--<li class="frist_i">17</li>-->
+            <!--<li class="second_i">较广</li>-->
+            <!--<li class="frist_i">通货</li>-->
+            <!--<li class="frist_i">荆云鹏</li>-->
+            <!--<li class="third_i">15638215985</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+        </ul>
+    </div>
+</div>
+</body>
+<script src="../js/load.js"></script>
+<script>
+    var goodsName = decodeURI(rule.getRequest().goodsName);
+    var listWp = $(".spy_ul");
+    var param = {
+        clientType:1,
+        num:20
+    }
+    appendLoad(listWp)
+    param.goods_name = goodsName;
+    rule.scrollEvent = function (fn) {
+        var lastId = listWp.children(":last").attr("data-id");
+        param.minId = lastId || "";
+        $.post(rule.root + 'AppSupply/supply_lists' , param , function (req) {
+            if (req.code == 1){
+                var str = '';
+                var datas = req.data,dataL = datas.length;
+                for (var i = 0; i < dataL; i++){
+                    var id = datas[i].id;
+                    var frist  =  datas[i].price;
+                    var originArea = datas[i].origin_area;
+                    var attrName = datas[i].goods_attr_name;
+                    var contacts = datas[i].contacts;
+                    var mobile = datas[i].mobile;
+                    str += ' <li class="list-item" data-id="'+ id +'"><a href="./supplydetail.html?id='+id+'"><ul class="clearfix"><li class="frist_i">'+ frist +'</li><li class="second_i">'+ originArea +'</li><li class="frist_i">'+ attrName +'</li><li class="frist_i">'+ contacts +'</li><li class="third_i">'+ mobile +'</li></ul></a></li>'
+                }
+                listWp.append(str);
+                if (dataL < param.num){
+                    $(".load_wp").text("没有更多数据");
+                    return;
+                }
+                fn&&fn();
+            }else if (req.code == 0){
+                $(".load_wp").text("没有更多数据")
+            }
+        })
+    }
+    rule.scrollEvent();
+</script>
+</html>

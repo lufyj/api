@@ -1,0 +1,37 @@
+<extend name="Public/base" />
+<block name='navi'><li>求购管理</li><li>求购列表</li></block>
+<block name="body">
+    <div class="page-header"><h1>求购列表</h1></div>
+    <div class="space"></div>
+    <div class="row">
+        <div class="col-xs-12">
+        	<div class="alert alert-danger">
+				<button type="button" class="close" data-dismiss="alert">
+					<i class="ace-icon fa fa-times"></i>
+				</button>							
+				<span class="label label-warning arrowed arrowed-right">药都网</span> 此颜色标示为前台用户自定义药品名称							
+				<br>
+			</div>
+            <div class="col-xs-6">
+                <form onsubmit="return false;" id="search-form">
+                    <div style="margin-bottom:10px;">                    	
+                        <select name="cate_id">
+                        	<option>请选择分类</option>	                        	
+                        	<foreach name="cates" item="vo" >
+                        	    <option value="{$vo.id}">{$vo.title}</option>
+                        	</foreach>		
+						</select>                 
+                        <input type="text" name="realname" class="input-sm" placeholder="请输入联系人或手机号"/>                     
+                        <a href="javascript:void(0)" class="fm-button btn btn-sm btn-info search">查询</a>                                               
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-6 ">
+                <a class="fm-button btn btn-sm btn-success pull-right" href="{:U('add')}">新 增</a>
+            </div>
+            <div class="col-xs-12" id="ajax_table">      
+            	<include file='table'/>            
+            </div>
+        </div>
+    </div>
+</block>

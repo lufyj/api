@@ -1,0 +1,7 @@
+.title { text-align: center;font-size: 1.33rem;line-height: 1.91rem; color: #000;font-weight: 700}
+.price-wp {padding: 0 3%;padding-top:0.9rem;}
+.msg-div {text-align: center;font-size: 0.95rem;line-height: 1.3rem;margin-top: 0.1rem;}
+.msg-div .t {margin-right: 2.8%;}
+.msg-div span {color: #999;}
+.main-content{font-size: 1.25rem;line-height: 1.7rem;padding-top: 0.4rem;text-align: justify;}
+.main-content img{width: 100%;display: block;margin: 0.8rem auto}

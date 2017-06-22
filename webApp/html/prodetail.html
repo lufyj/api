@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/share.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body class="dcp">
+
+<div class="main ydw_wp">
+    <header>
+        <a href="./discover.html" class="back_btn">
+            <i class="icon_zjt iconfont"></i>返回
+        </a>
+        <span>加工详情</span>
+    </header>
+    <div class="middle">
+        <ul>
+            <li>
+                <div class="c">
+                    <b class="line dib"></b>
+                </div>
+                <span class="ft_s dib">加工方式: </span><span class="process_type bhd_s dib"></span>
+            </li>
+            <li>
+                <div class="c"><b class="line dib"></b></div>
+                <span class="ft_s dib">联系方式: </span><div class="bhd_s dib">
+                <span class="name_span"></span><br>
+                <span class="tel_span"></span>
+            </div>
+            </li>
+            <li class="dcp_sp">
+                <i class="c dib"></i>
+                <span class="ft_s dib">备　　注: </span>
+                <span class="bhd_s dib remark">
+               			 </span>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="../js/lists.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var id = parseInt(rule.getRequest().id);
+    var data = {
+        clientType: 1,
+        id: id
+    };
+    $.ajax({
+        url: rule.root + "AppCompany/processInfo",
+        data: data,
+        type: "post",
+        success: function(req) {
+            var code = req.code;
+            if(code == 1) {
+                var datas = req.data;
+                var contacts = datas.contacts;
+                var content = datas.content;
+                var mobile = datas.mobile;
+                var remarks = datas.remarks;
+                $(".process_type").text(content);
+                $(".name_span").text(contacts);
+                $(".tel_span").text(mobile);
+                $(".remark").text(remarks);
+                var obj = $('.middle li');
+                line(obj);
+            }
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    })
+</script>
+
+</html>

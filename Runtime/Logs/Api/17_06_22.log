@@ -1,0 +1,1456 @@
+[ 2017-06-22T14:26:19+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0290s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0320s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0290s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '' AND `password` = '' LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0290s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 30 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 30 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T14:26:48+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0370s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0980s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.1020s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '' AND `password` = '' LIMIT 1   [ RunTime:0.0600s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0920s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 30 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 30 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T14:31:58+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0290s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0280s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0290s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0290s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '' AND `password` = '' LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0290s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 30 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 30 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T14:35:51+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0380s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0330s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0360s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '' AND `password` = '' LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0320s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 30 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 30 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T14:36:02+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0250s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0240s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '' AND `password` = '' LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0240s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 30 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 30 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T14:41:26+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0160s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0190s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0230s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '' AND `password` = '' LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0160s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 30 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 30 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T14:42:17+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0170s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0150s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0160s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '' AND `password` = '' LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0170s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 30 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 30 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T14:47:51+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0280s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '15638215985' AND `password` = 'ea75b1fd6ef80f4d60848c053b80521d' LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0290s ]
+SQL: UPDATE `ydw_user` SET `last_login_time`='1498114071',`token`='cd43407bf85585d8516d5263147cb7ea' WHERE ( id=3 ) [ RunTime:0.0270s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 28 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 28 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T14:50:34+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0240s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0240s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0240s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '15638215985' AND `password` = 'ea75b1fd6ef80f4d60848c053b80521d' LIMIT 1   [ RunTime:0.0220s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0220s ]
+SQL: UPDATE `ydw_user` SET `last_login_time`='1498114234',`token`='ad0939b5cc6b94be91909e230409a308' WHERE ( id=3 ) [ RunTime:0.0220s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 28 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 28 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T14:51:16+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0170s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0160s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0160s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '15638215985' AND `password` = 'ea75b1fd6ef80f4d60848c053b80521d' LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0160s ]
+SQL: UPDATE `ydw_user` SET `last_login_time`='1498114276',`token`='0ef3aba913ab9d1f987ad43c54c41f9c' WHERE ( id=3 ) [ RunTime:0.0150s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 28 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 28 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T15:08:55+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0440s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0440s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0390s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '15638215985' AND `password` = 'ea75b1fd6ef80f4d60848c053b80521d' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0420s ]
+SQL: UPDATE `ydw_user` SET `last_login_time`='1498115335',`token`='9aa067363470b813535a6dfcd44084f4' WHERE ( id=3 ) [ RunTime:0.0550s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 28 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 28 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T15:52:20+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0550s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0230s ]
+NOTIC: [8] Undefined variable: list D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 67 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 142 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 142 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:18:18+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0310s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:18:18+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0280s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:18:34+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0360s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:18:35+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0240s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:19:29+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0410s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0550s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:19:29+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0240s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0280s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:21:08+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0270s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0350s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:21:09+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0370s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0240s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:21:33+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:21:33+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0440s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:22:08+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0230s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:22:46+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0240s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0240s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:22:47+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0240s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:22:59+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0330s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0430s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:23:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0220s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0270s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:23:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0240s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0250s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:23:27+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0500s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0490s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:24:07+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.2880s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0310s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:25:32+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0340s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0310s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:25:59+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0240s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:26:19+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:26:36+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0270s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0300s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:26:56+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:26:57+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0250s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:27:06+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0240s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0240s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:27:43+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0340s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0390s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:29:22+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0250s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:29:46+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0280s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0320s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:30:02+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0300s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0270s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:30:02+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0230s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:30:54+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0300s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:31:57+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0360s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:32:05+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0290s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:32:37+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0430s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0510s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:33:01+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0270s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0350s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:33:01+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:33:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0650s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0470s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:33:18+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0420s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0480s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:34:45+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0240s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0250s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:37:02+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0320s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.1220s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:37:03+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0240s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0240s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:39:03+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0620s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0400s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:39:03+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0500s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0410s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:39:16+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0460s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0430s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:39:52+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0290s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0250s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:44:33+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0270s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0240s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:50:28+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0670s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0540s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:50:39+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0420s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0310s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:51:16+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.2560s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0510s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:51:17+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0590s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0900s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:51:17+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0740s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0570s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:51:17+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0320s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0820s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:51:55+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0250s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:52:44+08:00 ] 192.168.2.43 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0290s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:52:46+08:00 ] 192.168.2.191 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0240s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0310s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:53:11+08:00 ] 192.168.2.191 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0270s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0400s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:53:51+08:00 ] 192.168.2.191 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0270s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:58:31+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0300s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0270s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T17:58:32+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/demand_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0270s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0310s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 48 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:01:01+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0270s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:01:02+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0290s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:01:02+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0430s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:01:22+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0250s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:01:34+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:01:46+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:02:01+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:02:01+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0500s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:02:02+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0250s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:02:07+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0350s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0520s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:03:54+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0340s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:06:04+08:00 ] 192.168.2.121 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0280s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0350s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:07:13+08:00 ] 192.168.2.121 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.3220s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.5930s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:07:15+08:00 ] 192.168.2.121 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:07:30+08:00 ] 192.168.2.121 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0240s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:07:44+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0260s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:08:02+08:00 ] 192.168.2.121 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0470s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0550s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:10:25+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0360s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0420s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:11:39+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0260s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:11:40+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0250s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0240s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:11:41+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0380s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0540s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-06-22T18:11:41+08:00 ] 192.168.2.141 /ydwAPI/index.php?s=Api/AppShare/supply_share
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0510s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0380s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppShareController.class.php on line 15 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+

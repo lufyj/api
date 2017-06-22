@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>药都网--支付保证金</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" href="../css/payment.css" />
+		<script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+            if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+		</script>
+	</head>
+	<body>
+		<header>
+	        <a href="javascript:void(0);" class="back_btn" id="back_btn">
+	            <i class="icon_zjt iconfont"></i>
+	        </a>
+	        <span>支付保证金</span>
+   		</header>	
+   		<div class="ydw_wp">
+   			<section>
+   				<p class="pay-ts">保证金额度：200-500元之间，金额越大，推广力度越大。</p>
+   				<p class="pay-ts2">选择支付宝交易，必须选择金额。</p>
+   				<ul class="pay-select">
+   					<li data-pay="1">
+   						<dl>
+   							<dt>
+   								<i class="iconfont icon-zhuanzhang"></i>
+   							</dt>
+   							<dd>
+   								<h2>转账</h2>
+   								<p>稍后客服将会电话与您联系，请保持电话畅通。</p>
+   							</dd>
+   							<dd>
+   								<i class="iconfont icon-wx"></i>
+   							</dd>
+   						</dl>
+   					</li>
+   					<li data-pay="2">
+   						<dl>
+   							<dt>
+   								<i class="iconfont icon-zhifubao"></i>
+   							</dt>
+   							<dd>
+   								<h2>支付宝</h2>
+   								<p>客服不会以任何方式索要您的验证码！</p>
+   							</dd>
+   							<dd>
+   								<i class="iconfont icon-wx"></i>
+   							</dd>
+   						</dl>
+   						<div class="pay-zfb-sel" style="display: none;">
+   							<span>选择金额</span>
+	   						<div class="money-sel">
+	   							<a href="javascript:;">200 元</a>
+	   							<a href="javascript:;">300 元</a>
+	   							<a href="javascript:;">400 元</a>
+	   							<a href="javascript:;">500 元</a>
+	   						</div>
+   						</div>
+   					</li>
+   					<li data-pay="0">
+   						<dl>
+   							<dt>
+   								<i class="iconfont icon-bzf"></i>
+   							</dt>
+   							<dd>
+   								<h2>不支付保证金</h2>
+   								<p>发布后若想重新支付保证金，可联系客服进行操作。</p>
+   							</dd>
+   							<dd>
+   								<i class="iconfont icon-wx"></i>
+   							</dd>
+   						</dl>
+   					</li>
+   				</ul>
+   				<div class="pay-btn">
+   					<button type="button" id="paySubmit" class="active">确定</button>
+   				</div>
+   			</section>
+   		</div>
+   		<script src="../js/payment.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

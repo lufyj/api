@@ -1,0 +1,29 @@
+<extend name="Public/base" />
+<block name='navi'>
+    <li>商品管理</li>
+    <li>规格管理</li>
+</block>
+<block name="body">
+    <div class="page-header">
+        <h1>规格列表</h1>
+    </div>
+    <div class="space"></div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-6">
+                <form onsubmit="return false;" id="search-form">
+                    <div style="margin-bottom:10px;">
+                        <input type="text" name="attr_name" class="input-sm" placeholder="请输入属性名">
+                        <a href="javascript:void(0)" class="fm-button btn btn-sm btn-info search">查询</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-6 ">
+                <a class="fm-button btn btn-sm btn-success pull-right" href="{:U('add')}">新 增</a>
+            </div>
+            <div class="col-xs-12" id="ajax_table">      
+            	<include file='table'/>
+            </div>
+        </div>
+    </div>
+</block>

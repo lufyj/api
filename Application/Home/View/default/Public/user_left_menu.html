@@ -1,0 +1,76 @@
+<ul class="user-nav l">
+    <li>
+        <div class="one-level">
+            <img src="__HOME__/user/images/center_03.png" alt="" />账户管理
+        </div>
+        <ul class="two-level">
+            <li <if condition="$act eq profile">class="active"</if>>
+                <a href="{:U('user/profile')}">账户信息</a>
+            </li>
+            <li><a href="#">账户安全</a></li>
+            <li <if condition="$act eq 'comConfirm'">class="active"</if>><a href="{:U('CompanyConfirm/confirmInfo')}" >认证管理</a></li>
+        </ul>
+    </li>
+    <eq name="Think.session.user_auth" value="2">
+    <li>
+        <div class="one-level">
+            <img src="__HOME__/user/images/center_02.png" alt="" />企业管理
+        </div>
+        <ul class="two-level">
+            <li <if condition="$act eq comBase">class="active"</if>>
+                <a href="{:U('Company/baseInfo')}">基础信息</a>
+            </li>
+            <li <if condition="$act eq comNews">class="active"</if>>
+                <a href="{:U('Company/newsInfo')}">企业动态</a>
+            </li>
+            <eq name="Think.session.business_auth" value="1">
+            <li <if condition="$act eq comBus">class="active"</if>>
+                <a href="{:U('Company/businessInfo')}">业务管理</a>
+            </li>
+            </eq>
+        </ul>
+    </li>
+    </eq>
+    <li>
+        <div class="one-level">
+            <img src="__HOME__/user/images/center_08.png" alt="" />求购管理
+        </div>
+        <ul class="two-level">
+        	<li <if condition="$act eq tender">class="active"</if>>
+            	<a href="{:U('demand/tender')}">我的投标</a>
+            </li>        	
+            <li <if condition="$act eq dem">class="active"</if>>
+                <a href="{:U('demand/index')}">我的求购</a>
+            </li>             
+            <li <if condition="$act eq dem_pub">class="active"</if>>
+            	<a href="{:U('demand/publish')}">发布求购</a>
+            </li>                       
+        </ul>
+    </li>
+    <li>
+        <div class="one-level">
+            <img src="__HOME__/user/images/center_13.png" alt="" />供应管理
+        </div>
+        <ul class="two-level">        	
+        	<li <if condition="$act eq sup">class="active"</if>>
+                <a href="{:U('supply/index')}">我的供应</a>    
+            </li>
+            <li <if condition="$act eq sup_pub">class="active"</if>>
+                <a href="{:U('supply/publish')}">发布供应</a>
+            </li>            
+        </ul>
+    </li>
+    <li>
+        <div class="one-level">
+            <img src="__HOME__/user/images/center_06.png" alt="" />消息管理
+        </div>
+        <ul class="two-level">
+            <li <if condition="$act eq follow">class="active"</if>>
+                <a href="{:U('user/follow')}">我的关注</a>
+            </li>
+            <li <if condition="$act eq suggest">class="active"</if>>
+                <a href="{:U('user/suggest')}">意见反馈</a>
+            </li>
+        </ul>
+    </li>
+</ul>

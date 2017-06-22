@@ -1,0 +1,174 @@
+/**关于市场价格页面**/
+.trend-t{
+	margin:15px 0;
+}
+.trend-b dt,.trend-b dd{
+	border:1px solid #ddd;
+	padding:10px;
+}
+.trend-t dt{
+    width: 157px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 30px;
+    background: #FAFAFA;
+}
+.trend-t dd{
+	border-left:none;
+	width:1000px;
+}
+.trend-t a{
+    margin-bottom: 5px;
+    display: inline-block;
+    padding: 2px 10px;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+}
+.trend-t a.active,.trend-t a:hover{
+    background: #E62B2E;
+    border-radius: 3px;
+    color: #fff;
+}
+.trend-t a:hover{
+	text-decoration: none;
+}
+.trend-m table{
+	width:100%;
+	border:1px solid #ddd;
+	text-align: center;
+	font-size:14px;
+}
+.trend-m thead td{
+	font-weight: bold;
+}
+.trend-m td{
+	border:1px solid #ddd;
+	height:40px;
+}
+td.trend-a{
+	width:9%;
+}
+td.trend-a a{
+	display: inline-block;
+    background: #eee;
+    border: 1px solid #cfcfcf;
+    line-height: 30px;
+    padding: 0 15px;
+}
+td.trend-a a:hover{
+	text-decoration: none;
+	background: #E62B2E;
+	color:#fff;
+	border-color:#e62b2e;
+}
+.col-r{
+	color:#E62B2E;
+}
+.col-g{
+	color:#008000;
+}
+.trend-m tbody tr:hover{
+	background: #fafafa;
+}
+/**关于历史价格页面**/
+.history-t dl{
+	border:1px solid #ddd;
+	border-top:none;
+}
+.history-t dl:first-child{
+	border-top:1px solid #ddd;
+}
+.history-t dt{
+	height:35px;
+	line-height:35px;
+}
+.history-t dd{
+	border-left:1px solid #ddd;
+	padding-top:5px;
+	padding-left:10px;
+}
+.history-t{
+	margin-bottom:0;
+}
+.history-m{
+	border:1px solid #ddd;
+	border-top:none;
+}
+.m-left{
+	width:68%;
+	margin-right:1.5%;
+}
+.m-right{
+	width:30%;
+}
+.m-right li{
+	border-left:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	height:40px;
+	line-height: 40px;
+	padding-left:15px;
+	font-size:14px;
+}
+.col-r{
+	font-weight:bold;
+	font-size:15px;
+}
+li.r-height{
+	height:auto;
+}
+.m-right input[type='button']{
+	width:86.5%;
+	height:40px;
+	line-height:40px;
+	background: #E62B2E;
+	color:#fff;
+	text-align: center;
+	margin:10px 0;
+	cursor:pointer;
+}
+.m-right input[type='button']:hover{
+	background: red;
+}
+.h-date input{
+	border:1px solid #ddd;
+	height:40px;
+	line-height:40px;
+	width:80%;
+	margin-top:10px;
+	padding:0 10px;
+}
+.history-b p{
+	border:1px solid #ddd;
+	border-bottom:none;
+	background: #fafafa;
+	height:40px;
+	line-height:40px;
+	margin-top:15px;
+	font-size:14px;
+	font-weight:bold;
+}
+.history-b p span{
+	color:#e62b2e;
+	padding-left:10px;
+}
+.history-b table{
+	width:100%;
+	border:1px solid #ddd;
+	text-align: center;
+	color:#f50;
+}
+.history-b table td{
+	border:1px solid #ddd;
+	width:7.6%;
+	height:40px;
+}
+.history-b thead td,.history-b tbody td:first-child{
+	font-weight:bold;
+	background: #fafafa;
+	color:#000;
+}
+.history-b tbody tr:hover{
+	background:#f3f3f3;
+}

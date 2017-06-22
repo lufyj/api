@@ -1,0 +1,257 @@
+<extend name="./base" />
+<block name="style">
+<link rel="stylesheet" type="text/css" href="__HOME__/goods/css/drugdetails.css"/>
+</block>
+<block name="body">
+<div class="details-wp">
+	<div class="title clearfix">
+		<span class="l">{$info.goods_name}</span>
+		<!-- <div class="l clearfix">
+			<span><a href="###">供应</a></span>
+			<span><a href="###">求购</a></span>
+			<span><a href="###">知识</a></span>
+		</div> -->
+		<eq name='info.favor' value='1'>
+			<b class="care-btn r" id="follow_btn">关注</b>	
+		<else/>
+			<b class="care-btn r">已关注</b>
+		</eq>				
+	</div>			
+	<div class="drug-knowledge">
+		<div class="top clearfix">
+			<span>{$info.goods_name}</span>
+		</div>
+		<div class="main main_txt clearfix">
+			<div class="img_show l">
+				<img src="{$info.goods_img|default='__HOME__/goods/images/blg.jpg'}" alt="">
+			</div>
+			<div class="text ">
+				{$info.description}
+			</div>
+			<span class="detail_cont down">详细内容<b></b></span>
+		</div>
+	</div>		
+	<div class="details-list clearfix">
+		<div class="apply l">
+			<div class="top clearfix">
+				<span>供应</span>
+				<a href="{:U('supply/lst',array('cate_id'=>$info['cate_id'],'id'=>$info['id']))}" class="r more">更多</a>
+			</div>
+			<ul>
+				<li class="first">
+					<ul class="clearfix">
+						<li class="price">药名</li>
+						<li class="place">数量</li>
+						<li class="norms">规格</li>
+						<li class="contacts">联系人</li>
+						<li class="tel">电话</li>
+					</ul>
+				</li>
+				<foreach name="supplys" item="vo" >
+			    	<li><a href="{:U('supply/detail',array('id'=>$vo['id']))}">
+						<ul class="clearfix">
+							<li class="price">{$vo.goods_name}</li>
+							<li class="place">{$vo.num}</li>
+							<li class="norms">{$vo.goods_attr_name}</li>
+							<li class="contacts">{$vo.contacts}</li>
+							<li class="tel">{$vo.mobile}</li>
+						</ul></a>
+					</li>
+		    	</foreach>
+		    </ul>					
+		</div>
+		<div class="need r">
+			<div class="top clearfix">
+				<span>求购</span>
+				<a href="{:U('demand/lst',array('cate_id'=>$info['cate_id'],'id'=>$info['id']))}" class="r more">更多</a>
+			</div>
+			<ul>
+				<li class="first">
+					<ul class="clearfix">
+						<li class="price">药名</li>
+						<li class="place">数量</li>
+						<li class="norms">规格</li>
+						<li class="contacts">联系人</li>
+						<li class="tel">电话</li>
+					</ul>
+				</li>
+				<foreach name="demands" item="vo" >
+			    	<li><a href="{:U('demand/detail',array('id'=>$vo['id']))}">
+						<ul class="clearfix">
+							<li class="price">{$vo.goods_name}</li>
+							<li class="place">{$vo.num}</li>
+							<li class="norms">{$vo.goods_attr_name}</li>
+							<li class="contacts">{$vo.contacts}</li>
+							<li class="tel">{$vo.mobile}</li>
+						</ul></a>
+					</li>
+		    	</foreach>
+		    </ul>		
+		</div>
+	</div>
+	<div class="drug-trends clearfix">
+		<div class="top clearfix">
+			<span>{$info.goods_name}行情</span>
+			<a href="{:U('goods/market',array('id'=>$info['id'],'title'=>$info['goods_name']))}" class="r more">更多</a>
+		</div>
+		<div class="main clearfix">
+			<div class="left l">
+				<ul class="goods-list">
+					<foreach name="markets" item="vo" key="k" >
+						<li class="clearfix lists">
+							<i class="l"></i>
+							<a href="{:U('goods/market_h',array('id'=>$vo['id']))}" class="l">{$vo.title}</a>
+							<span class="r">{$vo.update_time|date='Y-m-d',###}</span>
+						</li>
+					</foreach>
+				</ul>
+			</div>
+			<div class="right r" id="line_chart">
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">	
+<script type="text/javascript" src="__STATIC__/highcharts/js/highcharts.js"></script>
+<script type="text/javascript">
+$(function(){
+	var globalObj = {
+		gid	  : "{$info.id}",   			
+		sign  : "{:session('user_sign.realname')}",
+		follow_url : "{:U('User/ajaxSetFollow')}"
+	};
+	var repeat_click = true;
+	/* 关注事件 */
+	$('#follow_btn').on('click', function(){
+		if(!globalObj.sign){   				
+			 window.location.href = "{:U('login/index')}" + '?redirectUrl='+ encodeURIComponent(window.location.href);
+			 return;
+		}
+		if(!repeat_click){       			
+   			return;
+   		}
+		console.log(globalObj.sign);
+		return;
+		repeat_click = false;   			
+		$.ajax({
+     		url: globalObj.follow_url,
+     		dataType: "json",       		    
+     		data: {'gid': globalObj.gid},
+     		type: "get",       		   
+     		success: function(req) {       		    
+     			//请求成功时处理		        
+     		    $.custom(req.msg);
+     		    repeat_click = true;
+     		    var timer = setTimeout(function(){
+     		    	location.reload();  
+     		    	clearTimeout(timer);	
+     		    },500);	        
+     		},		    
+     		error: function() {
+     			//请求出错处理
+     		    $.custom('网络连接超时，请您稍后重试');
+     		    repeat_click = true;
+     		}
+     	});		
+	});		
+	/* 显示折线图 */
+	$('#line_chart').highcharts({
+        title: {
+            text: '最近{$info.goods_name}趋势图',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '来源: 药都网',
+            x: -20
+        },
+        xAxis: {    
+        	tickInterval: {$lines.l},
+            categories: [{$lines.h}]
+        },
+        yAxis: {
+            title: {
+                text: '价格 (元)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }],
+        },
+        tooltip: {
+            valueSuffix: '元',
+            crosshairs: [{            // 设置准星线样式
+                width: 2                
+            }]
+        },
+        legend: {
+        	enabled: false
+        },
+        credits: {
+	    	enabled: false
+	    },
+        series: [{
+            name: '{$info.goods_name}',
+            type: 'spline',
+            data: [{$lines.v}]
+        }]
+    });
+    //缩放图片
+    var img = $(".img_show img");
+    var imgW = img.width() ,
+    	imgH = img.height();
+    if (imgW >= imgH){
+    	var img_width = 300 * imgW / imgH;
+    	img.css({
+    		'height':"300px",
+    		'position': 'absolute',
+    		'top':'0',
+    		'left':-(img_width-300)/2 + 'px'
+    	})
+    }else{
+    	var img_height = 300 * imgH / imgW;
+    	img.css({
+    		'width':"300px",
+    		'position': 'absolute',
+    		'top':-(img_height-300)/2 + 'px',
+    		'left':'0',
+    	})
+    }
+    //收缩
+    var detail_cont = $('.detail_cont'),
+    	main_div = $(".main_txt"),
+   		 text_div  = $(".text");
+   	text_div.css({
+   		'height':'auto'
+   	});
+   	var txtH = text_div.height();
+   	if (txtH > 317){
+   		main_div.css({
+    		'padding': '8px 8px 28px 8px'
+   		})
+   		text_div.css({
+   			 'height': '317px',
+   			 'overflow':'hidden'
+   		})
+   		detail_cont.show();
+   	}
+   	detail_cont.click(function (){
+   		var self = $(this);
+   		if (self.hasClass("down")){
+	    	text_div.css({
+	    		'height':'auto',
+	    		'overflow':"visible"
+	    	})
+    		self.html('收起' + '<i></i>').removeClass("down").addClass('up');
+   		}else{
+	    	text_div.css({
+	    		'height':'317px',
+	    		'overflow':'hidden'
+	    	})
+    		self.html('详细内容' + '<b></b>').removeClass("up").addClass('down');
+   		}
+    });
+})
+</script>  
+</block>

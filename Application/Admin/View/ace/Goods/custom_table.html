@@ -1,0 +1,18 @@
+<div class="dataTables_wrapper form-inline no-footer">
+    <table class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="sample-table-2_info">
+        <thead>
+            <tr>
+                <th class="">序号</th>
+                <th class="">药品名称</th>               
+            </tr>
+        </thead>
+        <tbody>
+            <foreach name="custom_list" item="vo" key="k">
+                <tr>
+                    <td>{$show_num*($page_num-1)+$k+1}</td>
+                    <td>{$vo.goods_name}</td>
+                </tr>
+            </foreach>
+        </tbody>
+    </table>    
+</div>

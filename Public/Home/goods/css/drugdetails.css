@@ -1,0 +1,298 @@
+.details-wp{
+     width: 1200px;
+     margin: 20px auto;
+ }
+.drug-trends,.drug-knowledge ,.details-list{
+    margin-top:20px;
+}
+.title{
+    height: 45px;
+    line-height: 46px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+.title span{
+    display: inline-block;
+    height: 45px;
+    min-width: 68px;
+    background-color: #E62B2E;
+    text-align: center;
+    color: #fff;
+    padding: 0 6px;
+}
+.drug-knowledge{
+	position: relative;
+}
+.top{
+    height: 26px;
+    line-height: 26px;
+    padding: 5px 0;
+}
+.top>span{
+    display: inline-block;
+    padding: 0px 14px;
+    font-size: 18px;
+    border-left: 4px solid #E62B2E;
+}
+.main{
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    margin-top: 5px;
+    border-top:2px solid #E62B2E;
+    padding: 8px;
+}
+.main .img_show{
+    width: 300px;
+    height: 300px;
+    margin-right: 8px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #D3D3D3;
+}
+.text{
+    font-size: 16px!important;
+    height: 317px;
+    line-height:26px;
+    overflow: hidden;
+}
+.detail_cont {
+	position: absolute;
+	bottom: 4px;
+	right: 12px;
+	cursor: pointer;
+	color: #E62B2E;
+	font-size: 16px;
+	display: none;
+}
+.detail_cont:hover{
+	text-decoration: underline;
+}
+.detail_cont b , .detail_cont i{
+	display: inline-block;
+	width: 13px;
+	height: 8px;
+	vertical-align: middle;
+	margin-left: 5px;
+	position: relative;
+	top: -2px;
+}
+.detail_cont b{
+	background: url(../images/down.png);
+}
+.detail_cont i{
+	background: url(../images/up.png);
+}
+.care-btn {
+    display: inline-block;
+    width: 58px;
+    padding: 0px 8px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #E62B2E;
+    cursor: pointer;
+    margin:6px 10px 0 0;
+}
+/*更多按钮*/
+.more{
+    color: #E62B2E;
+    margin-right: 10px;
+    font-size: 16px;
+}
+/*列表详情*/
+.need {
+    width: 590px;
+    overflow: hidden;
+}
+.apply {
+    width: 590px;
+    overflow: hidden;
+}
+.details-list>div>ul{
+    border: 1px solid #ccc;
+    border-top:2px solid #E62B2E;
+    border-bottom: none;
+    margin-top: 5px;
+}
+.first li {
+    height: 47px;
+    line-height: 47px;
+    color: #666666;
+    background-color: #f0f0f0;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: default;
+}
+.details-list>div>ul>li{
+    border-bottom: 1px solid #ccc;
+}
+.details-list>div>ul>li li {
+    float: left;
+    height: 41px;
+    line-height: 41px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.details-list .price, .details-list .norms, .details-list .contacts, .details-list .tel{
+    width: 17.5%;
+}
+.details-list .place {
+    width: 30%;
+}
+/*行情走势*/
+.main .left{
+    width: 599px;/**影响布局的关键，注意*/
+    border-right: 1px solid #ccc;
+}
+.main .right {
+    width: 598px;
+    height: 193px;
+}
+.drug-trends .main{
+	padding:0px;
+}
+.drug-trends .main ul {
+    width: 552px;
+    font-size: 15px;
+    padding: 4px 24px;
+}
+
+.drug-trends .main li {
+    line-height: 36px;
+}
+
+.drug-trends .main li a {
+    display: inline-block;
+    width: 510px;
+    border-bottom: 1px solid #ccc;
+}
+.goods-list{
+	height:185px;
+	overflow:hidden;
+}
+.goods-list i{
+	display:inline-block;
+	width:0;
+	height:0;
+	border:3px solid #E62B2E;
+	margin-right:5px;
+	margin-top:15px;
+}
+.drug-trends .main li.lists{
+	border-bottom:1px dashed #ccc;
+}
+.drug-trends .main li.lists a{
+	border-bottom:none;
+	width:444px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	height:36px;
+	overflow:hidden;
+}
+.drug-trends .main li.lists a:hover{
+	color:#e62b2e;
+}
+/*行情走势结束*/
+/*********行情的详情页******************/
+/*.marketInfo{
+	width:1200px;
+	margin:0 auto;
+}*/
+.m-border{
+	border-bottom:2px solid #CFCFCF;
+}
+.marketInfo{
+	margin-top:15px;
+}
+.marketInfo h2{
+	font-size:24px;
+	text-align: center;
+	color:#333;
+	padding-top: 15px;
+    padding-bottom: 5px;
+}
+.marketInfo .m-first{
+	text-align:center;
+	border-bottom:1px dashed #ddd;
+	padding-bottom:5px;
+	margin-bottom:5px;
+	font-size: 14px;
+	color: #666;
+}
+.marketInfo .m-contain{
+	font-size:16px;
+	color:#333;
+	line-height:30px;
+	text-indent: 2em;
+}
+.marketInfo p{
+	line-height:30px;
+	font-size:16px;
+}
+.market-detail .content-img{
+	text-align: center;
+}
+.market-detail .content-img img{
+	width:30%;
+}
+.market-detail p{
+	font-size:16px\9\0!important;
+}
+.m-lists h3{
+	padding-top:15px;
+}
+.m-lists h3 a{
+	font-size:14px;
+	font-weight: bold;
+	color:#000;
+}
+.m-lists h3 a:hover{
+	color:#E62B2E;
+}
+.m-lists:hover{
+	background:#F9F9F9;
+}
+.m-lists .m-contain{
+	color:#000;
+	font-size:14px;
+	max-height:56px;
+	/*width:99%;
+	white-space:nowrap;
+	text-overflow: ellipsis;*/
+	overflow: hidden;
+}
+.m-lists .m-first{
+	text-align: right;
+}
+/*关于药材行情的上一篇或者下一篇*/
+.m-page{
+	border-top:1px solid #f0f0f0;
+	margin-top:15px;
+	padding-top:15px;
+}
+.m-page p{
+	line-height:30px;
+	font-size:16px;
+	float:left;
+	width:50%;
+}
+.m-page span{
+	color:#E62B2E;
+}
+.m-page a{
+	display: inline-block;
+	width:77%;
+	height:30px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	vertical-align: middle;
+	line-height:25px;
+}
+/******行情的详情页结束*******/

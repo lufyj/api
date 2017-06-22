@@ -1,0 +1,85 @@
+<extend name="./base" />
+<block name="style">
+    <link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+    <link rel="stylesheet" type="text/css" href="__HOME__/user/css/index02.css" />
+    <link rel="stylesheet" type="text/css" href="__HOME__/user/css/alipay.css" />
+    <link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/alipay02.css" />
+</block>
+<block name="body">
+<div class="user-wrap clearfix">
+    <div class="title clearfix">
+        <span class="l">我的药都网</span>
+        <div class="ad l">
+            您现在所在的位置 :
+            <a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+            <a href="javascript:;">求购管理</a>&nbsp;>&nbsp;
+            <a href="javascript:;">我的投标</a>
+        </div>
+    </div>
+    <div class="content-wrap clearfix">
+        <include file="Public:user_left_menu" />
+        <div class="right l">
+            <div class="title">
+                <span class="active">我的投标</span>
+            </div>            
+            <div class="pub-t2">
+                <ul class="t2-lists clearfix">
+                    <li class="active">全部投标{$orderCnt|array_sum}</li>                        
+                </ul>
+            </div>
+            <div class="dem-main">              
+                <table class="pub-m show">
+                    <thead>
+                        <tr>
+                            <td width="180">药材</td>
+                            <td>联系人</td>
+                            <td>手机号</td>
+                            <td>价格</td>
+                            <td>发布时间</td>
+                            <td>状态</td>
+                            <td width="100">操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <foreach name="list" item="vo" key="k">
+                    <tr>
+                    	<td><a href="{:U('demand/detail',array('id'=>$vo['demand_id']))}">{$vo.goods_name}</a></td>
+                    	<td>{$vo.contacts}</td>
+                    	<td>{$vo.mobile}</td>
+                    	<td>{$vo.price}元/公斤</td>
+                    	<td>{$vo.create_time|time_format}</td>
+                    	<td>{$vo.status|get_tender_type}</td>
+                    	<td>
+	                    	<if condition="$vo.d_status eq 2 && $vo.trading_type eq 1">
+	                    	<a href="javascript:;" onclick="deliveryGoods({$vo.demand_id},{$vo.id});">确定发货</a>
+	                    	</if>
+                    	</td>                               
+                    </tr>
+                    </foreach>
+                    </tbody>
+                </table> 
+                {$pageHtml}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="confirmModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<i class="close">&times;</i>
+			<p>提示</p>	
+			<div class="modal-context">确定发布当前求购信息？</div>
+			<div class="context-a">
+				<a href="javascript:;" class="ok">确定</a>
+				<a href="javascript:;" class="close">取消</a>
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">
+<script src="__HOME__/demand/js/tender.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+var urls = ["{:U('Demand/doDemand')}"];
+</script>
+</block>

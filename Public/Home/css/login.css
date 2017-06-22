@@ -1,0 +1,659 @@
+/******************************登录/发布需求**********************************/
+#header {
+	width: 980px;
+	padding: 2px;
+	margin: 20px auto 0;
+}
+.header-login img {
+	width: 200px;
+	height: 73px;
+	vertical-align: middle;
+}
+#header a:hover{
+	text-decoration: none;
+}
+#header i {
+	display: inline-block;
+	height: 73px;
+	width: 1px;
+	margin: 0 20px;
+	background-color: #ef383c;
+	vertical-align: middle;
+}
+#header .hovers:hover{
+	text-decoration: none;
+}
+#header span {
+	font-size: 25px;
+	color: #000;
+	vertical-align: middle;
+}
+/*新的lgin*/
+.middle-wrap {
+	height: 600px;
+	width: 100%;
+	margin: 20px 0;
+	background-color: #e93854;
+}
+
+.banner {
+	width: 1040px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+.banner-img {
+	display: inline-block;
+	width: 577px;
+	height: 368px;
+	margin-top: 116px;
+	background: url(../images/login_03.png) no-repeat;
+}
+.login-box {
+	width: 346px;
+	margin-top: 130px;
+	background-color: #fff;
+}
+.login-box .top{
+	width: 325px;
+	height: 54px;
+	line-height: 54px;
+	padding-left: 21PX;
+	border-bottom: 1px solid #f4f4f4;
+}
+.login-box .top a{
+	font-size: 18px;
+	font-weight: 700;
+	color: #e4393c;
+	text-decoration: none;
+}
+.msg-wrap{
+	width: 304px;
+	margin: 10px auto;
+	height: 25px;
+	border: 1px solid #fff;
+}
+.msg-wrap>div{
+	position: relative;
+}
+.msg-error{
+	border: 1px solid #faccc6;
+	background-color: #ffebeb;
+	height: 18px;
+	line-height: 18px;
+	padding: 3px 10px 3px 40px;
+	
+}
+.msg-warn{
+	border: 1px solid #ffe57d;
+	background-color: #fff6d2;
+	height: 18px;
+	line-height: 18px;
+	padding: 3px 10px 3px 40px;
+}
+.msg-wrap b{
+	display: inline-block;
+}
+.msg-error b{
+	width: 16px;
+	height: 17px;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	margin-top: -8px;
+	background: url("../images/icons.png") no-repeat -104px -48px;
+}
+.msg-warn b{
+	width: 16px;
+	height: 17px;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	margin-top: -8px;
+	background: url("../images/icons.png") no-repeat -104px -23px;
+}
+.login-box .bottom{
+	height: 50px;
+	line-height: 50px;
+	margin-top: 30px;
+	border-top: 1px solid #f4f4f4;
+	background-color: #fcfcfc;
+	padding: 0 20px;
+}
+.login-box .bottom b , .login-box .bottom i{
+	display: inline-block;
+	position: relative;
+}
+.login-box .bottom b {
+	width: 16px;
+	height: 16px;
+	top: 4px;
+	left: -5px;
+	background: url(../images/icons.png) no-repeat -104px -75px;
+}
+.login-box .bottom i{
+	width: 18px;
+	height: 18px;
+	top: 5px;
+	background: url(../images/wx.png) no-repeat;
+	margin-right: 4px;
+}
+.login-box .bottom a.l{
+	font-size: 12px;
+	color: #888;
+}
+.login-box .bottom a.r{
+	color: #b61d1d;
+	font-size: 14px;
+}
+.login-box .input,
+.login-box .op,
+.login-box .op .login-btn{
+	width: 304px;
+}
+.login-box .input {
+	margin: 0 auto 20px;
+	position: relative;
+}
+.login-box #yzdiv{
+	width: 304px;
+	margin-bottom: 10px;
+}
+#yzdiv{
+	display: none;
+}
+.login-box .input input:focus{
+	border: 1px solid #3aa2e4;
+}
+.login-box  input[type="text"] , .login-box  input[type="password"]{
+	width: 252px;
+	border: 1px solid #ccc;
+	height: 18px;
+	line-height: 18px;
+	padding-left: 10px;
+	padding: 10px 0 10px 50px;
+	font-size: 14px;
+	overflow: hidden;
+}
+.user-icon,
+.psw-icon {
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	left: 1px;
+	top:1px;
+	position: absolute;
+	border-right: 1px solid #bdbdbd;
+}
+.user-icon {
+	background: url(../images/icons.png) no-repeat 0 0;
+}
+.psw-icon {
+	background: url(../images/icons.png) no-repeat -48px 0;
+}
+.error .user-icon , .error .psw-icon{
+	border-right: 1px solid #e85356;
+}
+.error .user-icon {
+	background: url(../images/icons.png) no-repeat 0 -96px;
+}
+.error .psw-icon {
+	background: url(../images/icons.png) no-repeat -48px -96px;
+}
+.focus .user-icon , .focus .psw-icon{
+	border-right: 1px solid #3aa2e4;
+}
+.focus .user-icon {
+	background: url(../images/icons.png) no-repeat 0 -48px;
+}
+.focus .psw-icon {
+	background: url(../images/icons.png) no-repeat -48px -48px;
+}
+.error input{
+	border:1px solid #e85356 !important;
+}
+
+.code {
+	width: 120px !important;
+	padding-left: 10px !important;
+}
+
+.code-img {
+	width: 96px;
+	height: 38px;
+	vertical-align: middle;
+	border: 1px solid #bdbdbd;
+	margin-left: 68px;
+}
+.remb input[type="checkbox"]{
+	position: relative;
+	top: -1px;
+}
+.remb {
+	width: 304px;
+	margin:0 auto;
+}
+
+.remb-txt {
+	font-size: 12px;
+	cursor: pointer;
+	left: 4px;
+	margin-left: 4px;
+}
+
+.login-box .op {
+	margin: 15px auto 0;
+}
+
+.login-box .op span {
+	display: inline-block;
+	border-radius: 2px;
+	background-color: #e4393c;
+	height: 33px;
+	line-height: 33px;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+	border: 1px solid #e85356;
+}
+/*页面底部 版权信息*/
+.footer {
+    /*padding:10px 0;*/
+    text-align: center;
+}
+.links a {
+    margin: 0 10px;
+}
+.links {
+    margin: 6px 0;
+}
+/***********关于用户注册页面*************/
+
+#header{
+	width: 1200px;
+}
+
+.have-account {
+	font-size: 16px;
+	color: #333;
+	margin:5px 0px 120px 0px;
+}
+.have-account a{
+	padding:5px 18px;
+	background: #E62B2E;
+	color:#fff;
+	margin-left:5px;
+}
+.have-account a:hover{
+	text-decoration: none;
+	background: red;
+}
+.register-r{
+	margin-left:30px;
+}
+.header_bg {
+	height: 110px;
+	background: url(../images/headbg.jpg) repeat-x left bottom;
+}
+
+.register {
+	background: #fff;
+	width: 1200px;
+	margin: 50px auto 20px;
+	border-bottom: 1px solid #eee;
+	height: auto;
+	padding-bottom: 50px;
+}
+
+.register-l {
+	width: 760px;
+	border-right: 1px solid #eee;
+}
+
+.register-l li {
+	height: 60px;
+	line-height: 60px;
+}
+
+.register-l li label {
+	width: 100px;
+	text-align: right;
+	display: inline-block;
+	font-size: 16px;
+	color: #000;
+}
+.register-l li input {
+	margin-left: 15px;
+	border: 1px solid #ddd;
+	width: 270px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	font-size: 14px;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	-o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.register-l li input[type="checkbox"] {
+	width: 25px;
+	height: 25px;
+	box-shadow: none;
+	border: none;
+}
+
+.register-l span {
+	margin-left: 10px;
+	font-size: 12px;
+	cursor:pointer;
+}
+.submits span{
+	font-size:16px;
+}
+/*修改同意药都网协议的样式*/
+#agree{
+	padding-left:104px;
+}
+#agree label{
+	display: inline;
+	margin-left:5px;
+	vertical-align: middle;
+}
+#agree a{
+	font-size:16px;
+	color:#E62B2E;
+	vertical-align: middle;
+}
+/*修改同意药都网协议的样式结束*/
+.register-l li input[type="checkbox"]:focus,
+.register-l li .code-btn:focus {
+	box-shadow: none;
+}
+
+.register-l li input:focus {
+	border-color: #E62B2E;
+	-webkit-box-shadow: 1px 0px 10px 1px rgba(255, 0, 0, 0.2);
+	box-shadow: 1px 0px 10px 1px rgba(255, 0, 0, 0.2);
+	-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	-o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.login-img img {
+	width: 110px;
+	height: 37px;
+	position: relative;
+	top: 14px;
+	left: 10px;
+	cursor:pointer;
+}
+
+.login-img {
+	overflow: hidden;
+}
+.register-l li button {
+	width: 312px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 3px;
+	background: #E62B2E;
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+
+.register-l li button:hover {
+	background: red;
+}
+
+.register-l li .code-btn {
+	width: 180px;
+	color: #fff;
+	border: none;
+	background: #1A901A;
+	padding-left:0;
+}
+.register-l label.error {
+	width: 135px;
+	text-align: left;
+	line-height: 20px;
+	color: #E62B2E;
+	font-size: 14px;
+	padding-left: 25px;
+	background: url(../images/tanhao.png) 0% 0px no-repeat;
+	background: url(../images/tanhao.png) 0% 1px no-repeat\9\0;
+	margin-left: 5px;
+}
+.login-img label.error{
+	width:99px;
+}
+.submits label.error{
+	width:207px;
+}
+.register-l li.login-img label.error {
+	height: 20px\9;
+	overflow: hidden\9;
+	position: relative\9;
+	top: 5px\9;
+}
+/***************关于找回密码页面***************************/
+.password{
+	width:1030px;
+}
+.password-nav{
+	height:85px;
+	background:url(../images/passw.png) no-repeat;
+	margin:0 auto 35px;
+}
+.password form{
+	width:350px;
+	margin:0 auto;
+}
+.password input{
+	margin: 10px 0;
+    height: 40px;
+    line-height:40px\9;
+    border: 1px solid #d2d2d2;
+    border-radius: 2px;
+    font-size:14px;
+}
+.password-phone input{
+    padding: 0 40px 0 45px;
+    width: 268px;
+    background:url(../images/password_icon.gif) no-repeat 20px 10px;
+}
+.password-phone input:hover{
+	background:url(../images/password_icon.gif) no-repeat 20px -40px;
+}
+.password-code input{
+    padding-left:10px;
+    width:110px;
+}
+.password-phone span{
+	color:#e62b2e;
+	font-size:14px;
+	display:none;
+}
+.password input:hover{
+	border-color:#E62B2E;
+}
+.password-code{
+	margin:10px 0;
+}
+.password-code img{
+	width: 100px;
+	height: 37px;
+	position: relative;
+	top: 14px;
+	left: 5px;
+	cursor:pointer;
+}
+.password-code span{
+	margin-left:5px;
+	font-size:14px;
+}
+.password-next a{
+	width: 350px;
+    height: 50px;
+    line-height: 50px;
+    font-size:20px;
+    color: #fff;
+    background: #E62B2E;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+.password-next a:hover{
+	text-decoration: none;
+	background:#ff0000;
+}
+/*找回密码第二部，账号确认及重置密码*/
+.password2{
+	background-position:0 -100px;
+}
+.password-back{
+	text-align:center;
+	font-size:14px;
+	line-height:30px;
+}
+.password-back span{
+	color:#E62B2E;
+	font-size:16px;
+	font-weight:bold;
+}
+.password-back a{
+	background:#aaa;
+	padding:5px 10px;
+	color:#fff;
+	margin:0 5px;
+	cursor: pointer;
+}
+.password-back a:hover{
+	text-decoration:none;
+	background:#E62B2E;
+}
+.pwd2-code input{
+	background:none;
+	padding-left:20px;
+	width:293px;
+}
+.pwd2-code input:hover{
+	background:none;
+}
+.pwd2-pw input{
+	background:url(../images/password_icon.gif) no-repeat 20px -90px;
+}
+.pwd2-pw input:hover{
+	background:url(../images/password_icon.gif) no-repeat 20px -140px;
+}
+.pwd2-pw i{
+	display:block;
+	height:30px;
+	background:url(../images/pwd_grade.gif) no-repeat;
+}
+.pwd2-pw span{
+	display:block;
+	color:#666;
+	margin-bottom:20px;
+}
+/*找回密码第三部分，完成*/
+.password3{
+	background-position:0 -200px;
+}
+.pwd3{
+	text-align:center;
+}
+.pwd3 p{
+	font-size:36px;
+}
+.pwd3 img{
+	vertical-align: bottom;
+	margin-right: 10px;
+}
+.pwd3 a{
+	margin-top: 40px;
+    display: inline-block;
+    font-size: 14px;
+    background:green;
+    color: #fff;
+    padding: 8px 19px;
+}
+.pwd3 a:hover{
+	text-decoration:none;
+	background:#1A901A;
+}
+/**关于自定义alert模态框**/
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	background: rgba(0, 0, 0, 0.1);
+	background:#000\9;
+	filter:alpha(opacity=10);
+}
+.modal-dialog {
+	background: #fff;
+	width:370px;
+	height:160px;
+	margin:auto;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
+.modal-content {
+	position: relative;
+	font-size: 14px;
+	padding-bottom: 5px;
+}
+
+.modal-content>p {
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	text-indent: 1em;
+	background: #E62B2E;
+}
+
+.modal-content i {
+	position: absolute;
+	right: 10px;
+	top: 12px;
+	color: #fff;
+	font-style: normal;
+	font-family: '宋体';
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.modal-context {
+	font-size: 16px;
+	text-indent: 2em;
+	padding: 10px;
+	line-height: 28px;
+}
+
+.context-a {
+	text-align: right;
+	padding: 15px 0;
+}
+
+.context-a button {
+	margin-right: 15px;
+	padding: 8px 19px;
+	color: #fff;
+	text-align: center;
+	background: #E62B2E;
+	text-decoration: none;
+	border: 1px solid #E62B2E;
+}

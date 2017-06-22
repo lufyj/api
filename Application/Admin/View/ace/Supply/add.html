@@ -1,0 +1,169 @@
+<extend name="Public/base" />
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__ADMIN__/css/fileinput.min.css" />
+	<link rel="stylesheet" type="text/css" href="__ADMIN__/css/addoredit.css" />	
+	<script>
+		var cateJson = {$cateJson};
+	</script>
+</block>
+<block name='navi'>
+	<li>供应管理</li>
+	<li>添加供应信息</li>
+</block>
+<block name="body">
+	<div class="page-header">
+		<h1>新增供应信息</h1>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a data-toggle="tab" href="#tab1"><i class="green ace-icon fa fa-home bigger-120"></i>基 础</a>
+				</li>
+			</ul>
+			<div class="tab-content clearfix">
+				<div class="col-md-12">
+					<div class="tabbable">
+						<div class="row">
+							<div class="col-sm-12">
+								<form name="baseinfo" id="myform" action="{:U('save')}" method="post">
+									<input type="hidden" class="img_url" name="imgPath" />
+									<input type="hidden" class="origin_area" name="origin_area" />
+									<input type="hidden" class="goods_area" name="goods_area" />
+									<!--<input type="hidden" />-->
+									<table class="table table-bordered dataTable chengebackgrounecolor ui-jqgrid-htable" id="grid-table">
+										<tbody>
+											<tr class="bg1">
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;药材名称：</td>
+												<td class="col-md-5 col-sm-5" style="text-align:left;position: relative;">
+													<div class="choose-durg" style="position: relative; width: 220px;">
+														<span class="show-cate">请选择药材</span>
+														<input type="hidden" name="cid" />
+														<input type="hidden" name="c_name" />
+														<input type="hidden" name="gid" />
+														<input type="hidden" name="g_name" />
+														<div class="alert-wp">
+															<ul class="classify-list">
+																<li>
+																	<span data-param="-1">自定义类</span>
+																	<div class="drug-list clearfix">
+																		<label for=""><span>药材名字:</span><input type="text" name="custom_name" autocomplete="off" class="form-control"></label>
+																		<br>
+																		<input type="button" id="custom_btn" value="确定" class="btn btn-primary">
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</td>
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;联系人：</td>
+												<td class="col-md-5 col-sm-5" style="text-align:left;">
+													<input class="form-control" name="contacts" type="text" placeholder="" style="display:inline-block; width:50%;"> &nbsp;&nbsp;
+													<span class="blue"></span>
+												</td>
+											</tr>
+											<tr class="bg1">
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;规格：</td>
+												<input type="hidden" name="attrId" class="levels_id">
+												<input type="hidden" name="attrName" class="levels_name">
+												<td class="col-md-5 col-sm-5">
+													<select class="form-control" name="levels" id="levels" style="display:inline-block; width:50%;">
+													</select>
+												</td>
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;手机：</td>
+												<td class="col-md-5 col-sm-5" style="text-align:left;"><input style="display:inline-block; width:50%;" name="mobile" class="form-control" type="text" placeholder="">
+												</td>
+											</tr>
+											<tr class="bg2">
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;数量：</td>
+												<td class="col-md-5 col-sm-5"><input style="display:inline-block; width:50%;" name="num" type="text" placeholder="">&nbsp;&nbsp;公斤</td>
+												<td class="col-md-1 col-sm-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QQ：</td>
+												<td class="col-md-5 col-sm-5"><input name="qq"  style="display:inline-block; width:50%;" class="form-control" type="text" placeholder=""></td>
+											</tr>
+											<tr class="bg2">
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;价格：</td>
+												<td class="col-md-5 col-sm-5" colspan="3">
+													<div class="control-group">
+														<label><input name="priceType" type="radio" class="ace price" checked="checked" value="2"><span class="lbl">&nbsp;&nbsp;面议</span></label>&nbsp;&nbsp;
+														<label><input name="priceType" type="radio" class="ace price unit_price" value="1"><span class="lbl">&nbsp;&nbsp;单价</span></label>
+														&nbsp;&nbsp;<span class="price_input" style="display: none;"><input type="text"  name="price"  />&nbsp;&nbsp;元/公斤</span>
+													</div>
+												</td>
+											</tr>
+											<tr class="bg1">
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;产地：</td>
+												<td class="col-md-5 col-sm-5">
+													<div class="control-group">
+														<label><input name="originType" type="radio" class="ace origin_place" checked="checked" value="1"><span class="lbl">&nbsp;&nbsp;较广</span></label>&nbsp;&nbsp;
+														<label><input name="originType" type="radio" class="ace origin_place"  value="2"><span class="lbl">&nbsp;&nbsp;进口</span></label>&nbsp;&nbsp;
+														<label><input name="originType" type="radio" class="ace origin_place pca"  value="3"><span class="lbl">&nbsp;&nbsp;省市县</span></label>
+													</div>
+												</td>
+												<td class="col-md-1 col-sm-1 place_select" style="display: none;"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;选择省地县：</td>
+												<td class="col-md-5 col-sm-5 place_select" style="display: none;">
+													<select class="col-md-3" name="prov_select" id="prov_select">
+													</select>&nbsp;&nbsp;&nbsp;&nbsp;
+													<select class="col-md-3" name="city_select" id="city_select">
+													</select>
+													&nbsp;&nbsp;&nbsp;&nbsp;
+													<select class="col-md-3" name="area_select" id="area_select">
+													</select>
+												</td>
+											</tr>
+											<tr class="bg2">
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>货源所在地：</td>
+												<td class="col-md-5 col-sm-5">
+													<select class="col-md-3" name="supply_prvo" id="supply_prvo">
+													</select>&nbsp;&nbsp;
+													<select class="col-md-3" name="supply_city" id="supply_city">
+													</select>
+													&nbsp;&nbsp;
+													<select class="col-md-3" name="supply_area" id="supply_area">
+													</select>
+												</td>
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;详细地址：</td>
+												<td class="col-md-5 col-sm-5"><input name="supplyDetail" class="form-control" type="text" placeholder="" style="width:100%"></td>
+											</tr>
+											<tr>
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;详情：</td>
+												<td class="col-md-5 col-sm-5" colspan="3"><textarea name="details" rows="5" class="form-control" cols="" style="height: ;"></textarea></td>
+											</tr>
+								</form>
+											<tr class="bg1">
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;选择图片：</td>
+												<td colspan="3" style="text-align:left;">
+													<form enctype="multipart/form-data">
+														<input id="file-fr" name="supply" type="file" multiple>
+													</form>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</br>
+							</div>
+						</div>
+						<div style="text-align: center;" class="clearfix form-actions">
+							<a href="javascript:void(0);" id="ok" class="btn btn-primary sub-btn" style="margin-right:30px;">
+								<i class="ace-icon fa fa-check"></i> 确定
+							</a>
+							<a href="{:U('index')}" class="btn">
+								<i class="ace-icon fa fa-arrow-left"></i> 返回
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</block>
+
+<block name="script">
+	<script src="__ADMIN__/js/fileinput.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__ADMIN__/js/zh.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__ADMIN__/js/business/spyadd.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		var apiArr = ["{:U('Region/ajaxGetProHtml')}" , "{:U('Region/ajaxGetCityHtml')}"  , "{:U('Region/ajaxGetAreaHtml')}" , "{:U('Goods/ajaxGetSpecs')}" , "{:U('Supply/upImg')}" , "{:U('Supply/delImg')}"];
+		highlight_subnav("{:U('Supply/index')}");
+	</script>
+</block>

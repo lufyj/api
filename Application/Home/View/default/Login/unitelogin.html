@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<title>药都网联合登录</title>
+		<link rel="shortcut icon" type="image/x-icon" href="__IMG__/logo-icon.ico">
+		<link href="__CSS__/reset.css" rel="stylesheet" type="text/css" />
+		<link href="__CSS__/login.css" rel="stylesheet" type="text/css" />
+		<link href="__CSS__/modal.css" rel="stylesheet" type="text/css" />
+		<link href="__CSS__/unitelogin.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<!--联合登录的头部-->
+		<div class="header_bg">
+			<div id="header" class="clearfix header-login">
+				<a href="/">
+					<img src="__IMG__/logo_03.png" alt="" />
+				</a>
+				<i></i>
+				<span>联合登录</span>
+			</div>
+		</div>
+		<!--关于账号绑定或者完善资料-->
+		<div class="unite">
+			<!--选择要操作的列表-->
+			<ul class="unite-list clearfix">
+				<li class="active"><i></i>已有药都网账号，请绑定</li>
+				<li><i></i>没有药都网账号，请完善资料</li>
+			</ul>
+			<!---->
+			<div class="unite-tishi">
+				<img src="//wx.qlogo.cn/mmopen/YoCiapBC7z8EKqRZicqBozkNr6GLJhlT5qxbfzzxzOZhLATLPl3iaibhvx4WurtGjJGDfKVl5nd9qFnd4wwALPxLC1v6YT7ggc72/0" width="28" height="28">
+				<p> Hi, 手写的从前 欢迎来药都网，完成绑定后可以一键登录哦~</p>
+			</div>
+			<!--第一部分已有药都网的账号，请绑定-->
+			<div class="unite-login unite-item" style="display: block;">
+				<div class="msg-wrap">
+					<div class="msg-error"><b></b>请输入验证码</div>
+				</div>
+				<div class="user-div inputs">
+					<span class="login-account">药都网账号</span>
+					<input type="text" class="user-name" id="loginname" maxlength="11" autocomplete="off" placeholder="请输入手机号">
+				</div>
+				<div class="psw-div inputs">
+					<span class="login-account">输入密码</span>
+					<input type="password" class="psw" id="loginpwd" autocomplete="off" placeholder="请输入密码" onkeydown="keyDown(event);" />
+				</div>
+				<div class="yzm-div inputs">
+					<span class="login-account">验证码</span>
+					<input type="text" class="code" id="authcode" autocomplete="off" placeholder="请输入验证码" />
+					<img class="code-img" alt="点击切换" title="点击切换" src="{:U('index/verify','',false)}" style="cursor:pointer;" onclick="this.src='<?php echo U('index/verify','',false);?>/'+Math.random()">
+				</div>
+				<div class="clearfix skip-reg">
+					<a href="{:U('login/findpwd')}" class="r">忘记登录密码</a>
+				</div>
+				<div class="op">
+					<span class="login-btn" id="submit_btn">立即绑定</span>
+				</div>
+			</div>
+			<!--第二部分没有药都网账号，请完善资料-->
+			<div class="unite-register unite-item">
+				<form id="register_form" action="{:U('Login/register')}" method="post" class="register-l">
+					<ul>
+						<li>
+							<label for="mobile">手机号码：</label>
+							<input type="text" name="mobile" id="mobile" placeholder="请输入手机号码" maxlength="11" autocomplete="off" />
+						</li>
+						<li class="login-img clearfix">
+							<label for="code">验证码：</label>
+							<input type="text" name="code" id="code" placeholder="请输入验证码" maxlength="4" autocomplete="off" />
+							<img alt="点击切换" title="点击切换" src="{:U('index/verify','',false)}" style="cursor:pointer;" onclick="this.src='<?php echo U('index/verify','',false);?>/'+Math.random() ">
+							<span onclick="changeCode(this);">看不清，换一张？</span>
+						</li>
+						<li>
+							<label for=""></label>
+							<input type="button" class="code-btn" id="yz_btn" value="点击获取手机短信验证码" style="cursor:pointer;" />
+						</li>
+						<li>
+							<label for="captcha">短信验证码：</label>
+							<input type="text" name="captcha" id="captcha" placeholder="请输入短信验证码" autocomplete="off" />
+						</li>
+						<li>
+							<label for="password">登录密码：</label>
+							<input type="password" name="password" id="password" placeholder="请输入密码" autocomplete="off" />
+						</li>
+						<li>
+							<label for="repassword">确认密码：</label>
+							<input type="password" name="repassword" id="repassword" placeholder="请重新输入密码" autocomplete="off" />
+						</li>
+						<li>
+							<label for="realname">姓名/称呼：</label>
+							<input type="text" name="realname" id="realname" placeholder="请输入用户名" autocomplete="off" />
+						</li>
+
+						<li class="submits" id="agree">
+							<input type="checkbox" name="type" checked id="register" />
+							<label for="register">我已阅读并同意 </label>
+							<a href="javascript:;">《药都网服务协议》</a>
+						</li>
+						<li>
+							<label for=""></label>
+							<button type="submit">立即注册</button>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+		<!--关于账号绑定或者完善资料结束-->
+		<!--联合登录的尾部-->
+		<include file="Public/footer" />
+		<!--底部结束-->
+		<!--关于协议模态框-->
+		<div class="modal-container">
+			<div class="modal-dialogs">
+				<span class="protocol-col"></span>
+				<div class="protocol-t">药都网用户注册协议</div>
+				<div class="protocol-b">
+					<p><b>免责声明：</b>药都网所展示的中药材供求信息由买卖双方自行提供，其真实性、准确性和合法性由信息发布人负责。药都网不提供任何保证，并不承担任何法律责任。</p>
+					<p><b>药都网友情提醒：</b>为保障您的利益，请谨慎交易！药都网信息咨询栏目均为经营者提供参考，并不能作为投资和经营指导，在使用中务必进一步进行核实，本网不能保证完全准确、全面、真实有效。如客户在使用中造成损失，药都网不承担法律责任。药商谈药中的言论属于药商自由（在不违反国家政策及论坛的规则的情况下），药都网对其言论的准确性不能保证！不能作为指导经营使用，也不代表药都网的观点，药商在此发言要为自己的言论承担全部责任！</p>
+				</div>
+				<p class="protocol-f">
+					<button>同意本协议</button>
+				</p>
+			</div>
+		</div>
+		<script src="__STATIC__/jquery-1.8.3.min.js" type="text/javascript"></script>
+		<script src="__STATIC__/jquery.validate.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			/*切换联合登录的--已有药都网账号，请绑定*/
+			//获取url中参数
+			function GetRequest() {
+				var url = location.search; //获取url中"?"符后的字串 
+				var theRequest = new Object();
+				if(url.indexOf("?") != -1) {
+					var str = url.substr(1);
+					strs = str.split("&");
+					for(var i = 0; i < strs.length; i++) {
+						theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+					}
+				}
+				return theRequest;
+			}
+			var errorDiv = $(".msg-error");
+			function showError(msg, code) {
+				errorDiv.parent().show();
+				errorDiv.html("<b></b>" + msg);
+				//对应边框变红
+				if(code == 2) {
+					//验证码错误或过期
+					$(".yzm-div").addClass("error");
+				} else if(code == 3) {
+					//密码错误或用户名不存在
+					$(".user-div").addClass("error");
+					$(".psw-div").addClass("error");
+				} else if(code == 0) {
+					//手机号格式不正确
+					$(".user-div").addClass("error");
+				}
+			}
+			var urlParam = GetRequest();
+			if(urlParam.e) {
+				showError("账号密码错误请重新输入", 3);
+			}
+			/* 显示错误信息方法 */
+			/* 点击回车提交 */
+			function keyDown(evt) {
+				evt = (evt) ? evt : ((window.event) ? window.event : ""); //兼容IE和Firefox获得keyBoardEvent对象
+				var key = evt.keyCode ? evt.keyCode : evt.which; //兼容IE和Firefox获得keyBoardEvent对象的键值
+				if(key == 13) {
+					$('#submit_btn').trigger('click');
+				}
+			}
+			$(function() {
+					/* 判断是否显示验证码 */
+					var hit_click = parseInt("<?php echo session('login_error_counter') ?>" || 0);
+					var repeat_click = true;
+					/* 绑定登录事件,兼容ie */
+					$('#submit_btn').on('click', function() {
+						if(!repeat_click) {
+							return;
+						}
+						var mobile = $.trim($('#loginname').val());
+						if(!mobile || mobile == '请输入手机号') {
+							showError("请输入手机号");
+							return;
+						}
+						var password = $.trim($('#loginpwd').val());
+						if(!password || password == '请输入密码') {
+							showError("请输入密码");
+							return;
+						}
+						var data = {
+							mobile: mobile,
+							password: password
+						};
+						//判断是否显示验证码
+						var code = $.trim($('#authcode').val());
+						if(!code || code == '请输入验证码' || code.length!=4) {
+							showError("请输入验证码");
+							return;
+						}
+						data.code = code;
+						repeat_click = false;
+						//提交数据
+						$.ajax({
+							url: "{:U('Login/login')}",
+							data: data,
+							type: "post",
+							dataType: "json",
+							success: function(data) {
+								console.log(data);
+								if(data.code == 1) {
+									//window.location.href = "<?php echo session('jump_url') ?>" || '/';
+									window.location.href = "<?php echo I('get.redirectUrl') ?>" || '/';
+								} else if(data.code == 2) {
+									$('#authcode').val('');
+									showError(data.msg, data.code);
+								} else if(data.code == 3) {
+									hit_click++;
+									showError(data.msg, data.code);
+								} else if(data.code == 0) {
+									showError(data.msg, data.code);
+								}
+								repeat_click = true;
+							}
+						});
+					});
+					/* 聚焦时候 去掉classerror */
+					$("input").focus(function() {
+						var self = $(this);
+						self.parent("div").removeClass("error").addClass("focus");
+					}).blur(function() {
+						var self = $(this);
+						self.parent("div").removeClass("focus");
+					});
+				})
+				/*切换联合登录的--没有药都网账号，请完善资料*/
+			$(function() {
+				var uniteList = $('.unite-list li');
+				var uniteLen = uniteList.length;
+				var uniteItem = document.querySelectorAll('.unite-item');
+				for(var i = 0; i < uniteLen; i++) {
+					uniteList[i].index = i;
+					uniteList.on('click', function() {
+						for(var i = 0; i < uniteLen; i++) {
+							uniteList[i].className = '';
+							uniteItem[i].style.display = 'none';
+						}
+						this.className = 'active';
+						uniteItem[this.index].style.display = 'block';
+					});
+				}
+			});
+			/* 切换验证码 */
+			var code_img = $('.login-img img');
+
+			function changeCode() {
+				code_img.attr('src', "/index/verify/" + Math.random());
+			}
+			//关于获取验证码的信息
+
+			$(function() {
+				//点击获取验证码
+				var yzBol = true;
+				$('#yz_btn').on('click', function() {
+					if(!yzBol) {
+						return;
+					}
+					yzBol = false;
+					//获取验证码和手机号
+					var mobile = $.trim($('#mobile').val());
+					var code = $.trim($('#code').val());
+					var regMobile = /^1[34578]\d{9}$/;
+					var regCode = /^([a-z]|[A-Z]|[0-9]){4}$/i;
+					if(!mobile) {
+						//$.custom('请输入手机号');
+						yzBol = true;
+						return false;
+					} else if(!regMobile.test(mobile)) {
+						//$.custom('请输入正确手机号');
+						yzBol = true;
+						return false;
+					} else if(!code) {
+						//$.custom('请输入验证码');
+						yzBol = true;
+						return false;
+					} else if(!regCode.test(code)) {
+						$.custom('验证码格式不正确');
+						yzBol = true;
+						return false;
+					}
+					$.ajax({
+						type: 'GET',
+						url: "{:U('Login/check_verify')}",
+						data: {
+							code: code
+						},
+						dataType: 'json',
+						success: function(data) {
+							if(data.status == 0) {
+								$.custom('验证码错误');
+								changeCode();
+								yzBol = true;
+								return false;
+							} else if(data.status == 1) {
+								//保存计时器对象
+								record.statusdata.intervalObj = window.setInterval(record.startRecord, 1000);
+								$('#yz_btn').attr({
+									"disabled": "disabled"
+								});
+								yzBol = true;
+								$.ajax({
+									url: "{:U('Api/User/mobileCode', '', false)}",
+									type: 'post',
+									data: {
+										code: code,
+										mobile: mobile
+									},
+									dataType: 'json',
+									success: function(req) {
+										if(req['code'] == 21) {
+											$.custom('该手机已经注册过用户了!');
+											window.clearInterval(record.statusdata.intervalObj);
+											$('#yz_btn').removeAttr("disabled");
+											changeCode();
+										}
+										if(req == 1) {
+											window.clearInterval(record.statusdata.intervalObj);
+										} else {
+											//弹出错误信息
+										}
+									},
+									error: function(err) {
+										//rule.showMsg(2, '网络有问题，请求失败');
+									}
+								});
+							}
+						}
+					});
+				});
+				//开始记录
+				var record = {
+					statusdata: {
+						wait: 119
+					},
+					startRecord: function() {
+						var that = $('#yz_btn');
+						//开始记录时间
+						if(record.statusdata.wait === 0) {
+							window.clearInterval(record.statusdata.intervalObj);
+							record.statusdata.wait = 119;
+							that.removeAttr("disabled");
+							that.val('点击获取验证码');
+						} else {
+							that.val(record.statusdata.wait + ' 秒后重新获取');
+							record.statusdata.wait--;
+						}
+					}
+				}
+
+				//验证表单
+				$("#register_form").validate({
+					submitHandler: function(form) {
+						$.ajax({
+							url: "{:U('Api/User/register','',false)}",
+							data: $(form).serialize(),
+							type: "post",
+							dataType: "json",
+							success: function(data) {
+								switch(data['code']) {
+									case 1:
+										$.custom('注册成功');
+										var url = "{:U('Home/user/index')}";
+										window.location.href = url;
+										break;
+									case 10:
+										$.custom('姓名/称呼长度不合法!');
+										break;
+									case 35:
+										$.custom('验证码已失效');
+										break;
+									case 36:
+										$.custom('验证码错误');
+										break;
+									case 38:
+										$.custom('手机验证码错误!');
+										break;
+								}
+							}
+						});
+					},
+					rules: {
+						realname: {
+							required: true,
+						},
+						mobile: {
+							required: true,
+							number: true,
+							isMobile: true,
+						},
+						password: {
+							required: true,
+							minlength: 6,
+						},
+						repassword: {
+							required: true,
+							equalTo: "#password"
+						},
+						code: {
+							required: true,
+						},
+						captcha: {
+							required: true,
+						},
+						type: {
+							required: true,
+						}
+					},
+					messages: {
+						realname: {
+							required: "请输入用户名",
+						},
+						mobile: {
+							required: "手机号必须填",
+							number: "请输入正确的号码",
+							isMobile: "请输入有效的手机号",
+						},
+						password: {
+							required: "请输入密码",
+							minlength: "密码不能小于6个字符"
+						},
+						repassword: {
+							required: "请再次输入密码",
+							equalTo: "两次密码不一致"
+						},
+						code: {
+							required: "验证码必须填写"
+						},
+						captcha: {
+							required: "短信验证码必须填写"
+						},
+						type: {
+							required: "您还有没勾选用户注册协议呢~"
+						}
+					}
+				});
+			});
+			//关于自定义alert插件
+			jQuery.custom = function() {
+					var str = "<div class='modal modal-close'><div class='modal-dialog'><div class='modal-content'>" +
+						"<i class='custom-close'>&times;</i>" +
+						"<p>" + (arguments[1] || '药都网温馨提示您') + "</p>" +
+						"<div class='modal-context'>" + arguments[0] + "</div>" +
+						"<div class='context-a'>" +
+						"<button class='custom-ok'>确定</button>" +
+						"</div></div></div></div>";
+					$('body').append(str);
+					$('i.custom-close,button.custom-ok').click(function() {
+						$('.modal-close').remove();
+					});
+				}
+				//关于弹窗模态框
+			$(function() {
+				$('#agree a').click(function() {
+					$('.modal-container').show();
+				});
+				$('.protocol-col,.protocol-f button').on('click', function() {
+					$('.modal-container').hide();
+					if(this.nodeName == 'BUTTON') {
+						$('#register').prop("checked", true);
+						$('#type-error').hide();
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

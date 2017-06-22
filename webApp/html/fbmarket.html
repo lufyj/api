@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>药都网--发布行情</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" href="../css/fbmarket.css" />
+		<script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+            if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+            if (!isMobile()) location.href = "./bind.html";
+		</script>
+	</head>
+	<body>
+	<header>
+		<a href="./persional.html" class="back_btn">
+			<i class="icon_zjt iconfont"></i>返回
+		</a>
+		<span>发布行情</span>
+	</header>
+		<div class="ydw_wp">
+			<ul class="market">
+				<li class="mar-t">
+					<span>输入标题</span>
+					<textarea name="title" id="mar-title" maxlength="30"></textarea>
+				</li>
+				<li class="mar-m">
+					<textarea name="content" contenteditable="true" id="mar-detail" maxlength="255" rows="" cols="" placeholder="输入描述..."></textarea>
+				</li>
+				<li>
+					<form method="post" enctype="multipart/form-data" id="my-form">
+						<ul id="mar-imgs" class="clearfix">
+							<li class="mar-img-carrier mar-imgs-fb">
+								<i class="iconfont icon-sczp"></i>
+								<input type="file" id="fbmar-img" accept="image/*" name="pic[]"/>
+								<input type="hidden" name="clientType" value="1" />
+							</li>
+						</ul>
+					</form>
+				</li>
+				<li class="mar-tj">
+					<input type="button" value="发布" id="mar-submit"/>
+				</li>
+				<li>
+					<p class="market-b">
+						发布成功后将会进行1-3天的审核，审核结构我们将会以消息形式通知您！
+					</p>
+				</li>
+			</ul>
+		</div>
+
+		<script src="../js/form.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var marTitle = $('#mar-title');//发布行情的标题
+			var marDetail = $('#mar-detail');//发布行情描述
+			var marImgs = $('#mar-imgs');//展示行情图片的容器
+			var marSubmit = $('#mar-submit');//行情"发布"
+			var fbmarImg = $('#fbmar-img');//file容器
+			var imgsL = 0;//记录图片的个数
+			var isClick = false;//判断是否可以点击图片删除
+			var fbObj = {};//发布行情的容器
+			autoTextarea(marDetail[0]);//然备注的textarea的高度自适应
+			//上传图片预览
+			fbmarImg.on('change',function(){
+				$('#my-form').ajaxSubmit({
+					type: 'post',
+					url: rule.root + "AppMarket/upload_pic",
+					success: function(req) {
+						if(req.code==1){
+							var data = req.data;
+							var l = data.length;
+							var html = '';
+							/*(l>=6) && (l=5);
+							(imgsL+l>6) && (l=5-imgsL);*/
+							imgsL+=l;
+							if(imgsL>=5){
+								rule.showMsg(1,'发布的行情图片最多上传5张',1000);
+								$('.mar-img-carrier').hide();
+							}else{
+								$('.mar-img-carrier').show();
+							}
+							html='<li><img src="'+data+'"></li>';
+							/*for(var i=0;i<l;i++){
+								html+='<li><img src="'+data[i]+'"></li>';
+							}*/
+							marImgs.prepend(html);
+							isClick = true;
+						}
+					},
+					error:function(){
+						rule.showMsg(1,'图片加载失败请重试',1000);
+					}
+				});
+			});
+			//删除图片
+			marImgs.on('click','li',function(){
+				var _this = $(this);
+				if(isClick && !_this.hasClass('mar-img-carrier')){
+					_this.remove();
+				}
+				var len = marImgs.find('li').length;
+				imgsL = len-1;
+				if(len-1<5){
+					marImgs.find('li:last').show();
+				}
+			});
+			marSubmit.on('click',function(){
+				var arrImg = [];//存储图片地址
+				marImgs.find('li img').each(function(){
+					arrImg.push(this.src);
+				});
+				fbObj = {};//设置为空对象
+				var marTitleL = $.trim(marTitle.val());
+				if(!marTitleL){
+					rule.showMsg(1,'请输入行情标题',1000);
+					return;
+				}else if(marTitleL.length>30){
+					rule.showMsg(1,'行情标题不能超过30个字',1000);
+					return;
+				}
+				var marDetailL = $.trim(marDetail.val());
+				if(!marDetailL){
+					rule.showMsg(1,'请输入行情内容',1000);
+					return;
+				}else if(marDetailL.length>256){
+					rule.showMsg(1,'行情内容不能超过256个字',1000);
+					return;
+				}
+				fbObj.title = marTitleL;
+				fbObj.content = marDetailL;
+				if(arrImg){
+					fbObj.thumb = arrImg.join(',');
+				}
+				//提交表单
+				$.postT(rule.root + 'AppMarket/add_Market' , fbObj , function (req){
+					if(req.code == 103){
+						var hrefUrl = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+						rule.showMsg(1 , "该账号已在其他地方登陆,请重新登录" , 2000 , hrefUrl);
+					}
+					if(req.code == 1){	
+						rule.showMsg(1,'发布行情成功',1000);
+						window.location.href="persional.html";
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

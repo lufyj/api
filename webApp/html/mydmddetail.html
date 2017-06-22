@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/share.css"/>
+    <link rel="stylesheet" type="text/css" href="../swiper.min.css"/>
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+    </script>
+    <style>
+        .sds_public .bottom {margin-bottom:0rem;}
+        .tender_wp {font-size:2.4rem;}
+        .tender_wp .tender_hd {height: 6rem;line-height: 6rem;padding: 0 2.4rem;background-color:#f3f3f3;border-bottom:1px solid #ccc;}
+        .h_light {color: #e6282b;}
+        .tender_hd>span{border-left: 0.5rem solid #e6282b;padding-left:1rem;}
+        .tender_head ,  .tender_img{width:8rem;height:8rem;vertical-align: middle;}
+        .tender_head {border-radius: 50%;}
+        .tender_img {margin-right:0.5rem;}
+        .tender_bd li{border-bottom:1px solid #ccc;padding:1rem 2rem;position:relative;}
+        .tender_bd li p{display: inline-block;vertical-align: middle;width:calc(100% - 10.6rem);margin-left:2rem;}
+        .icon{display:inline-block;vertical-align:-1rem;width:4rem;height: 4rem;background: url("../images/jt.png") no-repeat;background-size:100% 100%; }
+        .icon2{-webkit-transform: rotate(180deg);}
+        .tender_info {padding: 0 4%;background:#f7f7f7;margin-top:1rem;display:none;max-height: 100%;}
+        .tender_info>div {padding:2rem 0;border-bottom: 1px solid #ccc;}
+        .tender_info>div:nth-child(3) {min-height: 8rem;}
+        .tender_info>div:nth-child(3)>div{display:inline-block;}
+        .scs_icon {display: none;}
+        .tender_btn {display: inline-block;text-align:center;color:#fff;background-color:#e6282b;padding:0.3rem 3rem;border-radius:0.2rem;margin: 2rem 0;}
+        .tender_ok .tender_head{border:0.2rem solid #e6282b;}
+        .tender_ok .scs_icon1 {width:7.5rem;height:5rem;top:3rem;left:40rem;background:url("../images/bid.png") no-repeat;}
+        .tender_ok .scs_icon2 {width:2rem;height:2rem;position:absolute;top:6.8rem;left:8.5rem;background:url("../images/s1.png") no-repeat;}
+        .tender_ok  .scs_icon {display: block;position:absolute;background-size:100% 100%;}
+    </style>
+</head>
+<body class="gray_boby sds_public">
+<header>
+    <a href="javascript:;" class="back_btn" id="back_btn">
+        <i class="icon_zjt iconfont"></i>返回
+    </a>
+    <span>我的求购详情</span>
+</header>
+<div class="ydw_wp">
+    <div class="main">
+        <div class="time_div">
+            <span class="bf">发布时间 : </span><span class="time_span"></span>
+        </div>
+        <div class="top">
+            <ul class="top_list list">
+                <li>
+                    <span class="bf">品　　名 : </span><span class="name_span"></span>
+                </li>
+                <li>
+                    <span class="bf">规　　格 : </span><span class="spec_span"></span>
+                </li>
+                <li>
+                    <span class="bf">数　　量 : </span><span class="num_span"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="middle">
+            <ul class="middle_list list">
+                <li>
+                    <span class="bf">产　　地 : </span><span class="origin_span r_span"></span>
+                </li>
+                <li>
+                    <span class="bf">描　　述 : </span><span class="des_span r_span"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <ul class="bottom_list list">
+                <li>
+                    <span class="bf">联&nbsp;&nbsp;系&nbsp;&nbsp;人 : </span><span class="contacts_span r_span"></span>
+                </li>
+                <li>
+                    <span class="bf">手　　机 : </span><span class="tel_span"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="tender_wp" >
+            <div class="tender_hd">
+                <span class="h_light">投标人</span>
+                <div class="r">共<span class="tender_num h_light"></span>人</div>
+            </div>
+            <div class="tender_bd">
+                <ul class="tender_ul">
+                    <!--<li class="tender_ok">-->
+                        <!--<i class="scs_icon1 scs_icon"></i>-->
+                        <!--<i class="scs_icon2 scs_icon"></i>-->
+                        <!--<img src="../images/tjimg.png" alt="" class="tender_head"><p class="clearfix">-->
+                        <!--<span>我的大萨达</span>-->
+                        <!--<i class="icon r"></i>-->
+                    <!--</p>-->
+                        <!--<div class="tender_info clearfix">-->
+                            <!--<div>-->
+                                <!--<label for="">价　　格 : </label><span></span>-->
+                            <!--</div>-->
+                            <!--<div>-->
+                                <!--<label for="">联系电话 : </label><span></span>-->
+                            <!--</div>-->
+                            <!--<div>-->
+                                <!--<label for="">图　　片 : </label>-->
+                                <!--<div>-->
+                                    <!--<img src="../images/tjimg.png" alt="" class="tender_img">-->
+                                    <!--<img src="../images/tjimg.png" alt="" class="tender_img">-->
+                                    <!--<img src="../images/tjimg.png" alt="" class="tender_img">-->
+                                    <!--<img src="../images/tjimg.png" alt="" class="tender_img">-->
+                                    <!--<img src="../images/tjimg.png" alt="" class="tender_img">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div>-->
+                                <!--<label for="">详细说明 : </label>-->
+                            <!--</div>-->
+                            <!--<span class="tender_btn r">选标</span>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/share.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var icon = $(".icon");
+
+    var gn = $(".name_span"),
+        spec = $(".spec_span"),
+        goodsNum = $(".num_span");
+    var id = parseInt(rule.getRequest().id);
+    var data = {
+        demand_id:id
+    };
+    var mySelection = {
+        id:id,
+    }
+    $.postT(rule.root +'AppUser/demand_details' ,data , function (req) {
+        var code = req.code;
+        if (code == 1){
+            var datas = req.data;
+            var id = datas.id;
+            var create_time = new Date(datas.create_time*1000).format('yyyy-MM-dd');		//发布时间
+            var	contacts = datas.contacts;				//联系人
+            var	mobile = datas.mobile;					//手机号
+            var goods_name = datas.goods_name;			//品名
+            var goods_attr_name = datas.goods_attr_name;//规格
+            var	num = datas.num;						//数量
+            var price_type = datas.price_type;			//价格类型
+            var	origin_area = datas.origin_area;		//产地
+            var origin_type = datas.origin_type;        //产地类型
+            var	details = datas.details;
+            var status = parseInt(datas.status);
+            mySelection.num = parseInt(num);
+            var tender = datas.tender;
+            if (tender){
+                var tenderL = tender.length;
+                $(".tender_num").text(tenderL)
+                var str = '';
+                for (var i = 0; i < tenderL; i++){
+                    var tenderStatus = tender[i].status;
+                    var imgs = tender[i].imgs;
+                    var imgStr = '';
+                    if (imgs){
+                        var imgsL = imgs.length;
+                        for (var j = 0; j <imgsL; j++){
+                            imgStr += '<img src="'+ imgs[j] +'" alt="" class="tender_img">'
+                        }
+                    }
+                    if (tenderStatus == 1){
+                        str += '<li data-id="'+tender[i].id+'" class="tender_ok"><i class="scs_icon scs_icon1"></i><i class="scs_icon scs_icon2"></i><img src="'+tender[i].head_pic+'" class="tender_head"><p class="clearfix"><span>'+tender[i].contacts+'</span><i class="icon r"></i></p><div class="tender_info clearfix"><div><label for="">价　　格 : </label><span class="price">'+tender[i].price+'</span></div><div><label for="">联系电话 : </label><span>'+tender[i].mobile+'</span></div><div><label for="">图　　片 : </label><div>'+ imgStr +'</div></div><div><label for="">详细说明 : </label><span>'+tender[i].remarks+'</span></div><span class="tender_btn r">选标</span></div></li>'
+                    }else {
+                        str += '<li data-id="'+tender[i].id+'"><img src="'+tender[i].head_pic+'" class="tender_head"><p class="clearfix"><span>'+tender[i].contacts+'</span><i class="icon r"></i></p><div class="tender_info clearfix"><div><label for="">价　　格 : </label><span class="price">'+tender[i].price+'</span></div><div><label for="">联系电话 : </label><span>'+tender[i].mobile+'</span></div><div><label for="">图　　片 : </label><div>'+ imgStr +'</div></div><div><label for="">详细说明 : </label><span>'+tender[i].remarks+'</span></div><span class="tender_btn r">选标</span></div></li>'
+                    }
+                }
+                $(".tender_ul").html(str);
+                if (status >= 1){
+                    //已经选过标
+                    $(".tender_btn").hide();
+                }
+            }else {
+                $(".tender_num").text(0);
+            }
+            $(".time_span").text(create_time);
+            gn.text(goods_name);
+            $(".contacts_span").text(contacts);
+            $(".tel_span").text(mobile);
+            if (goods_attr_name){
+                spec.text(goods_attr_name);
+            }
+            if (num == "大货"){
+                goodsNum.text(num);
+            }else {
+                goodsNum.text(num + "公斤");
+            }
+            $(".origin_span").text(origin_area);
+            $(".des_span").text(details);
+        }else if (code == 103){
+            rule.reLogin();
+        }
+    })
+    $(".tender_ul").on('click' ,".icon",function () {
+        var _this = $(this);
+        var infoDiv = _this.parents("li").find('.tender_info');
+        _this.toggleClass("icon2");
+        infoDiv.slideToggle()
+    })
+    //选标
+    $(".tender_ul").on('click' ,".tender_btn",function () {
+        var _this = $(this);
+        var parent = _this.parents("li");
+        var tenderId = parent.attr("data-id");
+        var datas = {
+            demand_id:id,
+            tender_id:tenderId
+        }
+        var price = parseInt(parent.find(".price").text());
+        mySelection.price = price;
+        $.postT(rule.root + 'AppUser/win' ,datas,function (req) {
+            if (req.code == 1){
+                //带着资金去
+                //储存选标的信息去支付资金
+                new Intent().setIntent("my_selection" , mySelection)
+                rule.showMsg(1 , "选标成功,前往支付托管资金" , 1000 , './paycustody.html');
+            }
+        })
+    })
+</script>
+</html>

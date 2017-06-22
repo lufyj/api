@@ -1,0 +1,70 @@
+/*关于用户注册协议弹窗*/
+.modal-container {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	background: #000\9;
+	filter: alpha(opacity=50);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.modal-dialogs{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background-color: #fff;
+	width: 800px;
+	height: 570px;
+}
+.protocol-col {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	right: 26px;
+	top: 26px;
+	background: url(../images/times.png) no-repeat;
+	cursor: pointer;
+	z-index: 30;
+}
+
+.protocol-t {
+	font-size: 24px;
+	padding: 40px 30px 0px;
+}
+
+.protocol-b {
+	width: 722px;
+	height: 350px;
+	margin: 30px auto;
+	border: 1px solid #ddd;
+	padding: 10px;
+	overflow-y: auto;
+}
+
+.protocol-b p {
+	text-indent: 2em;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.protocol-f {
+	text-align: center;
+}
+
+.protocol-f button {
+	padding: 5px 17px;
+	background: #E62B2E;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.protocol-f button:hover {
+	background: #f00;
+}

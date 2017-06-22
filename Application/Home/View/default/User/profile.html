@@ -1,0 +1,82 @@
+<extend name="./base" />
+<block name="style">
+<link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+<link rel="stylesheet" type="text/css" href="__HOME__/user/css/fips.css" />
+</block>
+<block name="body">
+<div class="user-wrap clearfix">
+	<div class="title clearfix">
+		<span class="l">我的药都网</span>
+		<div class="ad l">
+			您现在所在的位置 :
+			<a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+			<a href="javascript:;">账户管理</a>&nbsp;>&nbsp;
+			<a href="javascript:;">账户信息</a>
+		</div>
+	</div>
+	<div class="content-wrap clearfix">
+		<include file="Public:user_left_menu" />			
+		<div class="right user-manage l">
+			<ul class="navs clearfix">
+				<li class="show">账户信息</li>
+				<li>我的积分</li>
+				<li>账号安全</li>
+			</ul>
+			<form id="submit-form" method="post" enctype="multipart/form-data">			
+				<ul class="user-msg msg02">
+					<li class="upload-li clearfix">
+						<span class="l img-middle">上传头像 : </span>
+						<div id="preview_img" class="l">
+							<img src="{$info.head_pic|default='__HOME__/user/images/center_my_03.jpg'}" id="profile_img" alt="用户头像" id="head_pic" />
+						</div>
+						<div class="user-msg-file" class="l">
+							<label for="file1">请选择修改图像</label>
+							<input type="file" id="file1" name="file1" onchange="PreviewImage(this,'profile_img','profile_img')"/>							
+						</div>
+					</li>
+					<li>
+						<span>昵称 : </span>
+						<input type="text" name="realname" value="{:session('user_sign.realname')}" />
+					</li>
+					<li>
+						<span>手机号 : </span>
+						<input type="text" disabled="disabled" value="{:session('user_sign.mobile')}" />
+					</li>
+					<li>
+						<span>邮箱 : </span>
+						<input type="text" name="email" value="{$info.email}" />
+					</li>
+					<li>
+						<span>微信号 : </span>
+						<input type="text" name="weixin" value="{$info.weixin}" />
+					</li>
+					<li>
+						<span>QQ : </span>
+						<input type="text" name="qq" value="{$info.qq}" />
+					</li>
+					<li>
+						<span>地址 : </span>
+						<input type="text" name="address" value="{$info.address}" />
+					</li>
+					<li class="sub-li">
+						<button type="submit" id="submitBtn">保存</button>
+					</li>
+				</ul>	
+			</form>		
+			<div class="msg02" style="display:none;">
+				这是我的积分页面，还没有完善，敬请期待！
+			</div>				
+			<div class="msg02" style="display:none;">
+				这是我的账号安全页面，还没有完善，敬请期待！
+			</div>				
+		</div>			
+	</div>
+</div>
+</block>
+<block name="script">
+<script src="__HOME__/user/js/profile.js" type="text/javascript" charset="utf-8"></script>
+<script src="__STATIC__/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var urls=["{:U('')}"];		
+</script>	
+</block>

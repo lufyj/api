@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>登录</title>
+		<link rel="shortcut icon" type="image/x-icon" href="__IMG__/logo-icon.ico">
+		<link href="__CSS__/reset.css" rel="stylesheet" type="text/css" />
+		<link href="__CSS__/login.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div id="header">
+			<a href="/" class="hovers header-login">
+				<img src="__IMG__/logo_03.png" alt="" />
+			</a>
+			<i></i>
+			<span>欢迎登录</span>
+		</div>
+		<div class="middle-wrap">
+			<div class="banner clearfix">
+				<span class="banner-img"></span>
+				<div class="login-box r clearfix">
+					<div class="top">
+						<a>账户登录</a>
+					</div>
+					<div class="msg-wrap">
+						<div class="msg-error" style="display: none;">
+							<b></b>
+						</div>
+						<div class="msg-warn" style="display: block;">
+							<b></b>公共场所不建议自动登录，以防账号丢失
+						</div>
+					</div>
+					<div class="user-div input">
+						<span class="user-icon"></span>
+						<input type="text" class="user-name" id="loginname" maxlength=11 autocomplete="off" placeholder="请输入手机号" />
+					</div>
+					<div class="psw-div input">
+						<span class="psw-icon"></span>
+						<input type="password" class="psw" id="loginpwd" autocomplete="off" placeholder="请输入密码" onkeydown="keyDown(event);" />
+					</div>
+					<div id="yzdiv" class="input">
+						<input type="text" class="code" id="authcode" autocomplete="off" placeholder="请输入验证码" />
+						<img class="code-img" alt="点击切换" title="点击切换" src="{:U('index/verify','',false)}" style="cursor:pointer;" onclick="changeCode(this);">
+					</div>
+					<div class="clearfix remb">
+						<label><input type="checkbox" id="autoLogin" checked="checked"/><span class="remb-txt">自动登录</span></label>
+						<a href="{:U('login/findpwd')}" class="r">忘记密码？</a>
+					</div>
+					<div class="op">
+						<span class="login-btn" id="submit_btn">登 录</span>
+					</div>
+					<div class="bottom clearfix">
+						<a href="http://m.yaoduwang.com/Api/WeixinLogin/getBaseInfo" class="l">
+							<i></i>微信登录
+						</a>
+						<a href="{:U('login/register')}" class="r">
+							<b></b>立即注册
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<include file="Public/footer" />
+		<script src="__STATIC__/jquery-1.8.3.min.js" type="text/javascript"></script>
+		<script src="__HOME__/js/placeholder.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//获取url中参数
+			function GetRequest() {
+				var url = location.search; //获取url中"?"符后的字串 
+				var theRequest = new Object();
+				if(url.indexOf("?") != -1) {
+					var str = url.substr(1);
+					strs = str.split("&");
+					for(var i = 0; i < strs.length; i++) {
+						theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+					}
+				}
+				return theRequest;
+			}
+			var errorDiv = $(".msg-error"),
+				warnDiv = $(".msg-warn");
+
+			function showError(msg, code) {
+				errorDiv.show();
+				warnDiv.hide();
+				errorDiv.html("<b></b>" + msg);
+				//对应边框变红
+				if(code == 2) {
+					//验证码错误或过期
+					$("#yzdiv").addClass("error");
+				} else if(code == 3) {
+					//密码错误或用户名不存在
+					$(".user-div").addClass("error");
+					$(".psw-div").addClass("error");
+				}else  if (code == 0){
+					//手机号格式不正确
+					$(".user-div").addClass("error");
+				}
+			}
+			var urlParam = GetRequest();
+			if(urlParam.e) {
+				showError("账号不存在或密码错误请重新输入" , 3);
+			}
+			/* 显示错误信息方法 */
+
+			/* 切换验证码 */
+			function changeCode(that) {
+				$(that).attr('src', "<?php echo U('index/verify','',false);?>/" + Math.random());
+			}
+			/* 点击回车提交 */
+			function keyDown(evt) {
+				evt = (evt) ? evt : ((window.event) ? window.event : ""); //兼容IE和Firefox获得keyBoardEvent对象
+				var key = evt.keyCode ? evt.keyCode : evt.which; //兼容IE和Firefox获得keyBoardEvent对象的键值
+				if(key == 13) {
+					$('#submit_btn').trigger('click');
+				}
+			}
+			$(function() {
+				/* 判断是否显示验证码 */
+				var hit_click = parseInt("<?php echo session('login_error_counter') ?>" || 0);
+				var repeat_click = true;
+
+				if(hit_click >= 3) {
+					$('#yzdiv').show();
+				}
+				/* 绑定登录事件,兼容ie */
+				$('#submit_btn').on('click', function() {
+					if(!repeat_click) {
+						return;
+					}
+					var mobile = $.trim($('#loginname').val());
+					if(!mobile || mobile == '请输入手机号') {
+						showError("请输入手机号");
+						return;
+					}
+					var password = $.trim($('#loginpwd').val());
+					if(!password || password == '请输入密码') {
+						showError("请输入密码");
+						return;
+					}
+					var data = {
+						mobile: mobile,
+						password: password
+					};
+					//判断是否显示验证码
+					if(hit_click >= 3) {
+						$('#yzdiv').show();
+						var code = $.trim($('#authcode').val());
+						if(!code || code == '请输入验证码') {
+							showError("请输入验证码");
+							return;
+						}
+						data.code = code;
+					}
+					//判断是否选中记住我
+					if($('#autoLogin').is(':checked')) {
+						data.auto_login = 1;
+					}
+					repeat_click = false;
+					//提交数据
+					$.ajax({
+						url: "{:U('Login/login')}",
+						data: data,
+						type: "post",
+						dataType: "json",
+						success: function(data) {
+							if(data.code == 1) {
+								//window.location.href = "<?php echo session('jump_url') ?>" || '/';
+								window.location.href = "<?php echo I('get.redirectUrl') ?>" || '/';
+							} else if(data.code == 2) {
+								$('#authcode').val('');
+								showError(data.msg, data.code);
+							} else if(data.code == 3) {
+								hit_click++;
+								showError(data.msg, data.code);
+							}else if(data.code == 0){
+								showError(data.msg, data.code);
+							}
+							repeat_click = true;
+						},
+						error:function  (error) {
+							console.log(error);
+						}
+					});
+				});
+				/* 聚焦时候 去掉classerror */
+				$("input").focus(function() {
+					var self = $(this);
+					self.parent("div").removeClass("error").addClass("focus");
+				}).blur(function() {
+					var self = $(this);
+					self.parent("div").removeClass("focus");
+				});
+				/* 自动登录 */
+				$('#autoLogin').change(function() {
+					if($(this).is(":checked")) {
+						warnDiv.show();
+						errorDiv.hide();
+					} else {
+						warnDiv.hide();
+					}
+				});
+			})
+		</script>
+	</body>
+
+</html>

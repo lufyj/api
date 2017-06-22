@@ -1,0 +1,101 @@
+@charset "utf-8";
+body{font: 12px/1.5 Arial, Tahoma, Helvetica, \5b8b\4f53, sans-serif;color: #444;background-color: #f7f7f7;}
+html,body,div,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,object,code,em,span,var,legend,button,input,textarea,th,td,a,img,header,footer,nav,aside,audio,datalist,section{margin:0;padding:0;border:0;outline:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%;/*font-weight:normal;*/}
+:focus {outline:0;}
+ul,ol,ul li,ol li {list-style: none;}
+address, caption, cite, em, code, dfn, th, var {font-style: normal;font-weight: normal;}
+form label {cursor: pointer;}
+input,button,select,textarea {font-family:inherit;font-size:100%;outline:none;}
+textarea {resize: none;}
+input {vertical-align: middle;}
+img {border: 0;}
+table {border-collapse:collapse;border-spacing:0;}
+article,section,nav,header,footer{display:block;}
+button, input[type="reset"], input[type="button"], input[type="submit"] {line-height: normal !important;}
+input[type="submit"],input[type="text"],input[type="number"],input[type="reset"],input[type="button"]{-webkit-appearance: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}/*苹果手机按钮和输入框默认样式清除*/
+a:link,a:visited,a:active{text-decoration:none;}
+a:hover{text-decoration: none;}
+a {color: #333;}
+a,input,button,select,textarea{ -webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight-color:transparent;}
+input {_filter: chroma(color=#000000);}
+/*--清除浮动和浮动--*/
+.l {float: left;}
+.r {float:right;}
+.clearfix:after {clear: both;content: ".";display: block;font-size: 0;height: 0;visibility: hidden;}
+.clearfix:after {_zoom: 1;}
+.overflow {overflow: hidden;_zoom: 1;  }
+.clear {clear: both;height: 0;font-size: 0;overflow: hidden;}
+.dib {display: inline-block;}
+/*header*/
+header{width:100%;height:7.6rem;background-color: #e62b2e;display:flex;align-items:center;justify-content: center;color: #fff;font-size:3rem;position: fixed;top: 0;left: 0;z-index: 100;}
+.ydw_wp{padding-top: 7.6rem;}
+header .back_btn , header .r_btn{width: 20%;position:absolute; height:7.6rem;line-height:7.6rem;color: #fff;}
+header .back_btn {left: 2%;}
+header .r_btn {right:2%;text-align: right;}
+header .iconfont {color:#fff;font-size:3.4rem;vertical-align: -0.1rem;}
+header .nav_tab{width: 27%;border: 1px solid #fff;border-radius:0.6rem;}
+header .nav_tab>div{display: flex;width: 50%;justify-content: center;align-items: center;height: 5.2rem;}
+header .nav_tab .act{background-color: #fff;color: #000;}
+header .right_a {position: absolute;color: #fff;height: 100%;font-size: 2.8rem;line-height:7.6rem;right: 1%;}
+footer .iconfont {color:#919191;font-size:3.4rem;position:relative;height: 4.8rem;display: inline-block;}
+footer {width:100%;position: fixed;z-index:1000;bottom: 0;height:10.7rem;background-color:#fff;background:url(../images/homepage.png) no-repeat;background-size: 100% 100%;display: flex;justify-content: space-around;align-items: center;font-size: 0;}
+footer a{height:8.3rem;text-align: center;display: inline-block;margin-top: 2.5rem;}
+footer .home{height: 100%;width: 15%;}
+footer p{font-size: 2.4rem;}
+/*弹框*/
+.modal_container{width: 100%;height: 100%;position: fixed;top:0;z-index: 1000;}
+.lay_wp{min-width: 35%;font-size: 2.2rem;color: #fff;padding:1rem;background: rgba(0 , 0 , 0 , 0.6);text-align: center;border-radius:0.8rem;display: inline-block;}
+.loading_msg{text-align: center;font-size: 2.4rem;line-height: 7rem;color: #000;background-color: #fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#load_img {
+    background-position: 0 100%;
+    -webkit-transform: rotate(0deg) translateZ(0);
+    -webkit-transition-duration: 0ms;
+    -webkit-animation-name: loading;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes loading {
+    from {
+        -webkit-transform: rotate(0deg) translateZ(0);
+    }
+    to {
+        -webkit-transform: rotate(360deg) translateZ(0);
+    }
+}
+/*@media screen and (min-width:1080px){
+html,body{ font-size:32px;}
+}
+@media screen and (min-width:721px) and (max-width:1079px){
+html,body{ font-size:28px;}
+}
+@media screen and (min-width:640px) and (max-width:720px){
+html,body{ font-size:22px;}
+}
+@media screen and (min-width:541px) and (max-width:639px){
+html,body{ font-size:18px;}
+}
+@media screen and (min-width:481px) and (max-width:540px){
+html,body{ font-size:16px;}
+}
+@media screen and (min-width:321px) and (max-width:480px){
+html,body{ font-size:14px;}
+}
+@media screen and (max-width:320px){
+html,body{ font-size:14px;}
+}*/

@@ -1,0 +1,1570 @@
+[ 2017-05-02T16:41:06+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHall/demand_hall
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`uid`,`cate_id`,`cate_name`,`goods_id`,`goods_name`,`goods_attr_id`,`goods_attr_name`,`num`,`contacts`,`mobile` FROM `ydw_demand` WHERE `status` NOT IN ('-1') ORDER BY id desc LIMIT 20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 1335 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_company_confirm` [ RunTime:0.0020s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 1335 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 1145 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 1145 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 1142 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 1142 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 948 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 948 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 936 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 936 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 909 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 909 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 163 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 163 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 107 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 107 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:27:10+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Api
+
+[ 2017-05-02T17:28:03+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 146 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 146 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:28:16+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_1` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:36:22+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_1` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_1` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_1` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_1` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:36:29+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_2` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_2` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_2` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_2` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_2` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_2` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:36:40+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:08+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0070s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:08+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:09+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:09+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:10+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:10+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:14+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:14+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:15+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:15+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:16+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:17+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:18+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:18+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:18+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:18+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:19+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:23+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:24+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:24+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:25+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:25+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:30+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:30+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:31+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:45:31+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:09+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:09+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:24+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:38+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:39+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:39+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:44+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0070s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:46+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:47+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0090s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:47+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:48+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0080s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:48+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:48+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:48+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0080s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:48+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:48+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:52:48+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:53:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:53:23+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:55:26+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:55:26+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:56:52+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:56:53+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:59:01+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:59:02+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0070s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:59:02+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:59:12+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0080s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:59:20+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:59:21+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:59:21+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T17:59:22+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-02T18:08:22+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_details
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0110s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdt` [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Model\CYsdtModel.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `ydw_c_tthq_3` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`title`,`view`,`create_time`,`author`,`content` FROM `ydw_c_tthq_3` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` < null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ydw_c_tthq_3` WHERE `id` > null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 141 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+

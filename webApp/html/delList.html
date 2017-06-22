@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/lists.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <title>物流列表</title>
+    <style>
+        .data_wp {margin-top: 7.1rem;}
+    </style>
+</head>
+<body>
+<header>
+    <a href="./discover.html" class="back_btn">
+        <i class="icon_zjt iconfont"></i>返回
+    </a>
+    <span>物流列表</span>
+</header>
+<div class="ydw_wp">
+    <div class="swiper-container" id="swiper-container2" style="width:100%;">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide active-nav nav_item">
+                全部
+            </div>
+            <div class="swiper-slide nav_item">
+                箱式/板车
+            </div>
+            <div class="swiper-slide nav_item">
+                集装箱
+            </div>
+            <div class="swiper-slide nav_item">
+                冷藏车
+            </div>
+            <div class="swiper-slide nav_item">
+                危险品车辆
+            </div>
+            <div class="swiper-slide nav_item">
+                特种车
+            </div>
+        </div>
+    </div>
+    <div class="data_wp">
+        <div class="data_box all_data">
+            <ul class="list_wp list_wp1">
+                <!--<li class="list_item dcp">-->
+                    <!--<div class="title">-->
+                        <!--<label for="">车辆类型:</label><span class="title_txt">普通</span>-->
+                    <!--</div>-->
+                    <!--<div class="middle">-->
+                        <!--<ul>-->
+                            <!--<li>-->
+                                <!--<div class="cir">-->
+                                    <!--<b class="line dib"></b>-->
+                                <!--</div>-->
+                                <!--<label class="ft_s dib">出&nbsp;&nbsp;发&nbsp;&nbsp;地 : </label><span class="bhd_s dib">河南省郑州市公安县的撒打算的萨达傻傻的阿大声道阿萨德</span>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="cir"><b class="line dib"></b></div>-->
+                                <!--<label class="ft_s dib">目&nbsp;&nbsp;的&nbsp;&nbsp;地 : </label><span class="bhd_s dib">河南省郑州市公安县的撒打算的萨达傻傻的阿大声道阿萨德</span>-->
+                            <!--</li>-->
+                            <!--<li class="contact_li">-->
+                                <!--<div class="cir"><b class="line dib"></b></div>-->
+                                <!--<label class="ft_s dib">联系方式 : </label><div class="bhd_s dib">-->
+                                <!--<span class="contacts_span">荆云鹏有限公司</span><br>-->
+                                <!--<span class="tel_span">15638215985</span>-->
+                            <!--</div>-->
+                            <!--</li>-->
+                            <!--<li class="dcp_sp">-->
+                                <!--<i class="cir dib"></i>-->
+                                <!--<label class="ft_s dib">简　　介 : </label>-->
+                                <!--<span class="bhd_s dib des_span">河南省郑州市公安县的撒打算的萨达傻傻的阿大声道阿萨德</span>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="bottom clearfix">-->
+                        <!--<div class="time_wp r">-->
+                            <!--<span>发布时间 :</span> <span class="add_time">2017-12-25</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="data_box">
+            <ul class="list_wp list_wp2">
+            </ul>
+        </div>
+        <div class="data_box">
+            <ul class="list_wp list_wp3">
+
+            </ul>
+        </div>
+        <div class="data_box">
+            <ul class="list_wp list_wp4">
+
+            </ul>
+        </div>
+        <div class="data_box">
+            <ul class="list_wp list_wp5">
+
+            </ul>
+        </div>
+        <div class="data_box">
+            <ul class="list_wp list_wp6">
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="../js/lists.js"></script>
+<script src="../js/load.js"></script>
+<script>
+    var data = {
+        t:'9999',
+        num:10,
+        clientType:1
+    }
+    var dataWp = $(".data_box");
+    var listWp = $(".list_wp");
+    var navItem = $(".nav_item");
+    var mySwiper2 = new Swiper('#swiper-container2',{
+        watchSlidesProgress : true,
+        watchSlidesVisibility : true,
+        slidesPerView : 5,
+        onTap: function(){
+            var i = mySwiper2.clickedIndex;
+            if (!i && i!= 0 || navItem.eq(i).hasClass("active-nav")) return;
+            updateNavPosition(i);
+            tabClickFn(i);
+        }
+    })
+    listWp.each(function () {
+        var _this = $(this);
+        _this[0].scrolling = false;
+        appendLoad(_this);
+    })
+    rule.scrollEvents = function (wp) {
+        var j = $(".active-nav").index() + 1;
+        var dataWp = wp || $(".list_wp" +j);
+        if (dataWp[0].scrolling){
+            return;
+        }
+        dataWp[0].scrolling = true;
+        var lastId = dataWp.children(":last").attr("data-id");
+        data.minId = lastId || "";
+        $.post(rule.root + 'AppCompany/deliveryList' ,data ,function (req) {
+            var code = req.code;
+            var str1  = '';
+            if (code == 1){
+                var datas = req.data.data;
+                if (datas){
+                    console.log(datas)
+                    var  datasL = datas.length;
+                    for (var i = 0; i < datasL; i++){
+                        var begin = datas[i].begin,
+                            addTime = datas[i].add_time,
+                            end = datas[i].end,
+                            contacts = datas[i].contacts,
+                            desc = datas[i].desc,
+                            id = datas[i].id,
+                            type = datas[i].type,
+                            mobile = datas[i].mobile;
+                            str1 += '<li class="list_item dcp" data-id="'+ id +'"><a href="./deldetail.html?id='+ id +'"><div class="title"><label for="">车辆类型:</label><span class="title_txt">'+ type +'</span></div><div class="middle"><ul><li><div class="cir"><b class="line dib"></b></div><label class="ft_s dib">出&nbsp;&nbsp;发&nbsp;&nbsp;地 : </label><span class="bhd_s dib">'+begin+'</span></li><li><div class="cir"><b class="line dib"></b></div><label class="ft_s dib">目&nbsp;&nbsp;的&nbsp;&nbsp;地 : </label><span class="bhd_s dib">'+end+'</span></li><li class="contact_li"><div class="cir"><b class="line dib"></b></div><label class="ft_s dib">联系方式 : </label><div class="bhd_s dib"><span class="contacts_span">'+ contacts +'</span><br><span class="tel_span">'+ mobile +'</span></div></li><li class="dcp_sp"><i class="cir dib"></i><label class="ft_s dib">简　　介 : </label><span class="bhd_s dib des_span">'+ desc  +'</span></li></ul></div><div class="bottom clearfix"><div class="time_wp r"><span>发布时间 :</span> <span class="add_time">'+ addTime +'</span></div></div></a></li>'
+                    }
+                    dataWp.append(str1);
+                    //后期针对每个优化
+                    line($(".dcp li"));
+                    dataWp[0].hasload = true;
+                    if (datasL < data.num){
+                        dataWp[0].scrolling = true;
+                        dataWp.next("div").text("没有更多数据");
+                        return;
+                    }
+                    dataWp[0].scrolling = false;
+                }else {
+                    //data不存在 说明 没数据
+                    dataWp[0].scrolling = true;
+                    dataWp.next("div").text("没有更多数据");
+                }
+            }else if (code == 0){
+                alert("请求错误");
+            }
+        })
+    }
+    function tabClickFn(i) {
+        $(window).scrollTop(0);
+        data.t = i - 1;
+        dataWp.hide().eq(i).show();
+        if (data.t == -1) {
+            data.t = '9999';
+        }
+        var index = i + 1;
+        var wpObj = $(".list_wp" + index);
+        if (wpObj[0].hasload) return;
+        rule.scrollEvents(wpObj);
+    }
+    function updateNavPosition(i){
+        $('#swiper-container2 .active-nav').removeClass('active-nav')
+        var activeNav = $('#swiper-container2 .swiper-slide').eq(i).addClass('active-nav');
+        if (!activeNav.next().hasClass('swiper-slide-visible')){
+            mySwiper2.slideTo(activeNav.index()-2)
+        }
+        if (!activeNav.prev().hasClass('swiper-slide-visible')){
+            mySwiper2.slideTo(activeNav.index()-2);
+        }
+        if (!activeNav.hasClass('swiper-slide-visible')) {
+            if (activeNav.index()>mySwiper2.activeIndex) {
+                var thumbsPerNav = Math.floor(mySwiper2.width/activeNav.width())-1
+                mySwiper2.slideTo(activeNav.index()-thumbsPerNav)
+            }
+            else {
+                mySwiper2.slideTo(activeNav.index())
+            }
+        }
+    }
+    //初始化页面数据;
+    rule.scrollEvents();
+</script>
+</body>
+</html>

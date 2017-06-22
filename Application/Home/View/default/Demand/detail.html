@@ -1,0 +1,188 @@
+<extend name="./base" />
+<block name="style">
+<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/titleDSG.css" />
+<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/dl.css" />
+</block>
+<block name="body">
+<div class="demand-detail">
+	<include file="Public/common_nav" />
+	<div class="detail-middle">
+		<div class="detail-bread">
+			<i></i>
+			<b>当前位置：</b>&nbsp;
+			<a href="/">首页</a>&nbsp;&gt;&nbsp;<a href="{:U('demand/lst')}">求购信息</a>&nbsp;&gt;&nbsp;<a href="javascript:;"><b>详细</b></a>
+			<a href="{:U('goods/detail',array('id'=>$info['goods_id']))}" class="r look_detail">查看更多内容</a>
+		</div>
+		<div class="detail-main clearfix">
+			<div class="main-title clearfix">
+				<h2 class="l">求购：{$info.goods_name}</h2>
+				<if condition="$Think.session.user_sign">
+					<eq name="same" value="1">
+						<else/>
+						<if condition="!$tender && $info.status eq 0">
+						<p class="r"><button type="button" onclick="toTender();">投标</button></p>
+						<else/>
+						<p class="r"><button type="button">{$tender.status|get_tender_type}</button></p>
+						</if>						
+					</eq>
+				<else/>
+					<p class="r"><button type="button" onclick="toTender();">投标</button></p>
+				</if>								
+			</div>
+			<div class="main-detail">
+				<ul class="l main-details demand-details clearfix">
+					<li>分类：{$info.cate_name|default='自定义'}</li>
+					<li>规格：{$info.goods_attr_name|default=''}</li>
+					<li>数量：{$info.num}公斤</li>
+					<li>产地：
+						<eq name="info.origin_type" value="3">
+							{$info.origin_area}
+							<else/> {$info.origin_type|get_origin_type}
+						</eq>
+					</li>
+					<li>买家：{$info.contacts}</li>
+					<li>手机：{$info.mobile}</li>
+					<li class="status">状态：<span>{$info.status|get_demand_type}</span></li>
+					<li class="status">保证金：<span><gt name="info.deposit" value="0">已支付（{$info.deposit}元）<else/>未支付</gt></span></li>
+					<li>Q&nbsp;Q：{$info.qq|default="无"}</li>
+					<li>发布时间：{$info.create_time|date='Y-m-d',###}</li>		
+					<li class="w-full">详情：{$info.details}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<notempty name="Think.session.user_sign">
+		<eq name="same" value="1">
+			<notempty name="list">
+			<div class="bid-compete clearfix">
+				<h2>供应商投标信息</h2>
+				<div class="compete-left l">
+					<foreach name="list" item="vo" key="k">
+						<div class="competes clearfix">
+							<div class="order l">{$k+1}</div>
+							<div class="competes-img l">
+								<img src="{$vo.imgs}" alt="" />
+							</div>
+							<div class="competes-detail l">
+								<ul class="clearfix">
+									<li>投标价格：{$vo.price}元/公斤</li>
+									<li>投标时间：{$vo.create_time|date='Y-m-d',###}</li>
+									<li>联&nbsp;&nbsp;系&nbsp;&nbsp;人：{$vo.contacts}</li>
+									<li>联系电话：{$vo.mobile}</li>
+									<li class="w-full">备&nbsp;&nbsp;&nbsp;&nbsp;注：{$vo.remarks}</li>
+								</ul>
+							</div>
+							<div class="choose r">
+								<if condition="($info.status eq 0) or ($vo.status eq 0) ">
+								<button type="button" onclick="chooseWin({$vo.id})">选择</button>
+								 </if>								
+							</div>
+						</div>
+					</foreach>
+				</div>			
+			</div>			
+			{$pageHtml}
+			</notempty>
+			<else/>
+			<notempty name="tender">
+				<div class="bid-compete clearfix">
+					<h2>我的投标信息</h2>
+					<div class="compete-left l">
+						<div class="competes clearfix">
+							<div class="order l">1</div>
+							<div class="competes-img l">
+								<img src="{$tender.imgs}" alt="投标图片" />
+							</div>
+							<div class="competes-detail l">
+								<ul class="clearfix">
+									<li>投标价格：{$tender.price}元/公斤</li>
+									<li>投标时间：{$tender.create_time|date='Y-m-d',###}</li>
+									<li>联&nbsp;&nbsp;系&nbsp;&nbsp;人：{$tender.contacts}</li>
+									<li>联系电话：{$tender.mobile}</li>
+									<li>备&nbsp;&nbsp;&nbsp;&nbsp;注：{$tender.remarks}</li>
+								</ul>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</notempty>
+		</eq>
+	</notempty>
+</div>
+<div class="modal" id="modal">
+	<div class="modal-dialog demand-bid">
+		<div class="modal-content">			
+			<span class="cancel" onclick="cancelModal();"></span>
+			<div class="bid-title">编辑我的投标信息</div>
+			<ul class="bid-list">
+				<li>
+					<span>药材名称：</span> {$info.goods_name}
+				</li>
+				<li>
+					<span>规&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：</span> {$info.goods_attr_name}
+				</li>
+				<li class="bid-phone">
+					<span>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：</span>
+					<input type="text" id="price" autocomplete="off" placeholder="请输入您的价格" />&nbsp;元/公斤
+					<div class="bid-test test-price">
+					</div>
+				</li>
+				<li>
+					<span>联&nbsp;&nbsp;系&nbsp;&nbsp;人：</span>
+					<input type="text" id="contacts" value="<?php echo session('user_sign.realname'); ?>" autocomplete="off"/>
+					<div class="bid-test test-contact">
+					</div>
+				</li>
+				<li>
+					<span>联系电话：</span>
+					<input type="text" id="mobile" value="<?php echo session('user_sign.mobile'); ?>" maxlength=11 autocomplete="off"/>
+					<div class="bid-test test-phone">
+					</div>
+				</li>			
+				<li class="detail-upload">
+					<span class="txt l">图片上传：</span>
+					<ul id="detail1" class="clearfix">
+						<li class="up-btn1">
+							<img class="add-store" src="__HOME__/company/images/up_pic.png" alt="" />
+							<form id="detail-form" enctype="multipart/form-data">
+								<input type="file" id="file" name="file" />
+							</form>
+						</li>
+					</ul>					
+				</li>					
+				<li class="remarks-li">
+					<span class="txt">详细说明：</span>
+					<textarea id="remarks" rows="3" cols="61" placeholder="请输入详情"></textarea>
+				</li>
+				<li class="center-btn">
+					<button type="button" onclick="submitForm();">确定</button>
+					<button type="button" class="close" onclick="cancelModal();">取消</button>
+				</li>
+			</ul>		
+		</div>
+	</div>
+</div>
+<div class='modal modal-shade' id='confirmModal'>
+	<div class='modal-dialog demand-tishi'>
+		<div class='modal-content'>
+			<i class='close'>&times;</i>
+			<p>提示</p>	
+			<div class='modal-context'>确定选择当前投标信息？</div>
+			<div class='context-a demand-m2'>
+				<a href='javascript:;' class='ok'>确定</a>
+				<a href='javascript:;' class='close'>取消</a>
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">
+<script src="__STATIC__/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+<script src="__HOME__/demand/js/detail.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var params = {};
+	params.user_sign = "{$Think.session.user_sign}";
+	params.id = "{$Think.get.id}";	
+	var urls = ["{:U('Demand/win')}","{:U('login/index')}","{:U('Demand/ajaxUploadImg')}","{:U('Demand/tender')}"];	
+</script>
+</block>

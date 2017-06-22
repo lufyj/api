@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>药都网--发现</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/hqdetail.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+    <script>
+        if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+    </script>
+</head>
+<body>
+    <header>
+        <!--<a href="javascript:void(0);" class="back_btn" onclick="window.history.back();">-->
+            <!--<i class="icon_zjt iconfont"></i>返回-->
+        <!--</a>-->
+        <span>行情</span>
+    </header>
+    <div class="ydw_wp">
+        <article class="market_wp">
+            <div class="article_info">
+                <div class="head_info clearfix">
+                    <img src="" alt="" class="head_img">
+                    <p id="author"></p>
+                    <span class="right_txt r" id="create_time"></span>
+                </div>
+                <div class="atc_c">
+                    <h3 id="title"></h3>
+                    <p id="description"></p>
+                    <div class="img_wp thumb_details"></div>
+                </div>
+                <div class="atc_op">
+                        浏览<span class="view_num"></span>
+                        <div class="r">
+                            <!--<a href="javascript:;"><i class="iconfont icon_dashang icon"></i> <span class="total_reward">26</span></a>-->
+                            <a href="javascript:;"><i class="iconfont icon_huifu icon"></i> <span class="total_comment">51</span></a>
+                            <!--<a href="javascript:;"><i class="iconfont icon_fenxiang icon"></i> <span>分享</span></a>-->
+                        </div>
+                </div>
+            </div>
+            <div class="interact_info">
+                <!--<div class="person_wp">-->
+                    <!--<a href="">-->
+                        <!--<i class="icon_wallet"></i>-->
+                        <!--<span>奔跑的五牛、</span>-->
+                        <!--<span>奔跑的五牛、</span>-->
+                        <!--<span>奔跑的五牛、</span>-->
+                        <!--<span>奔跑的五牛、</span>-->
+                        <!--<span>奔跑的五牛、</span>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <div class="comment_wp">
+                    <div class="comment_hd">用户评论</div>
+                    <div class="comment_bd">
+                        <ul id="comment_list">
+                            <!--<li>-->
+
+                                <!--<span class="user" id="user">卖蘑菇的混沌</span>: <span>你这文章不错啊</span>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<span class="user">卖冰淇淋</span>回复<span class="user">卖蘑菇的混沌</span>: <span>可怜一下，打赏一下啊亲可怜一下，打赏一下啊亲</span>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<span class="user">卖糖葫芦</span>: <span>啥几把文章，真垃圾</span>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<span class="user">卖冰淇淋</span>回复<span class="user">卖蘑菇的混沌</span>: <span>我辛辛苦苦写的东西，你说是垃圾，不看滚蛋</span>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<span class="user">兄弟你炸了</span>: <span>兄弟,说的不错,现在的行情,确实太乱了。</span>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </div>
+    <div class="comment_op">
+        <input type="text" placeholder="期待您的评论" id="comment_input" onfocus="checkVal(this)" onkeyup="checkVal(this)" onkeydown="checkVal(this)" onchange="checkVal(this)" onblur="checkVal(this)"><i class="iconfont icon_shuxie"></i><button class="" id="sub_com">发送</button>
+    </div>
+</body>
+<script type="text/javascript" src="../js/load.js"></script>
+<script type="text/javascript">
+    function checkVal(obj){
+        var _this = $(obj);
+        var val = $.trim(_this.val());
+        if (val) subBtn.addClass("act");
+        else subBtn.removeClass("act");
+    }
+    var marketId = rule.getRequest().id;
+    var commentArea =  $("#comment_input");
+    var subBtn = $("#sub_com");
+$(function(){
+        var listwp = $("#comment_list");
+        appendLoad(listwp);
+        var data = {
+            market_id:marketId
+        };
+
+        $.postT(rule.root + "AppHerbal/market_detail" , data , function (req){
+            var code = req.code;
+            if (code == 1){
+                var datas = req.data,
+                    author = datas.author,
+                    content = datas.content,
+                    createTime = datas.create_time,
+                    description = datas.description,
+                    headPic  = datas.head_pic,
+                    id = datas.id,
+                    atcImgArr = datas.thumb_details,
+                    title = datas.title,
+                    totalComment = datas.total_comment,
+                    totalReward = datas.total_reward,
+                    viewNum = datas.view;
+                    $("#author").text(author);
+                    $("#create_time").text(createTime);
+                    $("#description").text(description);
+                    $("#title").text(title);
+                    $(".head_img").attr("src" , headPic);
+                    $(".view_num").text(viewNum + "次");
+                    $(".total_comment").text(totalComment);
+                    $(".total_reward").text(totalReward);
+                    var imgArrLength = atcImgArr.length
+                    var img = '';
+                    for (var i = 0; i < imgArrLength;i++){
+                        img += '<img src="'+ atcImgArr[i] +'" alt="">';
+                    }
+                    $(".thumb_details").html(img)
+            }
+        })
+
+        rule.scrollEvent = function (fn){
+            var params = {
+                market_id:marketId,
+                num:20
+            }
+            var lastId = listwp.children(":last").attr("data-id");
+            params.minId = lastId || "";
+            $.postT(rule.root + "AppMarket/market_comment" , params , function (req){
+                var code = req.code;
+                if (code == 1){
+                    var datas = req.data;
+                    var datasL = datas.length;
+                    var li = '';
+                    for (var i = 0; i < datasL; i++){
+                        var content = datas[i].content,
+                            getSendName = datas[i].get_send_name,
+                            id = datas[i].id,
+                            sendId = datas[i].send_id,
+                            sendName = datas[i].send_name;
+                        if (getSendName){
+                            li += '<li send-id="'+ sendId +'" data-id="'+ id +'"><a href="javascript:;"><span class="user" id="user">'+ sendName +'</span>回复<span class="user">'+ getSendName +'</span>: <span>'+ content +'</span></a></li>';
+                        }else {
+                            li += '<li send-id="'+ sendId +'" data-id="'+ id +'"><a href="javascript:;"><span class="user" id="user">'+ sendName +'</span>: <span>'+ content +'</span></a></li>';
+                        }
+                    }
+                    listwp.append(li);
+                    if (datasL < 20){
+                        $("#load_wp").text("没有更多数据");
+                        return;
+                    }
+                    fn&&fn();
+                }else if (code == 103){
+                    var hrefUrl = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+                    rule.showMsg(1 , "该账号已在其他地方登陆,请重新登录" , 2000 , hrefUrl);
+                }else if (code == 0){
+                    $("#load_wp").text("没有更多数据")
+                }
+            })
+        }
+        rule.scrollEvent();
+        var commentData = {
+            market_id:marketId,
+            comment_id:'',
+            get_send_id:''
+        };
+        listwp.on("click" , "li" , function (){
+            var _this = $(this);
+            var comId = _this.attr("data-id");
+            var senderId = _this.attr("send-id");
+            if (commentData.comment_id&&commentData.comment_id == comId){
+                commentArea.focus();
+                return;
+            }
+            commentData.comment_id = comId;
+            commentData.get_send_id = senderId;
+            var commentName =_this.find("#user").text();
+            commentArea.val("").focus().attr('placeholder' , "@" + commentName);
+        });
+        var subBol = true;
+        subBtn.click(function (){
+            var _this = $(this);
+            if (!_this.hasClass("act")) return;
+            if (!subBol) return;
+            var content = $.trim(commentArea.val());
+            if (!content) return;
+            commentData.content = content;
+            subBol = false;
+            $.postT(rule.root + 'AppMarket/add_comment',commentData , function (req){
+                var code = req.code;
+                if (code == 1){
+                    location.reload();
+                    return;
+                }else if (code == 0 || code == 30  || code == 107 || code == 108 ){
+                    rule.showMsg(1 , "发布失败" , 1500);
+                }else if (code == 103){
+                    var hrefUrl = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+                    rule.showMsg(1 , "该账号已在其他地方登陆,请重新登录" , 1500 , hrefUrl);
+                }else  if(code == 109){
+                    rule.showMsg(1 , "评论内容过长" , 1500);
+                }
+                subBol = true;
+            })
+        });
+
+//    code  1  		成功
+//    code  0  		失败
+//    code  30  		发布评论用户未传
+//    code  107              comment_id的评论 所属文章与 market_id  不一致
+//    code  108              comment_id的评论 发布人id get_send_id  不一致
+//    code  109             评论内容为空,或评论内容大于255
+//         参数
+//    get_send_id 		被评论用户id   (如果评论的是评论的话,把被评论人的id传过来,  如果评论的是文章传个空字符串)
+//    comment_id          	被评论的评论id (如果评论的是评论的话,把被评论的评论id传过来,如果评论的是文章传个空字符串)
+//    market_id            被评论文章id
+//    content
+    })
+</script>
+</html>

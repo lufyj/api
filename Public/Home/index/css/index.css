@@ -1,0 +1,638 @@
+/*滚动条*/
+::-webkit-scrollbar-track-piece {  
+    background-color:#f5f5f5;  
+    border-left:1px solid #d2d2d2;  
+}  
+::-webkit-scrollbar {  
+    width:13px;  
+    height:13px;  
+}  
+::-webkit-scrollbar-thumb {  
+    background-color:#c2c2c2;  
+    background-clip:padding-box;  
+    border:1px solid #979797;  
+    min-height:28px;
+    border-radius: 30px;
+}  
+::-webkit-scrollbar-thumb:hover {  
+    border:1px solid #636363;  
+    background-color:#929292;  
+} 
+/*关于热门药材*/
+.drug-list li.remen-title{
+	color:#E62b2e;
+	font-size:16px;
+	margin-left: 7px;
+	height:39px;
+	line-height: 30px;
+}
+.remen a{
+    display: block;
+    height: 22px;
+    line-height: 21px;
+    background: #fa4c4c;
+    color: #fff;
+    border-radius: 11px;
+    padding: 0 10px;
+    margin: 5px 5px 5px 0px;
+}
+.remen a:hover{
+	text-decoration: none;
+}
+.index-close{
+	display: none !important;
+}
+/*导航nav*/
+.nav-wrap{
+	width: 100%;
+	height: 45px;
+	border-bottom: 2px solid #E62B2E;
+}
+.nav-wrap .nav{
+	margin: 20px auto 0;
+	width: 1200px;
+	position: relative;
+}
+.nav-wrap .nav>span,.nav-wrap .nav-list,.nav-wrap .nav-list li{
+	float: left;
+	height: 45px;
+	line-height: 45px;
+}
+.nav-wrap .nav>span {
+	display: inline-block;
+	width: 194px;
+	text-align: center;
+	background-color:#e62b2e ;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	z-index: 100;
+	left: 0;
+	position: absolute;
+}
+.nav-wrap .nav-list{
+	width: 1006px;
+	margin-left: 194px;
+}
+.nav-wrap .nav-list li{
+	font-size: 16px;
+	cursor: pointer;
+	width: 10%;
+	height: 43px;
+	text-align: center;
+}
+.nav-wrap .nav-list li a{
+	display: inline-block;
+	height: 43px;
+	width: 100%;
+}
+/*.nav-wrap .nav-list li[class="current"]{
+	border-bottom: 2px solid #e62b2e;
+}*/
+.nav-wrap .nav-list li[class="current"] a{
+	color: #e62b2e;
+}
+.nav-wrap .nav-list li>a:hover{
+	color: #e62b2e;
+	text-decoration: none;
+}
+/*导航nav结束*/
+.banner-wp {
+	width: 1200px;
+	height: 456px;
+	position: relative;
+	margin: 0 auto;
+}
+.banner-wp .middle {
+	width:704px;
+	height: 456px;
+	margin-left: 10px;
+}
+.banner {
+	width: 100%;
+	height: 456px;
+}
+
+.banner img {
+	width: 100%;
+	height: 456px;
+}
+
+/*药材分类导航*/
+.drug-class {
+	width: 194px;
+	height: 456px;
+	position: relative;
+	background-color: #6C6669;
+}
+
+.drug-class>li {
+	width: 162px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	color: #000;
+	padding-left: 32px;
+	cursor: pointer;
+}
+.drug-class>li:hover{
+	background-color: #fff;
+	color: #000;
+}
+.drug-class:hover{
+	 box-shadow: -8px 8px 16px rgba(0,0,0,0.18);
+   	-webkit-box-shadow: -8px 8px 16px rgba(0,0,0,0.18);
+   	-moz-box-shadow: -8px 8px 16px rgba(0,0,0,0.18);
+}
+.drug-class>li:hover span{
+	color: #000;
+}
+.drug-class>li span {
+	color: #fff;
+}
+
+.drug-class>li .nav-icon {
+	display: inline-block;
+	width: 6px;
+	height: 12px;
+	background: url(../images/weixin.png);
+	margin-left: 80px;
+	position: absolute;
+	right: 32px;
+	margin-top: 12.5px;
+}
+
+.nav-icon {
+	margin-left: 51px !important;
+}
+
+.drug-list {
+	width: 673px;
+	height: 456px;
+	position: absolute;
+	top:0;
+	left: 100%;
+	padding: 0 20px;
+	background-color: #fff;
+	display: none;
+	z-index: 50;
+	cursor: default;
+   	box-shadow: 8px 8px 16px rgba(0,0,0,0.18);
+   	-webkit-box-shadow: 8px 8px 16px rgba(0,0,0,0.18);
+   	-moz-box-shadow: 8px 8px 16px rgba(0,0,0,0.18);
+    overflow-y: auto;
+}
+
+.drug-list>li {
+	float: left;
+	padding: 0 8px;
+	font-size: 14px;
+	cursor: pointer;
+}
+.drug-list>li:hover {
+	color: #f00;
+}
+/*登录框*/
+.login-box {
+	width: 280px;
+	height: 100%;
+	margin-left: 10px;
+	background-color: #f8f8f8;
+}
+
+.login-box .title,
+.login-box .input,
+.login-box .op{
+	width: 248px;
+}
+
+.login-box .title {
+	margin: 5px auto;
+	line-height: 28px;
+}
+
+.login-box .input {
+	margin: 10px auto;
+	position: relative;
+}
+
+.login-box .title span {
+	font-size: 12px;
+	color:#030303;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.login-box .title a {
+	color: #f00;
+}
+
+.login-box .input input {
+	width: 195px;
+	border: 1px solid #ccc;
+	height: 36px;
+	line-height: 36px;
+	margin-top: 10px;
+	padding-left: 10px;
+}
+#loginname{
+	background:#fff url(../images/user.png) no-repeat 217px center;
+}
+#loginpwd{
+	background:#fff url(../images/password.png) no-repeat 217px center;
+}
+.user-name,
+.psw {
+	padding-right: 41px;
+}
+
+.user-name {
+	margin-top: 0 !important;
+}
+.remb {
+	margin-top: 18px !important;
+}
+
+.show {
+	background: url(../images/login_duihao.png) no-repeat center center;
+}
+
+.is-remb {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border: 1px solid #bbb;
+	margin-top: 6px;
+}
+
+.remb-txt {
+	margin-left: 7px;
+}
+
+.login-box .op {
+	margin: 15px auto 0;
+}
+.login-box .op .login-btn {
+	display: inline-block;
+	border-radius: 2px;
+	background-color: #e6292c;
+	background-image: linear-gradient(#fc696b, #e6292c);
+	width: 248px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+}
+
+.publish-div{
+	text-align: center;
+	margin-top: 20px;
+}
+.publish-div>a{
+	color: #e62b2e;
+	font-size: 16px;
+}
+/*****给登录时添加验证信息*******/
+div.verify{
+    min-height: 18px;
+    border: 1px solid sandybrown;
+    width: 236px;
+    margin: 0 auto;
+    padding: 5px;
+    background: #fff6d2;
+}
+div.verify span{
+	display: inline-block;
+	padding-left:16px;
+	background: url(../../images/icons.png) no-repeat -104px -23px;
+}
+/*****给登录时添加验证信息结束****************/
+/*登录框结束*/
+/*******登录成功后的部分*********/
+.success-title{
+	padding-top: 10px;
+    text-align: center;
+}
+.success-title img{
+	max-width:80px;
+	height:80px;
+	border-radius:50%;
+}
+.success-title dd{
+    font-size: 16px;
+    color: #030303;
+    line-height: 30px;
+}
+.success-title dd span{
+	color:#E62B2E;
+}
+.success-center{
+	margin:10px 0;
+}
+.success-center a{
+	display: inline-block;
+    width: 34%;
+    border: 1px solid #E62B2E;
+    padding: 8px 15px;
+    background: #E62B2E;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 8px;
+}
+.success-center a:hover{
+	text-decoration:none;
+	background:#ff2121;
+	border-color:#ff2121;
+}
+/*******登录成功后部分的结束************/
+.content-wp {
+	width: 1200px;
+	margin: 10px auto;
+}
+.content-wp .title , .content-wp .title-left , .content-wp .title-right {
+	height: 46px;
+	line-height: 46px;
+}
+.title_a{
+	background: url(../images/title_f.png) no-repeat;
+}
+.title_b{
+	background: url(../images/title_b.png) no-repeat;
+}
+.title_c{
+	background: url(../images/title_c.png) repeat-x;
+	background-size: 100% 100%;
+}
+.title_d{
+	background: url(../images/title_d.png) repeat-x;
+	background-size: 100% 100%;
+}
+.content-wp .title span,
+.other .title-left span,
+.other .title-right span {
+	display: inline-block;
+	font-size: 20px;
+	margin-left: 25px;
+	font-weight: bolder;
+	color: #fff;
+}
+
+.other .title-left,
+.other .title-right {
+	width: 599px;
+}
+
+.content-wp .title a,
+.other .title-left a,
+.other .title-right a {
+	font-size: 14px;
+	color: #fff;
+	margin-right: 15px;
+}
+
+.cont-box {
+	margin-top: 20px;
+}
+
+.cont .left,
+.cont .right {
+	width: 597px;
+	height: 193px;
+	border: 1px solid #ccc;
+}
+
+.cont .right,
+.other .title-right {
+	margin-left: 2px;
+}
+.cont .img {
+	width: 158px;
+	height: 100%;
+	overflow: hidden;
+}
+
+.cont .img img {
+	width: 158px;
+	height: 193px;
+}
+
+.cont .message {
+	width: 438px;
+	height: 100%;
+	border-left: 1px solid #ccc;
+}
+
+.cont .message>li {
+	height: 32px;
+	line-height: 32px;
+	padding-right: 3px;
+	padding-right:3px\9;
+}
+
+.cont .message>li li {
+	float: left;
+	width: 20%;
+	text-align: left;
+	cursor: pointer;
+	height: 32px;
+	text-align: center;
+	overflow: hidden;
+	font-size: 13px;
+}
+.cont .message.logistics>li li{
+	width:33%;
+}
+.cont .txt-clip>li li{
+	text-overflow: clip;
+    overflow: hidden;
+}
+.cont .message .top {
+	font-weight: 900;
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+}
+.ad {
+	width: 1200px;
+	height: 130px;
+	margin-top: 20px;
+}
+
+.service {
+	width: 1200px;
+	margin: 25px auto;
+}
+
+.service .title {
+	height: 32px;
+	line-height: 32px;
+	font-size: 16px;
+	border-bottom: 2px solid #ff5555;
+	margin-bottom: 17px;
+}
+
+.service-cont>div>div {
+	margin: 0 7px 7px 0;
+}
+
+.new-notice {
+	width: 1200px;
+	margin: 20px auto;
+}
+.notice-title span{
+	display: inline-block;
+	height: 13px;
+	line-height: 13px;
+	text-align: center;
+	border-left: 4px solid #e6292c;
+	padding: 5px 9px;
+	font-size: 20px;
+	margin-left: 3px;
+	font-weight: bolder;
+}
+.new-notice .content {
+	width: 1200px;
+	border: 1px solid #ccc;
+	margin-top: 15px;
+	border-radius: 5px;
+}
+
+.new-notice .content ul {
+	width: 552px;
+	font-size: 15px;
+	padding: 4px 24px;
+}
+
+.new-notice .content li {
+	line-height: 36px;
+}
+.new-notice .content li span{
+	display: inline-block;
+    width: 25px;
+    text-align: right;
+}
+
+/*添加我的公告hover状态*/
+
+.new-notice .content li a:hover {
+	background: #Fafafa;
+	color: #D83434;
+	text-decoration: none;
+}
+.new-notice .content li a {
+	display: inline-block;
+	width: 510px;
+	border-bottom: 1px solid #ccc;
+}
+
+.new-notice .content .btm {
+	border: none;
+}
+
+.friendly-link {
+	width: 1198px;
+	margin: 20px auto;
+	height: 124px;
+	border: 1px solid #ccc;
+}
+
+.friendly-link .top {
+	height: 36px;
+	line-height: 36px;
+	font-size: 15px;
+	padding-left: 30px;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #ccc;
+}
+
+.friendly-link li {
+	line-height: 43.5px;
+	float: left;
+	margin-left: 35px;
+}
+
+.friendly-link>ul {
+	padding: 0 3%
+}
+
+.lunb_zhan {
+	width: 1200px;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 2px solid #e6292c;
+	margin: 26px auto 0;
+	color: #555;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: Microsoft Yahei;
+}
+
+.serve-wp {
+	width: 1200px;
+	margin: 18px auto 0;
+	height: 334px;
+	overflow: hidden;
+}
+
+.serve-wp li {
+	float: left;
+	width: 336px;
+	height: 158px;
+	margin: 0 9px 9px 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.serve-wp .small {
+	width: 164px;
+}
+
+.serve-wp .last {
+	margin-right: 0px;
+}
+
+.serve-wp li>img {
+	width: 100%;
+	height: 100%;
+}
+
+.serve-wp li div {
+	position: absolute;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	width: 100%;
+	top: 100%;
+}
+/******修改登录部分
+ * *  这一块暂时不用，后期看情况，但也有可能删除掉2016-10-1-24周一**********/
+.list-news li p,.list-news2 li p{
+	display: inline-block;
+	height:24px;
+}
+.news-sel{
+	position:absolute;
+	top:10px;
+	right:15px;
+}
+.news-sel i{
+    display: inline-block;
+    margin-right: 5px;
+    background: #afafaf;
+    color: #fff;
+    font-style: normal;
+    width: 20px;
+    height: 15px;
+    line-height: 16px;
+    text-align: center;
+    font-family: '宋体';
+    border-radius: 3px;
+    font-weight: bold;
+    cursor:pointer;
+}
+.news-sel i:hover{
+	background:#0398FA;
+}
+/*******修改登录部分结束*******/

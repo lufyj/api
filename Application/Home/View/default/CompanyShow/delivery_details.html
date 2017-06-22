@@ -1,0 +1,29 @@
+<extend name="./base" />
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/titleDSG.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/dl.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/companyShow/css/companyShow.css" />
+</block>
+<block name="body">
+	<div class="demand-detail">
+		<include file="Public/common_nav" />
+		<div class="detail-middle">
+			<div class="detail-bread">
+				<i></i>
+				<b>当前位置：</b>&nbsp;
+				<a href="/">首页</a>&nbsp;&gt;&nbsp;
+				<a href="{:U('CompanyShow/storeList')}">物流信息</a>&nbsp;&gt;&nbsp;
+				<a href="javascript:;"><b>详情</b></a>
+			</div>
+			<div class="delivery_detail">
+				<ul>
+					<li><b>车辆&nbsp;类型：</b><span>{$info.type}</span></li>
+					<li><b>出&nbsp;&nbsp;发&nbsp;&nbsp;地：</b>{$info.begin}</li>
+					<li><b>目&nbsp;&nbsp;的&nbsp;&nbsp;地：</b>{$info.end}</li>
+					<li><b>简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介：</b><em>{$info.desc}</em></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+</block>

@@ -1,0 +1,123 @@
+<extend name="Public/base"/>
+<block name='navi'><li>会员管理</li><li>信息管理</li></block>
+<block name="body">	
+<div class="page-header">
+	<h1>{:isset($info['id'])?'编辑':'新增'}会员</h1>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#tab1"><i class="green ace-icon fa fa-home bigger-120"></i>注册信息</a></li>				
+		</ul>
+		<div class="tab-content">
+			<form action="{:U('save')}" method="post" class="form-horizontal" id="submit-form">
+				<!-- 基础 -->
+				<div id="tab1" class="tab-pane fade active in">
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;姓名：</label>
+						<div class="controls">
+							<input type="text" name="realname" class="col-xs-10 col-sm-5" value="{$info.realname|default=''}" autocomplete="off"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;手机号：</label>
+						<div class="controls">
+							<input type="text" name="mobile" maxlength=11 class="col-xs-10 col-sm-5" value="{$info.mobile|default=''}" <notempty name="info">readonly</notempty>/>
+							<div id="alert-span" style="padding: 5px 15px;display:inline-block;margin-left: 10px;margin-bottom: 0px" role="alert"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right">邮箱：</label>
+						<div class="controls">
+							<input type="text" name="email" class="col-xs-10 col-sm-5" value="{$info.email|default=''}" autocomplete="off"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right">微信号：</label>
+						<div class="controls">
+							<input type="text" name="weixin" class="col-xs-10 col-sm-5" value="{$info.weixin|default=''}" autocomplete="off"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right">QQ：</label>
+						<div class="controls">
+							<input type="text" name="qq" class="col-xs-10 col-sm-5" value="{$info.qq|default=''}" autocomplete="off"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right">地址：</label>
+						<div class="controls">
+							<input type="text" name="address" class="col-xs-10 col-sm-5" value="{$info.address|default=''}" autocomplete="off"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right">是否启用：</label>
+						<div class="radio">
+							<label>
+								<input type="radio" name="status" class="ace" value="1" checked>									
+								<span class="lbl"> 启用 </span>
+							</label>
+							<label>
+								<input type="radio" name="status" class="ace" value="0">
+								<span class="lbl"> 禁用 </span>
+							</label>			
+						</div>							
+					</div>
+				</div>
+				<div class="clearfix form-actions">		
+					<div class="col-md-offset-3 col-md-9">						
+						<a href="javascript:;" id="submitBtn" class="btn btn-info"><i class="ace-icon fa fa-check bigger-110"></i>确 定</a>
+						<a class="btn btn-return" href="<empty name='info'>javascript:history.back();<else/>{:U('index')}</empty>"><i class="ace-icon fa fa-undo bigger-110"></i>返 回</a>
+					</div>
+				</div>
+				<input type="hidden" name="id" value="{$info.id|default=''}">
+			</form>
+		</div>
+	</div>		
+</div>
+</block>
+<block name="script">
+<script type="text/javascript">
+var submitForm = $('#submit-form');
+$(function(){	
+	/* 提交表单 */
+	$('#submitBtn').on('click', function(){
+		var datas = _checkForm();
+		if(!datas) return;					
+		var _this = $(this);
+		_this.addClass('disabled');			
+		$.ajax({
+			url: "{:U('')}",
+			dataType: "json",		
+			data: datas,
+			type: "post",
+			success: function(req) {
+				if(req.code == 1) success(req.msg, req.url || true);
+				else fail(req.msg, _this);					
+			},
+			error: function() {			
+				alert('网络连接超时，请稍后再试');
+				_this.removeClass('disabled');
+			}
+		});		
+	});
+	//导航高亮
+	highlight_subnav("{:U('User/index')}");	
+})
+<present name="info">
+	Think.setValue("status", {$info.status});
+</present>
+/* 验证表单数据 */
+function _checkForm(){
+	var realname = $.trim(submitForm.find('input[name=\'realname\']').val());
+	if(!realname){
+		fail('请输入用户姓名');return;
+	}
+	var mobile = $.trim(submitForm.find('input[name=\'mobile\']').val());
+	if(!mobile){
+		fail('请输入手机号');return;
+	}
+	return submitForm.serialize();
+}
+</script>
+</block>

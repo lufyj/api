@@ -1,0 +1,17 @@
+
+
+
+.wrap {padding:0.7rem 3.3% 0;}
+.top {width:100%;border-bottom: 1px solid #e5e5e5;}
+.title {font-size:1.33rem;line-height: 1.91rem; color: #000;font-weight: 700}
+.base-msg span {font-size:0.9rem;color:#999;line-height: 1.3rem;}
+.base-msg .author {margin-right:1.9%;}
+.content-wrap .desc {font-size:1.25rem;margin-top:0.8rem;}
+.img-s {width:77.5%;text-align:center;margin:0.88rem auto;}
+.img-s img {width:100%;}
+.content{font-size:1.25rem;}
+.content img{width: 90%;display: block;margin: 0.8rem auto}
+.content {text-align: justify;}
+
+
+/*方案3*/

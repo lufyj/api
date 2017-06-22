@@ -1,0 +1,191 @@
+<extend name="Public/base" />
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__ADMIN__/css/fileinput.min.css" />
+	<link rel="stylesheet" type="text/css" href="__ADMIN__/css/addoredit.css" />
+	<script>
+		var cateJson = {$cateJson};
+	</script>
+</block>
+<block name='navi'>
+	<li>供应管理</li>
+	<li>编辑供应信息</li>
+</block>
+<block name="body">
+	<div class="page-header">
+		<h1>编辑供应信息</h1>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a data-toggle="tab" href="#tab1"><i class="green ace-icon fa fa-home bigger-120"></i>基 础</a>
+				</li>
+			</ul>
+			<div class="tab-content clearfix">
+				<div class="col-md-12">
+					<div class="tabbable">
+						<div class="row">
+							<div class="col-sm-12">
+								<form name="baseinfo" id="myform" action="{:U('save')}" method="post">
+									<input type="hidden" name="id" value="{$info.id}" />
+									<input type="hidden" name="oldPath" class="old_path" value="{$info.pic}" />
+									<input type="hidden" class="img_url" name="imgPath" />
+									<input type="hidden" class="origin_area" name="origin_area" value="{$info.origin_area}" />
+									<input type="hidden" class="goods_area" name="goods_area" value="{$info.supply_area}" />
+									<!--<input type="hidden" />-->
+									<table class="table table-bordered dataTable chengebackgrounecolor ui-jqgrid-htable" id="grid-table">
+										<tbody>
+											<tr class="bg1">
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;药材名称：</td>
+												<td class="col-md-5 col-sm-5" style="text-align:left;position: relative;">
+													<div class="choose-durg" style="position: relative; width: 220px;">
+														<span class="show-cate">{$info.goods_name}</span>
+														<input type="hidden" name="cid" value="{$info.cate_id}" />
+														<input type="hidden" name="c_name" value="{$info.cate_name}" />
+														<input type="hidden" name="gid" value="{$info.goods_id}" />
+														<input type="hidden" name="g_name" value="{$info.goods_name}" />
+														<div class="alert-wp">
+															<ul class="classify-list">
+																<li>
+																	<span data-param="-1">自定义类</span>
+																	<div class="drug-list clearfix">
+																		<label for=""><span>药材名字:</span><input type="text" name="custom_name" class="custom_name"></label>
+																		<br>
+																		<input type="button" id="custom_btn" value="确定" class="">
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</td>
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;联系人：</td>
+												<td class="col-md-5 col-sm-5" style="text-align:left;">
+													<input class="form-control" name="contacts" type="text" placeholder="" style="display:inline-block; width:50%;" value="{$info.contacts}"> &nbsp;&nbsp;
+													<span class="blue"></span>
+												</td>
+											</tr>
+											<tr class="bg1">
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;规格：</td>
+												<input type="hidden" name="attrId" class="levels_id" value="{$info.goods_attr_id}">
+												<input type="hidden" name="attrName" class="levels_name" value="{$info.goods_attr_name}">
+												<td class="col-md-5 col-sm-5">
+													<select class="form-control" name="levels" id="levels" style="display:inline-block; width:50%;">
+														<if condition="$info.specs_list neq ''">
+															<foreach name="info.specs_list" item="spec">
+																<eq name="spec.id" value="$info['goods_attr_id']">
+																	<option value="{$spec.id}" selected>{$spec.attr_name}</option>
+																	<else/>
+																	<option value="{$spec.id}">{$spec.attr_name}</option>
+																</eq>
+															</foreach>
+														</if>
+													</select>
+												</td>
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;手机：</td>
+												<td class="col-md-5 col-sm-5" style="text-align:left;"><input style="display:inline-block; width:50%;" name="mobile" class="form-control" type="text" placeholder="" value="{$info.mobile}">
+												</td>
+											</tr>
+											<tr class="bg2">
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;数量：</td>
+												<td class="col-md-5 col-sm-5"><input style="display:inline-block; width:50%;" name="num" value="{$info.num}" type="text" placeholder="">&nbsp;&nbsp;公斤</td>
+												<td class="col-md-1 col-sm-1">QQ：</td>
+												<td class="col-md-5 col-sm-5"><input name="qq" class="form-control" type="text" value="{$info.qq}" placeholder="" style="display:inline-block; width:50%;"></td>
+											</tr>
+											<tr class="bg2">
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;价格：</td>
+												<td class="col-md-5 col-sm-5" colspan="3">
+													<div class="control-group">
+														<label><input name="priceType" type="radio" class="ace price" <if condition="$info.price_type eq '2'">checked="checked"</if>  value="2"><span class="lbl">&nbsp;&nbsp;面议</span></label>
+														<label><input name="priceType" type="radio" class="ace price unit_price" <if condition="$info.price_type eq '1'">checked="checked"</if> value="1"><span class="lbl">&nbsp;&nbsp;单价</span></label>
+														<span class="price_input" style="display: none;"><input type="text"  name="price" value="{$info.price}" />&nbsp;&nbsp;元/公斤</span>
+													</div>
+												</td>
+											</tr>
+											<tr class="bg1">
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;产地：</td>
+												<td class="col-md-5 col-sm-5">
+													<div class="control-group">
+														<label><input name="originType" type="radio" class="ace origin_place" <if condition="$info.origin_type eq '1'">checked="checked"</if> value="1"><span class="lbl">&nbsp;&nbsp;较广</span></label>
+														<label><input name="originType" type="radio" class="ace origin_place" <if condition="$info.origin_type eq '2'">checked="checked"</if> value="2"><span class="lbl">&nbsp;&nbsp;进口</span></label>
+														<label><input name="originType" type="radio" class="ace origin_place" <if condition="$info.origin_type eq '3'">checked="checked"</if> value="3"><span class="lbl">&nbsp;&nbsp;省市县</span></label>
+													</div>
+												</td>
+												<td class="col-md-1 col-sm-1 place_select" style="display: none;"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;选择省地县：</td>
+												<td class="col-md-5 col-sm-5 place_select" style="display: none;">
+													<select class="col-md-3" name="prov_select" id="prov_select">
+														<if condition="$info.origin_code neq ''">
+															{$info.origin.pro}
+															<else/> {$info.origin.proInfo}
+														</if>
+													</select>&nbsp;&nbsp;
+													<select class="col-md-3" name="city_select" id="city_select">
+														{$info.origin.city}
+													</select>
+													&nbsp;&nbsp;
+													<select class="col-md-3" name="area_select" id="area_select">
+														{$info.origin.area}
+													</select>
+												</td>
+											</tr>
+											<tr class="bg2">
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>货源所在地：</td>
+												<td class="col-md-5 col-sm-5">
+													<select class="col-md-3" name="supply_prvo" id="supply_prvo">
+														{$info.supply.pro}
+													</select>&nbsp;&nbsp;
+													<select class="col-md-3" name="supply_city" id="supply_city">
+														{$info.supply.city}
+													</select>
+													&nbsp;&nbsp;
+													<select class="col-md-3" name="supply_area" id="supply_area">
+														{$info.supply.area}
+													</select>
+												</td>
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;详细地址：</td>
+												<td class="col-md-5 col-sm-5"><input name="supplyDetail" class="form-control" type="text" value="{$info.supply_detail}" placeholder="" style="width:100%;"></td>
+											</tr>
+											<tr>
+												<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;详情：</td>
+												<td class="col-md-5 col-sm-5" colspan="3"><textarea name="details" rows="5" class="form-control" cols="" style="height: ;resize: none;">{$info.details}</textarea></td>
+											</tr>
+								</form>
+								<tr class="bg1">
+									<td class="col-md-1 col-sm-1"><i class="ace-icon glyphicon glyphicon-asterisk red smaller-80"></i>&nbsp;&nbsp;选择图片：</td>
+									<td class="col-sm-5 col-md-5 show_img" style="text-align:left;">
+									</td>
+									<td colspan="3" style="text-align:left;">
+										<form enctype="multipart/form-data">
+											<input id="file-fr" name="supply" type="file" multiple>
+										</form>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+
+								</br>
+							</div>
+						</div>
+						<div style="text-align: center;" class="clearfix form-actions">
+							<a href="javascript:void(0);" id="ok" class="btn btn-primary sub-btn" style="margin-right:30px;">
+								<i class="ace-icon fa fa-check"></i> 确定
+							</a>
+							<a href="{:U('index')}" class="btn">
+								<i class="ace-icon fa fa-arrow-left"></i> 返回
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</block>
+
+<block name="script">
+	<script src="__ADMIN__/js/fileinput.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__ADMIN__/js/zh.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__ADMIN__/js/business/spyedit.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	var apiArr = ["{:U('Region/getCityHtml')}"  , "{:U('Region/getAreaHtml')}" , "{:U('Goods/ajaxGetSpecs')}" , "{:U('Supply/upImg')}" , "{:U('Supply/delImg')}"];
+		highlight_subnav("{:U('Supply/index')}");
+	</script>
+</block>

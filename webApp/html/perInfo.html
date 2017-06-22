@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人资料</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="../css/amend.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+    <script type="text/javascript">
+        if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+	</script>
+</head>
+<body>
+	<header>
+	    <a href="./persional.html" class="back_btn">
+	        <i class="icon_zjt iconfont"></i>返回
+	    </a>
+	    <span>个人资料</span>
+	</header>
+	<div class="ydw_wp">
+	    <div class="psndata-wp">
+		    <ul class="psndata">
+		        <li class="clearfix">
+		            <span class="head-span">修改头像</span>
+	            	<div class="r xg-img" style="height: 100%">
+	            		 <form method="post" enctype="multipart/form-data" id="submitImg">
+			                <img src="" class="head-img" id="picture"/>
+			                <input type="file" name="head_pic" accept="image/*" id="xg-img">
+			                <input type="hidden" name="clientType" value="1" />
+			                <input type="hidden" name="uid">
+			                <i class="iconfont icon_yjt"></i>
+		                </form>
+	            	</div>  
+		        </li>
+		        <li class="clearfix">
+		            <span>修改昵称</span>
+		            <i class="iconfont icon_yjt r"></i>
+		            <span class="name r" id="name"></span>
+		        </li>
+		        <li class="clearfix" onclick="javascript:window.location.href='./amendPwd.html'">
+		            <span>修改密码</span>
+		            <i class="iconfont icon_yjt r"></i>
+		        </li>
+		        <li class="clearfix">
+		            <span>绑定手机</span>
+		            <span class="tel r" id="mobile"></span>
+		        </li>
+		    </ul>
+		</div>
+	</div>
+	<script src="../js/form.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var local = new LocalData();
+		var uid = local.getData('user_info').uid;
+		$('input[name="uid"]').val(uid);
+		$(function(){
+			//修改头像
+			$('#xg-img').on('change',function(){
+				$('#submitImg').ajaxSubmit({
+					type: 'post',
+					url: rule.root+"AppUser/user_herd",
+					success: function(req) {
+						if(req.code==1){
+							$('#picture').attr('src',req.data);
+						}else{
+							(req.code==41) ? rule.showMsg(1,'上传头像不存在',2000) : rule.showMsg(1,'上传图片失败，请重试！',2000);
+							$('#picture').attr('src','../images/ydw2.png');
+						}
+					},
+					error:function(){
+						rule.showMsg(1,'图片加载失败请重试',1000);
+					}
+				});
+			});
+			$('.psndata>li:nth-child(2)').on('click',function(){
+				var txt = encodeURIComponent($('#name').text());
+				window.location.href="./amendName.html?name="+txt;
+			});
+			//提交表单
+			$.postT(rule.root+'AppUser/user_details' , {uid:uid} , function (req){
+				console.log(req);
+				switch(req.code){
+					case 0:
+						rule.showMsg(1,'修改失败，请重试！',2000);
+						break;
+					case 1:
+						var data = req.data;
+						data.head_pic && $('#picture').attr('src',data.head_pic);
+						$('#name').text(data.realname);
+						$('#mobile').text(data.mobile);
+						break;
+					case 103:
+						var hrefUrl = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+						rule.showMsg(1 , "该账号已在其他地方登陆,请重新登录" , 2000 , hrefUrl);
+						break;
+				}
+			});
+		});
+	</script>
+</body>
+</html>

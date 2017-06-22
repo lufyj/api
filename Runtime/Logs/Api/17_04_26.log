@@ -1,0 +1,469 @@
+[ 2017-04-26T11:38:33+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHall/demand_hall
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`uid`,`cate_id`,`cate_name`,`goods_id`,`goods_name`,`goods_attr_id`,`goods_attr_name`,`num`,`contacts`,`mobile` FROM `ydw_demand` WHERE `status` NOT IN ('-1') ORDER BY id desc LIMIT 20   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 484 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_company_confirm` [ RunTime:0.0050s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 484 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 526 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 526 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 510 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 510 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 484 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 484 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 484 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 484 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 31 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 31 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 31 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 31 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 163 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 163 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 98 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 98 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-04-26T11:38:39+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_c_tthq` SET `view`=view+1 WHERE `id` = 47301 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ydw_c_tthq` WHERE `id` = 47301 ORDER BY id desc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: list D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 155 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 155 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 155 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-04-26T11:38:56+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq` [ RunTime:0.0040s ]
+SQL: UPDATE `ydw_c_tthq` SET `view`=view+1 WHERE `id` = 47301 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ydw_c_tthq` WHERE `id` = 47301 ORDER BY id desc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: list D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 155 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 155 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 155 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-04-26T11:42:00+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHall/demand_hall
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0080s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`uid`,`cate_id`,`cate_name`,`goods_id`,`goods_name`,`goods_attr_id`,`goods_attr_name`,`num`,`contacts`,`mobile` FROM `ydw_demand` WHERE `status` NOT IN ('-1') ORDER BY id desc LIMIT 20   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0070s ]
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 484 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_company_confirm` [ RunTime:0.0060s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 484 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 526 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 526 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 510 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 510 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 484 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 484 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 484 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 484 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 31 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 31 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 31 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 31 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 163 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 163 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 98 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 98 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-04-26T11:42:19+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHall/demand_hall
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`uid`,`cate_id`,`cate_name`,`goods_id`,`goods_name`,`goods_attr_id`,`goods_attr_name`,`num`,`contacts`,`mobile` FROM `ydw_demand` WHERE `status` NOT IN ('-1') ORDER BY id desc LIMIT 20   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 484 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_company_confirm` [ RunTime:0.0020s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 484 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 526 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 526 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 510 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 510 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 484 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 484 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 484 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 484 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 31 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 31 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 31 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 31 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 163 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 163 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 87 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 89 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 91 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 98 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 98 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-04-26T11:42:19+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_c_tthq` SET `view`=view+1 WHERE `id` = 47301 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ydw_c_tthq` WHERE `id` = 47301 ORDER BY id desc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: list D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 155 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 155 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 155 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-04-26T11:42:25+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_c_tthq` SET `view`=view+1 WHERE `id` = 47301 [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ydw_c_tthq` WHERE `id` = 47301 ORDER BY id desc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: list D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 155 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 155 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 155 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-04-26T11:42:57+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_c_tthq` SET `view`=view+1 WHERE `id` = 47301 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ydw_c_tthq` WHERE `id` = 47301 ORDER BY id desc  [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 154 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 154 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-04-26T11:44:01+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/tthq_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_tthq` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_c_tthq` SET `view`=view+1 WHERE `id` = 47301 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ydw_c_tthq` WHERE `id` = 47301 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 154 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 154 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+

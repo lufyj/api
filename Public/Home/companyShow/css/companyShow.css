@@ -1,0 +1,139 @@
+/*高亮*/
+.highlight_span{
+	color:#E62B2E;
+}
+/*****关于物流信息 的开始*****/
+.detail-middle .drugs-top>.h2-com{
+	width:100%;
+	display:block;
+}
+.delivery-nav li{
+	float:left;
+}
+.delivery-nav li a{
+	display: inline-block;
+	border:1px solid #cfcfcf;
+	padding:8px 15px;
+	margin-right:5px;
+	font-size:14px;
+}
+.delivery-nav li a:hover,.delivery-nav li.active a{
+	background: #E62B2E;
+	color:#fff;
+	text-decoration: none;
+}
+.delivery-lists{
+	padding: 15px;
+    border-bottom: 1px dashed #ddd;
+}
+.delivery-lists:hover{
+	background: #f9f9f9;
+}
+.delivery-lists .competes-img{
+	width:120px;
+	height:120px;
+}
+.delivery-lists .competes-img img{
+	width:120px;
+	height:120px;
+}
+.delivery-lists .competes-detail{
+	margin-left:10px;
+	width:71%;
+}
+.delivery-lists .competes-detail li{
+	margin-bottom:8px;
+}
+.competes.delivery-lists span{
+	color:#E62B2E;
+}
+.competes-detail .del-last{
+	width:100%;
+}
+.color-r{
+	color:#E62B2E;
+}
+.del-last em{
+	font-style: normal;
+}
+.del-last a{
+	color:#E62B2E;
+}
+/******关于物流信息结束********/
+/******关于仓库信息开始*****/
+.storeList{
+	border-bottom:1px dotted #cfcfcf;
+	padding-top:20px;
+	padding-bottom:30px;
+}
+.store-nav{
+	margin-bottom:20px;
+}
+.storeList:hover{
+	background:#fcfcfc;
+}
+.store-lists{
+	width:74%;
+	padding-right:1%;
+	border-right: 1px dashed #e5e5e5;
+}
+.store-lists li{
+	float:left;
+	width:25%;
+	font-size:15px;
+	line-height:30px;
+}
+li.last-store,li.store-l{
+	width:100%;
+}
+.store-lists-r{
+	width:23%;
+	padding-left:1%;
+	color:#AEAEAE;
+	font-size:12px;
+	line-height:30px;
+	margin-top:25px;
+}
+.down-a,.up-a{
+	display: inline-block;
+	padding-right:20px;
+	background:url(../images/icon_up.png) no-repeat right center;
+	color:#FF9E52;	
+}
+.last-store a:hover{
+	color:#FF9E52;
+}
+.up-a{
+	margin-left:10px;
+	background:url(../images/icon_down.png) no-repeat right center;
+}
+.span-store{
+	display:inline-block;
+	width:81%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: top;
+}
+/*******关于仓库信息结束**********/
+/*******c仓库信息详情开始*****/
+.main-details.storeInfo li{
+	font-size:16px;
+}
+.main-details.storeInfo span{
+	color:#E62B2E;
+}
+.storeInfo .w-f{
+	width:150%;
+}
+/**关于物流详情页面**/
+.delivery_detail{
+	font-size:16px;
+	padding-top:15px;
+}
+.delivery_detail li{
+	line-height:35px;
+}
+.delivery_detail span{
+	color:#E62B2E;
+}

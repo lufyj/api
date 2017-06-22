@@ -1,0 +1,483 @@
+<extend name="./base" />
+<block name="style">
+	<!--样式自定义开始-->
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+	<link rel="stylesheet" href="__HOME__/user/css/publishDS.css" />
+	<style type="text/css">
+		.publish-submit input {
+			behavior: url(__CSS__/ie-css3.htc);
+		}
+	</style>
+	<!--样式自定义结束-->
+</block>
+<block name="body">
+	<!--主页内容开始-->
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="">我的药都网</a>&nbsp;>&nbsp;
+				<a href="###">个人资料</a>
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />
+
+			<!--关于用户的中的发布供应和发布求购问题-->
+			<div class="publish-supply publish right l">
+				<form id="submit_form" target='frameFile' enctype="multipart/form-data">
+					<!--<div class="publishs">
+						<ul class="publish-nav clearfix">
+							<li class="active">发布供应</li>
+						</ul>
+					</div>-->
+					<div class="title">
+						<span>发布供应</span>
+					</div>
+					<!--发布求购-->
+					<div class="right">
+						<ul class="publish-ul">
+							<li>
+								<span><span>* </span>药材名称：</span>
+								<div class="drug-name" id="select_cate">
+									<span onclick="showCate();">----请选择----</span>
+									<div class="alert">
+										<ul class="classify-list">
+											<foreach name="cates" item="vo">
+												<li>
+													<span data-param="{$vo.id}">{$vo.title}</span>
+													<ul class="drug-list clearfix">
+														<foreach name="vo._child" item="ko">
+															<li data-param="{$ko.id}">{$ko.goods_name}</li>
+														</foreach>
+													</ul>
+												</li>
+											</foreach>
+											<li>
+												<span data-param="-1">自定义类</span>
+	                                                <div class="drug-list clearfix">													
+													<label for=""><span>药材名字:</span><input type="text" name="custom_name"></label>
+													<br>
+													<input type="button" id="custom_btn" value="确定" class="">
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span><span>* </span>规格：</span>
+								<select id="select_spec">
+									<option value="-1" selected="selected">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----请选择----</option>
+								</select>
+							</li>
+							<li>
+								<span><span>* </span>数量：</span>
+								<input type="text" name="num" placeholder="请输入药材的数量..." />
+							</li>
+							<!--图片路径-->
+							<input type="hidden" name='img' value="" class="img">
+							<li>
+								<span><span>* </span>价格：</span>
+								<label>
+                                    <input type="radio" name="price_type" value="2" checked="checked" />面议</label>
+								<label>
+                                    <input type="radio" name="price_type" value="1" />单价</label>
+								<input type="text" name="price" style="width:135px;" />
+							</li>
+							<li>
+								<span><span>* </span>产地：</span>
+								<label>
+                                    <input type="radio" name="origin_type" value="1" checked="checked" />较广</label>
+								<label>
+                                    <input type="radio" name="origin_type" value="2"/>进口</label>
+								<label>
+                                    <input type="radio" name="origin_type"  value="3"/>省市县</label>
+								<div class="place-div">
+									<select id="prov_select" name="prov_select"></select>
+									<select id="city_select" name="city_select"></select>
+									<select id="area_select" name="area_select"></select>
+								</div>
+							</li>
+							<li>
+								<span><span>* </span>联系人：</span>
+								<input type="text" name="contacts" placeholder="请输入您的姓名..." />
+							</li>
+							<li>
+								<span><span>* </span>手机：</span>
+								<input type="text" name="mobile" value="{:session('user_sign.mobile')}" maxlength="11" placeholder="请输入您的手机号..." />
+							</li>
+							<li>
+								<span><span></span>Q Q：</span>
+								<input type="text" name="qq" placeholder="请输入您的QQ号..." />
+							</li>
+							<li>
+								<span><span>* </span>货源所在地：</span>
+								<select id="supply_prvo" name="supply_prvo" class="supply_prvo"></select>
+								<select id="supply_city" name="supply_city" class="supply_city"></select>
+								<select id="supply_area_select" name="supply_area_select" class="supply_area_select"></select>
+							</li>
+							<li>
+								<span><span>* </span>详细地址：</span>
+								<input type="text" name="supply_details" placeholder="请输入您的详细地址">
+							</li>
+							<li>
+								<span><span>* </span>选择图片：</span>
+							</li>
+							<li class="detail-li">
+								<span><span>* </span>详情介绍：</span>
+								<textarea name="details" rows="" cols=""></textarea>
+							</li>
+
+						</ul>
+						<div class="publish-submit">
+							<input type="button" value="提交" id="submit_btn" />
+						</div>
+					</div>
+					<!--发布求购结束-->
+					<notempty name="cates">
+						<input type="hidden" name="cate_id" value="{$cates[0].id}" />
+						<input type="hidden" name="cate_name" value="{$cates[0].title}" />
+						<else/>
+						<input type="hidden" name="cate_id" />
+						<input type="hidden" name="cate_name" />
+					</notempty>
+					<input type="hidden" name="goods_id" />
+					<input type="hidden" name="goods_name" />
+					<input type="hidden" name="goods_attr_id" />
+					<input type="hidden" name="goods_attr_name" />
+					<input type="hidden" name="origin_area" />
+					<input type="hidden" id="supply_area" name="supply_area" />
+					<ul id="spy" class="clearfix spy">
+					
+					</ul>
+				</form>
+				<div class="upload-btn">
+					<img class="add-spy" src="__HOME__/images/up_pic.png" alt="" />
+					<form id="spy-form" enctype="multipart/form-data">
+						<input type="file" id="up-spy" name="file" />
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!--主页内容结束-->
+	<script src="__STATIC__/form.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("#spy").on("click", "div.del", function() {
+			//出现添加图片按钮
+			$(".upload-btn").show();
+			$("#spy").addClass("spy");
+			//移除dom
+			var self = $(this);
+			self.parent("li").remove();
+			//动态修改id和name
+			$(".img-li").each(function(index) {
+				var a = index + 1
+				var self = $(this);
+				self.children("img").attr("id", "spy-img" + a);
+				self.children("input").attr("name", "img" + a);
+			});
+		});
+		$(".upload-btn").on('change', "#up-spy", function() {
+			var i = $(".img-li").length;
+			if(i >= 5) {
+				return false;
+			} else {
+				$("#spy-form").ajaxSubmit({
+					type: 'post',
+					url: "{:U('pic_updata')}",
+					success: function(data) {
+						if(typeof(data) == "object") {
+							if(data.path) {
+								var path = '__ROOT__' + data.path;
+								var index = i + 1;
+								var img = $('<li class="img-li"><img id="spy-img' + index + '" /><div class="del"><span>删除</span></div><input name="img'+ index +'" type="hidden" value="'+ data.path +'"/></li>');
+								$("#spy").append(img);
+								$("#spy-img" + index).attr("src", path);
+								$('#spy-form').resetForm();
+								if(i >= 4) {
+									$(".upload-btn").hide();
+									$("#spy").removeClass("spy");
+								}
+							} else {
+								$.custom(data.msg);
+							}
+						} else {
+							var datas = JSON.parse(data);
+							if(datas.path) {
+								var path = '__ROOT__' + datas.path;
+								var index = i + 1;
+								var img = $('<li class="img-li"><img id="spy-img' + index + '" /><div class="del"><span>删除</span></div><input name="img'+ index +'" type="hidden" value="'+ data.path +'"/></li>');
+								$("#spy").append(img);
+								$("#spy-img" + index).attr("src", path);
+								$('#spy-form').resetForm();
+								if(i >= 4) {
+									$(".upload-btn").hide();
+									$("#spy").removeClass("spy");
+								}
+							} else {
+								$.custom(datas.msg);
+							}
+						}
+
+					},
+					error: function(error) {
+						$.custom('上传失败');
+					}
+				})
+			}
+		});
+	</script>
+</block>
+<block name="script">
+	<script src="__HOME__/user/js/user.js" type="text/javascript" charset="utf-8"></script>
+	<!--脚本自定义开始-->
+	<script type="text/javascript">
+		var select_cate = $('#select_cate'),
+			submit_form = $('#submit_form');
+
+		/* 
+		 * 显示或隐藏药品面板 
+		 */
+		function showCate() {
+			select_cate.find('div.alert').toggle('fast');
+		}
+
+		$(function() {
+
+			/* 
+			 * 点击一级分类切换不同药品分类页 
+			 */
+			select_cate.find('ul.classify-list > li').on('click', function() {
+				var self = $(this);
+				self.css({
+					"background-color": "#F8F8F8"
+				}).siblings("li").css({
+					"background-color": "#fff"
+				});
+				self.children(".drug-list").show();
+				self.siblings("li").children(".drug-list").hide();
+
+				//给隐藏域赋值
+				submit_form.find('input[name=\'cate_name\']').val(self.find('span:first').text());
+				submit_form.find('input[name=\'cate_id\']').val(self.find('span:first').attr('data-param'));
+			});
+			/* 
+			 * 点击弹框里面的药材 
+			 */
+			select_cate.find("ul.drug-list > li").on('click', function(e) {
+				var self = $(this),
+					drug = self.text(),
+					id = self.attr('data-param');
+
+				$(".drug-name>span").text(drug);
+				$(".alert").hide();
+				//阻止冒泡
+				var e = e || window.event;
+				e.preventDefault();
+				e.stopPropagation();
+				e.preventBubble = true;
+
+				//给隐藏域赋值
+				submit_form.find('input[name=\'goods_name\']').val(drug);
+				submit_form.find('input[name=\'goods_id\']').val(id);
+
+				//根据药品异步加载对应的规格
+				$.getJSON("{:U('Goods/ajaxGetSpecs')}", {
+					id: id
+				}, function(data) {
+					if($.isArray(data) && data.length > 0) {
+						var spec_str = '<option value="-1" selected="selected">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----请选择----</option>';
+						for(var i in data) {
+							spec_str += '<option value="' + data[i].id + '">' + data[i].attr_name + '</option>';
+						}
+						$('#select_spec').html(spec_str);
+					}
+				});
+				submit_form.find('input[name=\'goods_attr_id\']').val('');
+				submit_form.find('input[name=\'goods_attr_name\']').val('');
+			});
+			/* 
+			 * 动态改变属性值
+			 */
+			$('#select_spec').change(function() {
+				var obj = $(this).children('option:selected');
+				if(parseInt(obj.val()) > 0) {
+					submit_form.find('input[name=\'goods_attr_id\']').val(obj.val());
+					submit_form.find('input[name=\'goods_attr_name\']').val(obj.text());
+				} else {
+					submit_form.find('input[name=\'goods_attr_id\']').val('');
+					submit_form.find('input[name=\'goods_attr_name\']').val('');
+				}
+			});
+			/**************************对省市县进行操作********************************/
+			/* 
+			 * 产地省市县
+			 */
+			submit_form.find('input[name=\'origin_type\']').on('click', function() {
+				if($(this).val() == 3) {
+					$('div.place-div').show();
+					$(".upload-btn").css({
+						'top':"708px"
+					})
+					$("#spy").css({
+						'top':"708px"
+					});
+				} else {
+					$(".upload-btn").css({
+						'top':"662px"
+					})
+					$("#spy").css({
+						'top':"662px"
+					});
+					$('div.place-div').hide();
+				}
+			});
+			//产地_省
+			var prov_select = $('#prov_select'),
+				//货源地_省
+				supply_prvo = $('#supply_prvo'),
+				//产地_市
+				city_select = $('#city_select'),
+				//货源地_市
+				supply_city = $('#supply_city'),
+				//产地_县
+				area_select = $('#area_select');
+			//货源地_县
+			supply_area_select = $('#supply_area_select');
+			origin_area = '';
+			supply_area = '';
+			/* 
+			 * 默认读取所有省份
+			 */
+			$.get("{:U('Region/getProHtml')}", function(data) {
+					if(data) {
+						prov_select.html(data);
+						supply_prvo.html(data);
+					}
+				})
+				//改变省份选择城市
+			prov_select.change(function() {
+				origin_area = $(this).find("option:selected").text();
+				// 读取市区列表
+				$.get("{:U('Region/getCityHtml')}", {
+					id: prov_select.val()
+				}, function(data) {
+					city_select.html(data);
+				});
+				//清空地区
+				area_select.html("<option value='0'>请选择</option>");
+			});
+			//改变货源地省份选择城市
+			supply_prvo.change(function() {
+				supply_area = $(this).find("option:selected").text();
+				$('#supply_area').val(supply_area);
+				// 读取市区列表
+				$.get("{:U('Region/getCityHtml')}", {
+					id: supply_prvo.val()
+				}, function(data) {
+					supply_city.html(data);
+				});
+				//清空地区
+				supply_area_select.html("<option value='0'>请选择</option>");
+			});
+			//改变城市选择区域
+			city_select.change(function() {
+				if(parseInt($(this).val()) > 0) {
+					origin_area = prov_select.find('option:selected').text() + $(this).find('option:selected').text();
+				} else {
+					origin_area = prov_select.find('option:selected').text();
+				}
+				$.get("{:U('Region/getAreaHtml')}", {
+					id: city_select.val()
+				}, function(data) {
+					area_select.html(data);
+				});
+			});
+			//改变货源地城市城市选择区域
+			supply_city.change(function() {
+				if(parseInt($(this).val()) > 0) {
+					supply_area = supply_prvo.find('option:selected').text() + $(this).find('option:selected').text();
+				} else {
+					supply_area = supply_prvo.find('option:selected').text();
+				}
+				$('#supply_area').val(supply_area);
+				$.get("{:U('Region/getAreaHtml')}", {
+					id: supply_city.val()
+				}, function(data) {
+					supply_area_select.html(data);
+				});
+			});
+			area_select.change(function() {
+				if(parseInt($(this).val()) > 0) {
+					origin_area = prov_select.find('option:selected').text() + city_select.find('option:selected').text() + $(this).find("option:selected").text();
+				} else {
+					origin_area = prov_select.find('option:selected').text() + city_select.find('option:selected').text();
+				}
+			});
+			supply_area_select.change(function() {
+				if(parseInt($(this).val()) > 0) {
+					supply_area = supply_prvo.find('option:selected').text() + supply_city.find('option:selected').text() + $(this).find("option:selected").text();
+				} else {
+					supply_area = supply_prvo.find('option:selected').text() + supply_city.find('option:selected').text();
+				}
+				$('#supply_area').val(supply_area);
+			});
+
+			var span_click = true; //重复标示
+			/* 
+			 * 提交表单
+			 */
+			$('#submit_btn').on('click', function(e) {
+				//console.log('开始提交');
+				if(!span_click) {
+					//console.log('请不要连续点击');
+					return;
+				}
+				// 阻止默认事件提交
+				e.preventDefault();
+				//在这个时候给input【name=origin_name】
+				submit_form.find('input[name=\'origin_area\']').val(origin_area);
+				var params = submit_form.serialize(); // http request parameters. 
+				params = decodeURIComponent(params, true);
+				//在进行编码
+				params = encodeURI(encodeURI(params));
+
+				//console.log(params);
+
+				$.ajax({
+					url: "{:U('tests')}", //请求的url地址
+					dataType: "json", //返回格式为json
+					async: true, //请求是否异步，默认为异步，这也是ajax重要特性
+					data: params, //参数值
+					type: "post", //请求方式
+					beforeSend: function() {
+						span_click = false;
+						//请求前的处理
+					},
+					success: function(req) {
+						//请求成功时处理
+						//弹出未定义		        
+						$.custom(req.msg);
+						span_click = true;
+						//发布成功之后跳转到发布页面
+						if(req.code) {
+							// alert('发布成功之后跳转到求购列表');
+							// window.location.href = '';
+							location.reload();
+						}
+					},
+					error: function() {
+						//请求出错处理
+						$.custom('网络请求错误，请稍后再试~');
+						span_click = true;
+					}
+				});
+			});
+		})
+	</script>
+	<!--脚本自定义结束-->
+</block>

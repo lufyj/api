@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="full-screen" content="yes">
+	<meta name="x5-fullscreen" content="true">
+    <title>药都网-找回密码</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/regAndLogin.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <header>
+        <a href="javascript:;" class="back_btn" id="back_btn">
+            <i class="icon_zjt iconfont"></i>返回
+        </a>
+        <span>找回密码</span>
+    </header>
+    <!--注册框-->
+    <div class="ydw_wp">
+        <div class="reg_wp">
+            <ul class="reg_list">
+                <li class="reg_item">
+                    <label for="mobile" class="dib">手机号码</label>
+                    <input type="text" class="mobile input1" id="mobile"  placeholder="请输入手机号码" autocomplete="off" />
+                </li>
+                <li class="reg_item">
+                    <label for="code" class="three_word">验证码</label>
+                    <input type="text" class="code input1" id="code"  placeholder="请输入验证码" autocomplete="off" />
+                    <button class="get_code" disabled="disabled" onclick="getMobileCode(2)">获取验证码</button>
+                </li>
+                <li class="reg_item">
+                    <label for="psw" class="three_word">新密码</label>
+                    <input type="password" class="psw input1" id="psw"  placeholder="6-20字符，区分大小写" autocomplete="off" />
+                </li>
+                <li class="reg_item">
+                    <label for="repsw">确认密码</label>
+                    <input type="password" class="repsw input1" id="repsw"  placeholder="请确认密码" autocomplete="off" />
+                </li>
+            </ul>
+            <button class=" find_btn sub_btn">下一步</button>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/reg-login.js"></script>
+</html>

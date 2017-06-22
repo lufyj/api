@@ -1,0 +1,209 @@
+/*底部样式*/
+
+#footer-wrap {
+	width: 100%;
+	border-top: 1px solid #E7E7E7;
+	padding-top: 10px;
+	margin-top: 20px;
+}
+
+
+/*头*/
+
+.logo-title {
+	background: url(./../images/gs02.png) no-repeat;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+
+/*更换魔板颜色添加div为mb的*/
+
+.mb {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 120px;
+	background: rgb(173, 128, 107);
+	background: rgba(173, 128, 107, 0.3);
+	filter: "alpha(opacity=30)";
+	filter: alpha(opacity=30);
+}
+
+.logo-bg {
+	width: 1230px;
+	margin: 0 auto;
+	height: 120px;
+	line-height: 120px;
+}
+
+.logo-bg img {
+	max-height: 80px;
+	margin-top: 20px;
+	margin-left: 60px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.com-name {
+	font-size: 36px;
+	color: #010101;
+	margin-right: 100px;
+}
+
+.title2-m {
+	width: 100%;
+	height: 44px;
+	background-color: #AD806B;
+	margin: 0 auto;
+}
+
+.title2-m p {
+	width: 1160px;
+	margin: 0 auto;
+	height: 44px;
+	line-height: 44px;
+	padding: 0 20px;
+	color: #fff;
+	font-size: 18px;
+}
+
+
+/*详情页*/
+
+.title-ad {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #f8f8f8;
+	font-size: 16px;
+	color: #333;
+	margin: 0 auto;
+}
+
+.title-ad .ad {
+	width: 1160px;
+	margin: 0 auto;
+}
+
+.title-ad .cur {
+	color: #c59d8a;
+}
+
+
+/*news动态和desc*/
+
+.wrap-b {
+	width: 1160px;
+	margin: 10px auto;
+	overflow: hidden;
+	border: 1px solid #efefef;
+	min-height: 400px;
+}
+
+.wrap-b h3 {
+	text-align: center;
+	font-size: 26px;
+	height: 62px;
+	line-height: 62px;
+	color: #666666;
+}
+
+.wrap-b .time {
+	text-align: center;
+	color: #999;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.wrap-b p {
+	font-size: 18px;
+	color: #333;
+	text-indent: 2em;
+	line-height: 38px;
+}
+
+.wrap-b .content {
+	margin-top: 12px;
+	padding: 0 20px;
+}
+
+.wrap-b img {
+	float: left;
+	width: 320px;
+	height: 240px;
+	border: 1px solid #ccc;
+	margin-right: 24px;
+	margin-top: 12px;
+}
+
+
+/*news动态和desc*/
+
+
+/*store和packing*/
+
+.wrap-a {
+	width: 1160px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.wrap-a>ul:first-child {
+	padding: 20px 20px 0;
+}
+
+.wrap-a ul.img-ul {
+	padding: 0 56px;
+	margin-top: 30px;
+}
+
+.wrap-a li {
+	float: left;
+}
+
+.wrap-a>ul:first-child>li {
+	font-size: 22px;
+	width: 33%;
+	color: #666;
+	min-height: 42px;
+}
+
+.wrap-a ul.img-ul>li {
+	margin: 0 11px 20px;
+	height: 240px;
+	width: 240px;
+}
+
+.wrap-a ul.img-ul img {
+	height: 240px;
+	width: 240px;
+}
+
+.wrap-a .store-des,
+.wrap-a .ads {
+	width: 100% !important;
+	line-height: 42px !important;
+}
+
+.wrap-a sup {
+	font-size: 4px;
+}
+
+
+/*store和pacKing*/
+
+
+/*详情页*/
+
+
+/*****关于公司简介的样式设置********/
+
+.content,
+.brief_detail {
+	font-size: 16px;
+	line-height: 25px;
+	text-indent: 2em;
+}

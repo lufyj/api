@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/hangqing.css"/>
+    <script src="../js/zepto.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="price-wp">
+		<div class="title"></div>
+		<div class="msg-div">
+			<span>发布时间 : </span><span class="t"></span><span>发布人 : </span><span class="author"></span>
+		</div>
+		<div class="main-content">
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	function GetRequest() {
+		var url = location.search; //获取url中"?"符后的字串
+		var theRequest = new Object();
+		if (url.indexOf("?") != -1) {
+			var str = url.substr(1);
+			strs = str.split("&");
+			for(var i = 0; i < strs.length; i ++) {
+				theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+			}
+		}
+		return theRequest;
+	}
+	var result = GetRequest(),
+			tthqId = result.market_id;
+	var data = {
+		clientType:1,
+        tthq_id:tthqId
+	};
+	$.ajax({
+		url:'http://m.yaoduwang.com/index.php?s=Api/AppHerbal/tthq_detail',
+		data:data,
+		type: "post",
+		success:function(data) {
+			if (data.data){
+				var title = data.data.title,
+						time = data.data.create_time,
+						author = data.data.author,
+						content = data.data.content;
+				$(".main-content").html(content);
+				$(".author").text(author);
+				$(".t").text(time);
+				$(".title").text(title);
+			}
+		},
+		error:function (error) {
+//			alert(error);
+		}
+	})
+</script>
+</html>

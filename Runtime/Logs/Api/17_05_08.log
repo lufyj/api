@@ -1,0 +1,1606 @@
+[ 2017-05-08T15:07:56+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHall/demand_hall
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`uid`,`cate_id`,`cate_name`,`goods_id`,`goods_name`,`goods_attr_id`,`goods_attr_name`,`num`,`contacts`,`mobile` FROM `ydw_demand` WHERE `status` NOT IN ('-1') ORDER BY id desc LIMIT 20   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 1335 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_company_confirm` [ RunTime:0.0030s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 1335 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 1145 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 1145 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 1142 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 1142 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 948 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 948 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 936 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 936 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 909 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 909 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 163 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 163 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 107 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 107 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:07:58+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHall/demand_hall
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`uid`,`cate_id`,`cate_name`,`goods_id`,`goods_name`,`goods_attr_id`,`goods_attr_name`,`num`,`contacts`,`mobile` FROM `ydw_demand` WHERE `status` NOT IN ('-1') ORDER BY id desc LIMIT 20   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0010s ]
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 1335 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_company_confirm` [ RunTime:0.0020s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 1335 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 1145 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 1145 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 1142 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 1142 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 948 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 948 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 936 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 936 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 909 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 909 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 163 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 163 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 107 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 107 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:07:58+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHall/demand_hall
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`uid`,`cate_id`,`cate_name`,`goods_id`,`goods_name`,`goods_attr_id`,`goods_attr_name`,`num`,`contacts`,`mobile` FROM `ydw_demand` WHERE `id` < 23 AND `status` NOT IN ('-1') ORDER BY id desc LIMIT 20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_company_confirm` [ RunTime:0.0020s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 107 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 107 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:07:59+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHall/demand_hall
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_demand` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`uid`,`cate_id`,`cate_name`,`goods_id`,`goods_name`,`goods_attr_id`,`goods_attr_name`,`num`,`contacts`,`mobile` FROM `ydw_demand` WHERE `id` < 3 AND `status` NOT IN ('-1') ORDER BY id desc LIMIT 20   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_company_confirm` [ RunTime:0.0040s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+SQL: SELECT `company_auth_status` FROM `ydw_user` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `confirm_status` FROM `ydw_company_confirm` WHERE `user_id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 96 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 98 行.
+NOTIC: [8] Undefined index: origin_type D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php 第 100 行.
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 107 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHallController.class.php on line 107 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:08:01+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHot/goods_hot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`goods_name`,`goods_img` FROM `ydw_goods` WHERE `is_recom` = 1  [ RunTime:0.0140s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHotController.class.php on line 11 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHotController.class.php on line 11 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:08:01+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppBanner/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_banner` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`img_url`,`title`,`link_url` FROM `ydw_banner` WHERE `platform` = 2  [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppBannerController.class.php on line 11 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppBannerController.class.php on line 11 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:08:01+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/Class/goods_category
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\ClassController.class.php on line 45 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\ClassController.class.php on line 45 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:08:02+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/discover_theme
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_discover` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title_type`,`title_id` FROM `ydw_discover` WHERE `theme_status` = 1 ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_company_process` [ RunTime:0.0020s ]
+SQL: SELECT `user_id` FROM `ydw_company_process` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `content` FROM `ydw_company_process` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_company_info` [ RunTime:0.0030s ]
+SQL: SELECT `logo` FROM `ydw_company_info` WHERE `user_id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdq` [ RunTime:0.0040s ]
+SQL: SELECT `title`,`thumb` FROM `ydw_c_ysdq` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title`,`thumb` FROM `ydw_c_ysdq` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 397 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 397 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:08:02+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/discover_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_discover` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 280 行.
+SQL: SELECT `id`,`title_type`,`title_id` FROM `ydw_discover` ORDER BY id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_company_process` [ RunTime:0.0030s ]
+SQL: SELECT `user_id` FROM `ydw_company_process` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `content`,`remarks` FROM `ydw_company_process` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_company_info` [ RunTime:0.0020s ]
+SQL: SELECT `logo` FROM `ydw_company_info` WHERE `user_id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_c_ysdq` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`create_time` FROM `ydw_c_ysdq` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`create_time` FROM `ydw_c_ysdq` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 341 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 341 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:08:03+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/market
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-08T15:08:11+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0020s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '15638215985' AND `password` = 'ea75b1fd6ef80f4d60848c053b80521d' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_user` SET `last_login_time`='1494227291',`token`='9ea91faad270f6a0f6abb13ad4e06099' WHERE ( id=3 ) [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 29 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 29 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:08:12+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/market
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0050s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 64 行.
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view` FROM `ydw_goods_market` ORDER BY id desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0070s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 90 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 89 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 88 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 87 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 86 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 85 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 84 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 83 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 82 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 103 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 103 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:08:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0030s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:08:13+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:08:42+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0030s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '15638215985' AND `password` = 'ea75b1fd6ef80f4d60848c053b80521d' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_user` SET `last_login_time`='1494227322',`token`='bc6ed80fa53af41b5bf53f3e8bff3efb' WHERE ( id=3 ) [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 29 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 29 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:08:44+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0030s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:08:44+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:17:26+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0020s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:17:27+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:17:33+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0030s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:17:33+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:19:11+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0010s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0020s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:19:11+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:20:09+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0010s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:20:09+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:20:18+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0010s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0020s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:20:18+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:20:28+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0020s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '15638215985' AND `password` = 'ea75b1fd6ef80f4d60848c053b80521d' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_user` SET `last_login_time`='1494228028',`token`='c3f610397b22029b13c58d23f46fc972' WHERE ( id=3 ) [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 29 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 29 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:20:29+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0030s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0060s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:20:29+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:20:45+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-08T15:20:45+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0020s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0040s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0070s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:20:47+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0080s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0050s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0040s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0060s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0090s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:20:47+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0090s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-08T15:20:48+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0100s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0050s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0050s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0060s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:20:48+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-08T15:20:57+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0020s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '15638215985' AND `password` = 'ea75b1fd6ef80f4d60848c053b80521d' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ydw_user` SET `last_login_time`='1494228057',`token`='39ab1f0ae1b5f07721d3c2124437c93f' WHERE ( id=3 ) [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 29 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 29 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:20:58+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0070s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0060s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:20:58+08:00 ] 192.168.2.42 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.009000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0060s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:22:09+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0020s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:22:09+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0040s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-08T15:22:18+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 2 for password_md5(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Model\UserModel.class.php on line 50 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Common\function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `ydw_mobile_login` [ RunTime:0.0020s ]
+SQL: SELECT `uid`,`mobile` FROM `ydw_mobile_login` WHERE `mobile` = '15638215985' AND `password` = 'ea75b1fd6ef80f4d60848c053b80521d' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`realname` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `ydw_user` SET `last_login_time`='1494228138',`token`='f94c84f522376f44fecab2e56a528458' WHERE ( id=3 ) [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 29 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\UserController.class.php on line 29 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:22:19+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0020s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:22:20+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:22:25+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0030s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:22:25+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:22:32+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0030s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0030s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:22:32+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:22:36+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0030s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0030s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:22:36+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:22:47+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0030s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0010s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:22:47+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:22:57+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0030s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0020s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:22:57+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:23:04+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0020s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0020s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:23:04+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0020s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:23:20+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppHerbal/market_detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_goods_market` [ RunTime:0.0030s ]
+SQL: UPDATE `ydw_goods_market` SET `view`=view+1 WHERE `id` = 91 [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`description`,`thumb`,`author`,`belong_id`,`create_time`,`view`,`content` FROM `ydw_goods_market` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_reward` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ydw_user_reward` WHERE `reward_id` = 3 AND `market_id` = 91 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ydw_user_goods_market` [ RunTime:0.0030s ]
+SQL: SELECT `uid` FROM `ydw_user_goods_market` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0040s ]
+SQL: SELECT `head_pic` FROM `ydw_user` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_reward` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ydw_user_comment` WHERE `market_id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `reward_name`,`money` FROM `ydw_user_reward` WHERE `market_id` = 91  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppHerbalController.class.php on line 265 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+
+[ 2017-05-08T15:23:20+08:00 ] 192.168.2.173 /ydwAPI/index.php?s=Api/AppMarket/market_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ydw_config` [ RunTime:0.0020s ]
+SQL: SELECT `type`,`name`,`value` FROM `ydw_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user` [ RunTime:0.0040s ]
+SQL: SELECT `token` FROM `ydw_user` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ydw_user_comment` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`send_id`,`send_name`,`get_send_name`,`content` FROM `ydw_user_comment` WHERE `market_id` = 91 ORDER BY id asc LIMIT 20   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [2] Missing argument 4 for Api\Controller\BaseController::ajaxDie(), called in D:\xampp\htdocs\ydwAPI\Application\Api\Controller\AppMarketController.class.php on line 213 and defined D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: dataHot D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Undefined variable: sign_status D:\xampp\htdocs\ydwAPI\Application\Api\Controller\BaseController.class.php 第 47 行.
+

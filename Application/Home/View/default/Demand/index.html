@@ -1,0 +1,223 @@
+<extend name="./base" />
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/index02.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/alipay.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/dlDS/css/alipay02.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/css/modal.css" />
+</block>
+<block name="body">
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+				<a href="javascript:;">求购管理</a>&nbsp;>&nbsp;
+				<a href="javascript:;">我的求购</a>
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />
+			<div class="right l">
+				<div class="title">
+					<span class="active">我的求购</span>
+				</div>
+				<div class="pub-t clearfix">
+					<a href="{:U('publish')}" class="but r">发布求购</a>
+				</div>
+				<div class="pub-t2">
+					<ul class="t2-lists clearfix">
+						<li class="active">全部求购{$orderCnt|array_sum}</li>
+					</ul>
+				</div>
+				<div class="dem-main">
+					<table class="pub-m show">
+						<thead>
+							<tr>
+								<td width="180">药材</td>
+								<td>规格</td>
+								<td>数量</td>
+								<td>发布时间</td>
+								<td>状态</td>
+								<td width="180">操作</td>
+							</tr>
+						</thead>
+						<tbody>
+							<foreach name="list" item="vo" key="k">
+								<tr>
+									<td>
+										<a href="{:U('detail',array('id'=>$vo['id']))}">{$vo.goods_name}</a>
+									</td>
+									<td>{$vo.goods_attr_name|default='暂无'}</td>
+									<!--<td>{$vo.num}</td>-->
+									<td>
+										<?php if(is_numeric($vo['num'])){echo $vo['num'].'公斤';}else{echo $vo['num'];} ?>
+									</td>
+									<td>{$vo.create_time|date='Y-m-d',###}</td>
+									<eq name="vo.status" value="-1">
+										<td>该求购已作废</td>
+										<td></td>
+										<else/>
+										<eq name="vo.trading_type" value="2">
+											<td>已选择线下交易托管资金，交易已完成</td>
+											<td></td>
+											<else/>
+											<eq name="vo.status" value="0">
+												<td>雇主正在选标</td>
+												<td></td>
+												<else/>
+												<if condition="$vo.status eq 1 && $vo.order_amount eq -1">
+													<td>已选择转账托管资金，等待管理员通知</td>
+													<td></td>
+													<elseif condition="$vo.status eq 1 && $vo.order_amount eq 0" />
+													<td>已选标，请支付托管资金</td>
+													<td>
+														<a href="javascript:;" onclick="payModal({$vo.id});">支付托管资金</a>
+													</td>
+													<elseif condition="$vo.status eq 2" />
+													<td>已支付托管资金，等待发货</td>
+													<td></td>
+													<elseif condition="$vo.status eq 3" />
+													<td>已发货，等待签收</td>
+													<td>
+														<a href="javascript:;" onclick="confirmSign({$vo.id});">确定签收</a>
+													</td>
+													<elseif condition="$vo.status eq 4" />
+													<td>已签收，交易完成</td>
+													<td></td>
+													<else/>
+													<td></td>
+													<td></td>
+												</if>
+											</eq>
+										</eq>
+									</eq>
+								</tr>
+							</foreach>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal">
+		<div class="dialog index-modal">
+			<div class="content">
+				<i class="i-close">&times;</i>
+				<div class="alipay02-nav">
+					<p>官方提供线上担保交易，保障您的资金安全，且不会收取您任何佣金。</p>
+				</div>
+				<div class="alipay02-m clearfix">
+					<div class="m-l l">
+						<div class="l-title">
+							<p>对方投标信息</p>
+							<ul class="m-lists tender"></ul>
+						</div>
+						<div class="l-title">
+							<p>托管资金</p>
+							<form id="submit-form">
+								<ul class="m-lists b-lists alipay01-sel">
+									<li>
+										<input type="radio" name="payType" value="1" id="sel02" />
+										<label for="sel02">转账</label>
+										<span>转账账户：王德全;62112356487;工商银行 。发布后会有客服联系您，请保持通话畅通！</span>
+									</li>
+									<!--此功能暂时去掉，后期再增加上去
+									<li class="zhifubao">
+									<input type="radio" name="payType" value="2" id="sel03" />
+									<label for="sel03"></label>
+								</li>-->
+									<li>
+										<input type="radio" name="payType" value="0" id="sel01" />
+										<label for="sel01">线下交易</label>
+									</li>
+								</ul>
+							</form>
+							<div class="b-warn">
+								<img src="__HOME__/dlDS/images/i_warn.png" /> 友情提醒：线下交易风险较大，请谨慎交易 ，因线下交易造成的损失，平台不予赔偿。
+							</div>
+						</div>
+						<div class="l-bottom">
+							<div class="b-t">
+								<i class="sel-i"></i>
+								<input type="checkbox" id="agreen" checked/>
+								<label for="agreen">同意并遵守</label>
+								<a href="javascript:;">《药都网求购发布与选标规则》</a>
+							</div>
+							<div class="b-m">
+								<button type="button" id="submitBtn">确定</button>
+							</div>
+						</div>
+					</div>
+					<div class="m-r l">
+						<h2>为什么要托管资金</h2>
+						<dl class="clearfix">
+							<dt>1</dt>
+							<dd>交易有担保</dd>
+							<dd class="r-b">托管的资金将冻结在您的账户中，满意后再支付给投标人。</dd>
+						</dl>
+						<dl class="clearfix">
+							<dt>2</dt>
+							<dd>退款有保证</dd>
+							<dd class="r-b">交易收到的货物不符合要求，可无条件进行全额退款。</dd>
+						</dl>
+						<dl class="clearfix">
+							<dt>3</dt>
+							<dd>安全可靠</dd>
+							<dd class="r-b">免去了大面额的现金交易，规避了一些不必要的风险。</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='modal' id='confirmModal'>
+		<div class='modal-dialog'>
+			<div class='modal-content'>
+				<i class='close'>&times;</i>
+				<p>提示</p>
+				<div class='modal-context'>确定选择当前投标信息？</div>
+				<div class='context-a'>
+					<a href='javascript:;' class='ok'>确定</a>
+					<a href='javascript:;' class='close'>取消</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--关于药都网求购发布与选标规则-->
+	<div class="modal-container">
+		<div class="modal-dialogs">
+			<span class="protocol-col"></span>
+			<div class="protocol-t">药都网求购发布与选标规则须知</div>
+			<div class="protocol-b">
+				<p><b>免责声明：</b>药都网所展示的中药材供求信息由买卖双方自行提供，其真实性、准确性和合法性由信息发布人负责。药都网不提供任何保证，并不承担任何法律责任。</p>
+				<p><b>药都网友情提醒：</b>为保障您的利益，请谨慎交易！药都网信息咨询栏目均为经营者提供参考，并不能作为投资和经营指导，在使用中务必进一步进行核实，本网不能保证完全准确、全面、真实有效。如客户在使用中造成损失，药都网不承担法律责任。药商谈药中的言论属于药商自由（在不违反国家政策及论坛的规则的情况下），药都网对其言论的准确性不能保证！不能作为指导经营使用，也不代表药都网的观点，药商在此发言要为自己的言论承担全部责任！</p>
+			</div>
+			<p class="protocol-f">
+				<button>同意本协议</button>
+			</p>
+		</div>
+	</div>
+	<!--关于药都网求购发布与选标规则结束-->
+</block>
+<block name="script">
+	<script src="__HOME__/demand/js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var urls = ["{:U('Demand/ajaxPayModal')}", "{:U('Demand/doDemand')}"];
+		$(function() {
+			$('.b-t a').click(function() {
+				$('#modal').hide();
+				$('.modal-container').show();
+			});
+			$('.protocol-col,.protocol-f button').on('click', function() {
+				$('.modal-container').hide();
+				if(this.nodeName=='BUTTON'){
+					$('#agreen').prop("checked",true);
+					$('.b-t i.sel-i').css('background','url(__HOME__/user/images/icon02.png) no-repeat center center');
+				}
+				$('#modal').show();
+			});
+		})
+	</script>
+</block>

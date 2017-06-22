@@ -1,0 +1,19 @@
+.title{height:8.8rem;line-height:8.8rem;border-bottom:1px solid #ddd;text-align: center;}
+.title>span{font-size:3rem;}
+.title>a{position:absolute;left:0.5rem;color:#fff;font-size:2.8rem;vertical-align: middle;}
+.title>a i{font-size:2.8rem;}
+/*以上后期会去掉的*/
+body{background: #FAFAFA;}
+.icon-sjt:before{content: "\e608";}
+.com-list{margin-top:3.5rem;}
+.com-list li{margin-top:2rem;background: #fff;padding:2rem 1rem;font-size:2.6rem;}
+.com-list dt img{width:10rem;height:10rem;}
+.com-list dt{margin-right:2rem;}
+.com-list dd{width: calc( 100% - 12rem);}
+.com-lis-c h3{font-weight: normal;color:#333;}
+.com-lis-c h3 span{color:#999;font-size:2rem;}
+.com-lis-c p{margin-bottom:0.5rem;}
+div.com-link {position: relative;padding:1.5rem 1rem;background: #F2F2F2;font-size:2.5rem;}
+div.com-link a{color:#05579D;}
+div.com-link span{color:#666;}
+div.com-link i{position: absolute;top:-2rem;left:1.5rem;color:#f2f2f2;font-size:2.5rem;}

@@ -1,0 +1,18 @@
+.header{height: 7.6rem;width: 100%;display:flex;align-items:center;justify-content: center;font-size: 2.6rem;position: relative;}
+.icon_zjt{font-size: 3rem;}
+.iconfont{color: #898989;}
+.search{background-color:#E9E9E9;padding: 0 6%;border-radius: 0.5rem;height: 5rem;line-height: 5rem;width: 64%;}
+.sear_btn ,.icon1 {position: absolute;}
+.icon1{left: 12%;top:0.9rem;font-size: 4rem;}
+.sear_btn{height: 7.6rem;line-height: 7.6rem;right: 2%;}
+.main{padding: 0 4%;font-size: 2.8rem;}
+.box_hd{height: 8rem;line-height: 8rem;}
+.icon_dustbin{font-size: 3rem;}
+.box_bd a{display: inline-block;padding: 0.4rem 1.2rem;background-color: #eee;margin: 0.8rem;border-radius: 0.4rem;font-size: 2.4rem;}
+.icon2 {margin-right: 2rem;font-size: 3rem;}
+.search_result li{border-bottom: 0.1rem solid #ccc;font-size: 2.4rem;line-height:6rem;}
+.search_result {height: 100%;}
+.box2 {display: none;}
+.search_result .no_data {text-align: center;border: none;}
+.history_box{display: none;}
+.back_btn{width:10%;position:absolute; height:7.6rem;line-height:7.6rem;color: #fff;left:2%;}

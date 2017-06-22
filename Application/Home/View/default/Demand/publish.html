@@ -1,0 +1,238 @@
+<extend name="./base" />
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/publishDS.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/alipay.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/css/modal.css" />
+	<script type="text/javascript">
+		var catObj = {$cateJson};
+	</script>
+	<style type="text/css">
+		.publish-submit input {
+			behavior: url(__CSS__/ie-css3.htc);
+		}
+	</style>
+</block>
+<block name="body">
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+				<a href="javascript:;">求购管理</a>&nbsp;>&nbsp;
+				<a href="javascript:;">发布求购</a>
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />
+			<form id="submit_form">
+				<div class="publish-supply publish right l">
+					<div class="title">
+						<span class="active">发布求购</span>
+					</div>
+					<ul class="publish-ul">
+						<li>
+							<span><span>* </span>药材：</span>
+							<div class="drug-name" id="select_cate">
+								<span>请选择</span>
+								<div class="alert">
+									<ul class="classify-list">
+										<li>
+											<span data-param="-1">自定义类</span>
+											<div class="drug-list clearfix">
+												<label><span>药材名字:</span><input type="text" name="custom_name" autocomplete="off"></label>
+												<br>
+												<b class="warn_custom warn"><i></i></b><br />
+												<input type="button" id="custom_btn" value="确定" class="">
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<b class="warn_drug warn"><i></i></b>
+						</li>
+						<li>
+							<span>规格：</span>
+							<select id="select_spec">
+								<option value="-1" selected="selected">请选择</option>
+							</select>
+						</li>
+						<li>
+							<span><span>* </span>数量：</span>
+							<input type="text" name="num" autocomplete="off" class="num_input" placeholder="请输入药材的数量" />&nbsp;&nbsp;公斤
+							<b class="warn_num warn"><i></i>请输入药材的数量</b>
+						</li>
+						<li>
+							<span><span>* </span>产地：</span>
+							<label><input type="radio" name="origin_type" value="1" checked="checked" />较广</label>
+							<label><input type="radio" name="origin_type" value="2"/>进口</label>
+							<label><input type="radio" name="origin_type"  value="3"/>省市县</label>
+							<div class="place-div">
+								<select id="prov_select" name="prov_select"></select>
+								<select id="city_select" name="city_select"></select>
+								<select id="area_select" name="area_select"></select>
+								<b class="warn_place warn"><i></i>请选择地区</b>
+							</div>
+						</li>
+						<li>
+							<span><span>* </span>联系人：</span>
+							<input type="text" name="contacts" value="{:session('user_sign.realname')}" autocomplete="off" placeholder="请输入联系人" />
+							<b class="warn_contacts warn"><i></i>请输入联系人</b>
+						</li>
+						<li>
+							<span><span>* </span>手机：</span>
+							<input type="text" name="mobile" value="{:session('user_sign.mobile')}" maxlength="11" autocomplete="off" placeholder="请输入您的手机号" />
+							<b class="warn_mobile warn"><i></i>请输入您的手机号</b>
+						</li>
+						<li>
+							<span>Q Q：</span>
+							<input type="text" name="qq" autocomplete="off" placeholder="请输入您的QQ号" />
+							<b class="warn_qq warn"><i></i></b>
+						</li>
+						<li>
+							<span><span>* </span>详情：</span>
+							<textarea name="details" id="details"></textarea>
+							<b class="warn_details warn"><i></i></b>
+						</li>
+					</ul>
+					<div class="publish-submit">
+						<input type="button" value="下一步" id="nextStep" />
+					</div>
+				</div>
+				<notempty name="cates">
+					<input type="hidden" name="cate_id" value="{$cates[0].id}" />
+					<input type="hidden" name="cate_name" value="{$cates[0].title}" />
+					<else/>
+					<input type="hidden" name="cate_id" />
+					<input type="hidden" name="cate_name" />
+				</notempty>
+				<input type="hidden" name="goods_id" />
+				<input type="hidden" name="goods_name" />
+				<input type="hidden" name="goods_attr_id" />
+				<input type="hidden" name="goods_attr_name" />
+				<input type="hidden" name="origin_area" />
+				<input type="hidden" name="pay_type" />
+			</form>
+			<div class="publish-supply publish right l" id="sup02" style="display:none">
+				<div class="title">
+					<span class="active">发布求购</span>
+				</div>
+				<div class="demand-lists">
+					<ul class="lists-d detail"></ul>
+				</div>
+				<div class="alipay01">
+					<p class="color-r">保证金额度：200-500元之间，金额越大，推广力度越大。</p>
+					<form action="">
+						<ul class="alipay01-sel">
+							<li>
+								<input type="radio" name="payType" value="0" id="ckb01" />
+								<label for="ckb01">不支付保证金，直接发布</label>
+								<span>发布后若想重新支付保证金，可联系客服进行操作</span>
+							</li>
+							<li>
+								<input type="radio" name="payType" value="1" id="ckb02" />
+								<label for="ckb02">转账支付保证金</label>
+								<span>转账方式：转账人：王德全，银行卡号：62112356487 工商银行 。发布后会有客服联系您，请保持手机通话畅通！</span>
+							</li>
+							<!--此块支付宝功能先去掉，后期加上去
+							<li>								
+							<input type="radio" name="payType" value="2" id="ckb03" />
+							<label for="ckb03">在线支付保证金</label>
+							<span class="zf03">
+               					<label>支付金额</label>&nbsp;&nbsp;
+               					<select id="payMoney">
+               						<option>200</option>
+               						<option>300</option>
+               						<option>400</option>
+               						<option>500</option>
+               					</select>&nbsp;&nbsp;元
+               				</span>								
+						</li>-->
+						</ul>
+					</form>
+					<div class="tishi">
+						<img src="__HOME__/user/images/tishi.png" alt="" />
+					</div>
+					<div class="tijiao">
+						<i class="sel-i"></i>
+						<input type="checkbox" id="agreen" checked/>
+						<label for="agreen">我已阅读并同意<a href="javascript:;">《发布求购须知》</a></label>
+					</div>
+					<div class="fabu">
+						<a href="javascript:;" id="lastStep">上一步</a>
+						<button type="button" id="submitBtn">发布</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--<div class="modal">
+	<div class="dialog">
+		<div class="content">
+			<i>&times;</i>
+			<p>支付提示</p>
+			<div class="zf-b">
+				<p>请问您完成付款了吗？</p>
+				<p>如没有，请在新打开的支付页面进行付款的操作。</p>
+				<p>若未正常新打开页面，请
+					<a href="###">点击此处</a>继续支付。</p>
+				<p>提示超过商户限额？请查看&nbsp;
+					<a href="###">各银行网上支付限额</a>
+				</p>
+				<p class="fabu">
+					<a href="{:U('demand/alipay01')}">重选支付方式</a>
+					<button type="submit">完成支付</button>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>-->
+	<div class="modal modal-shade" id="confirmModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<i class="close">&times;</i>
+				<p>提示</p>
+				<div class="modal-context">确定发布当前求购信息？</div>
+				<div class="context-a demand-pubm">
+					<a href="javascript:;" class="ok">确定</a>
+					<a href="javascript:;" class="close">取消</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--关于发布求购协议-->
+	<div class="modal-container">
+		<div class="modal-dialogs">
+			<span class="protocol-col"></span>
+			<div class="protocol-t">药都网发布求购须知</div>
+			<div class="protocol-b">
+				<p><b>免责声明：</b>药都网所展示的中药材供求信息由买卖双方自行提供，其真实性、准确性和合法性由信息发布人负责。药都网不提供任何保证，并不承担任何法律责任。</p>
+				<p><b>药都网友情提醒：</b>为保障您的利益，请谨慎交易！药都网信息咨询栏目均为经营者提供参考，并不能作为投资和经营指导，在使用中务必进一步进行核实，本网不能保证完全准确、全面、真实有效。如客户在使用中造成损失，药都网不承担法律责任。药商谈药中的言论属于药商自由（在不违反国家政策及论坛的规则的情况下），药都网对其言论的准确性不能保证！不能作为指导经营使用，也不代表药都网的观点，药商在此发言要为自己的言论承担全部责任！</p>
+			</div>
+			<p class="protocol-f">
+				<button>同意本协议</button>
+			</p>
+		</div>
+	</div>
+	<!--关于发布求购协议结束-->
+</block>
+<block name="script">
+	<script src="__HOME__/demand/js/publish.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var urls = ["{:U('Goods/ajaxGetSpecs')}", "{:U('Region/getProHtml')}", "{:U('Region/getCityHtml')}", "{:U('Region/getAreaHtml')}", "{:U('')}"];
+		var redirectUrl = "{:U('index')}";
+		$(function(){
+			$('.tijiao>label>a').click(function(){
+				$('.modal-container').show();
+			});
+			$('.protocol-col,.protocol-f button').on('click',function(){
+				$('.modal-container').hide();
+				if(this.nodeName=='BUTTON'){
+					$('#agreen').prop("checked",true);
+					$('.tijiao i.sel-i').css('background','url(__HOME__/user/images/icon02.png) no-repeat center center');
+				}
+			});
+		});
+	</script>
+</block>

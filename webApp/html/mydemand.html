@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/mydemand.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+    <title>我的采购</title>
+    <script type="text/javascript">
+        if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+        if (!isMobile()) location.href = "./bind.html";
+    </script>
+</head>
+<body>
+<header>
+    <a href="./persional.html" class="back_btn">
+        <i class="icon_zjt iconfont"></i>返回
+    </a>
+    <span>我的采购</span>
+</header>
+<div class="nav_wp">
+    <ul class="clearfix">
+        <li class="nav_item active-nav">全部</li>
+        <li class="nav_item">进行中</li>
+        <li class="nav_item">已经结束</li>
+    </ul>
+</div>
+<div class="ydw_wp">
+
+    <div class="main_wp">
+        <div class="c_item">
+            <ul class="list_wp" id="data_wp1">
+                <!--<li>-->
+                    <!--<a href="" class="clearfix">-->
+                        <!--<div class="list_info">-->
+                            <!--<div class="left">-->
+                                <!--<p>-->
+                                    <!--<label>品名 : </label><span class="goods_name light">柑橘</span>-->
+                                <!--</p>-->
+                                <!--<p>-->
+                                    <!--<label>规格 : </label><span class="txt_span1 txt_span">打算的</span>-->
+                                    <!--<label> 数量 : </label><span class="txt_span2 txt_span">995</span>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="right">-->
+                                <!--&lt;!&ndash;<i class="iconfont icon_shijian"></i><br>&ndash;&gt;-->
+                                <!--<i class="iconfont icon_wancheng"></i><br>-->
+                                <!--&lt;!&ndash;<span class="status">未选标</span>&ndash;&gt;-->
+                                <!--<span class="status status_ok">交易完成</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="btm_info clearfix">-->
+                            <!--<label>发布时间 : </label><span>2017-02-52</span>-->
+                            <!--<span class="r_btn r">去托管</span>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                 <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<div class="list_info">-->
+                            <!--<div class="left">-->
+                                <!--<p>-->
+                                    <!--<label>品名 : </label><span class="goods_name light">柑橘</span>-->
+                                <!--</p>-->
+                                <!--<p>-->
+                                    <!--<label>规格 : </label><span class="txt_span1 txt_span">打算的</span>-->
+                                    <!--<label> 数量 : </label><span class="txt_span2 txt_span">995</span>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="right">-->
+                                <!--<i class="iconfont icon_shijian"></i><br>-->
+                                <!--<span class="status">未托管资金</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="btm_info clearfix">-->
+                            <!--<label>发布时间 : </label><span>2017-02-52</span>-->
+                            <!--<span class="r_btn r">去托管</span>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<div class="list_info">-->
+                            <!--<div class="left">-->
+                                <!--<p>-->
+                                    <!--<label>品名 : </label><span class="goods_name light">柑橘</span>-->
+                                <!--</p>-->
+                                <!--<p>-->
+                                    <!--<label>规格 : </label><span class="txt_span1 txt_span">打算的</span>-->
+                                    <!--<label> 数量 : </label><span class="txt_span2 txt_span">995</span>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="right">-->
+                                <!--<i class="iconfont icon_wancheng"></i><br>-->
+                                <!--<span class="status status_ok">交易完成</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="btm_info clearfix">-->
+                            <!--<label>发布时间 : </label><span>2017-02-52</span>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<div class="list_info">-->
+                            <!--<div class="left">-->
+                                <!--<p>-->
+                                    <!--<label>品名 : </label><span class="goods_name light">柑橘</span>-->
+                                <!--</p>-->
+                                <!--<p>-->
+                                    <!--<label>规格 : </label><span class="txt_span1 txt_span">打算的</span>-->
+                                    <!--<label> 数量 : </label><span class="txt_span2 txt_span">995</span>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="right">-->
+                                <!--<i class="iconfont icon_wancheng"></i><br>-->
+                                <!--<span class="status status_ok">交易完成</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="btm_info clearfix">-->
+                            <!--<label>发布时间 : </label><span>2017-02-52</span>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="c_item">
+            <ul class="list_wp" id="data_wp2">
+            </ul>
+        </div>
+        <div class="c_item">
+            <ul class="list_wp" id="data_wp3">
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/load.js"></script>
+<script type="text/javascript">
+    var data = {
+        status:'',
+        num:10
+    };
+    $(".list_wp").each(function () {
+        $(this)[0].scrolling = false;
+        appendLoad($(this));
+    })
+    var nav = $(".nav_item");
+    rule.scrollEvents = function (wp) {
+        var j = $(".active-nav").index() + 1;
+        var dataWp = wp || $("#data_wp" +j);
+        if (dataWp[0].scrolling){
+            return;
+        }
+        dataWp[0].scrolling = true;
+        var lastId = dataWp.children(":last").attr("data-id");
+        data.minId = lastId || "";
+        $.postT(rule.root + 'AppUser/user_demand' ,data ,function (req) {
+            var code = req.code;
+            var str1  = '';
+            if (code == 1){
+                var datas = req.data;
+                var datasL = datas.length;
+                for (var i = 0; i < datasL; i++){
+                    console.log(datas[i])
+                   var createTime = datas[i].create_time,
+                        attrName = datas[i].goods_attr_name,
+                        goodsName = datas[i].goods_name,
+                        id = datas[i].id,
+                        num = datas[i].num,
+                       order_amount = datas[i].order_amount,  //'托管资金，0：未支付，-1：转账支付，大于0为托管资金金额',
+                        status = datas[i].status,//'求购流程状态,-1：已删除，0：雇主正在选标，1：雇主已选标，2：已支付托管资金，3：已发货，4：已签收',
+                        tradingType =  datas[i].trading_type;//交易类型0：未选择，1：线上交易，2：代表线下交易',
+                        createTime = new Date(createTime*1000).format("yyyy-MM-dd");
+                        str1 += '<li data-id="'+ id +'"><a href="./mydmddetail.html?id='+id+'"><div class="list_info clearfix"><div class="left"><p><label>品名 : </label><span class="goods_name light">'+ goodsName +'</span></p><p><label>规格 : </label><span class="txt_span1 txt_span">'+ attrName +'</span><label> 数量 : </label><span class="txt_span2 txt_span">'+ num +'</span></p></div><div class="right">';
+                        switch (status){
+                            case '0':
+                                //未选标
+                                str1 += ' <i class="iconfont icon_shijian"></i><br><span class="status">未选标</span></div></div><div class="btm_info clearfix"><label>发布时间 : </label><span>' + createTime + '</span></div></a></li>';
+                                break;
+                            case '1':
+                                //没有支付托管资金 || 已经选择未转账
+                                if (tradingType == 1 && order_amount <= 0){
+                                    str1 += ' <i class="iconfont icon_shijian"></i><br><span class="status">未转账,请联系客服</span></div></div><div class="btm_info clearfix"><label>发布时间 : </label><span>' + createTime + '</span></div></a></li>';
+                                }else {
+                                    str1 += '<i class="iconfont icon_shijian"></i><br><span class="status">未托管资金</span></div></div><div class="btm_info clearfix"><label>发布时间 : </label><span>'+ createTime +'</span><span class="r_btn r">去托管</span></div></a></li>'
+                                }
+                                break;
+                            case '2':
+                                //已经支付托管资金
+                                str1 += ' <i class="iconfont icon_shijian"></i><br><span class="status">已付托管资金</span></div></div><div class="btm_info clearfix"><label>发布时间 : </label><span>'+ createTime +'</span></div></a></li>'
+                                break;
+                            case '3':
+                                //发货
+                                str1 += ' <i class="iconfont icon_shijian"></i><br><span class="status">已发货</span></div></div><div class="btm_info clearfix"><label>发布时间 : </label><span>'+ createTime +'</span></div></a></li>'
+                                break;
+                            case '4':
+                                //完成
+                                str1 +=  ' <i class="iconfont icon_wancheng"></i><br><span class="status status_ok">交易完成</span></div></div><div class="btm_info clearfix"><label>发布时间 : </label><span>'+ createTime +'</span></div></a></li>'
+                                break;
+                            default:
+                                break;
+                        }
+                }
+                setTimeout(function () {
+                    dataWp.append(str1);
+                    if (datasL < data.num){
+                        dataWp[0].scrolling = false;
+                        dataWp.next("div").text("没有更多数据");
+                    }
+                    dataWp[0].hasload = true;
+                    dataWp[0].scrolling = false;
+                } ,300)
+            }else if (code == 103){
+                var hrefUrl = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+                rule.showMsg(1 , "该账号已在其他地方登陆,请重新登录" , 2000 , hrefUrl);
+            }else if (code == 0){
+                dataWp[0].scrolling = true;
+                dataWp.next("div").text("没有更多数据");
+            }
+        })
+    }
+    nav.click(function (e){
+        var _this = $(this);
+        var index = _this.index();
+        _this.addClass('active-nav').siblings("li").removeClass("active-nav");
+        $(window).scrollTop(0);
+        $(".c_item").hide().eq(index).show();
+        data.status = index;
+        if (index == 0) {
+            data.status = '';
+        }
+        var i = index + 1;
+        var wpObj = $("#data_wp" + i);
+        if (wpObj[0].hasload) return;
+        rule.scrollEvents(wpObj);
+    });
+    //初始化页面数据;
+    rule.scrollEvents();
+    //绑定去托管事件
+    $(".list_wp").on("click" , ".r_btn" ,function (e) {
+        e.preventDefault();
+        //储存托管的信息
+        var _this = $(this);
+        var id = _this.parents("li").attr("data-id");
+        var num = _this.parents("li").find(".txt_span2").text();
+        var mySelection = {
+            id:id,
+        }
+        mySelection.num = parseInt(num);
+        //拿着id 去找price
+        $.postT(rule.root +'AppUser/demand_details' ,{demand_id:id} , function (req) {
+            if (req.code == 1){
+                var tender = req.data.tender;
+                if (tender){
+                    var tenderL = tender.length;
+                    for (var i = 0; i < tenderL; i++){
+                        var tenderStatus = tender[i].status;
+                        if (tenderStatus == 1){
+                            //这条是中标信息
+                            mySelection.price = parseInt(tender[i].price);
+                        }
+                    }
+                }
+                new Intent().setIntent("my_selection" , mySelection);
+                location.href = "./paycustody.html";
+            }
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/share.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body class="dcp">
+<header>
+    <a href="javascript:void(0);" class="back_btn" id="back_btn">
+        <i class="icon_zjt iconfont"></i>返回
+    </a>
+    <span>物流详情</span>
+</header>
+<div class="main ydw_wp">
+    <div class="top">
+        <span>车辆类型 : </span><span class="deli_type"></span>
+    </div>
+    <div class="middle">
+        <ul>
+            <li>
+                <div class="c">
+                    <b class="line dib"></b>
+                </div>
+                <span class="ft_s dib">出&nbsp;&nbsp;发&nbsp;&nbsp;地 : </span><span class="begin_span bhd_s dib"></span>
+            </li>
+            <li>
+                <div class="c"><b class="line dib"></b></div>
+                <span class="ft_s dib">目&nbsp;&nbsp;的&nbsp;&nbsp;地 : </span><span class="end_span bhd_s dib"></span>
+            </li>
+            <li class="contact_li">
+                <div class="c"><b class="line dib"></b></div>
+                <span class="ft_s dib">联系方式 : </span><div class="bhd_s dib">
+                <span class="contacts_span"></span><br>
+                <span class="tel_span"></span>
+            </div>
+            </li>
+            <li class="dcp_sp">
+                <i class="c dib"></i>
+                <span class="ft_s dib">简　　介 : </span>
+                <span class="bhd_s dib des_span"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="bottom clearfix">
+        <div class="time r">
+            发布时间 : <span class="add_time"></span>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/lists.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var id = parseInt(rule.getRequest().id);
+    var data = {
+        clientType: 1,
+        id: id
+    };
+    $.ajax({
+        url: rule.root +"AppCompany/deliveryInfo",
+        data: data,
+        type: "post",
+        success: function(req) {
+            var code = req.code;
+            if(code == 1) {
+                var datas = req.data;
+                var id =  datas.id;
+                if (!id){
+                    return;
+                }
+                var type = datas.type;
+                var begin = datas.begin;
+                var end = datas.end;
+                var contacts = datas.contacts;
+                var t = new Date(datas.add_time * 1000).format("yyyy-MM-dd")
+                var mobile = datas.mobile;
+                var desc = datas.desc;
+
+                $(".deli_type").text(type);
+                $(".begin_span").text(begin);
+                $(".end_span").text(end);
+                $(".add_time").text(t);
+                $(".des_span").text(desc);
+                $(".contacts_span").text(contacts);
+                $(".tel_span").text(mobile);
+                var obj = $('.middle li');
+                line(obj);
+            }
+
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    })
+</script>
+</html>

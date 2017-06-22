@@ -1,0 +1,173 @@
+.alipay02-nav{
+	/*width:100%;*/
+	width:930px;
+	height:40px;
+	background:#E62B2E;
+	margin-top:25px;
+	margin:0 auto;
+	font-size:14px;
+}
+.alipay02-m{
+	width:900px;
+	margin:0 auto;
+	font-size:14px;
+}
+.alipay02-nav p{
+	font-size:16px;
+	color:#fff;
+	height:40px;
+	line-height:40px;
+	text-indent:1em;
+}
+.m-l{
+	width:625px;
+	border-right:1px solid #F0F0F0;
+	padding:0 20px 20px 5px;
+}
+.l-title{
+	border-bottom:1px dashed #E9E9EC;
+	margin-top:12px;
+	padding-bottom:15px;
+}
+.l-title>p{
+	font-size:16px;
+	margin-bottom:5px;
+}
+.t-lists li{
+	float:left;
+	width:20%;
+}
+.t-lists{
+	margin-top:15px;
+}
+.l-title span{
+	color:#ADADAD;
+}
+span.color-r{
+	color:#E62B2E;
+}
+div>span.color-r{
+	font-size:22px;
+	font-weight: bold;
+}
+.m-lists{
+	line-height:30px;
+}
+.l-title div{
+	font-size:16px;
+}
+.b-lists label{
+	margin-left:6px;
+	/*margin-right:15px;*/
+}
+.zhifubao img,.b-warn img{
+	vertical-align: middle;
+	margin-right:6px;
+}
+.b-lists .zhifubao label{
+	display: inline-block;
+	width:53px;
+	height:20px;
+	background:url(../images/zhifu.png) no-repeat center center;
+	vertical-align: middle;
+}
+.b-lists li{
+	padding-left:6px;
+	border:1px dashed transparent;
+	line-height:40px;
+}
+.b-lists li:hover,.b-lists li.active{
+	border-color:#ffd188;
+	background:#FFFBED;
+}
+.l-title .b-warn{
+	margin-top:5px;
+	color:#F5AB3D;
+	font-size:14px;
+}
+.b-t{
+	margin:15px 0 20px 0;
+	font-size:14px;
+	position:relative;
+}
+.b-t>label{
+	margin-left:22px;
+}
+.sel-i{
+	display: inline-block;
+	width:14px;
+	height:14px;
+	border:1px solid #D6D7DC;
+	margin-bottom:-1px;
+	background: url(../images/icon02.png) no-repeat center center;
+	margin-right:10px;
+}
+.b-t>input{
+	position:absolute;
+	top:3px;
+	left:2px;
+	opacity: 0;
+	filter: "alpha(opacity=0)";
+	filter: alpha(opacity=0); 
+	zoom:1;
+}
+.b-t a{
+	color:#0E8CE4;
+}
+.b-m button{
+	padding:9px 19px;
+	background: #E62B2E;
+    color:#fff;
+    /*border:1px solid #E62B2E;
+    margin-right:20px;*/
+    cursor: pointer;
+}
+/*.b-m a,.b-m a{
+	border-color:#D9DADE;
+	color:#8A8A8A;
+	background: #EDEDED;
+}
+.b-m a:hover{
+	text-decoration:none;
+}*/
+/**关于托管资金的右侧**/
+.m-r{
+	padding-left:20px;
+}
+.m-r h2{
+	font-size:16px;
+	font-weight:bold;
+	margin-top:10px;
+}
+.m-r dl{
+	margin-top:20px;
+}
+dl>dt{
+	float:left;
+	font-size:16px;
+	width:25px;
+	height:25px;
+	color:#fff;
+	background: #E62B2E;
+	text-align: center;
+	line-height:25px;
+	font-weight:bold;
+	border-radius: 50%;
+	margin-right:15px;
+	
+}
+dl>dd{	
+	font-weight:bold;
+	font-size:16px;
+	color:#E62B2E;
+}
+.r-b{
+	float:left;
+	font-weight: normal;
+	font-size:14px;
+	color:#898989;
+	margin-left:41px;
+	margin-left:0px\9\0;
+	width:185px;
+	line-height:30px;
+}

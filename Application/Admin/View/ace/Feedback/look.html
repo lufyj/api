@@ -1,0 +1,71 @@
+<extend name="Public/base" />
+<block name='navi'><li>客户信息</li><li>意见反馈</li></block>
+<block name="body">
+    <div class="page-header">
+        <h1>反馈详情</h1>
+    </div>
+    <div class="space"></div>
+    <div class="row">
+        <div class="col-xs-12">
+        	<form class="form-horizontal">
+				<!-- 基础 -->
+				<div id="tab1" class="tab-pane fade active in">
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right">用户问题：<span class="check-tips"></span></label>					
+						<textarea class="col-xs-10 col-sm-5" readonly>{$info.question}</textarea>					
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right"></label>
+						<div class="page-header col-xs-10 col-sm-5"></div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right">回复内容：</label>
+						<textarea class="col-xs-10 col-sm-5" id="reply" <eq name="info['status']" value="1">readonly</eq>>{$info.reply}</textarea>
+					</div>																
+				</div>
+				<div class="clearfix form-actions">		
+					<div class="col-md-offset-3 col-md-9">						
+						<eq name="info['status']" value="0">
+							<button type="button" id="submitBtn" class="btn btn-info"><i class="ace-icon fa fa-check bigger-110"></i>确 定</button>	
+						</eq>															
+						<a class="btn btn-return" href="javascript:history.back();"><i class="ace-icon fa fa-undo bigger-110"></i>返 回</a>
+					</div>
+				</div>
+			</form>
+        </div>
+    </div>
+</block>
+<block name="script">
+<script type="text/javascript">
+	$(function(){
+		var id = {$Think.get.id};
+		var repeat_click = true;
+		/* 表单提交 */
+		$('#submitBtn').on('click', function(){
+			var reply = $.trim($('#reply').val());
+			if(!reply){
+				fail('回复内容不能为空');return;
+			}		
+			var _this = $(this);
+			_this.addClass('disabled');
+			$.ajax({
+	   		    url: "{:U('')}",
+	   		    dataType: "json",       		   
+	   		    data: {id: id,reply: reply},
+	   		    type: "post",
+	   		    success: function(req) {       		    
+	   		    	if(req.code == 1) success(req.msg, req.url);
+					else fail(req.msg, _this);
+	   		    },		    
+	   		    error: function() {	
+	   		    	alert('网络连接超时，请稍后再试');
+					_this.removeClass('disabled');	   		     	
+	   		    }
+	   		});
+			
+		});
+		//导航高亮
+		highlight_subnav("{:U('Feedback/index')}");
+	})	
+</script>
+</block>

@@ -1,0 +1,55 @@
+<extend name="Company:base1" />
+<block name="style">
+	<!--样式自定义开始-->
+	<link rel="stylesheet" type="text/css" href="__CSS__/reset.css" />
+	<link rel="stylesheet" href="__TMPL__/light/css/lightdetail.css" />
+	<!--样式自定义结束-->
+</block>
+<block name="body">
+	<div class="company01">
+		<!--logo头部-->
+		<div class="logo-title">
+			<div class="logo-bg clearfix">
+				<img src="{$comInfo.logo}" alt="公司的logo" class="l" />
+				<span class="r com-name">{$comInfo.name}</span>
+			</div>
+			<div class="mb"></div>
+			<div class="title2-m">
+				<p>
+					<span>公告：</span>
+					<marquee scrolldelay="1000" direction="left" behavior="scroll" scrollamount="30" loop="-1" onMouseOut="this.start()" onMouseOver="this.stop()">
+						{$noticeInfo.content}
+					</marquee>
+				</p>
+			</div>
+		</div>
+		<!--logo头部-->
+		<!--位置信息-->
+		<div class="title-ad">
+			<div class="ad">
+				<span><a href="{$domain}">首页</a> ></span>
+				<span>公司业务 ></span>
+				<span class="cur">包装</span>
+			</div>
+		</div>
+		<!--位置信息-->
+		<!--包装-->
+		<div class="packing-wrap wrap-a">
+			<ul class="clearfix">
+				<li>包装方式 : {$packingInfo.packing_method}</li>
+				<li>包装材料 : {$packingInfo.packing_material}</li>
+			</ul>
+			<ul class="img-ul clearfix">
+				<foreach name="packingInfo.img" item="img">
+					<li>
+						<img src="{$img}" alt="" />
+					</li>
+				</foreach>
+			</ul>
+		</div>
+		<!--包装-->
+	</div>
+</block>
+<block name="script">
+
+</block>

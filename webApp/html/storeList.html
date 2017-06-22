@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/lists.css"/>
+    <link rel="stylesheet" href="../css/LArea.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+    <title>仓库列表</title>
+    <script src="../js/swiper.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="./discover.html" class="back_btn">
+            <i class="icon_zjt iconfont"></i>返回
+        </a>
+        <span>仓库列表</span>
+    </header>
+    <div class="ydw_wp">
+        <div class="swiper-container" id="swiper-container2" style="width:100%;">
+            <div class="swiper-wrapper">
+                    <div class="swiper-slide active-nav nav_item">
+                        全部
+                    </div>
+                    <div class="swiper-slide nav_item">
+                        普通
+                    </div>
+                    <div class="swiper-slide nav_item">
+                        冷藏
+                    </div>
+                    <div class="swiper-slide nav_item">
+                        保温/恒温
+                    </div>
+                    <div class="swiper-slide nav_item">
+                        特种
+                    </div>
+                    <div class="swiper-slide nav_item">
+                        气调
+                    </div>
+            </div>
+        </div>
+        <div class="choose_ad">
+            <i class="iconfont icon_dizhi"></i>
+            <span class="area">点击选择仓库所在地</span>
+            <input type="hidden" name="add_code" class="add_code"/>
+            <i class="iconfont icon_quxiao"></i>
+        </div>
+        <div class="data_wp">
+            <div class="data_box all_data">
+                <ul class="list_wp list_wp1">
+                    <!--<li class="list_item">-->
+                        <!--<div class="title">-->
+                            <!--<label for="">仓库类型:</label><span class="title_txt">普通</span>-->
+                        <!--</div>-->
+                        <!--<div class="list_c">-->
+                            <!--<img src="../images/tjimg.png" alt="" class="list_img">-->
+                            <!--<div class="detail_msg">-->
+                                <!--<p>-->
+                                    <!--<label for="">面积:</label><span class="msg_text">60000.00平方米</span>-->
+                                <!--</p>-->
+                                <!--<p>-->
+                                    <!--<label for="">层高:</label><span class="msg_text">60000.00平方米</span>-->
+                                <!--</p>-->
+                                <!--<p>-->
+                                    <!--<label for="">地址:</label><span class="msg_text">黄河路50号黄河路50号黄河路50号黄河路50号黄河路50号</span>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<i class="iconfont icon_yjt"></i>-->
+                        <!--</div>-->
+                    <!--</li>-->
+
+                </ul>
+            </div>
+            <div class="data_box">
+                <ul class="list_wp list_wp2">
+
+                </ul>
+            </div>
+            <div class="data_box">
+                <ul class="list_wp list_wp3">
+
+                </ul>
+            </div>
+            <div class="data_box">
+                <ul class="list_wp list_wp4">
+
+                </ul>
+            </div>
+            <div class="data_box">
+                <ul class="list_wp list_wp5">
+
+                </ul>
+            </div>
+            <div class="data_box">
+                <ul class="list_wp list_wp6">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../js/load.js"></script>
+    <script src="../js/LArea.js"></script>
+    <script src="../js/LAreaData2.js"></script>
+    <script>
+        var data = {
+            t:'9999',
+            num:10,
+            clientType:1
+        }
+        var cancleBtn = $(".icon_quxiao");
+        var areaTxt = $(".area");
+        var addVal = $(".add_code");
+        var area2 = new LArea();
+        area2.init({
+            'trigger': '.area',
+            'finishs':'.area',
+            'valueTo': '.add_code',
+            'keys': {
+                id: 'value',
+                name: 'text'
+            },
+            'type': 2,
+            'data': [provs_data, citys_data, dists_data],
+            "fn":function () {
+                //点击确定赋值之后走这个方法
+                checkAddress();
+            }
+        })
+        var dataWp = $(".data_box");
+        var listWp = $(".list_wp");
+        var navItem = $(".nav_item");
+        var mySwiper2 = new Swiper('#swiper-container2',{
+            watchSlidesProgress : true,
+            watchSlidesVisibility : true,
+            slidesPerView : 5,
+            onTap: function(){
+                var i = mySwiper2.clickedIndex;
+                if (!i && i!= 0 || navItem.eq(i).hasClass("active-nav")) return;
+                updateNavPosition(i);
+                tabClickFn(i);
+            }
+        })
+        listWp.each(function () {
+            var _this = $(this);
+            _this[0].scrolling = false;
+            appendLoad(_this);
+        })
+        rule.scrollEvents = function (wp) {
+            var j = $(".active-nav").index() + 1;
+            var dataWp = wp || $(".list_wp" +j);
+            if (dataWp[0].scrolling){
+                return;
+            }
+            dataWp[0].scrolling = true;
+            var lastId = dataWp.children(":last").attr("data-id");
+            data.minId = lastId || "";
+            $.post(rule.root + 'AppCompany/storeList' ,data ,function (req) {
+                var code = req.code;
+                var str1  = '';
+                if (code == 1){
+                    var datas = req.data.data;
+                    if (datas){
+                       var  datasL = datas.length;
+                        for (var i = 0; i < datasL; i++){
+                            var address = datas[i].address;
+                            contacts = datas[i].address;
+                            height = datas[i].height;
+                            img = datas[i].img;
+                            id = datas[i].id;
+                            size = datas[i].size;
+                            type = datas[i].type;
+                            str1 += '<li class="list_item" data-id="'+id+'"><a href="./storedetail.html?id='+id+'"><div class="title"><label for="">仓库类型:</label><span class="title_txt">'+ type +'</span></div><div class="list_c"><img src="'+img+'" alt="" class="list_img"><div class="detail_msg"><p><label for="">面积:</label><span class="msg_text">'+ size +'平方米</span></p><p><label for="">层高:</label><span class="msg_text">'+ height +'米</span></p><p><label for="">地址:</label><span class="msg_text">'+ address +'</span></p></div><i class="iconfont icon_yjt"></i></div></a></li>';
+                        }
+                        dataWp.append(str1);
+                        dataWp[0].hasload = true;
+                        if (datasL < data.num){
+                            dataWp[0].scrolling = true;
+                            dataWp.next("div").text("没有更多数据");
+                            return;
+                        }
+                        dataWp[0].scrolling = false;
+                    }else {
+                        //data不存在 说明 没数据
+                        dataWp[0].scrolling = true;
+                        dataWp.next("div").text("没有更多数据");
+                    }
+                }else if (code == 0){
+                    alert("请求错误");
+                }
+            })
+        }
+        cancleBtn.click(function () {
+            if (areaTxt.text() == '点击选择仓库所在地'){
+                return;
+            }
+            addVal.val('');
+            areaTxt.text("点击选择仓库所在地");
+            data.add = '';
+            initBox();
+            rule.scrollEvents();
+        })
+        //选择地址之后触发的函数
+        function checkAddress() {
+            var adCode = $.trim(addVal.val())
+            var adLength = adCode.length;
+            if  (adLength == 2){
+                //只有省
+                data.add = adCode;
+            }else  if (adLength == 7){
+                data.add = adCode.split(",")[1];
+            }else if (adLength == 14){
+                data.add = adCode.split(",")[2];
+            }
+            initBox();
+            rule.scrollEvents();
+        }
+        function initBox() {
+            listWp.each(function () {
+                var _this = $(this);
+                _this[0].scrolling = false;
+                _this[0].hasload = false;
+                _this.html('');
+                _this.next("div").text("正在加载...");
+            })
+        }
+        function tabClickFn(i) {
+            $(window).scrollTop(0);
+            data.t = i - 1;
+            dataWp.hide().eq(i).show();
+            if (data.t == -1) {
+                data.t = '9999';
+            }
+            var index = i + 1;
+            var wpObj = $(".list_wp" + index);
+            if (wpObj[0].hasload) return;
+            rule.scrollEvents(wpObj);
+        }
+        function updateNavPosition(i){
+            $('#swiper-container2 .active-nav').removeClass('active-nav')
+            var activeNav = $('#swiper-container2 .swiper-slide').eq(i).addClass('active-nav');
+            if (!activeNav.next().hasClass('swiper-slide-visible')){
+                mySwiper2.slideTo(activeNav.index()-2)
+            }
+            if (!activeNav.prev().hasClass('swiper-slide-visible')){
+                mySwiper2.slideTo(activeNav.index()-2);
+            }
+            if (!activeNav.hasClass('swiper-slide-visible')) {
+                if (activeNav.index()>mySwiper2.activeIndex) {
+                    var thumbsPerNav = Math.floor(mySwiper2.width/activeNav.width())-1
+                    mySwiper2.slideTo(activeNav.index()-thumbsPerNav)
+                }
+                else {
+                    mySwiper2.slideTo(activeNav.index())
+                }
+            }
+        }
+        //初始化页面数据;
+        rule.scrollEvents();
+    </script>
+</body>
+</html>

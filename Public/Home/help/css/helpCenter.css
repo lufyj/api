@@ -1,0 +1,153 @@
+/*新的帮助中心*/
+.help-wrap{
+	width: 1200px;
+	margin: 20px auto;
+}
+.help-nav{
+	width: 230px;
+}
+.help-nav>span{
+	display: inline-block;
+	width: 230px;
+	height: 42px;
+	line-height: 42px;
+	background-color: #E62B2E;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+}
+.nav-list{
+	border: 1px solid #d3d3d3;
+	border-top: none;
+	border-bottom: none ;
+}
+/*.nav-list>li{
+	cursor: pointer;
+}*/
+.one-l{
+	height: 48px;
+	line-height: 48px;
+	font-size: 16px;
+	padding-left:35px;
+	background-color: #F8F8F8;
+	border-bottom: 1px solid #d3d3d3;
+	cursor: pointer;
+}
+.one-l span{
+	display: inline-block;
+	border: 5px solid transparent;
+	border-top-width:8px;
+	border-top-color:#333;
+	position: relative; 
+	top:3px;
+	margin-left: 20px;
+}
+.one-l img{
+	vertical-align: middle;
+	position: relative;
+	top: -3px;
+	margin-right: 8px;
+}
+.two-l li{
+	border-bottom: 1px dashed #d3d3d3;
+}
+.two-l a{
+	display:block;
+	font-size: 14px;
+	text-indent: 65px;
+	height: 40px;
+	line-height: 40px;
+}
+.two-l li.active a,.two-l li:hover{
+	color:#E62B2E;
+}
+.two-l li a:hover{
+	text-decoration: none;
+}
+.two-l{
+	display: none;
+}
+.show{
+	display: block;
+}
+#show{
+	display: block;
+}
+.help-main{
+	width: 970px;
+}
+.main-top{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 2px solid #E62B2E;
+	padding-left: 35px;
+	font-size: 14px;
+	color: #666;
+	/*font-family: "宋体";*/
+}
+.main-title:after{
+	display: block;
+	content:'';
+	clear: both;
+}
+.main-title h3{
+	margin-top: 15px;
+	display: inline-block;
+	width:940px;
+	border-bottom: 2px solid #ccc;
+	float:right;
+}
+.main-title h3 span{
+	display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    font-size: 26px;
+    padding:2px 10px;
+    border-bottom: 2px solid #e62b2c;
+    margin-bottom: -2px;
+}
+.content,.brief{
+	padding-left: 30px;
+	margin-top: 12px;
+}
+.content p{
+	font-size: 16px;
+	color: #666;
+	margin: 20px 0;
+}
+.content img{
+	width: 100%;
+	margin-top: 10px;
+}
+/*关于公司简介*/
+.brief p{
+	font-size: 16px;
+	color: #333;
+	line-height:40px;
+	border-bottom: dashed 1px #CCC;
+}
+.brief p:first-child{
+	color:#E62B2E;
+	font-weight:bold;
+	font-size: 22px;
+    font-family: 微软雅黑;
+	border:none;
+}
+/*关于联系客服*/
+.help-contact img{
+	width:30%;
+}
+.help-contact p{
+	text-align: center;
+	margin:0;
+}
+.help-contact span{
+	font-size:30px;
+	font-weight: 900;
+	color:#E04141;
+	letter-spacing: 2px;
+}
+.help-contact i{
+	font-style:normal;
+	margin-left:-35px;
+}

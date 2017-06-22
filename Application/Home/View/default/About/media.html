@@ -1,0 +1,32 @@
+<extend name="./base" />
+<block name="style">
+	<!--样式自定义开始-->
+	<link rel="stylesheet" type="text/css" href="__HOME__/about/css/aboutUs.css" />
+	<!--样式自定义结束-->
+</block>
+<block name="body">
+	<!--主页内容开始-->
+	<div class="aboutUs clearfix">
+		<include file="about_menu" />
+		<!--企业文化开始-->
+		<div class="aboutUs-main l">
+			<div class="aboutUs-top">
+				<h3>您所在的位置：<a href="{:U('Index/index')}">首页</a>&nbsp;&gt;&nbsp;<a href="{:U('index')}">关于我们</a>&nbsp;&gt;&nbsp;<a href="javasrcipt:;">媒体报道</a></h3>
+			</div>
+			<div class="aboutUs-title">
+				<h2>媒体报道</h2>
+			</div>
+			<div class="aboutUs-container">
+				这是药都网的“媒体报道”页面！
+			</div>
+		</div>
+		<!--企业文化结束-->
+
+	</div>
+	<!--主页内容结束-->
+</block>
+<block name="script">
+	<!--脚本自定义开始-->
+	<script src="__HOME__/about/js/aboutUs.js" type="text/javascript" charset="utf-8"></script>
+	<!--脚本自定义结束-->
+</block>

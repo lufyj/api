@@ -1,0 +1,33 @@
+body{background-color: #f7f7f7;}
+.reg_wp {margin-top:2.4rem;}
+.reg_list {background-color: #fff;}
+.reg_item {padding:0 5%;border-top:1px solid #d7d7d7;font-size: 0;position: relative;}
+.reg_item:first-child {border: none;}
+label , input{font-size: 2.4rem;vertical-align: middle;}
+label{width:20%;display: inline-block;}
+.input1 {padding:2.8rem 0;width:80%;}
+.three_word {letter-spacing: 1.2rem;}
+.two_word:first-letter{margin-right:4.8rem;}
+button[disabled="disabled"]{background:#cecece;}
+.get_code{display:flex;align-items:center;padding:0 0.6rem;height:5.6rem;border-radius:0.8rem ;background-color: #e62b2e;color: #fff;position:absolute;right:2%;font-size: 2.4rem;top: 50%;margin-top: -2.8rem;}
+.reg_btn , .find_btn {width: 80%;}
+.sub_btn{box-shadow:0 1px 4px #888;height:7rem;color: #fff;margin: 2.4rem auto;display: block;font-size: 3.2rem;background-color:#e62b2e;border-radius:0.8rem;text-align: center;line-height:7rem;}
+/*登录*/
+.login_btn{width: 100%;}
+.logo_wp{margin-top: 10rem;text-align: center}
+.logo_img {width: 40%;}
+.login_wp{text-align: center;width: 90%;margin: 4rem auto 0;}
+.login_wp>div{position: relative;}
+.input2 {background-color: #fff;padding:2.2rem 12%;width: 76%;}
+.password {border-radius: 0 0 1rem 1rem;margin-top: 0.6rem;}
+.tel {border-radius:1rem 1rem 0 0;}
+.icon_psw  , .icon_tel{position: absolute;font-size: 4rem;color: #aaa;left: 2%;top:1rem;}
+.op_box , .op_box a {color:#e62b2e;font-size: 2.4rem;}
+.op_box span {position: relative;margin: 0 2%;top: -0.2rem;}
+.other_login {border-top: 2px solid #aaa;width: 80%;margin:5rem auto;font-size: 2.4rem;}
+.other_hd {background-color: #f7f7f7;position: relative;top: -2rem;padding: 0 4rem;}
+.wx_login {font-size: 2.2rem;}
+.wx_login i{display: inline-block;width: 5rem;height: 5rem;background:url("../images/wx.png") no-repeat;background-size: 100% 100%}
+/*input:focus{color:#F00;}*/
+/*找回密码*/
+

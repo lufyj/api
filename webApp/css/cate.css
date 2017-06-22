@@ -1,0 +1,16 @@
+.cate_wp li{height: 7rem;line-height: 7rem;border-bottom: 1px solid #ccc;font-size: 2.6rem;text-align: center;}
+.cate_wp a{display: inline-block;width: 100%;height: 100%;}
+.cate_wp a:active{background-color: #ddd;}
+
+/*中药品名*/
+.gs_name_wp{padding: 0 3%;}
+.icon_all , .icon_hot{margin-left: 0.5rem;}
+.box_hd {font-size: 2.8rem;background-color: #f7f7f7;color: #E62B2E;padding: 1rem 0;}
+.box_bd {font-size: 0rem;background-color: #fff;padding:0.8rem 2%;}
+.box_bd a {display: inline-block;text-align: center;font-size: 2.4rem;background-color: #eee;border-radius: 0.4rem;margin: 0.8rem 2%;padding: 0.4rem 0;}
+.hot_box .hot_a{color: #E62B2E;padding: 0.4rem 1.2rem;}
+.box_bd .a2 {min-width: 16%;}
+.box_bd .a3 {min-width: 21%;}
+.box_bd .a4 {min-width: 29%;}
+.box_bd3 , .box_bd4 , .box_bd5{margin-top: 2rem;}
+

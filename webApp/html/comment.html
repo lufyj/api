@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>药都网--我的评论</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" href="../css/comment.css" />
+		<script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+            if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+            if (!isMobile()) location.href = "./bind.html";
+		</script>
+	</head>
+	<body>
+	<header>
+		<a href="./persional.html" class="back_btn">
+			<i class="icon_zjt iconfont"></i>
+		</a>
+		<span>我的评论</span>
+	</header>
+		<div class="ydw_wp">
+			<ul class="com-list">
+				<!--<li>-->
+					<!--<dl class="clearfix">-->
+						<!--<dt class="l"><img src="../images/ydw2.png"/></dt>-->
+						<!--<dd class="l com-lis-c">-->
+							<!--<h3>张德全<span class="r">16:21</span></h3>-->
+							<!--<p>"你说说你咋这么重名呢?"</p>-->
+							<!--<div class="com-link">-->
+								<!--<i class="iconfont icon-sjt"></i>-->
+								<!--<a href="###">田七彻底大降价了！！</a>-->
+								<!--<span>回复&nbsp;&nbsp;(20)&nbsp;&nbsp;-&nbsp;&nbsp;来自&nbsp;&nbsp;王刚刚</span>-->
+							<!--</div>-->
+						<!--</dd>-->
+					<!--</dl>-->
+				<!--</li>-->
+			</ul>
+		</div>
+		<script type="text/javascript" src="../js/load.js"></script>
+		<script type="text/javascript">
+            var data = {
+                num:20
+            }
+			var listwp  = $(".com-list");
+            appendLoad(listwp)
+            rule.scrollEvent = function (fn) {
+                var lastId = listwp.children(":last").attr("data-id");
+                data.minId = lastId || "";
+                $.postT(rule.root + "AppMarket/user_comment" , data , function (req){
+                    console.log(req)
+                    var code = req.code;
+                    var str = '';
+                    if (code == 1 ){
+						var datas = req.data;
+						var datasL = datas.length;
+						for (var i = 0; i < datasL; i++){
+						    var author = datas[i].author,
+								content = datas[i].content,
+								createTime = datas[i].create_time,
+								headPic = datas[i].head_pic,
+								id = datas[i].id,
+								marketId = datas[i].market_id,
+								sendId = datas[i].send_id,
+								sendName = datas[i].send_name,
+								title = datas[i].title,
+								totalComment = datas[i].total_comment;
+                            str +='<li data-id="'+ id +'"><a href="./hqdetail.html?id='+marketId+'">'
+                                +'<dl class="clearfix">'
+                                +'<dt class="l"><img src="'+ headPic +'"/></dt>'
+                                +'<dd class="l com-lis-c">'
+                                +'<h3>'+ sendName +'<span class="r">16:21</span></h3>'
+                                +'<p>'+ content +'</p>'
+                                +'<div class="com-link">'
+                                +'<i class="iconfont icon-sjt"></i>'
+                                +'<a href="###">'+ title +'</a>'
+                                +'<span>回复&nbsp;&nbsp;('+ totalComment +')&nbsp;&nbsp;-&nbsp;&nbsp;来自&nbsp;&nbsp;'+ author +'</span>'
+                                +'</div>'
+                                +'</dd>'
+                                +'</dl>'
+                                +'</a></li>';
+						}
+						setTimeout(function () {
+                            listwp.append(str);
+                            fn&&fn();
+                        } , 1000)
+					}else if (code == 0){
+                        $("#load_wp").text("我也是有底线的...")
+					}else if (code == 103){
+                        rule.reLogin();
+					}
+				})
+            }
+            rule.scrollEvent();
+		</script>
+	</body>
+</html>

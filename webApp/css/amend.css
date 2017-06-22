@@ -1,0 +1,16 @@
+.psndata-wp{width: 100%;}
+.psndata li{border-bottom: 0.1rem solid #ccc;line-height: 5rem;font-size:2.4rem;padding: 1rem 4.2%;position: relative;}
+.psndata .head-img {width: 8rem;height: 8rem;margin-top:0.5rem;}
+.psndata .forward{width: 1.19rem;height: 1.63rem;display: inline-block;background: url(../images/j-2.png) no-repeat ;background-size: 100% 100%;position: absolute;left: 92.4%;top:1.1rem;}
+.iconfont , .head-img{vertical-align: middle;}
+.head-span{line-height: 9rem;}
+.xg-img{position:relative;}
+.xg-img input[type="file"]{position:absolute;right:3rem;top:0.5rem;width:8rem;height:8rem;opacity:0;}
+.amend-name{width: 85%; margin-left: auto;margin-right: auto;}
+.amend-name>input{font-size:2.8rem;margin:2rem 0 1rem;background: #f7f7f7;}
+.amend-name>p{border-top:0.2rem solid #e62b2e;padding-top:1rem;color:#666;font-size:2.4rem;}
+.pwd-set{width:95%;margin:2rem auto 2rem;background: #Fff;font-size:2.6rem;}
+.pwd-set>li{border-top:0.1rem solid #f3f3f3;padding:2rem;}
+.pwd-set>li:first-child{border-top:0;}
+.pwd-set>li input{width:100%;}
+.amend-pwd>p{font-size:2.4rem;text-indent:4rem;}

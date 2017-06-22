@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>药都网--发现</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/hqlist.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+<header>
+    <a href="./discover.html" class="back_btn">
+        <i class="icon_zjt iconfont"></i>返回
+    </a>
+    <span>行情列表</span>
+</header>
+<div class="ydw_wp">
+    <ul class="market_list" id="list_ul">
+        <!--<li class="list_item">-->
+            <!--<a href="./hqdetail.html">-->
+                <!--<div class="list_info">-->
+                    <!--<div class="head_info clearfix">-->
+                        <!--<img src="../images/tjimg.png" alt="" class="head_img">-->
+                        <!--<p>张全蛋</p>-->
+                        <!--<span class="right_txt r">16:21</span>-->
+                    <!--</div>-->
+                    <!--<div class="atc_c">-->
+                        <!--<h3>田七不要钱了啦</h3>-->
+                        <!--<div class="txt_wp clearfix">-->
+                            <!--<img src="../images/tjimg.png" alt="">-->
+                            <!--<div class="txt">-->
+                                <!--<p>田七不要钱了田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦田七不要钱了啦</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="atc_op">-->
+                        <!--浏览<span>19次</span>-->
+                        <!--<div class="r">-->
+                            <!--<a href="javascript:;"><i class="iconfont icon_dashang icon"></i> <span>26</span></a>-->
+                            <!--<a href="javascript:;"><i class="iconfont icon_huifu icon"></i> <span>51</span></a>-->
+                            <!--<a href="javascript:;"><i class="iconfont icon_fenxiang icon"></i> <span>分享</span></a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="list_item">-->
+            <!--<div class="list_info">-->
+                <!--<div class="head_info clearfix">-->
+                    <!--<img src="../images/tjimg.png" alt="" class="head_img">-->
+                    <!--<p>张全蛋</p>-->
+                    <!--<span class="right_txt r">16:21</span>-->
+                <!--</div>-->
+                <!--<div class="atc_c">-->
+                    <!--<h3>田七不要钱了啦</h3>-->
+                    <!--<div class="txt_wp">-->
+                        <!--<p>今天开始隆重宣布，今天开始隆重宣布今天开始隆重宣布今天开始今天开始隆重宣布，今天开始隆重宣布今天开始隆重宣布今天开始隆今天开始隆重宣布，今天开始隆重宣布今天开始隆重宣布今天开始隆今天开始隆重宣布，今天开始隆重宣布今天开始隆重宣布今天开始隆今天开始隆重宣布，今天开始隆重宣布今天开始隆重宣布今天开始隆今天开始隆重宣布，今天开始隆重宣布今天开始隆重宣布今天开始隆隆重宣布今天开始隆重宣布今天开始隆重宣布今天开始隆重宣布从今天开始隆重宣布今天开始不要前，从今天开始隆重宣布今天开始不要前从今天开始隆重宣布今天开始不要前从今天开始隆重宣布今天开始不要前不要钱。你买不了吃亏，买不了上当，还在犹豫什么呢，快来选购吧，从此以后，你就是结束赢家，只</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="atc_op">-->
+                    <!--浏览<span>19次</span>-->
+                    <!--<div class="r">-->
+                        <!--<a href="javascript:;"><i class="iconfont icon_dashang icon"></i> <span>26</span></a>-->
+                        <!--<a href="javascript:;"><i class="iconfont icon_huifu icon"></i> <span>51</span></a>-->
+                        <!--<a href="javascript:;"><i class="iconfont icon_fenxiang icon"></i> <span>分享</span></a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</li>-->
+    </ul>
+</div>
+</body>
+<script type="text/javascript" src="../js/load.js"></script>
+<script>
+    $(function (){
+        var listwp  = $('#list_ul');
+        appendLoad(listwp);
+        rule.scrollEvent = function (fn) {
+            var data = {
+                num:10
+            };
+            var lastId = listwp.children(":last").attr("data-id");
+            data.minId = lastId || "";
+            $.postT(rule.root + "AppHerbal/market" , data , function (req){
+                var li = "";
+                var code = req.code;
+                if (code == 1){
+                    var datas = req.data;
+                    console.log(datas)
+                    var datasL = datas.length;
+                    for (var i = 0; i < datasL; i++){
+                        var createTime = datas[i].create_time,
+                            hqId = datas[i].id,
+                            actImg = datas[i].thumb,
+                            title = datas[i].title,
+                            headPic = datas[i].head_pic,
+                            viewNum = datas[i].view,
+                            description = datas[i].description,
+                            viewNum = datas[i].view,
+                            totalComment = datas[i].total_comment
+                            totalReward =  datas[i].total_reward;
+                            isReward = datas[i].is_reward;
+                            author = datas[i].author;
+                            //判断打赏按钮是否需要
+                            var rewardBol = true;
+                            if (rewardBol == ''){
+                                rewardBol = false;
+                            }
+                            //判断图片是否存在
+                            if (actImg){
+                                 //<a href="javascript:;"><i class="iconfont icon_dashang icon"></i> <span>'+ totalReward +'</span></a>
+                                //<a href="javascript:;"><i class="iconfont icon_fenxiang icon"></i> <span>分享</span></a>
+                                li+= ' <li class="list_item" data-id="'+ hqId +'"><a href="./hqdetail.html?id='+ hqId +'"><div class="list_info"><div class="head_info clearfix"><img src="'+ headPic +'" alt="" class="head_img"><p>'+  author +'</p><span class="right_txt r">'+ createTime +'</span></div><div class="atc_c"><h3>'+title+'</h3><div class="txt_wp clearfix"><img src="'+ actImg +'" alt=""><div class="txt"><p>'+ description +'</p></div></div></div><div class="atc_op">浏览<span>'+ viewNum +'次</span><div class="r"><a href="javascript:;"><i class="iconfont icon_huifu icon"></i> <span>'+ totalComment +'</span></a></div></div></div></a></li>'
+                            }else {
+                                //a href="javascript:;"><i class="iconfont icon_dashang icon"></i> <span>'+ totalReward +'</span></a>
+                                li += '<li class="list_item" data-id="'+ hqId +'"><a href="./hqdetail.html?id='+ hqId +'"><div class="list_info"><div class="head_info clearfix"><img src="'+ headPic +'" alt="" class="head_img"><p>'+ author +'</p><span class="right_txt r">'+ createTime +'</span></div><div class="atc_c"><h3>'+ title +'</h3><div class="txt_wp"><p>'+ description +'</p></div></div><div class="atc_op">浏览<span>'+ viewNum +'次</span><div class="r"><a href="javascript:;"><i class="iconfont icon_huifu icon"></i> <span>'+ totalComment +'</span></a></div></div></div></a></li>'
+                            }
+                    }
+                    listwp.append(li);
+                    if (datasL < data.num){
+                        $("#load_wp").text("没有更多数据");
+                        return;
+                    }
+                    fn&&fn();
+                }else if (code == 103){
+                        rule.reLogin();
+                }else if (code == 0){
+                    $("#load_wp").text("没有更多数据")
+                }
+            });
+        }
+        rule.scrollEvent();
+    });
+</script>
+</html>

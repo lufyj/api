@@ -1,0 +1,88 @@
+/************定义公共类结束**************/
+/*头部*/
+.logo-title{
+	background:url(./../images/gs02.png) no-repeat;
+	width:100%;
+	position: relative;
+	overflow: hidden;
+}
+/*更换魔板颜色添加div为mb的*/
+.mb{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:126px;
+	background:rgb(173,128,107);
+	background:rgba(173,128,107,0.3);
+	filter:"alpha(opacity=30)";
+	filter:alpha(opacity=30);
+}
+.logo-bg{
+	width: 1230px;
+	margin: 0 auto;
+	height: 120px;
+	line-height: 120px;
+}
+.logo-bg img{
+	max-height: 80px;
+	margin-top: 20px;
+	margin-left: 60px;
+	vertical-align: middle;
+	display: inline-block;
+}
+.com-name{
+	font-size: 36px;
+	color: #010101;
+	margin-right: 100px;
+	font-family: "华文行楷";
+}
+.title2-m{
+	width: 100%;
+	height: 44px;
+	background-color: #AD806B;
+	margin: 0 auto;
+}
+.title2-m p{
+	width: 1160px;
+	margin: 0 auto;
+	height: 44px;
+	line-height: 44px;
+	padding: 0 20px;
+	color: #fff;
+	font-size: 18px;
+}
+.title2-m p span{
+	vertical-align: top;
+}
+.title2-m p marquee{
+	display:inline-block;
+	width: 1080px;
+    height: 44px;
+    line-height: 44px;
+}
+/*导航*/
+.title2-b{
+	width:1300px;
+	margin:0 auto;
+	padding:15px 0;
+}
+.title2-b dl{
+	float:left;
+	width:20%;
+	text-align: center;
+}
+.title2-b dl img{
+	width:100px;
+	height:100px;
+}
+.title2-b dl dd{
+	font-size: 22px;
+    color: #4B4543;
+    margin-top: 10px;
+}
+.title2-b dd a:hover{
+	color:#A88779;
+	text-decoration: none;
+}
+/*导航*/

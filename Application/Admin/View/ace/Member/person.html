@@ -1,0 +1,127 @@
+<extend name="Public/base" />
+<block name='navi'><li>管理员</li><li>用户信息</li></block>
+<block name="body">
+	<!-- 标题栏 -->
+	<div class="page-header">
+		<h1>个人信息</h1>
+	</div>		
+    <div class="space"></div>
+    <div class="row col-xs-12">
+    	<!-- 修改密码表单 -->
+	    <form id="submit-form" method="post" class="form-horizontal" enctype="multipart/form-data">
+	    	<div class="form-group ">
+	    		<div class="col-xs-10 col-sm-5 center">	                
+		            <span class="profile-picture">
+						<img id="avatar" style="height:150px;width:180px" alt="用户头像" src="{$info.head_pic|default='__ADMIN__/images/profile-pic.jpg'}"></img>
+						<label class="ace-file-input">
+						<input type="file" name="img" id="uploadImg" >
+						<span class="ace-file-container" data-title="选择">
+							<span class="ace-file-name" data-title="选择头像"><i class=" ace-icon fa fa-upload"></i></span>
+						</span>				
+					</label> 	
+					</span>
+					<div class="space-4"></div>
+					<div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
+						<div class="inline position-relative">
+							<a href="#" class="user-title-label dropdown-toggle" data-toggle="dropdown">
+								<i class="ace-icon fa fa-circle light-green"></i>								
+								<span class="white">&nbsp;&nbsp;管理员</span>
+							</a>
+						</div>
+					</div>						           
+	        	</div>
+	        </div>  	
+	       <div class="form-group">	       		    
+	            <div class="col-xs-10 col-sm-5">	            	
+	                <div class="profile-user-info profile-user-info-striped">
+						<div class="profile-info-row">
+							<div class="profile-info-name">用户名</div>
+							<div class="profile-info-value">
+								<span class="editable editable-click">{:session('user_auth.username')}</span>
+							</div>
+						</div>						
+						<div class="profile-info-row">
+							<div class="profile-info-name">昵称</div>
+							<div class="profile-info-value">
+								<span class="editable editable-click"><input type="text" name="nickname" autocomplete="off" value="{$info.nickname}"/></span>
+							</div>
+						</div>
+						<div class="profile-info-row">
+							<div class="profile-info-name">手机号</div>
+							<div class="profile-info-value">
+								<span class="editable editable-click"><input type="text" name="mobile" maxlength=11 autocomplete="off" value="{$info.mobile}"/></span>
+							</div>
+						</div>
+						<div class="profile-info-row">
+							<div class="profile-info-name">QQ</div>
+							<div class="profile-info-value">
+								<span class="editable editable-click"><input type="text" name="qq" autocomplete="off" value="{$info.qq}"/></span>
+							</div>
+						</div>
+						<div class="profile-info-row">
+							<div class="profile-info-name">最后一次登录</div>
+							<div class="profile-info-value">
+								<span class="editable editable-click">{$info.last_login_time|time_format}</span>
+							</div>
+						</div>
+					</div>
+	            </div>
+	        </div>
+	        <div class="clearfix form-actions">
+	            <div class="col-md-offset-3 col-md-9">
+	                <button type="submit" class="btn btn-info" id="submitBtn"><i class="ace-icon fa fa-check bigger-110"></i>确 认</button>
+	                <button class="btn btn-return" onclick="javascript:history.back(-1);return false;"><i class="ace-icon fa fa-undo bigger-110"></i>返 回</button>
+	            </div>
+	        </div>
+	        <input type="hidden" name="uid" value="{$info.uid}"/>
+	    </form>
+	</div>
+</block>
+
+<block name="script">
+<!-- <script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script> -->
+<script type="text/javascript" src="__STATIC__/jquery.form.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//上传头像
+		$('#uploadImg').on('change',function(){
+			//当没选中图片时，清除预览
+	        if(this.files.length === 0){
+	            document.querySelector('#avatar').src = '';
+	            return;
+	        }
+	        
+	        //实例化一个FileReader
+	        var reader = new FileReader();
+	        
+	        reader.onload = function (e) {
+	            //当reader加载时，把图片的内容赋值给
+	            document.querySelector('#avatar').src = e.target.result;
+	        };
+
+	    	//读取选中的图片，并转换成dataURL格式
+	    	reader.readAsDataURL(this.files[0]);
+		});		
+		/* 提交表单，一定要记得当值重复提交 */		
+		$('#submitBtn').on('click', function(){
+			var _this = $(this);
+			_this.addClass('disabled');
+			var options = {
+	            url: "{:U('Member/person')}",                
+	            success: function (req) {
+	            	if(req.code == 1) success(req.msg, req.url || true);
+	                else fail(req.msg, _this);
+	            },
+	            error: function(XmlHttpRequest, textStatus, errorThrown){            	
+	            	alert('网络连接超时，请稍后再试');
+	            	_this.removeClass('disabled');
+	            }
+	        };		
+	        $("#submit-form").ajaxForm(options);
+		});
+		
+	    //导航高亮
+	    highlight_subnav("{:U('Index/index')}");
+	})	
+</script>
+</block>

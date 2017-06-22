@@ -1,0 +1,726 @@
+<extend name="./base" />
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__HOME__/index/css/swipe.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/index/css/index.css" />
+	<script type="text/javascript">
+		var catObj = {$cateJson};
+	</script>
+</block>
+<block name="body">
+
+	<!--nav开始-->
+	<div class="nav-wrap clearfix">
+		<div class="nav clearfix">
+			<span>全服务分类</span>
+			<ul class="nav-list clearfix">
+				<li class="current">
+					<a href="/">首页</a>
+				</li>
+				<li>
+					<a href="{:U('supply/lst')}">供应信息</a>
+				</li>
+				<li>
+					<a href="{:U('demand/lst')}">求购信息</a>
+				</li>
+				<li>
+					<a href="{:U('goods/market')}">药材行情</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--nav结束-->
+	<!--bannar开始-->
+	<div class="banner-wp clearfix">
+		<ul class="drug-class l">
+			<!--药材分类和二级分类-->
+		</ul>
+		<div class="middle l">
+			<!-- 如果需要分页器 -->
+			<div class="pagination"></div>
+			<div class="banner swiper-container">
+				<div class="swiper-wrapper">
+					<foreach name="banners" item="vo">
+						<div class="swiper-slide">
+							<a href="{$vo.link_url}" title="{$vo.title}"><img src="{$vo.img_url}" alt="{$vo.title}" /></a>
+						</div>
+					</foreach>
+				</div>
+			</div>
+		</div>
+		<empty name="Think.session.user_sign">
+			<!--暂定首页登录部分方框-->
+			<div class="login-box l">
+				<div class="title clearfix">
+					<span class="l">登录药都网</span>
+					<a href="{:U('login/register')}" class="r">免费注册</a>
+				</div>
+				<div class="verify"><span>药都网欢迎您！</span></div>
+				<div class="input clearfix">
+					<input type="text" class="user-name" id="loginname" maxlength="11" autocomplete="off" placeholder="请输入手机号" />
+					<input type="password" class="psw" id="loginpwd" autocomplete="off" placeholder="请输入登录密码" onkeydown="keyDown(event);" />
+				</div>
+				<div class="title clearfix remb">
+					<span class="is-remb l"></span>
+					<span class="l remb-txt">记住我</span>
+					<a href="{:U('login/findpwd')}" class="r">忘记密码？</a>
+				</div>
+				<div class="op clearfix">
+					<span class="login-btn l" id="submit_btn">登 陆</span>
+				</div>
+				<div class="publish-div">
+					<a href="{:U('demand/publish')}">发布求购</a>
+					<a>|</a>
+					<a href="{:U('supply/publish')}">发布供应</a>
+				</div>
+			</div>
+			<!--关于登录部分结束-->
+			<else />
+			<!--关于登录成功以后部分-->
+			<div class="login-box l">
+				<dl class="success-title">
+					<!--__HOME__/index/images/photo.jpg-->
+					<dt><img src="__HOME__/index/images/head.png"/></dt>
+					<dd>Hi，<span>{:session('user_sign.realname')}</span></dd>
+					<dd>欢迎来到药都网</dd>
+				</dl>
+				<div class="success-center">
+					<a href="{:U('user/profile','',false)}">我的药都网</a>&nbsp;
+					<a href="{:U('user/logout','',false)}">退出</a>
+				</div>
+				<div class="publish-div">
+					<a href="{:U('demand/publish')}">发布求购</a>
+					<a>|</a>
+					<a href="{:U('supply/publish')}">发布供应</a>
+				</div>
+			</div>
+			<!--关于登录成功以后部分结束-->
+		</empty>
+	</div>
+	<!--bannar开始-->
+	<!--主页内容开始-->
+	<div class="content-wp">
+		<div class="apply cont-box">
+			<div class="title clearfix title_a">
+				<span class="left">供应</span>
+				<a href="{:U('supply/lst')}" class="right r">更多&gt;&gt;</a>
+			</div>
+			<div class="cont  clearfix">
+				<div class="left l clearfix">
+					<div class="img l">
+						<img src="__IMG__/xq_03.png" alt="" />
+					</div>
+					<ul class="message l txt-clip">
+						<li class="top">
+							<ul class="clearfix">
+								<li>药名</li>
+								<li>数量</li>
+								<li>规格</li>
+								<li>联系人</li>
+								<li>电话</li>
+							</ul>
+						</li>
+						<foreach name="supplys" item="vo" key="k">
+							<lt name="k" value="5">
+								<li>
+									<a href="{:U('supply/detail',array('id'=>$vo['id']))}">
+										<ul class="clearfix">
+											<li>{$vo.goods_name}</li>
+											<li>
+												<if condition="$vo.num eq  '-1' ">大货   <else /> {$vo.num}</if>
+											</li>
+											<li>{$vo.goods_attr_name|default='无'}</li>
+											<li>{$vo.contacts}</li>
+											<li>{$vo.mobile}</li>
+										</ul>
+									</a>
+								</li>
+							</lt>
+						</foreach>
+					</ul>
+				</div>
+				<div class="right l">
+					<div class="img l">
+						<img src="__IMG__/xq_12.png" alt="" />
+					</div>
+					<ul class="message l txt-clip">
+						<li class="top">
+							<ul class="clearfix">
+								<li>药名</li>
+								<li>数量</li>
+								<li>规格</li>
+								<li>联系人</li>
+								<li>电话</li>
+							</ul>
+						</li>
+						<foreach name="supplys" item="vo" key="k">
+							<gt name="k" value="4">
+								<li>
+									<a href="{:U('supply/detail',array('id'=>$vo['id']))}">
+										<ul class="clearfix">
+											<li>{$vo.goods_name}</li>
+											<li>
+												<if condition="$vo.num eq  '-1' ">大货   <else /> {$vo.num}</if>
+											</li>
+											<li>{$vo.goods_attr_name|default='无'}</li>
+											<li>{$vo.contacts}</li>
+											<li>{$vo.mobile}</li>
+										</ul>
+									</a>
+								</li>
+							</gt>
+						</foreach>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="notice-ban">
+			<a href="javascript:;"><img src="__HOME__/index/images/pic1.png" alt="{$vo.title}" class="ad" /></a>
+		</div>
+		<div class="need cont-box">
+			<div class="title clearfix title_b">
+				<span class="left">求购</span>
+				<a href="{:U('demand/lst')}" class="right r">更多&gt;&gt;</a>
+			</div>
+			<div class="cont  clearfix">
+				<div class="left l clearfix">
+					<div class="img l">
+						<img src="__IMG__/xq_03.png" alt="" />
+					</div>
+					<ul class="message l txt-clip">
+						<li class="top">
+							<ul class="clearfix">
+								<li>药名</li>
+								<li>数量</li>
+								<li>规格</li>
+								<li>联系人</li>
+								<li>电话</li>
+							</ul>
+						</li>
+						<foreach name="demands" item="vo" key="k">
+							<lt name="k" value="5">
+								<li>
+									<a href="{:U('demand/detail',array('id'=>$vo['id']))}">
+										<ul class="clearfix demand-hover">
+											<li>{$vo.goods_name}</li>
+											<li>{$vo.num}</li>
+											<li>{$vo.goods_attr_name|default='无'}</li>
+											<li>{$vo.contacts}</li>
+											<li>{$vo.mobile}</li>
+										</ul>
+									</a>
+								</li>
+							</lt>
+						</foreach>
+					</ul>
+				</div>
+				<div class="right l">
+					<div class="img l">
+						<img src="__IMG__/xq_05.png" alt="" />
+					</div>
+					<ul class="message l txt-clip">
+						<li class="top">
+							<ul class="clearfix">
+								<li>药名</li>
+								<li>数量</li>
+								<li>规格</li>
+								<li>联系人</li>
+								<li>电话</li>
+							</ul>
+						</li>
+						<foreach name="demands" item="vo" key="k">
+							<gt name="k" value="4">
+								<li>
+									<a href="{:U('demand/detail',array('id'=>$vo['id']))}">
+										<ul class="clearfix demand-hover">
+											<li>{$vo.goods_name}</li>
+											<li>{$vo.num}</li>
+											<li>{$vo.goods_attr_name|default='无'}</li>
+											<li>{$vo.contacts}</li>
+											<li>{$vo.mobile}</li>
+										</ul>
+									</a>
+								</li>
+							</gt>
+						</foreach>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="notice-ban">
+			<a href="javascript:;" title=""><img src="__HOME__/index/images/pic2.png" alt="" class="ad" /></a>
+		</div>
+		<div class="other cont-box">
+			<div class="cont  clearfix">
+				<div class="title-left l clearfix title_c">
+					<span>物流</span>
+					<a href="{:U('CompanyShow/deliveryList')}" class="r">更多&gt;&gt;</a>
+				</div>
+				<div class="title-right clearfix l title_d">
+					<span>仓库</span>
+					<a href="{:U('CompanyShow/storeList')}" class="r">更多&gt;&gt;</a>
+				</div>
+				<div class="left l clearfix">
+					<div class="img l">
+						<img src="__IMG__/xq_22.png" alt="" />
+					</div>
+					<ul class="message l logistics">
+						<li class="top">
+							<ul class="clearfix">
+								<li>出发地</li>
+								<li>目的地</li>
+								<li>车辆类型</li>
+								<!--<li style="width:16%">&nbsp;</li>-->
+							</ul>
+						</li>
+						<foreach name="delivery" item="del">
+							<li>
+								<a href="{:U('CompanyShow/delivery_details',array('id'=>$del['id']))}">
+									<ul class="clearfix log-container">
+										<li>{$del.begin_s}</li>
+										<li>{$del.end_s}</li>
+										<li>{$del.type}</li>
+										<!-- 	<li class="log-hover">
+											<span>简介详情&gt;&gt;</span>
+											<div class="brief-visiable">
+												<ul class="clearfix" id="brief-con">
+													<li>
+														<div>出发地</div>
+														<p>{$del.begin}</p>
+													</li>
+													<li class="icon-r"><p></p><i></i></li>
+													<li>
+														<div>目的地</div>
+														<p>{$del.end}</p>
+													</li>
+												</ul>
+												<p><span style="color:#999">简介：</span>{$del.desc}</p>
+											</div>
+										</li> -->
+									</ul>
+								</a>
+							</li>
+						</foreach>
+					</ul>
+				</div>
+				<div class="right l">
+					<div class="img l">
+						<img src="__IMG__/xq_05.png" alt="" />
+					</div>
+					<ul class="message l txt-clip">
+						<li class="top">
+							<ul class="clearfix">
+								<li>类型</li>
+								<li>面积 (m&sup2;)</li>
+								<li>层高 (m)</li>
+								<li>联系人</li>
+								<li>电话</li>
+							</ul>
+						</li>
+						<foreach name="store" item="st">
+							<li>
+								<a href="{:U('CompanyShow/storeInfoIndex',array('i'=>$st['id']))}">
+									<ul class="clearfix">
+										<li>{$st.type}</li>
+										<li>{$st.size}</li>
+										<li>{$st.height}</li>
+										<li>{$st.contacts}</li>
+										<li>{$st.mobile}</li>
+									</ul>
+								</a>
+							</li>
+						</foreach>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--录播图开始-->
+		<div class="lunb_zhan">实力代工 信誉保证</div>
+		<div class="serve-wp  swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<ul class="clearfix">
+						<li>
+							<img src="__IMG__/display_14.jpg" alt="" />
+							<div class="show-msg">
+
+							</div>
+						</li>
+						<li class="small">
+							<img src="__IMG__/display_14.jpg" alt="" />
+							<div></div>
+						</li>
+						<li class="small">
+							<img src="__IMG__/display_14.jpg" alt="" />
+							<div></div>
+						</li>
+						<li>
+							<img src="__IMG__/display_06.jpg" alt="" />
+							<div></div>
+						</li>
+						<li class="small last">
+							<img src="__IMG__/display_14.jpg" alt="" />
+							<div></div>
+						</li>
+					</ul>
+					<ul class="clearfix">
+						<li>
+							<img src="__IMG__/display_06.jpg" alt="" />
+							<div></div>
+						</li>
+						<li>
+							<img src="__IMG__/display_06.jpg" alt="" />
+							<div></div>
+						</li>
+						<li class="small">
+							<img src="__IMG__/display_14.jpg" />
+							<div></div>
+						</li>
+						<li class="last">
+							<img src="__IMG__/display_06.jpg" alt="" />
+							<div></div>
+						</li>
+					</ul>
+				</div>
+				<div class="swiper-slide">
+					<ul class="clearfix">
+						<li>
+							<img src="__IMG__/lunbo_05.jpg" alt="" />
+							<div></div>
+						</li>
+						<li class="small">
+							<img src="__IMG__/display_14.jpg" alt="" />
+							<div></div>
+						</li>
+						<li class="small">
+							<img src="__IMG__/display_14.jpg" alt="" />
+							<div></div>
+						</li>
+						<li>
+							<img src="__IMG__/lunbo_05.jpg" alt="" />
+							<div></div>
+						</li>
+						<li class="small last">
+							<img src="__IMG__/display_14.jpg" alt="" />
+							<div></div>
+						</li>
+					</ul>
+					<ul class="clearfix">
+						<li>
+							<img src="__IMG__/display_06.jpg" alt="" />
+							<div></div>
+						</li>
+						<li class="small">
+							<img src="__IMG__/display_14.jpg" />
+							<div></div>
+						</li>
+						<li>
+							<img src="__IMG__/lunbo_05.jpg" alt="" />
+							<div></div>
+						</li>
+						<li class="last">
+							<img src="__IMG__/display_06.jpg" alt="" />
+							<div></div>
+						</li>
+					</ul>
+				</div>
+				<div class="swiper-slide">
+					<ul class="clearfix">
+						<li>
+							<img src="__IMG__/display_06.jpg" alt="" />
+							<div></div>
+						</li>
+						<li class="small">
+							<img src="__IMG__/display_14.jpg" alt="" />
+							<div></div>
+						</li>
+						<li class="small">
+							<img src="__IMG__/display_14.jpg" alt="" />
+							<div></div>
+						</li>
+						<li>
+							<img src="__IMG__/lunbo_05.jpg" alt="" />
+							<div></div>
+						</li>
+						<li class="small last">
+							<img src="__IMG__/display_14.jpg" alt="" />
+							<div></div>
+						</li>
+					</ul>
+					<ul class="clearfix">
+						<li>
+							<img src="__IMG__/lunbo_05.jpg" alt="" />
+							<div></div>
+						</li>
+						<li class="small">
+							<img src="__IMG__/display_14.jpg" />
+							<div></div>
+						</li>
+						<li>
+							<img src="__IMG__/lunbo_03.jpg" alt="" />
+							<div></div>
+						</li>
+						<li class="last">
+							<img src="__IMG__/display_06.jpg" alt="" />
+							<div></div>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<!-- 如果需要分页器 -->
+			<!-- 如果需要导航按钮 -->
+			<a class="arrow-left1"></a>
+			<a class="arrow-right1"></a>
+		</div>
+		<!--轮播图结束-->
+		<div class="notice-ban">
+			<a href="javascript:;" title=""><img src="__HOME__/index/images/pic3.png" alt="" class="ad" /></a>
+		</div>
+		<div class="new-notice cont-box">
+			<div class="notice-title clearfix">
+				<span>最新公告</span>
+			</div>
+			<div class="content clearfix">
+				<ul class="l">
+					<foreach name="notices" item="vo" key="k">
+						<li>
+							<span>{$k+1}、</span>
+							<a href="{:U('about/detail',array('id'=>$vo['id']))}">{$vo.title}</a>
+						</li>
+						<eq name="k" value="4">
+				</ul>
+				<ul class="l">
+					</eq>
+					</foreach>
+				</ul>
+			</div>
+		</div>
+		<!--友情链接-->
+		<div class="friendly-link">
+			<div class="top">
+				友情链接
+			</div>
+			<ul class="content clearfix">
+				<li>
+					<a href="javascript:;">凤凰中医</a>
+				</li>
+				<li>
+					<a href="javascript:;">中国平安官网</a>
+				</li>
+				<li>
+					<a href="javascript:;">家庭医生在线</a>
+				</li>
+				<li>
+					<a href="javascript:;">网上药店</a>
+				</li>
+				<li>
+					<a href="javascript:;">健客</a>
+				</li>
+				<li>
+					<a href="javascript:;">百济新特药房</a>
+				</li>
+				<li>
+					<a href="javascript:;">药品网购</a>
+				</li>
+				<li>
+					<a href="javascript:;">有问必答知识库</a>
+				</li>
+				<li>
+					<a href="javascript:;">预约挂号</a>
+				</li>
+				<li>
+					<a href="javascript:;">心理咨询</a>
+				</li>
+				<li>
+					<a href="javascript:;">妇科疾病</a>
+				</li>
+				<li>
+					<a href="javascript:;">百济新特药房</a>
+				</li>
+				<li>
+					<a href="javascript:;">凤凰中医</a>
+				</li>
+				<li>
+					<a href="javascript:;">中国平安官网</a>
+				</li>
+				<li>
+					<a href="javascript:;">心理咨询</a>
+				</li>
+				<li>
+					<a href="javascript:;">养生</a>
+				</li>
+				<li>
+					<a href="javascript:;">预约挂号</a>
+				</li>
+				<li>
+					<a href="javascript:;">百济新特药房</a>
+				</li>
+				<li>
+					<a href="javascript:;">中华中医网</a>
+				</li>
+				<li>
+					<a href="javascript:;">39药品</a>
+				</li>
+				<li>
+					<a href="javascript:;">药品</a>
+				</li>
+				<li>
+					<a href="javascript:;">心理咨询</a>
+				</li>
+				<li>
+					<a href="javascript:;">家庭医生在线</a>
+				</li>
+				<li>
+					<a href="javascript:;">药咨讯网</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--主页内容结束-->
+</block>
+<block name="script">
+	<script src="__HOME__/index/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__HOME__/index/js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__HOME__/js/placeholder.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//药材分类数据	
+		var urlObj = {
+			login: "{:U('Api/User/login')}",
+			userCenter: "{:U('user/profile')}",
+			userlogin: "{:U('login/index')}?e=1"
+		};
+
+		//		$('.index-close').css('display','none');
+		$(function() {
+			//关于供货或者求购的图片放大的效果
+			$('.img').each(function() {
+				var imgs = $(this).find('img');
+				var w = imgs.width();
+				var h = imgs.height();
+				imgs.mouseover(function() {
+					$(this).animate({
+						'width': '170px',
+						'height': '210px',
+						'margin-left': '-10px'
+					}, 350);
+				}).mouseout(function() {
+					$(this).animate({
+						'width': w,
+						'height': h,
+						'margin-left': 0
+					}, 350);
+				})
+			});
+		});
+		//关于物流的‘公司简介’的弹窗的设置
+		/*$('.log-hover span').mouseover(function(){
+			$(this).next('.brief-visiable').show();
+		}).mouseout(function(){
+			$(this).next('.brief-visiable').hide();
+		});
+		$('.log-container li:lt(3)').each(function(){
+			var a = $(this).text();
+			if(a.length>9){
+				$(this).text($(this).text().slice(0,9));
+			}
+		});*/
+		//关于求购的文字超出部分的处理
+		/*$('.demand-hover li:nth-child(4)').each(function(){
+			var a = $(this).text();
+			if(a.length>7){
+				$(this).text($(this).text().slice(0,7));
+			}
+		});*/
+	</script>
+	<script type="text/javascript">
+		var objLength = catObj.length;
+		//把1.2  3 4 5以上长度的字 分别放在4个数组
+		for(var i = 0; i < objLength; i++) {
+			var arr = [];
+			for(var j = 0; j < 4; j++) {
+				var newArr = [];
+				arr.push(newArr);
+			}
+			for(var j = 0; j < catObj[i].c.length; j++) {
+				var cgLength = catObj[i].c[j].cg.length
+				if(cgLength <= 2) {
+					arr[0].push(catObj[i].c[j]);
+				} else if(cgLength == 3) {
+					arr[1].push(catObj[i].c[j]);
+				} else if(cgLength == 4) {
+					arr[2].push(catObj[i].c[j]);
+
+				} else if(cgLength >= 5) {
+					arr[3].push(catObj[i].c[j]);
+				}
+			}
+			catObj[i].c = arr;
+		}
+
+		for(var i = 0; i < objLength; i++) {
+			var html = '';
+			var rm = '';
+			if(catObj[i].hot != null) {
+				rm = remen(catObj[i].hot);
+			}
+			var title = catObj[i].t,
+				id = catObj[i].i;
+			var li = '<li><span class="class-span">' + title + '</span><span class="nav-icon"></span><ul class="drug-list clearfix"></ul></li>';
+			$(".drug-class").append(li);
+			for(var j = 0; j < catObj[i].c.length; j++) {
+				if(j == 0) {
+					for(var c = 0; c < catObj[i].c[j].length; c++) {
+						var ci = catObj[i].c[j][c].ci,
+							cg = catObj[i].c[j][c].cg;
+						if(c == 0) {
+							html += '<li style="clear:both"><a href="/goods/detail/id/' + ci + '.html">' + cg + '</a></li>';
+						} else {
+							html += '<li><a href="/goods/detail/id/' + ci + '.html">' + cg + '</a></li>';
+						}
+					}
+				} else if(j == 1) {
+					for(var c = 0; c < catObj[i].c[j].length; c++) {
+						var ci = catObj[i].c[j][c].ci,
+							cg = catObj[i].c[j][c].cg;
+						if(c == 0) {
+							html += '<li style="width:635px;border-top:0.5px dashed #ccc;"></li><li style="clear:both"><a href="/goods/detail/id/' + ci + '.html">' + cg + '</a></li>';
+						} else {
+							html += '<li><a href="/goods/detail/id/' + ci + '.html">' + cg + '</a></li>';
+						}
+					}
+				} else if(j == 2) {
+					for(var c = 0; c < catObj[i].c[j].length; c++) {
+						var ci = catObj[i].c[j][c].ci,
+							cg = catObj[i].c[j][c].cg;
+						if(c == 0) {
+							html += '<li style="width:635px;border-top:0.5px dashed #ccc;"></li><li style="clear:both"><a href="/goods/detail/id/' + ci + '.html">' + cg + '</a></li>';
+
+						} else {
+							html += '<li><a href="/goods/detail/id/' + ci + '.html">' + cg + '</a></li>';
+						}
+					}
+				} else if(j == 3) {
+					for(var c = 0; c < catObj[i].c[j].length; c++) {
+						var ci = catObj[i].c[j][c].ci,
+							cg = catObj[i].c[j][c].cg;
+						if(c == 0) {
+							html += '<li style="width:635px;border-top:0.5px dashed #ccc;"></li><li style="clear:both"><a href="/goods/detail/id/' + ci + '.html">' + cg + '</a></li>';
+						} else {
+							html += '<li><a href="/goods/detail/id/' + ci + '.html">' + cg + '</a></li>';
+						}
+					}
+				}
+			}
+			$(".drug-class>li").eq(i).find(".drug-list").html(rm + html);
+		}
+		function remen(array) {
+			var great = '';
+			great = '<li class="remen-title">热门：</li>';
+			for(var i = 0, len = array.length; i < len; i++) {
+				great += '<li class="remen"><a href="/goods/detail/id/' + array[i].id + '.html">' + array[i].goods_name + '</a></li>';
+			}
+			great += '<li style="width:635px;border-top:0.5px dashed #ccc;"></li>';
+			return great;
+		}
+	</script>
+</block>

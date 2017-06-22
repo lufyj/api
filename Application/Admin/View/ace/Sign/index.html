@@ -1,0 +1,120 @@
+<extend name="Public/base" />
+<block name="style">
+	<style type="text/css">
+		.table thead th:not(last-child){
+			width:30%;
+		}
+	</style>
+</block>
+<block name='navi'>
+	<li>签到管理</li>
+	<li>签到列表</li>
+</block>
+<block name="body">
+	<div class="page-header">
+		<h1>签到列表</h1></div>
+	<div class="space"></div>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="col-xs-12" id="ajax_table">
+				<include file='table' />
+			</div>
+		</div>
+	</div>
+</block>
+<block name="script">
+	<script type="text/javascript">
+		var id = 0;
+		$('.ck').on('click', function() {
+			$('.da').css({
+				'background': '#fff',
+				'color': 'black'
+			});
+			id = 0;
+			id = parseInt($(this).parent().parent().siblings(':first').val());
+			var y = $('.year').val();
+			var m = $('.month').val();
+			var uid = id;
+			$.get("{:U('Sign/ajaxGetView')}", {
+				year: y,
+				month: m,
+				uid: uid
+			}, function(data) {
+				if(data.status==0){
+					alert('对不起，查看失败，请重新查询！');
+					return;
+				}
+				//var datas = JSON.parse(data);
+				var datas=data.info;
+				if(datas == null) {
+					alert("亲，这个月您没有签到，请选择其他的日期");
+					return;
+				}
+				var arr = [];
+				for(var i = 0, len = datas.length; i < len; i++) {
+					arr.push(datas[i].data);
+				}
+				if(arr == null) {
+					alert("亲，这个月您没有签到，请选择其他的日期");
+					return;
+				} else {
+					$('.da').each(function() {
+						for(var i = 0, len = arr.length; i < len; i++) {
+							if(arr[i] == $(this).html()) {
+								$(this).css({
+									'background': '#e4393c',
+									'color': '#fff'
+								});
+							}
+						}
+					});
+				}
+			});
+		});
+		// 利用ajax查询  查询出来的数据 
+		$(".cx").click(function() {
+			$('.da').css({
+				'background': '#fff',
+				'color': 'black'
+			});
+			var y = $(".year").val();
+			var m = $(".month").val();
+			var uid = id;
+			$.get("{:U('Sign/ajaxGetView')}", {
+				year: y,
+				month: m,
+				uid: uid
+			}, function(data) {
+				if(data.status==0){
+					alert('对不起，查看失败，请重新查询！');
+					return;
+				}
+				//var datas = JSON.parse(data);
+				var datas=data.info;
+				if(datas == null) {
+					alert("亲，这个月您没有签到，请选择其他的日期");
+					return;
+				}
+				var arr = [];
+				for(var i = 0, len = datas.length; i < len; i++) {
+					arr.push(datas[i].data);
+				}
+				if(arr == null) {
+					alert("亲，这个月您没有签到，请选择其他的日期");
+					return;
+				} else {
+					$('.da').each(function() {
+						for(var i = 0, len = arr.length; i < len; i++) {
+							if(arr[i] == $(this).html()) {
+								$(this).css({
+									'background': '#e4393c',
+									'color': '#fff'
+								});
+							}
+						}
+					});
+				}
+			});
+		});
+	</script>
+</block>

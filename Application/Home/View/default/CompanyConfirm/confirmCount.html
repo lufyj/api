@@ -1,0 +1,59 @@
+<extend name="./base" />
+<block name="style">
+	<!--样式自定义开始-->
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/company/css/confirmCompany.css" />
+	<!--样式自定义结束-->
+</block>
+<block name="body">
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+				<a href="javascript:;">认证管理</a>
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />
+			<div class="right l">
+				<div class="progress-bar2"></div>
+				<ul class="account-info info-ul">
+					<input type="hidden" id="mystep" value="3">
+					<li>
+						<span class="bf-s">银行开户名 :</span>
+						<input type="text" class="account-name" autocomplete="off" <if condition="$info.count_name neq ''">value="{$info.count_name}"</if> />
+					</li>
+					<li>
+						<span class="bf-s">开户银行 :</span>
+						<input type="text" class="bank-name" autocomplete="off" <if condition="$info.bank_name neq ''">value="{$info.bank_name}"</if> />
+					</li>
+					<li>
+						<span class="bf-s">开户行所在城市 :</span>
+						<input type="text" class="bank-city" autocomplete="off" <if condition="$info.bank_city neq ''">value="{$info.bank_city}"</if> />
+						<span class="at-s"><span> * </span>精确到县/区</span>
+					</li>
+					<li>
+						<span class="bf-s">开户行支行名称 :</span>
+						<input type="text" class="bank-branch" autocomplete="off" <if condition="$info.bank_branch_name neq ''">value="{$info.bank_branch_name}"</if> />
+					</li>
+					<li>
+						<span class="bf-s">企业对公账户 :</span>
+						<input type="text" class="public-account" autocomplete="off" <if condition="$info.count_number neq ''">value="{$info.count_number}"</if> /><br />
+						<div class="remarks">注：如需填写企业对公账户，则前四项均为必填项。</div>
+					</li>
+					<li class="last-li">
+						<span class="pre">上一步</span>
+						<span class="sub-btn">提交申请</span>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	
+</block>
+<block name="script">
+	<script type="text/javascript" src="__HOME__/company/js/confirmCompanyInfo.js"></script>
+</block>

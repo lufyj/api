@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>药都网</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script type="text/javascript">
+        if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+    </script>
+    <style>
+        .goods_img{width:20rem;height:15rem;margin-right: 2rem;}
+        .about_goods {
+            padding: 2rem;
+            font-size:2.2rem;
+            height:14rem;
+            overflow: hidden;
+            background-color: #fff;
+        }
+        .goods_txt {text-align: justify;height:auto;line-height: 3.2rem;}
+         .more_wp {text-align: center;font-size:2.2rem;border-top: 2px solid #ccc;background-color: #fff;padding-bottom: 1rem;}
+        .act {border-top: 2px solid #e6282b;}
+        .look_more {
+            display: inline-block;
+            border: 2px solid #ccc;
+            background-color: #fff;
+            border-top: none;
+            padding:0.5rem 3rem;
+            position: relative;
+            top:-3px;
+        }
+        .act span {border: 2px solid #e6282b;color: #e6282b;border-top: none;}
+        .main{font-size: 2.2rem;}
+        .box_hd {padding:1rem 2rem;}
+        .box_hd span{font-size: 3.2rem;}
+        .box_hd a{color:#e6282b;margin-top:0.8rem;}
+        .box_bd {background-color: #fff;padding: 1rem 0;}
+        .frist_i{width: 17%;}
+        .second_i{width:25%;}
+        .third_i{width:24%;}
+        .list-item li , .hd_ul li{float: left;text-align: center;border-bottom:2px solid #ccc;overflow: hidden; white-space: nowrap; }
+        .list-item{line-height:5.4rem;}
+        .hd_ul{background-color: #fff;line-height:5.8rem;font-size: 2.4rem;border-left: 2px solid #ccc;border-top:2px solid #ccc;}
+        .hd_ul>li{border-right: 2px solid #ccc;box-sizing: border-box;}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="javascript:void(0);" id="back_btn" class="back_btn" >
+            <i class="icon_zjt iconfont"></i>返回
+        </a>
+        <span class="t"></span>
+        <a href="javascript:void(0);" class="flw_state r_btn"></a>
+    </header>
+    <div class="ydw_wp">
+        <div class="about_goods clearfix">
+            <img src="" alt="" class="goods_img l">
+            <div class="goods_txt">
+
+            </div>
+        </div>
+        <div class="more_wp">
+            <span class="look_more">查看更多</span>
+        </div>
+        <div class="main">
+            <div class="spy">
+                <div class="box_hd clearfix">
+                    <span>供应信息</span>
+                    <a href="supplylist.html" class="load_more r">加载更多</a>
+                </div>
+                <div class="box_bd">
+                    <div class="list_hd">
+                        <ul class="hd_ul clearfix hd1">
+                            <li class="frist_i">单价</li>
+                            <li class="second_i">产地</li>
+                            <li class="frist_i">规格</li>
+                            <li class="frist_i">联系人</li>
+                            <li class="third_i">电话</li>
+                        </ul>
+                        <!--<ul class="hd_ul clearfix hd2">-->
+                        <!--<li class="frist_i">单价</li>-->
+                        <!--<li class="second_i">产地</li>-->
+                        <!--<li class="frist_i">规格</li>-->
+                        <!--<li class="frist_i">联系人</li>-->
+                        <!--<li class="third_i">电话</li>-->
+                        <!--</ul>-->
+                    </div>
+                    <div class="list_bd">
+                        <ul class="list_ul spy_ul">
+                            <!--<li class="list-item">-->
+                                <!--<ul class="clearfix">-->
+                                    <!--<li class="frist_i">17</li>-->
+                                    <!--<li class="second_i">较广</li>-->
+                                    <!--<li class="frist_i">通货</li>-->
+                                    <!--<li class="frist_i">荆云鹏</li>-->
+                                    <!--<li class="third_i">15638215985</li>-->
+                                <!--</ul>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dmd">
+                <div class="box_hd clearfix">
+                    <span>采购信息</span>
+                    <a href="demandlist.html" class="load_more r">加载更多</a>
+                </div>
+                <div class="box_bd">
+                    <div class="list_hd">
+                        <ul class="hd_ul clearfix hd1">
+                            <li class="frist_i">数量</li>
+                            <li class="second_i">产地</li>
+                            <li class="frist_i">规格</li>
+                            <li class="frist_i">联系人</li>
+                            <li class="third_i">电话</li>
+                        </ul>
+                        <!--<ul class="hd_ul clearfix hd2">-->
+                        <!--<li class="frist_i">单价</li>-->
+                        <!--<li class="second_i">产地</li>-->
+                        <!--<li class="frist_i">规格</li>-->
+                        <!--<li class="frist_i">联系人</li>-->
+                        <!--<li class="third_i">电话</li>-->
+                        <!--</ul>-->
+                    </div>
+                    <div class="list_bd">
+                        <ul class="list_ul dmd_ul">
+                           <!---->
+                            <!--<li class="list-item">-->
+                                <!--<ul class="clearfix">-->
+                                    <!--<li class="frist_i">17</li>-->
+                                    <!--<li class="second_i">较广</li>-->
+                                    <!--<li class="frist_i">通货</li>-->
+                                    <!--<li class="frist_i">荆云鹏</li>-->
+                                    <!--<li class="third_i">15638215985</li>-->
+                                <!--</ul>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="price">-->
+                <!--<div class="box_hd clearfix">-->
+                    <!--<span>供应信息</span>-->
+                    <!--<a href="###" class="load_more r">加载更多</a>-->
+                <!--</div>-->
+                <!--<div class="box_bd">-->
+                    <!--暂无-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+</body>
+<script>
+    $(function () {
+        var moreBtn = $(".look_more");
+        var moreWp  = $(".more_wp");
+        var txtWp = $(".about_goods");
+        var flwBtn = $(".flw_state");
+        var urls = ['AppSupply/supply_lists','AppDemand/demand_lists','AppSupply/goods_attributes','Follow/cancel_follow','Follow/follow'];
+        moreBtn.click(function () {
+            var h = $(".goods_txt").height();
+            if (moreWp.hasClass("act")){
+                txtWp.animate({
+                    'height':'14rem',
+                })
+                moreWp.removeClass("act")
+            }else {
+                txtWp.animate({
+                    'height':h + "px",
+                })
+                moreWp.addClass("act");
+            }
+        });
+        var goodsmsg = new LocalData().getData("goodsmsg")
+        if (!goodsmsg){
+            location.href = './indexs.html';
+            return;
+        }
+        var goodsName = goodsmsg.goods_name;
+        var goodsId = goodsmsg.id;
+        $(".t").text(goodsName);
+        //设置连接
+        $(".load_more").each(function () {
+            var _this = $(this);
+            var links = _this.attr("href");
+            var gn = encodeURI(encodeURI(goodsName));
+            _this.attr("href" , links + "?goodsName=" + gn);
+        })
+        var param = {
+            clientType:1,
+            num:5
+        }
+        var spyWp =  $(".spy_ul");
+        var dmdWp =  $(".dmd_ul");
+        param.goods_name = goodsName;
+        //加载百科
+        $.postT(rule.root + urls[2] , {goods_id:goodsId} , function (req) {
+            if (req.code == 1){
+                var datas = req.data;
+                var des = datas.description;
+                var state = parseInt(datas.follow_state);
+                var arr = ["关注" , "取消关注"];
+                var stateTxt = arr[state];
+                var goodsImg = datas.goods_img;
+                $(".goods_txt").html(des);
+                $(".goods_img").attr("src" ,goodsImg);
+                $(".flw_state").text(stateTxt);
+            }else if (req.code == 103){
+                rule.reLogin();
+            }
+        })
+        //加载供应信息
+        $.post(rule.root +urls[0] , param , function (req) {
+            if (req.code == 1){
+                var str = '';
+                var datas = req.data,dataL = datas.length;
+                for (var i = 0; i < dataL; i++){
+                    var id = datas[i].id;
+                    var frist  =  datas[i].price;
+                    var originArea = datas[i].origin_area;
+                    var attrName = datas[i].goods_attr_name;
+                    var contacts = datas[i].contacts;
+                    var mobile = datas[i].mobile;
+                    str += ' <li class="list-item" data-id="'+ id +'"><a href="./supplydetail.html?id='+ id +'"><ul class="clearfix"><li class="frist_i">'+ frist +'</li><li class="second_i">'+ originArea +'</li><li class="frist_i">'+ attrName +'</li><li class="frist_i">'+ contacts +'</li><li class="third_i">'+ mobile +'</li></ul></a></li>'
+                }
+                spyWp.html(str);
+            }else if (req.code == 0){
+                spyWp.html('<li class="list-item" style="text-align: center;">暂无数据</li>');
+            }
+        })
+        //加载采购信息
+        $.post(rule.root + urls[1] , param , function (req) {
+            if (req.code == 1){
+                var str = '';
+                var datas = req.data,dataL = datas.length;
+                for (var i = 0; i < dataL; i++){
+                    var id = datas[i].id;
+                    var frist  = datas[i].num;
+                    var originArea = datas[i].origin_area;
+                    var attrName = datas[i].goods_attr_name;
+                    var contacts = datas[i].contacts;
+                    var mobile = datas[i].mobile;
+                    str += ' <li class="list-item" data-id="'+ id +'"><a href="./demanddetail.html?id='+ id +'"><ul class="clearfix"><li class="frist_i">'+ frist +'</li><li class="second_i">'+ originArea +'</li><li class="frist_i">'+ attrName +'</li><li class="frist_i">'+ contacts +'</li><li class="third_i">'+ mobile +'</li></ul></a></li>'
+                }
+                dmdWp.html(str);
+            }else if (req.code == 0){
+                dmdWp.html('<li class="list-item" style="text-align: center;">暂无数据</li>');
+            }
+        })
+        flwBtn.click(function () {
+            var _this = $(this);
+            if (_this.text() == '取消关注'){
+                $.postT(rule.root + urls[3] ,{goods_id:goodsId,goods_name:goodsName},function (req) {
+                    if (req.code == 1){
+                        //取消关注成功
+                        rule.showMsg(1 , "取消关注成功" , 800);
+                        flwBtn.text('关注');
+                    }else if(req.code == 0){
+                        rule.showMsg(1 , "取消关注失败" , 800);
+                    }else  if(req.code == 103){
+                        rule.reLogin();
+                    }
+                })
+            }else {
+                $.postT(rule.root + urls[4] ,{goods_id:goodsId,goods_name:goodsName},function (req) {
+                    if (req.code == 1){
+                        //取消关注成功
+                        rule.showMsg(1 , "关注成功" , 800);
+                        flwBtn.text('取消关注');
+                    }else if(req.code == 0){
+                        rule.showMsg(1 , "关注失败" , 800);
+                    }else  if(req.code == 103){
+                        rule.reLogin();
+                    }
+                })
+            }
+        })
+    })
+</script>
+</html>

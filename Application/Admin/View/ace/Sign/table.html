@@ -1,0 +1,116 @@
+<div class="dataTables_wrapper form-inline no-footer">
+	<table class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="sample-table-2_info">
+		<thead>
+			<tr>
+				<th>用户名称</th>
+				<th>用户手机号</th>
+				<th>签到次数({$month}月)</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<foreach name="data.list" item="vo" key="k">
+				<tr>
+					<input type="hidden" name="uid" value="{$vo.uid}">
+					<td>{$vo.realname}</td>
+					<td>{$vo.mobile}</td>
+					<td>{$vo.max(num)}</td>
+					<td width="100px">
+						<div class="btn-toolbar opt-btn cf">
+							<!--<a id="modal-604462" href="{:U('Sign/view',array('uid'=>$vo['uid'],'month'=>$m,'year'=>$y))}" role="button" class="ck btn btn-link" data-toggle="modal">查看</a>-->
+							<a id="modal-604462" href="#modal-container-604462" role="button" class="ck btn btn-minier btn-primary" data-toggle="modal">查看</a>
+						</div>
+					</td>
+				</tr>
+			</foreach>
+		</tbody>
+	</table>
+	<div class="row">
+		<div class="col-xs-12">
+			<include file='Public/pager' url="{:U('Sign/Index')}" />
+		</div>
+	</div>
+</div>
+<div class="row clearfix">
+	<div class="col-md-12 column">
+		<div class="modal fade" id="modal-container-604462" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content" style="margin-top:200px;">
+					<div class="modal-header">
+						<button type="button" class="close data-empty" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title" id="myModalLabel">
+							您的签到显示明细
+							</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row clearfix" style="margin-bottom:10px;">
+							<div class="col-xs-12 column">
+								<select name="year" class="year" style="width:80px;height:40px;line-height:40px;border-radius:5px;">
+									<if condition="I('year') neq '' ">
+										<for start="2013" end="2020">
+											<option <if condition="I('year') eq $i ">selected </if> >{$i}</option>
+									</for>
+									<else/>
+									<for start="2013" end="2020">
+										<option <if condition="$y eq $i ">selected </if> >{$i}</option>
+									</for>
+									</if>
+								</select>
+								<select name="month" class="month" style="width:80px;height:40px;line-height:40px;border-radius:5px;">
+									<if condition="I('month') neq '' ">
+										<for start="01" end="10">
+											<option <if condition="I('month') eq $i ">selected </if> >0{$i}</option>
+									</for>
+									<for start="10" end="13">
+										<option <if condition="I('month') eq $i ">selected </if>>{$i}</option>
+									</for>
+									<else/>
+									<for start="01" end="10">
+										<option <if condition="$m eq $i ">selected</if> >0{$i}</option>
+									</for>
+									<for start="10" end="13">
+										<option <if condition="$m eq $i ">selected </if>>{$i}</option>
+									</for>
+									</if>
+								</select>
+								<input type="submit" name="" value="查询" class="cx btn btn-primary" style="border-radius:5px;">
+							</div>
+						</div>
+						<div class="row clearfix">
+							<div class="col-xs-12 column">
+								<table class="table table-bordered empty-color" style="text-align:center">
+									<tbody>
+										<tr>
+											<for start="01" end="10">
+												<if condition="$i % 7 eq 1 ">
+										</tr>
+										<tr>
+											</if>
+											<td class="da">0{$i}</td>
+											</for>
+											<for start="10" end="32">
+												<if condition="$i % 7 eq 1 ">
+										</tr>
+										<tr>
+											</if>
+											<td class="da">{$i}</td>
+											</for>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger data-empty" data-dismiss="modal">关闭</button>
+						<!--<button type="button" class="btn btn-primary">保存</button>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

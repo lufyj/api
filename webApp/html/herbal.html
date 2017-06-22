@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/herbal.css" />
+		<script src="../js/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="../js/rem-dpr-w.min.js" type="text/javascript" charset="utf-8"></script>-->
+	</head>
+	<body>
+		<!--药都网药膳-->
+		<div class="wrap">
+			<div class="top">
+				<div class="title"></div>
+				<div class="base-msg">
+					<span class="author"></span>
+					<span class="time"></span>
+				</div>
+			</div>
+			<div class="content-wrap">
+				<p class="desc"></p>
+				<div class="img-s"></div>
+				<div class="content"></div>
+			</div>
+		</div>
+		<!--药都网药膳-->
+	</body>
+	<script type="text/javascript">
+		$(function() {
+			var id = window.location.toString().split("=")[1];
+			var data = {
+				atticles_id: id , 
+				clientType :1
+			};
+			$.ajax({
+				type: "post",
+				url: "http://m.yaoduwang.com/Api/AppHerbal/herbal_detail",
+				async: true,
+				data: data,
+				success: function(data) {
+					var title = data.data.title,
+						author = data.data.author,
+						content = data.data.content,
+						desc = data.data.description,
+						time = data.data.create_time,
+						thumb = data.data.thumb;
+					if(thumb) {
+						var img = $('<img src="' + thumb + '" alt="" />');
+						$(".img-s").append(img);
+					}
+					$(".desc").text(desc);
+					$(".title").text(title);
+					$(".base-msg .author").text(author);
+					$(".content").html(content.trim());
+					$(".base-msg .time").text(time);
+				}
+			});
+		})
+	</script>
+
+</html>

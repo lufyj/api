@@ -1,0 +1,71 @@
+<extend name="Public/base"/>
+<block name='navi'><li>系统</li><li>分类管理</li></block>
+<block name="body">
+	<!-- <script type="text/javascript" src="__STATIC__/uploadify/jquery.uploadify.min.js"></script>	 -->
+	<div class="page-header">
+		<h1>{:isset($info['id'])?'编辑':'新增'}分类</h1>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#tab1"><i class="green ace-icon fa fa-home bigger-120"></i>基 础</a></li>
+				<!-- <li><a data-toggle="tab" href="#tab2"><i class="green ace-icon fa fa-home bigger-120"></i>高 级</a></li> -->				
+			</ul>
+			<div class="tab-content">
+				<form action="{:U()}" method="post" class="form-horizontal">
+					<!-- 基础 -->
+					<div id="tab1" class="tab-pane fade active in">					
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right"><i class="ace-icon fa fa-asterisk red smaller-50"></i>&nbsp;&nbsp;分类名称：</label>
+							<div class="controls">
+								<input type="text" name="title" class="col-xs-10 col-sm-5" value="{$info.title|default=''}">								
+							</div>
+						</div>						
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right">排序：</label>
+							<div class="controls">
+								<input type="text" name="sort" class="col-xs-10 col-sm-5" value="{$info.sort|default=0}">								
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right">是否启用：</label>
+							<div class="radio">
+								<label>
+									<input type="radio" name="status" class="ace" value="1">									
+									<span class="lbl"> 启用 </span>
+								</label>
+								<label>
+									<input type="radio" name="status" class="ace" value="0">
+									<span class="lbl"> 禁用 </span>
+								</label>								
+								<lable class="blue smaller lighter">（默认即可）</label>
+							</div>							
+						</div>						
+					</div>
+					<div class="clearfix form-actions">		
+						<div class="col-md-offset-3 col-md-9">
+							<input type="hidden" name="id" value="{$info.id|default=''}">
+							<input type="hidden" name="pid" value="{:isset($category['id'])?$category['id']:$info['pid']}">
+							<button type="submit" id="submit" class="btn btn-info submit-btn ajax-post" target-form="form-horizontal"><i class="ace-icon fa fa-check bigger-110"></i>确 定</button>
+							<button class="btn btn-return" onclick="javascript:history.back(-1);return false;"><i class="ace-icon fa fa-undo bigger-110"></i>返 回</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>		
+	</div>
+</block>
+
+<block name="script">
+	<script type="text/javascript">		
+		/* $(function(){			
+			$("input[name=reply]").change(function(){
+				var $reply = $(".form-group.reply");
+				parseInt(this.value) ? $reply.show() : $reply.hide();
+			}).filter(":checked").change();
+		}); */
+		Think.setValue("status", {$info.status|default = 1});
+		//导航高亮
+		highlight_subnav('{:U('GoodsCategory/index')}');
+	</script>
+</block>

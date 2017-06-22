@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>药都网--消息</title>
+	    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/news.css" />
+    	<script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    	<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+            if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+		</script>
+	</head>
+	<body>
+	<header>
+		<a href="./persional.html" class="back_btn">
+			<i class="icon_zjt iconfont"></i>返回
+		</a>
+		<span>系统消息</span>
+	</header>
+	<div class="ydw_wp">
+		<section>
+			<ul class="n-c new_list">
+				<!--<li class="">-->
+					<!--<a href="###">-->
+						<!--<dl class="clearfix xt">-->
+							<!--<dt class="l">-->
+								<!--<i class="iconfont icon-xt"></i>-->
+							<!--</dt>-->
+							<!--<dd>-->
+								<!--系统消息 <span class="r">09:32</span>-->
+							<!--</dd>-->
+							<!--<dd>-->
+								<!--您所投标【田七】已经被选中，请尽快与求购人进行交易。-->
+							<!--</dd>-->
+						<!--</dl>-->
+					<!--</a>-->
+				<!--</li>-->
+				<!--<li class="">-->
+					<!--<a href="###">-->
+						<!--<dl class="clearfix tb">-->
+							<!--<dt class="l">-->
+								<!--<i class="iconfont icon-tb"></i>-->
+							<!--</dt>-->
+							<!--<dd>-->
+								<!--投标消息<span class="r">09:32</span>-->
+							<!--</dd>-->
+							<!--<dd>-->
+								<!--您所投标【田七】已经被选中，请尽快与求购人进行交易。-->
+							<!--</dd>-->
+						<!--</dl>-->
+					<!--</a>-->
+				<!--</li>-->
+				<!--<li class="active">-->
+					<!--<a href="###">-->
+						<!--<dl class="clearfix  fh">-->
+							<!--<dt class="l">-->
+								<!--<i class="iconfont icon-wl"></i>-->
+							<!--</dt>-->
+							<!--<dd>-->
+								<!--发货消息<span class="r">16/11/15 09:32</span>-->
+							<!--</dd>-->
+							<!--<dd>-->
+								<!--您所投标【田七】已经被选中，请尽快与求购人进行交易。-->
+							<!--</dd>-->
+						<!--</dl>-->
+					<!--</a>-->
+				<!--</li>-->
+				<!--<li class="active">-->
+					<!--<a href="###">-->
+						<!--<dl class="clearfix zb">-->
+							<!--<dt class="l">-->
+								<!--<i class="iconfont icon-zb"></i>-->
+							<!--</dt>-->
+							<!--<dd>-->
+								<!--中标消息<span class="r">16/11/15 09:32</span>-->
+							<!--</dd>-->
+							<!--<dd>-->
+								<!--您所投标【田七】已经被选中，请尽快与求购人进行交易。-->
+							<!--</dd>-->
+						<!--</dl>-->
+					<!--</a>-->
+				<!--</li>-->
+				<!--<li class="active">-->
+					<!--<a href="###">-->
+						<!--<dl class="clearfix  qs">-->
+							<!--<dt class="l">-->
+								<!--<i class="iconfont icon-qs"></i>-->
+							<!--</dt>-->
+							<!--<dd>-->
+								<!--签收消息<span class="r">16/11/15 09:32</span>-->
+							<!--</dd>-->
+							<!--<dd>-->
+								<!--您所投标【田七】已经被选中，请尽快与求购人进行交易。-->
+							<!--</dd>-->
+						<!--</dl>-->
+					<!--</a>-->
+				<!--</li>-->
+			</ul>
+		</section>
+	</div>
+	</body>
+	<script>
+		$.postT(rule.root +　"AppPush/pushList",{} ,function (req) {
+			var data = req.data;
+			if (data){
+				var dataL = data.length;
+				var li = ''
+				for (var i = 0; i < dataL; i++){
+					var st = data[i].st;
+					var details = data[i].details,
+                        message = data[i].message,
+						id = data[i].id,
+                    	demand_id = data[i].demand_id,
+						demandType = data[i].demand_type,
+                    	infotype = data[i].infotype,
+                    	addTime =  new Date(data[i].add_time*1000).format("yyyy-MM-dd");
+					if (st== 1){
+					    //已读
+                        li += '<li class="active" info-type="'+ infotype +'" demand-id="'+ demand_id+'" data-id="'+ id +'" data-type="'+demandType+'">';
+					}else {
+					    //未读
+                        li += '<li info-type="'+ infotype +'" demand-id="'+ demand_id+'" data-id="'+ id +'" data-type="'+demandType+'">';
+					}
+					switch (demandType){
+                        case '0':
+                            //系统消息
+                            li += '<dl class="clearfix xt"><dt class="l"><i class="iconfont icon-xt"></i></dt><dd><strong class="t">'+message+'</strong><span class="r time">'+addTime+'</span></dd><dd class="details">'+details+'</dd></dl></li>'
+                            break;
+                        case '1':
+                            //投标消息
+                            li += '<dl class="clearfix tb"><dt class="l"><i class="iconfont icon-tb"></i></dt><dd><strong class="t">'+message+'</strong><span class="r time">'+addTime+'</span></dd><dd class="details">'+details+'</dd></dl></li>'
+                            break;
+                        case '2':
+                            //中标
+                            li += '<dl class="clearfix zb"><dt class="l"><i class="iconfont icon-zb"></i></dt><dd><strong class="t">'+message+'</strong><span class="r time">'+addTime+'</span></dd><dd class="details">'+details+'</dd></dl></li>'
+                            break;
+						case '3':
+                            //发货
+                            li += '<dl class="clearfix fh"><dt class="l"><i class="iconfont icon-wl"></i></dt><dd><strong class="t">'+message+'</strong><span class="r time">'+addTime+'</span></dd><dd class="details">'+details+'</dd></dl></li>'
+                            break;
+						case '4':
+                            //签收
+                            li += '<dl class="clearfix qs"><dt class="l"><i class="iconfont icon-qs"></i></dt><dd><strong class="t">'+message+'</strong><span class="r time">'+addTime+'</span></dd><dd class="details">'+details+'</dd></dl></li>'
+                            break;
+                        default:
+                            break;
+					}
+				}
+				$(".new_list").html(li);
+			}
+			if (req.code == 103){
+                rule.reLogin();
+            }
+        })
+		$(".new_list").on("click" , "li" , function () {
+			//点击时候判断是否已读
+			var _this = $(this);
+			var type = _this.attr('data-type');
+			var i = _this.attr('info-type');
+			var p = _this.attr('data-id');
+			var demamdId = _this.attr('demand-id');
+			var data = {
+			    i:i,
+				p:p,
+				s:1,
+			}
+			if (i == "s") {
+			    //是系统消息
+				//缓存
+				var title = _this.find(".t").text();
+				var msg = _this.find(".details").text();
+				var time = _this.find(".time").text();
+                new Intent().setIntent("news_detail" , {detail:msg,time:time,title:title});
+			}
+			if (!_this.hasClass("active")){
+				$.postT(rule.root+'AppPush/pushStatus',data,function (req) {
+					if (req.code == 1){
+                        dealUrl(type , demamdId);
+					}
+                });
+			}else {
+                dealUrl(type,demamdId);
+			}
+        })
+		function dealUrl(type,id) {
+            switch (type){
+                case '0':
+                    //系统消息
+                    //将消息存在缓存到session 到详情页去那到
+					location.href = './newsdetail.html';
+                    break;
+                case '1':
+                    //投标消息
+                    //到采购详情
+                    location.href = './mydmddetail.html?id='+id;
+                    break;
+                case '2':
+                    //中标
+                    location.href = './tenderDetail.html?id='+id;
+                    //调到投标详情
+                    break;
+                case '3':
+                    //发货
+                    location.href = './mydmddetail.html?id='+id;
+                    //调到采购详情
+                    break;
+                case '4':
+                    //签收
+                    location.href = './tenderDetail.html?id='+id;
+                    //调到投标详情
+                    break;
+                default:
+                    break;
+            }
+        }
+	</script>
+</html>

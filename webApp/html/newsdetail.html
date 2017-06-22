@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+        .wrap {padding:1.4rem 3.3% 0;}
+        .top {width:100%;border-bottom: 1px solid #ccc;}
+        .title {font-size:2.8rem;line-height:6rem; color: #000;text-align: center;}
+        .content {font-size: 2.4rem;padding: 1rem 0;}
+        .btm {font-size: 2.2rem;}
+    </style>
+</head>
+<body>
+<div class="ydw_wp">
+    <header>
+        <a href="javascript:;" class="back_btn" id="back_btn">
+            <i class="icon_zjt iconfont"></i>返回
+        </a>
+        <span>系统消息</span>
+    </header>
+    <div class="wrap">
+        <div class="top">
+            <div class="title"></div>
+        </div>
+        <div class="content">
+
+        </div>
+        <div class="btm">
+            <span class="r time"></span>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    $(function () {
+        var news = new Intent().getIntent("news_detail");
+        if (news){
+            var detail = news.detail;
+            var time = news.time;
+            var title = news.title;
+            $(".title").text(title);
+            $(".content").text(detail);
+            $(".time").text(time);
+        }
+    })
+</script>
+</html>

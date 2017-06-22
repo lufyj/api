@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>{$meta_title}|{:C('WEB_SITE_TITLE')}</title>
+
+		<meta name="description" content="overview &amp; stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="__ADMIN__/assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="__ADMIN__/assets/css/font-awesome.min.css" />
+
+		<!-- page specific plugin styles -->
+		<link rel="stylesheet" href="__ADMIN__/assets/css/chosen.css" />
+
+		<!-- text fonts -->
+		<link rel="stylesheet" href="__ADMIN__/assets/css/ace-fonts.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="__ADMIN__/assets/css/ace.min.css" id="main-ace-style" />
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="__ADMIN__/assets/css/ace-part2.min.css" />
+		<![endif]-->
+		<link rel="stylesheet" href="__ADMIN__/assets/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="__ADMIN__/assets/css/ace-rtl.min.css" />
+
+		<link rel="stylesheet" href="__ADMIN__/css/common.css" />
+		<link rel="stylesheet" href="__ADMIN__/css/toastr.min.css" />
+
+		<!-- <style>
+		html,body{
+			font: 14px/1.5 "microsoft yahei", Helvetica, Tahoma, Arial, sans-serif;
+			font-family: "微软雅黑";
+			color:#404040;
+		}
+			
+		</style> -->
+		<block name="style">
+		</block>
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="__ADMIN__/assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->		
+		<script src='__STATIC__/jquery-1.8.3.min.js'></script>
+		
+		<!-- ace settings handler -->
+		<script src="__ADMIN__/assets/js/ace-extra.min.js"></script>
+		 <!-- <script src="__PUBLIC__/Admin/ace/js/jquery-1.8.3.min.js"></script> -->
+		<!--<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/ace/assets/ueditor/ueditor.config.js"></script>
+		<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/ace/assets/ueditor/ueditor.all.min.js"> </script> -->
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="__ADMIN__/assets/js/html5shiv.min.js"></script>
+		<script src="__ADMIN__/assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body class="no-skin">		
+		<div id="navbar" class="navbar navbar-default">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+			<div class="navbar-container" id="navbar-container">				
+				<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler">
+					<span class="sr-only">Toggle sidebar</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="navbar-header pull-left">				
+					<a href="#" class="navbar-brand">
+						<small>
+							<i class="fa fa-leaf"></i>
+							{:C('WEB_SITE_TITLE')}
+						</small>
+					</a>
+				</div>
+				<div class="navbar-buttons navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="light-blue">
+							<a href="javascript:;" onclick="refreshHomeIndex();return false;">
+								<div class="clearfix">
+									<span class="pull-left">清除前台缓存</span>
+									<span class="pull-right"></span>
+								</div>							
+							</a>
+						</li>						
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo"  src="<?php echo session('user_auth.head_pic') ? session('user_auth.head_pic') : '__ADMIN__/assets/avatars/profile-pic.jpg' ?>" alt="管理员头像" />
+								<span class="user-info">
+									<small>欢迎,</small>
+									{:session('user_auth.username')}
+								</span>
+								<i class="ace-icon fa fa-caret-down"></i>
+							</a>
+							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="{:U('Member/updatePassword')}">
+										<i class="ace-icon fa fa-cog"></i>
+										修改密码
+									</a>
+								</li>
+								<li>
+									<a href="{:U('Member/person')}">
+										<i class="ace-icon fa fa-user"></i>
+										个人信息
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="{:U('Public/logout')}">
+										<i class="ace-icon fa fa-power-off"></i>
+										退出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>		
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+			<include file='Public/leftmenu'/>
+			<div class="main-content">			
+				<div class="breadcrumbs" id="breadcrumbs">
+					<script type="text/javascript">
+						try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+					</script>
+					<ul class="breadcrumb">
+						<li>
+							<i class="ace-icon fa fa-home home-icon"></i>
+							<a href="{:U('index')}">首页</a>
+						</li>
+						<block name='navi'></block>						
+					</ul>
+				</div>
+				<div class="page-content">					
+					<div id="top-alert" class="fixed alert" style="display: none;">
+			            <button class="close fixed" style="margin-top: 4px;">&times;</button>
+			            <div class="alert-content">这是内容</div>
+			        </div>					
+					<block name="body">					    
+					</block>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer-inner">					
+					<div class="footer-content">
+						<span class="bigger-120">
+							<span class="blue bolder">药都网</span>
+							www.yaoduwang.com &copy; 2016-2020
+						</span>						
+					</div>					
+				</div>
+			</div>
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div>
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='__ADMIN__/assets/js/jquery.min.js'>"+"<"+"/script>");
+		</script>
+		<!-- <![endif]-->
+		<!--[if IE]>
+			<script type="text/javascript">
+			 window.jQuery || document.write("<script src='__ADMIN__/assets/js/jquery1x.min.js'>"+"<"+"/script>");
+			</script>
+		<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='__ADMIN__/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="__ADMIN__/assets/js/bootstrap.min.js"></script>
+		<!--[if lte IE 8]>
+		  <script src="__ADMIN__/assets/js/excanvas.min.js"></script>
+		<![endif]-->
+		<!-- <script src="__ADMIN__/assets/js/jquery-ui.custom.min.js"></script>
+		<script src="__ADMIN__/assets/js/jquery.ui.touch-punch.min.js"></script> -->	
+
+		<!-- ace scripts -->
+		<script src="__ADMIN__/assets/js/ace-elements.min.js"></script>
+		<script src="__ADMIN__/assets/js/ace.min.js"></script>
+		<script type="text/javascript">
+	    (function(){
+	        var ThinkPHP = window.Think = {
+	            "ROOT"   : "__ROOT__", //当前网站地址
+	            "APP"    : "__APP__", //当前项目地址
+	            "PUBLIC" : "__PUBLIC__", //项目公共目录地址
+	            "DEEP"   : "{:C('URL_PATHINFO_DEPR')}", //PATHINFO分割符
+	            "MODEL"  : ["{:C('URL_MODEL')}", "{:C('URL_CASE_INSENSITIVE')}", "{:C('URL_HTML_SUFFIX')}"],
+	            "VAR"    : ["{:C('VAR_MODULE')}", "{:C('VAR_CONTROLLER')}", "{:C('VAR_ACTION')}"]
+	        }
+	    })();
+	    </script>
+		<script type="text/javascript" src="__STATIC__/think.js"></script>
+		<script type="text/javascript" src="__ADMIN__/js/common.js"></script>
+		<script type="text/javascript" src="__ADMIN__/js/toastr.min.js"></script>		
+		<script type="text/javascript">
+			
+			/*清除首页缓存*/
+			function refreshHomeIndex(){
+				$.getJSON("{:U('Index/ajaxclearcache')}", function(req){
+					if(req.status) success(req.msg);
+					else fail(req.msg || req.info);
+				})
+			}
+			/* 公共调用成功方法 */
+			function success(msg, jumpUrl, timeOut){
+				timeOut = timeOut || 1000;				
+				toastr.options = {		          
+			        timeOut: timeOut			        		   
+			    };
+				toastr.success(msg);
+				if(jumpUrl){
+					setTimeout(function(){
+						if(jumpUrl === true){
+							window.location.href = window.location.href;
+						}else{
+							window.location.href = jumpUrl;	
+						}						
+					}, timeOut);
+				}				
+			}
+			/* 公共调用失败方法 */
+			function fail(msg, that, jumpUrl){
+				updateAlert(msg);			
+				setTimeout(function(){
+					that && that.removeClass('disabled');
+					if (jumpUrl) {
+                        location.href = jumpUrl;
+                    }else{
+                        $('#top-alert').find('button').click();
+                    }					
+				}, 1500);				
+			}
+			jQuery(function($) {
+				
+				/* 左边菜单高亮 */
+			    var subnav = $("#nav"), url;
+			    url = window.location.pathname + window.location.search;
+			    url = url.replace(/(\/(p)\/\d+)|(&p=\d+)|(\/(id)\/\d+)|(&id=\d+)|(\/(group)\/\d+)|(&group=\d+)/, "");			    
+			    subnav.find("a[href='" + url + "']").parent('li').addClass("active").closest('ul').addClass('nav-show').show();		
+			    
+			    /* 关闭确定框 */
+			    $('button.cancel,a.close').on('click', function(){
+			    	$(".dialogbg,.dialogcon").hide();
+			    });
+			})
+		</script>
+		<block name="script">
+		</block>
+		<div class="ui-widget-overlay dialogbg base-modal" style="display:none;"></div>
+		<div class="widget-box ui-sortable-handle col-sm-3 ui-jqdialog dialogcon base-modal" style="display:none;position:fixed;top:center;">
+			<div class="widget-header">
+				<h5 class="widget-title">提示</h5>
+				<div class="widget-toolbar">
+					<a href="javascript:void(0)" class="ui-dialog-titlebar-close close" ></a>
+				</div>
+			</div>
+			<div class="widget-body" style="height:140px;">
+				<div class="widget-main">
+					<big id="del-tip">确定删除？</big><br>
+					<hr>
+					<div style="float:right; margin-right:5px;">
+						<button class="btn btn-white btn-success btn-bold  btn-round ok">
+							<i class="ace-icon fa fa-check bigger-120 green"></i>
+							<input type="hidden" value="" id="set-this-for-delete"/>
+							确定
+						</button>
+						<button class="btn btn-white btn-default btn-round cancel">
+							<i class="ace-icon fa fa-times red2"></i>
+							取消
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>				
+	</body>
+</html>

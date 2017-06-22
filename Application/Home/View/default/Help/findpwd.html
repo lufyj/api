@@ -1,0 +1,31 @@
+<extend name="./base" />
+<block name="style">
+	<link rel="stylesheet" type="text/css" href="__HOME__/help/css/helpCenter.css" />
+</block>
+<block name="body">
+	<include file="Public:help_left_menu" />
+	<div class="help-main l">
+		<div class="main-top">
+			您现在所在的位置 :
+			<a href="/">首页</a>&nbsp;&gt;&nbsp;
+			<a href="{:U('help/demandHelp')}">帮助中心</a>&nbsp;&gt;&nbsp;
+			<a href="javascript:;">找回密码</a>
+		</div>
+		<div class="main-title">
+			<h3><span>找回密码</span></h3>
+		</div>
+		<div class="content">
+			<p>您可以通过以下方式进行找回密码：</p>
+			<img src="__HOME__/help/images/findpwd01.jpg"/>
+			<img src="__HOME__/help/images/findpwd02.jpg"/>
+			<img src="__HOME__/help/images/findpwd03.png"/>
+			<img src="__HOME__/help/images/findpwd04.png"/>
+			<img src="__HOME__/help/images/findpwd05.png"/>
+		</div>
+	</div>
+</div>
+	<!--帮助中心结束-->
+</block>
+<block name="script">
+	<script src="__HOME__/help/js/help.js" type="text/javascript" charset="utf-8"></script>
+</block>

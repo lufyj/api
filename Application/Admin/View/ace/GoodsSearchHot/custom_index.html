@@ -1,0 +1,71 @@
+<extend name="Public/base" />
+<block name='navi'><li>药品管理</li><li>药品热门搜索</li></block>
+<block name="body">
+<div class="page-header"><h1>药品热门搜索</h1></div><div class="space"></div>
+<div class="row">
+    <div class="col-xs-12">
+    	<div class="tabbable">
+    		<ul class="nav nav-tabs" id="myTab">
+				<li <if condition="$act eq index">class="active"</if>>
+					<a href="{:U('index')}"><i class="green ace-icon fa fa-home bigger-120"></i>平台关键词</a>
+				</li>
+				<li  <if condition="$act eq custom_index">class="active"</if>>
+					<a href="{:U('custom_index')}"><i class="green ace-icon fa fa-home bigger-120"></i>自定义关键词</a>
+				</li>
+			</ul>
+<div class="tab-content">
+	<div id="main" class="tab-pane fade in active">
+		<div class="row">
+			<div class="col-xs-12">
+	            <div id="ajax_table">      
+	            	<include file='custom_table'/>            
+	            </div>
+			</div>
+		</div>		
+	</div>
+</div>
+    	</div>
+    </div>
+</div>
+</block>
+<block name="script">
+	<script>
+		$(function(){
+			$('#submitBtn').on('click',function(){
+				var arr = [];
+				var custom_lists = $('.customid');
+				var len = custom_lists.length;
+				for(var i=0;i<len;i++){
+					var value = custom_lists[i];
+					if($(value).is(':checked')){
+						arr.push(value.value);
+					}else{
+						arr.splice(value.value);
+					}
+				}
+				var str = arr.join(',');
+				if(!str){
+					return false;
+				}
+				$.ajax({
+					type:"get",
+					url:"{:U('custom_del')}",
+					data:{id:str},
+					async:true,
+					success:function(req){
+						if(req.info == "删除成功"){
+                			success(req.info, req.url || true);
+               			}else{
+                			fail(req.info);
+               			}   
+					},
+					error:function(){
+						alert('网络超时，请重新加载！');
+					}
+				});
+			});
+		});
+		//导航高亮
+		highlight_subnav("{:U('GoodsSearchHot/index')}");
+	</script>
+</block>

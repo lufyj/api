@@ -1,0 +1,234 @@
+/*认证第一步*/
+.progress-bar1 , .progress-bar2{
+	width: 760px;
+	height: 105px;
+	margin: 20px auto 0;
+}
+.progress-bar1{
+	background: url(../images/pros_1.png) no-repeat;
+}
+.info-ul{
+	width: 900px;
+	margin: 60px auto 0;
+}
+.info-ul li , .view-info li{
+	margin-bottom: 20px;
+	line-height: 16px;
+}
+.bf-s{
+	display: inline-block;
+	width: 180px;
+	font-size: 16px;
+	padding-right: 18px;
+	text-align: right;
+}
+.at-s{
+	font-size: 14px;
+	color: #e62b2e;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+.bf-s>span  , .at-s>span{
+	color: #e62b2e;
+	position: relative;
+	top: 2px;
+}
+.info-ul input{
+	border: 1px solid #d6d7dc;
+}
+.info-ul input[type="text"]{
+	height: 18px;
+	line-height: 18px;
+	padding: 10px;
+	width:416px;
+	font-size: 14px;
+}
+.date{
+	width: 169px !important;
+	height: 18px;
+	line-height: 18px;
+	padding: 10px;
+	border: 1px solid #d6d7dc;
+	cursor: pointer;
+}
+.disabled{
+	background-color: #ddd !important;
+}
+.info-ul input[type="radio"]{
+	width: 16px;
+	height: 16px;
+}
+.radio-date{
+	margin-right: 9px;
+}
+.long-term{
+	margin: 20px 0 0 203px;
+	font-size: 16px;
+}
+.long-term .radio-date{
+	margin-right: 14px;
+}
+input[type="text"].money-input{
+	width: 200px;
+}
+.radio-label{
+	font-size: 16px;
+	margin-right: 80px;
+}
+.radio-license{
+	margin-right: 14px;
+}
+.bf-s-a{
+	vertical-align: top;
+}
+.license-li .at-s{
+	margin-left:200px ;
+}
+label[for^="license-"]{
+	margin-left: 372px;
+}
+.license-a>li , .license-b>li{
+	position: relative;
+	margin-bottom: 20px;
+}
+.license-file{
+	height: 29px;
+	width: 70px;
+	overflow: hidden;
+	position: absolute;
+	font-size: 20px;
+	top: 371px;
+	left:369px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	padding: 0;
+}
+/*图片上传*/
+#preview-div1New , #preview-div2New ,#preview-div3New{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 420px;
+	height: 340px;
+	margin: 0 auto;
+}
+#preview-div1 ,#preview-div2,#preview-div3 {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 420px;
+	height: 340px;
+	margin: 0 auto;
+}
+.up-span{
+	color: #0691d6;
+	font-size: 16px;
+}
+.btn-li{
+	text-align: center;
+}
+.btn-li span , .sub-btn{
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	color: #fff;
+	background-color: #e62b2e;
+}
+/*认证第一步*/
+/*认证第二步*/
+.progress-bar2{
+	background: url(../images/pros_2.png) no-repeat;
+}
+.pre{
+	display: inline-block;
+	width: 118px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	color: #888;
+	background-color: #e5e5e5;
+	margin-right: 40px;
+	cursor: pointer;
+}
+.last-li{
+	text-align: center;
+}
+.remarks{
+	font-size: 14px;
+	color: #e62b2e;
+	margin-left: 201px;
+	margin-top: 10px;
+}
+/*认证第二步*/
+/*完成*/
+.sub-img{
+	width: 160px;
+	height: 160px;
+	background: url(../images/sub.png) no-repeat;
+	margin: 0 auto 70px;
+}
+.sub-div{
+	text-align: center;
+}
+.sub-div p{
+	font-size: 18px;
+}
+.sub-div span{
+	color: #e62b2e;
+}
+.sub-div a{
+	color: #1575e1;
+}
+/*完成*/
+/*view*/
+.show-info{
+	font-size: 16px;
+}
+.show-img{
+	width: 420px;
+	height: 320px;
+}
+/*view*/
+/*查看审核*/
+.review-status{
+	position: relative;
+	font-size: 18px;
+	padding-bottom: 20px;
+	padding-right: 30px;
+}
+.review-status p{
+line-height: 50px;
+}
+.review-status span{
+	color:#e62b2e ;
+}
+.review-status span.reason{
+	color: #808080;
+}
+.review-status a{
+	color: #1575e1;
+}
+.review-fail , .review-success {
+	position: absolute;
+}
+.review-success{
+	top: -50px;
+	right: 44px;
+	width: 250px;
+	height: 140px;
+	background: url(../images/review_1.png) no-repeat;
+}
+.review-fail{
+	top: -50px;
+	right: 44px;
+	width: 256px;
+	height: 144px;
+	background: url(../images/review_2.png) no-repeat;
+}
+/*查看审核*/

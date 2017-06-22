@@ -1,0 +1,37 @@
+<extend name="./base" />
+<block name="style">
+	<!--样式自定义开始-->
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/company/css/confirmCompany.css" />
+	<!--样式自定义结束-->
+</block>
+<block name="body">
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+				<a href="javascript:;">认证管理</a>
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />
+			<div class="right l">
+				<div class="sub-div info-ul">
+					<div class="sub-img">
+						
+					</div>
+					<p>
+						您的认证申请已经提交，请耐心等待 <span>3-5</span>个工作日后至 <a href="{:U('CompanyConfirm/confirmInfo')}">我的认证信息 </a>处查看审核结果哦
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+</block>
+<block name="script">
+	<script type="text/javascript" src="__HOME__/company/js/confirmCompanyInfo.js"></script>
+</block>

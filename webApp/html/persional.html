@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>药都网--个人中心</title>
+	    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/personal.css" />
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script type="text/javascript">
+            if (!islogin()) location.href = "./login.html?ReturnUrl=" + encodeURIComponent(location.href);
+		</script>
+	</head>
+	<body>
+		<div class="per_wp">
+			<div class="per_info">
+				<a href="./perInfo.html">
+					<img src="" alt="" class="head-img" id="head-img"/>
+					<div class="acc-info">
+						<p class="user-name"></p>
+						<p class="user-mobile"></p>
+					</div>
+				</a>
+			</div>
+			<div class="per_m_wp per_m1">
+				<div class="m1_item m_item">
+					<a href="./myfollow.html">
+						<span class="flw_num"></span>
+						<p>关注</p>
+					</a>
+				</div>
+				<div class="m1_item">
+					<a href="./news.html">
+						<span class="news_num"></span>
+						<p>消息</p>
+					</a>
+				</div>
+				<div class="m1_item">
+					<a href="javascript:;">
+						<span>暂无开通</span>
+						<p>余额</p>
+					</a>
+				</div>
+				<div class="m1_item">
+					<span>暂无开通</span>
+					<p>钱包</p>
+				</div>
+			</div>
+			<div class="per_m_wp per_m">
+				<h3 class="tit">我的发布</h3>
+				<div class="per_m2">
+					<div>
+						<a href="./supply.html">
+							<i class="icon icon1"></i><br>
+							<span>发布供应</span>
+						</a>
+					</div>
+					<div>
+						<a href="./demand.html">
+							<i class="icon icon2"></i><br>
+							<span>发布采购</span>
+						</a>
+					</div>
+					<div>
+						<a href="./fbmarket.html">
+							<i class="icon icon3"></i><br>
+							<span>发布行情</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="per_m_wp per_m">
+				<h3 class="tit">我的相关</h3>
+				<div class="per_m3">
+					<div>
+						<a href="./mysupply.html">
+							<i class="icon icon4"></i><br>
+							<span>我的供应</span>
+						</a>
+					</div>
+					<div>
+						<a href="./mydemand.html">
+							<i class="icon icon5"></i><br>
+							<span>我的采购</span>
+						</a>
+					</div>
+					<div>
+						<a href="./mytb.html">
+							<i class="icon icon6"></i><br>
+							<span>我的投标</span>
+						</a>
+					</div>
+					<div>
+						<a href="./mymarket.html">
+							<i class="icon icon7"></i><br>
+							<span>我的行情</span>
+						</a>
+					</div>
+					<div>
+						<a href="./comment.html">
+							<i class="icon icon8"></i><br>
+							<span>我的评论</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="per_m_wp per_m4">
+				<div>
+					<a href="./help.html">
+						<span><i class="iconfont icon-bz"></i></span>
+						<div>
+							<p>帮助中心</p>
+							<p>解答您的疑问难题</p>
+						</div>
+					</a>
+				</div>
+				<div>
+					<a href="./suggestion.html">
+						<span><i class="iconfont icon-fk"></i></span>
+						<div>
+							<p>意见反馈</p>
+							<p>填写您的意见反馈</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<a href="./indexs.html" class="tab_lm">
+				<i class="iconfont icon_lm"></i>
+				<p>类目</p>
+			</a>
+			<a href="./follow.html" class="tab_follow">
+				<i class="iconfont icon_gz"></i>
+				<p>关注</p>
+			</a>
+			<a href="./index.html" class="home tab_home"></a>
+			<a href="./discover.html" class="tab_follow">
+				<i class="iconfont icon_fx"></i>
+				<p>发现</p>
+			</a>
+			<a href="javascript:;" class="tab_perisonal">
+				<i class="iconfont icon_geren"></i>
+				<p>个人</p>
+			</a>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+            $.postT(rule.root+"AppUser/user_details" , "" , function(req){
+				var code = req.code;
+				console.log(req)
+                if (code == 1){
+                    var datas = req.data;
+					var imgUrl = datas.head_pic,
+                        realname = datas.realname,
+                        mobile = datas.mobile;
+					var flwNum = datas.follow_num,
+						noRead = datas.notRead_num;
+						$(".flw_num").text(flwNum);
+						$(".news_num").text(noRead);
+						$("#head-img").attr("src" , imgUrl);
+						$(".user-name").text(realname);
+						$(".user-mobile").text(mobile);
+				}else  if (code == 103){
+                    rule.reLogin();
+				}
+			})
+		})
+	</script>
+</html>

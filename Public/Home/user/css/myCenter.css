@@ -1,0 +1,183 @@
+/*新的个人中心*/
+.user-wrap {
+	width: 1200px;
+	margin: 20px auto;
+}
+
+.user-wrap>.title {
+	height: 40px;
+	line-height: 42px;
+	border-bottom: 2px solid #E62B2E;
+}
+.user-wrap>.title div {
+	padding-left: 35px;
+	font-size: 14px;
+	color: #000;
+}
+.user-wrap>.title span {
+	display: inline-block;
+	width: 230px;
+	height: 42px;
+	line-height: 42px;
+	background-color: #E62B2E;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+
+.user-nav {
+	width: 228px;
+	border: 1px solid #ccc;
+	border-top: none;
+	border-bottom: none;
+}
+
+.user-nav>li {
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.user-nav ul li.active a {
+	color: #E62B2E;
+}
+
+.user-nav ul li a:hover {
+	text-decoration: none;
+	color:#e62b2e;
+}
+
+.user-nav .one-level {
+	height: 48px;
+	line-height: 48px;
+	background-color: #F8F8F8;
+	padding-left: 30px;
+	border-bottom: 1px solid #ccc;
+}
+
+.user-nav .one-level>img {
+	vertical-align: middle;
+	position: relative;
+	top: -2px;
+	margin-right: 5px;
+}
+.user-nav .two-level>li a{
+	display:block;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 57px;
+	border-bottom: 1px dashed #ccc;
+	font-size: 14px;
+}
+.content-wrap .right {
+	width: 940px;
+	padding-left: 30px;
+	padding-top: 15px;
+}
+/*此为账户信息、我的积分、账号安全的头部样式*/
+.user-manage .navs {
+	height: 42px;
+	border-bottom: 2px solid #e2e2e2;
+	margin-bottom: 30px;
+}
+.user-manage .navs li {
+	float: left;
+	cursor: pointer;
+	height: 42px;
+	padding: 0 25px;
+	line-height: 42px;
+	font-size: 16px;
+}
+
+.user-manage .navs .show {
+	border-bottom: 2px solid #E62B2E;
+	color: #E62B2E;
+	font-size: 18px;
+}
+/******此为企业管理的“基础信息”、‘公司动态’和‘业务管理’的头部样式
+ * *求购管理的‘发布求购’，消息管理的‘我的关注’,求购管理的‘我的求购’的头部样式
+ *  供应管理的‘我的供应’，消息管理的意见反馈的头部样式
+ *  供应管理的‘发布供应’的头部样式
+ *  Index/test和Index/tests*****/
+.content-wrap .right .title {
+	height: 42px;
+	line-height: 42px;
+	font-size: 16px;
+	border-bottom: 2px solid #e2e2e2;
+	margin-bottom: 30px;
+}
+.right .title>span{
+	 cursor: pointer;
+    height: 42px;
+    padding: 0 25px;
+    line-height: 42px;
+    font-size: 16px;
+}
+.right .title>span.active{
+	display: inline-block;
+	border-bottom: 2px solid #E62B2E;
+	font-size: 18px;
+	color: #e62b2e;
+}
+/*****此为求购管理的‘我的求购’的头部样式
+ * *     供应管理的‘我的供应’，消息管理的意见反馈************/
+
+
+/*公司有关页面的头部*/
+.content-wrap .right .title2 {
+	height: 42px;
+	line-height: 42px;
+	font-size: 16px;
+	border-bottom: 2px solid #e2e2e2;
+	margin-bottom: 30px;
+	width: 910px;
+}
+
+.right .title2>span {
+	display: inline-block;
+	cursor: pointer;
+	height: 42px;
+	padding: 0 25px;
+	line-height: 42px;
+	border-bottom: 2px solid #E62B2E;
+	font-size: 18px;
+	color: #e62b2e;
+}
+/*公司有关页面的头部结束*/
+/*.my-suggest-nav {
+	height: 42px;
+	border-bottom: 2px solid #e2e2e2;
+	margin-bottom: 30px;
+}
+.my-suggest-nav p.active {
+	height: 42px;
+	display: inline-block;
+	padding: 0 25px;
+	line-height: 42px;
+	font-size: 16px;
+	border-bottom: 2px solid #E62B2E;
+	color: #E62B2E;
+	font-size: 18px;
+}*/
+/*****此为供应管理的‘发布供应’的头部样式********/
+/*.publish-nav {
+	width: 940px;
+	border-bottom: 2px solid #e2e2e2;
+	height: 48px;
+}
+.publish-nav li {
+	float: left;
+	width: 120px;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.publish-nav li.active {
+	border-bottom: 2px solid #E62B2E;
+	font-size: 18px;
+	color: #e62b2e;
+	cursor: pointer;
+}*/
+/*********以上为关于  我的药都网的统一公共样式引用的全部*************/
+

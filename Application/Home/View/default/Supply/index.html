@@ -1,0 +1,170 @@
+<extend name="./base" />
+<block name="style">    
+    <link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+    <link rel="stylesheet" type="text/css" href="__HOME__/user/css/index02.css" />  
+</block>
+<block name="body">
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+				<a href="javascript:;">供应管理</a>&nbsp;>&nbsp;
+				<a href="javascript:;">我的供应</a>
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />			
+			 <div class="right my-buy l clearfix">	
+			 	<!--<div class="my-suggest-nav">
+					<p class="active">我的供应</p>
+				</div>-->
+				<div class="title">
+					<span class="active">我的供应</span>
+				</div>
+				<!--新的表格-->
+				<div class="sup-main">
+					<table class="pub-m">
+						<thead>
+							<tr>
+								<td width="135">&nbsp;</td>
+								<td width="160">药材名称</td>
+								<td>规格</td>
+								<td>数量</td>
+								<td>价格</td>
+								<td>发布时间</td>
+								<td width="130">操作</td>
+							</tr>
+						</thead>
+						<tbody>
+						<foreach name="list" item="vo" key="k" >
+							<tr>
+								<td class="img-p"><a href="{:U('supply/detail',array('id'=>$vo['id']))}"><img src="{$vo.imgs|default='__IMG__/noimg.png'}"/></a></td>
+								<td class="sup-drug-color"><a href="{:U('supply/detail',array('id'=>$vo['id']))}">{$vo.goods_name}</a></td>
+								<td>{$vo.goods_attr_name}</td>
+								<!--<td>{$vo.num}公斤</td>-->
+								<td><?php if(is_numeric($vo['num'])){echo $vo['num'].'公斤';}else{echo $vo['num'];} ?></td>
+								<td class="s-red">{$vo.price_type|get_price_type}<eq name="info.price_type" value="1">/{$info.price}</eq></td>
+								<td class="s-gray">{$vo.create_time|date='Y-m-d',###}</td>
+								<td>
+									<a href="javascript:;" onclick="modify({$vo.id});">修改</a>
+									<a href="javascript:;" onclick="del({$vo.id});" class="dels">删除</a>
+								</td>
+							</tr>
+						</foreach>
+						</tbody>
+					</table>
+				</div>
+				{$pageHtml}
+				<!--新的表格结束-->
+				<!--<div>
+					<ul class="tables clearfix">
+						<li class="clearfix">
+							<ul class="my-buy01">
+								<li>&nbsp;</li>
+								<li>药材名称</li>
+								<li>规格</li>
+								<li>数量</li>
+								<li>价格</li>
+								<li>发布时间</li>
+								<li>操作</li>
+							</ul>						
+						</li>
+						<foreach name="list" item="vo" key="k" >
+							<li class="clearfix">
+								<ul class="my-buy01 my-buy02">
+									<li class="lists01"><a href="{:U('supply/detail',array('id'=>$vo['id']))}"><img src="{$vo.imgs|default='__IMG__/noimg.png'}"/></a></li>
+									<li class="lists02"><a href="{:U('supply/detail',array('id'=>$vo['id']))}">{$vo.goods_name}</a></li>
+									<li>{$vo.goods_attr_name}</li>
+									<li>{$vo.num}</li>
+									<li class="lists03">{$vo.price_type|get_price_type}<eq name="info.price_type" value="1">/{$info.price}</eq></li>
+									<li class="lists04">{$vo.create_time|date='Y-m-d',###}</li>								
+									<li class="lists04">待审核状态</li>
+									<li class="lists05">
+										<a href="javascript:;" onclick="modify({$vo.id});">修改</a>
+										<a href="javascript:;" onclick="del({$vo.id});" class="dels">删除</a>
+									</li>
+								</ul>
+							</li>						
+						</foreach>			
+					</ul>
+					{$pageHtml}
+				</div>-->
+			</div>			
+		</div>
+	</div>
+	<div class="model" id="modal">
+		<div class="model-dialog">
+			<div class="model-content">
+				<span class="model-del models close">&times;</span>
+				<div class="model-nav">药都网温馨提示您：</div>
+				<p class="model-txt">您确定要删除您选中的信息吗？</p>
+				<p class="model-txt">
+					<a href="javascript:;" class="model-con ok">删除</a>
+					<a href="javascript:;" class="models close">取消</a>
+				</p>
+			</div>
+		</div>
+	</div>  
+</block>
+<block name="script">
+<script type="text/javascript">
+	var modal = $('#modal');
+	$(function(){	
+		//获取当前地址值
+		/*var host=window.location.hostname;
+		$('.model-nav').text(host+' 上网页的显示：');*/
+		/* 处理药材名称过长 */
+		/*$('.lists02 a').on('click', function(){
+			if($(this).text().length >= 5){
+				$(this).parent().css('line-height','30px');
+			}
+		});*/
+		/*$('.lists02 a').each(function(){
+			if($(this).text().length >= 5){
+				$(this).parent().css('line-height','30px');
+			}
+		});*/
+		/* 关闭模态框 */
+		modal.find('.close').on('click', function(){
+			modal.hide();
+		});		
+	})
+	/* 删除一条供应信息 */	
+	function del(id){		
+		var repeat_click = true;
+		/* 确定模态框 */
+		modal.show().find('a.ok').off('click').on('click', function(){
+			if(!repeat_click){
+				return;
+			}
+			repeat_click = false;
+			modal.hide();			
+			$.ajax({
+                url: "{:U('Supply/del')}",
+                dataType: "json",
+                data: { id: id },
+                type: "get",
+                success: function(req) {
+                    if (req.code == 1) {
+                    	$.custom(req.msg);
+                    	window.location.reload();                       
+                    } else {
+                        $.custom(req.msg);
+                    }
+                    repeat_click = true;
+                },
+                error: function() {
+                    $.custom('网络连接超时，请您稍后重试');
+                    repeat_click = true;
+                }
+            });
+		});		
+	}
+	/* 修改供应信息 */
+	function modify(id){
+		$.custom('正在完善中');
+	}
+</script>
+</block>

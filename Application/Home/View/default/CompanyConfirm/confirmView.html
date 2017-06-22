@@ -1,0 +1,163 @@
+<extend name="./base" />
+<block name="style">
+	<!--样式自定义开始-->
+	<link rel="stylesheet" type="text/css" href="__HOME__/user/css/myCenter.css" />
+	<link rel="stylesheet" type="text/css" href="__HOME__/company/css/confirmCompany.css" />
+	<!--样式自定义结束-->
+</block>
+<block name="body">
+	<div class="user-wrap clearfix">
+		<div class="title clearfix">
+			<span class="l">我的药都网</span>
+			<div class="ad l">
+				您现在所在的位置 :
+				<a href="{:U('user/profile')}">我的药都网</a>&nbsp;>&nbsp;
+				<a href="javascript:;">认证管理</a>
+			</div>
+		</div>
+		<div class="content-wrap clearfix">
+			<include file="Public:user_left_menu" />
+			<div class="right l">
+					<div class="title2">
+						<span class="active">审核结果</span>
+					</div>
+					<div class="review-status">
+						<if condition="$info.confirm_status eq '2'">
+							<div class="status-a">
+								<p>您的认证申请已经提交,请耐心等待<span>3-5</span>个工作日后查看审核结果哦</p>
+							</div>
+						</if>
+						<if condition="$info.confirm_status eq '3'">
+							<div class="status-b" >
+								<p>恭喜您，审核通过啦~    点击<a href="{:U('Company/baseInfo')}">企业管理</a>去完善公司信息吧</p>
+								<div class="review-success">
+
+								</div>
+							</div>
+						</if>
+						<if condition="$info.confirm_status eq '4'">
+							<div class="status-c">
+								<p>很抱歉，您的审核<span>未通过</span>，您可以核对信息后重新发起申请或<a href="{:U('CompanyConfirm/confirmInfo',array('status'=>4))}">“点我”</a>进行修改</p>
+								<p><span class="reason">未通过原因</span>：{$info.remark}</p>
+								<div class="review-fail">
+
+								</div>
+							</div>
+						</if>
+					</div>
+				<div class="title2">
+					<span class="active">企业信息</span>
+				</div>
+				<ul class="view-info">
+					<li>
+						<span class="bf-s"><span> * </span>企业名称 :</span>
+						<span class="show-info">{$info.name}</span>
+					</li>
+					<li>
+						<span class="bf-s"><span> * </span>营业执照所在地 :</span>
+						<span class="show-info">{$info.license_address}</span>
+					</li>
+					<li>
+						<span class="bf-s"><span> * </span>营业期限 :</span>
+						<span class="show-info">
+							<if condition="$info.license_continue eq '9999'">
+								长期
+							<else/>
+								{$info.begin} 至 {$info.end}
+							</if>
+						</span>
+					</li>
+					<li>
+						<span class="bf-s"><span> * </span>常用地址 :</span>
+						<span class="show-info">{$info.address}</span>
+					</li>
+					<li>
+						<span class="bf-s"><span> * </span>联系电话 :</span>
+						<span class="show-info">{$info.mobile}</span>
+					</li>
+					<li>
+						<span class="bf-s">营业范围 :</span>
+						<span class="show-info">{$info.business_scope}</span>
+					</li>
+					<li>
+						<span class="bf-s">注册资金 :</span>
+						<span class="show-info">{$info.registered_capital}万元</span>
+					</li>
+					<li>
+						<span class="bf-s"><span> * </span>执照类型 :</span>
+						<span class="show-info">
+							<if condition="$info.certificate_type eq '1'">
+								普通营业执照
+							<else/>
+								三证合一营业执照
+							</if>
+						</span>
+					</li>
+					<li>
+						<if condition="$info.certificate_type eq '2'">
+							<ul class="license-a">
+								<li>
+									<span class="bf-s bf-s-a"><span> * </span>三证合一营业执照 :</span>
+									<img src="{$info.comprehensive_license}" alt="三证合一营业执照" class="show-img" />
+								</li>
+								<li>
+									<span class="bf-s"><span> * </span>统一社会信用代码 :</span>
+									<span class="show-info">{$info.social_credit_code}</span>
+								</li>
+							</ul>
+						<else/>
+							<ul class="license-b">
+								<li>
+									<span class="bf-s bf-s-a"><span> * </span>营业执照 :</span>
+									<img src="{$info.license_img}" alt="营业执照" class="show-img" />
+								</li>
+								<li>
+									<span class="bf-s"><span> * </span>营业执照注册号 :</span>
+									<span class="show-info">{$info.license_number}</span>
+								</li>
+								<li>
+									<span class="bf-s bf-s-a"><span> * </span>组织机构代码证 :</span>
+									<img src="{$info.organization_code_certificate}" alt="组织机构代码证" class="show-img" />
+								</li>
+								<li>
+									<span class="bf-s"><span> * </span>组织机构代码 :</span>
+									<span class="show-info">{$info.organization_code}</span>
+								</li>
+							</ul>
+						</if>
+					</li>
+				</ul>
+				<div class="title2">
+					<span class="active">账户信息</span>
+				</div>
+				<ul class="view-info">
+					<li>
+						<span class="bf-s">银行开户名 :</span>
+						<span class="show-info">{$info.count_name}</span>
+					</li>
+					<li>
+						<span class="bf-s">开户银行 :</span>
+						<span class="show-info">{$info.bank_name}</span>
+					</li>
+					<li>
+						<span class="bf-s">开户行所在城市 :</span>
+						<span class="show-info">{$info.bank_city}</span>
+					</li>
+					<li>
+						<span class="bf-s">开户行支行名称 :</span>
+						<span class="show-info">{$info.bank_branch_name}</span>
+					</li>
+					<li>
+						<span class="bf-s">企业对公账户 :</span>
+						<span class="show-info">{$info.count_number}</span>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+</block>
+<block name="script">
+	<script type="text/javascript" src="__HOME__/company/js/confirmCompanyInfo.js"></script>
+</block>

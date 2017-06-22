@@ -1,0 +1,33 @@
+<extend name="./base" />
+<block name="style">
+<link rel="stylesheet" type="text/css" href="__HOME__/about/css/aboutUs.css" />
+</block>
+<block name="body">
+<div class="aboutUs clearfix">
+    <include file="about_menu" /> 
+    <div class="aboutUs-main l">
+        <div class="aboutUs-top">
+            <h3>您所在的位置：<a href="{:U('Index/index')}">首页</a>&nbsp;&gt;&nbsp;<a href="{:U('index')}">关于我们</a>&nbsp;&gt;&nbsp;<a href="/about/platform">最新公告</a></h3>
+        </div>
+        <div class="aboutUs-title">
+            <h2>最新公告</h2>
+        </div>
+        <div class="aboutUs-container">
+            <div class="report">
+                <ul>
+                    <foreach name="list" item="vo">
+                        <li class="clearfix">
+                        	<span class="riqi r">{$vo.create_time|date='Y-m-d',###}</span>
+                            <span><span class="dongtaidian"></span><a target="_blank" href="/about/detail/id/{$vo.id}" class="textcon">{$vo.title}</a></span>
+                        </li>
+                    </foreach>
+                </ul>
+            </div>
+            {$pageHtml}
+        </div>
+    </div>        
+</div>
+</block>
+<block name="script">
+<script src="__HOME__/about/js/aboutUs.js" type="text/javascript" charset="utf-8"></script>
+</block>
